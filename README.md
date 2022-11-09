@@ -4,7 +4,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# {repo-template}
+# ODIS Weihnachtsmarktkarte Berlin
 
 <!--
 
@@ -46,7 +46,7 @@ Read more here https://allcontributors.org/
 Get fancy shields at https://shields.io
  -->
 
-Add your project description here
+Eine Kartierung der Berliner Weihnachtsmärkte 2022 auf Basis von Open Data. 
 
 ## Prerequisites
 
