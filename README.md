@@ -46,7 +46,7 @@ Read more here https://allcontributors.org/
 Get fancy shields at https://shields.io
  -->
 
-Eine Kartierung der Berliner Weihnachtsmärkte 2022 auf Basis von Open Data. 
+The map shows christmas markets in Berlin 2022 based on an open data set, provided by the Senatsverwaltung für Wirtschaft, Energie und Betriebe. The data set contains informations about the location of christmas markets, opening times, entry fees, special attractions and a link to the website of each christmas market. 
 
 ## Prerequisites
 
@@ -73,7 +73,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center"><a href="https://fabianmoronzirfas.me/"><img src="https://avatars.githubusercontent.com/u/315106?v=4?s=64" width="64px;" alt="Fabian Morón Zirfas"/><br /><sub><b>Fabian Morón Zirfas</b></sub></a><br /><a href="https://github.com/technologiestiftung/weihnachtsmarktkarte/commits?author=ff6347" title="Documentation">📖</a></td>
-      <td align="center"><a href="http://vogelino.com"><img src="https://avatars.githubusercontent.com/u/2759340?v=4?s=64" width="64px;" alt="Lucas Vogel"/><br /><sub><b>Lucas Vogel</b></sub></a><br /><a href="https://github.com/technologiestiftung/weihnachtsmarktkarte/commits?author=vogelino" title="Documentation">📖</a></td>
+      <td align="center"><a href="http://vogelino.com"><img src="https://avatars.githubusercontent.com/u/2759340?v=4?s=64" width="64px;" alt="Lucas Vogel"/><br /><sub><b>Lucas Vogel</b></sub></a><br /><a href="https://github.com/technologiestiftung/weihnachtsmarktkarte/commits?author=vogelino" title="Documentation">📖</a> <a href="#ideas-vogelino" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/technologiestiftung/weihnachtsmarktkarte/pulls?q=is%3Apr+reviewed-by%3Avogelino" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/technologiestiftung/weihnachtsmarktkarte/commits?author=vogelino" title="Code">💻</a></td>
       <td align="center"><a href="http://www.awsm.de"><img src="https://avatars.githubusercontent.com/u/434355?v=4?s=64" width="64px;" alt="Ingo Hinterding"/><br /><sub><b>Ingo Hinterding</b></sub></a><br /><a href="https://github.com/technologiestiftung/weihnachtsmarktkarte/commits?author=Esshahn" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/m-b-e"><img src="https://avatars.githubusercontent.com/u/36029603?v=4?s=64" width="64px;" alt="Max B. Eckert"/><br /><sub><b>Max B. Eckert</b></sub></a><br /><a href="#data-m-b-e" title="Data">🔣</a></td>
       <td align="center"><a href="https://github.com/Lisa-Stubert"><img src="https://avatars.githubusercontent.com/u/61182572?v=4?s=64" width="64px;" alt="Lisa-Stubert"/><br /><sub><b>Lisa-Stubert</b></sub></a><br /><a href="https://github.com/technologiestiftung/weihnachtsmarktkarte/commits?author=Lisa-Stubert" title="Code">💻</a> <a href="https://github.com/technologiestiftung/weihnachtsmarktkarte/commits?author=Lisa-Stubert" title="Documentation">📖</a></td>
