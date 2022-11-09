@@ -1,5 +1,5 @@
 {
-  "projectName": "template-default",
+  "projectName": "weihnachtsmarktkarte",
   "projectOwner": "technologiestiftung",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -38,6 +38,15 @@
       "profile": "http://www.awsm.de",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "ester-t-s",
+      "name": "Ester",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91192024?v=4",
+      "profile": "https://github.com/ester-t-s",
+      "contributions": [
+        "data"
       ]
     }
   ],
