@@ -1,5 +1,5 @@
 {
-  "projectName": "template-default",
+  "projectName": "weihnachtsmarktkarte",
   "projectOwner": "technologiestiftung",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -37,6 +37,16 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/434355?v=4",
       "profile": "http://www.awsm.de",
       "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hanshack",
+      "name": "Hans Hack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8025164?v=4",
+      "profile": "https://hanshack.com/",
+      "contributions": [
+        "code",
         "doc"
       ]
     }
