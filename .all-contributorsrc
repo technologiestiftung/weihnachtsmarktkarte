@@ -58,6 +58,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "hanshack",
+      "name": "Hans Hack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8025164?v=4",
+      "profile": "https://hanshack.com/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
