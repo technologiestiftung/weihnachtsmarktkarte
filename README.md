@@ -6,7 +6,7 @@
 
 # <I>Berliner Weihnachtsmarktkarte<I>
 
-The <I>Berliner Weihnachtsmarktkarte<I> (Berlin Christmas market map)is an interactive web map of Berlin showing all christmas markets based on an open data set with further informations about opening dayy and times, special attractions or entry fees. This map will show the potential of maybe unexpected open data with some funny gadgets like the snowflake function. We wish you a charming exploration of the berlin christmas markets and a merry christmas
+The <I>Berliner Weihnachtsmarktkarte<I> (Berlin Christmas market map) is an interactive web map of Berlin showing all christmas markets based on an open data set with further informations about opening dayy and times, special attractions or entry fees. This map will show the potential of maybe unexpected open data with some funny gadgets like the snowflake function. We wish you a charming exploration of the berlin christmas markets and merry christmas.
 
 <!--
 
@@ -48,14 +48,14 @@ Read more here https://allcontributors.org/
 Get fancy shields at https://shields.io
  -->
 
-##context
+## Context
    
 Year after year the Senatsverwaltung für Wirtschaft, Energie und Betriebe (Senate Department for Economy, Energy and businesses) publishs an open dataset about christmas markets. This year the Open Data Informationsstelle Berlin (ODIS) looked a bit deeper into the data and decides to develop an interactive map with this interesting data. It does exist an overview about christmas markets on the official website of berlin called Das offizielle Hauptstadtporal, though the informations are only discoverable under individual articles. One key function of the map is to filter for specific searches. Which christmas markets are open on my desired date? Which are completly free? And can you show me only international christmas markets on the map? This map gives an answer to all these and allows you to plan the visit ahead. Additionally you can see public transport stations and public toilets nearby. With one click via the share function, you can share your favorite christmas market with others.
 
 This application is completely based on open data. Open data is now an important part of Berlin's administrative activities and not only creates transparency and openness, but also enables analysis and applications like this to explore the city and come together for pre-christmas time. 
 You can find more open data at the Berlin Open Data Portal.
 
-##Tech stack
+## Tech stack
    
 This website is a NextJS app configured with:
 
