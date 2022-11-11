@@ -4,7 +4,9 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# ODIS Weihnachtsmarktkarte Berlin
+# <I>Berliner Weihnachtsmarktkarte<I>
+
+The <I>Berliner Weihnachtsmarktkarte<I> (Berlin Christmas market map)is an interactive web map of Berlin showing all christmas markets based on an open data set with further informations about opening dayy and times, special attractions or entry fees. This map will show the potential of maybe unexpected open data with some funny gadgets like the snowflake function. We wish you a charming exploration of the berlin christmas markets and a merry christmas
 
 <!--
 
@@ -46,8 +48,34 @@ Read more here https://allcontributors.org/
 Get fancy shields at https://shields.io
  -->
 
-The map shows christmas markets in Berlin 2022 based on an open data set, provided by the Senatsverwaltung für Wirtschaft, Energie und Betriebe. The data set contains informations about the location of christmas markets, opening times, entry fees, special attractions and a link to the website of each christmas market. 
+##context
+   
+Year after year the Senatsverwaltung für Wirtschaft, Energie und Betriebe (Senate Department for Economy, Energy and businesses) publishs an open dataset about christmas markets. This year the Open Data Informationsstelle Berlin (ODIS) looked a bit deeper into the data and decides to develop an interactive map with this interesting data. It does exist an overview about christmas markets on the official website of berlin called Das offizielle Hauptstadtporal, though the informations are only discoverable under individual articles. One key function of the map is to filter for specific searches. Which christmas markets are open on my desired date? Which are completly free? And can you show me only international christmas markets on the map? This map gives an answer to all these and allows you to plan the visit ahead. Additionally you can see public transport stations and public toilets nearby. With one click via the share function, you can share your favorite christmas market with others.
 
+This application is completely based on open data. Open data is now an important part of Berlin's administrative activities and not only creates transparency and openness, but also enables analysis and applications like this to explore the city and come together for pre-christmas time. 
+You can find more open data at the Berlin Open Data Portal.
+
+##Tech stack
+   
+This website is a NextJS app configured with:
+
+Typescript
+Linting with ESLint
+Formatting with Prettier
+Linting, typechecking and formatting on by default using husky for commit hooks
+Testing with Jest and react-testing-library
+   
+## Data
+This repository contains the original data for the Erfrischungskarte, as well as the code used to estimate hourly values for cold wind volume and temperature.
+
+The Wind_Temperature folder contains the raw (values for specific hours) and clean data (quantiles for all hours from 9:00 to 21:00), in a Geojson format, for wind and temperature. The folder also encompasses a R code (Kaltluftvolum_Lufttemperatur.R) used to compute the estimates and quantiles for all hours.
+
+The POI's folder contains the raw point data (pools, green areas, picnic tables, etc.) as well as a Geojson file containing all data points (erfrischungskarte_poi.geojson).
+
+Original data sources
+
+The information on temperature and cold air is based on processed climate model data from the Berlin Senatsverwaltung für Stadtentwicklung und Wohnen. For both topics, data is available for different times of the day. These data were interpolated to obtain data for each hour of the day. The shadows were calculated from a digital terrain model. The map is supplemented by points of interests, i.e. places that could be interesting in connection with the data. These come from various sources: The coordinates of the green spaces were created from a data set on the public green space inventory. This is maintained by the district street and green space offices and made available on the Berlin geodata portal. The locations of the fountains can also be found in the geodata portal and are part of the extensive ATKIS dataset, which is regularly updated by the district surveying offices. The locations of bathing places come from the State Office for Health and Social Affairs (LaGeSo). The information on outdoor swimming pools and indoor swimming pools is currently only available as a list via Berlin.de. They were transferred into a geodata set by means of webscraping. Benches, picnic tables and drinking fountains were exported from Open Street Map, a freely accessible collection of geodata.
+   
 ## Prerequisites
 
 ## Installation
