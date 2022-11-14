@@ -119,6 +119,7 @@ const MapSite: NextPage = (mapData) => {
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
         setNavView={setNavView}
+        setSidebarMenuOpen={setSidebarMenuOpen}
       />
       <SidebarWrapper
         classes="z-20"

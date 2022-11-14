@@ -39,7 +39,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
       <div className="w-14 flex flex-col list-none overflow-hidden shadow-lg ">
         <div
           onClick={() => setModalOpen(true)}
-          className={classNames('bg-lightblue rounded mb-2', navClasses)}
+          className={classNames('bg-lightblue rounded mb-4', navClasses)}
         >
           <Home />
         </div>
