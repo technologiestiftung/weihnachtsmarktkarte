@@ -86,6 +86,13 @@ export const MapComponent: FC<MapComponentType> = ({
     }
   }, [showMapLayerToilets])
 
+  const onMarkerCLick = (feature): void => {
+    setMarketId(feature.properties.data.id)
+    setMarketData(feature.properties.data)
+    setShowMarker(true)
+    setMarkerPosition(feature.geometry.coordinates)
+  }
+
   const onMapCLick = (e): void => {
     if (!e.features || !e.features.length) {
       setMarketId(null)
@@ -113,8 +120,8 @@ export const MapComponent: FC<MapComponentType> = ({
         mapLib={maplibregl}
         initialViewState={{ ...startMapView }}
         mapStyle={mapStyle()}
-        onClick={onMapCLick}
-        interactiveLayerIds={['layer-toilets', 'layer-xmarkets']}
+        // onClick={onMapCLick}
+        // interactiveLayerIds={['layer-toilets', 'layer-xmarkets']}
         ref={mapRef}
         onLoad={onMapLoad}
       >
@@ -145,6 +152,18 @@ export const MapComponent: FC<MapComponentType> = ({
             })
           }}
         />
+
+        {mapData.xmarkets.features.map((feature: any) => (
+          <Marker
+            longitude={feature.geometry.coordinates[0]}
+            latitude={feature.geometry.coordinates[1]}
+            anchor="center"
+            onClick={() => onMarkerCLick(feature)}
+            key={feature.properties.data.id}
+          >
+            <img src="./stern_leuchtend.png" width="40px" />
+          </Marker>
+        ))}
         {showMarker && (
           <Marker
             longitude={markerPosition[0]}
