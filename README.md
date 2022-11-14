@@ -4,9 +4,9 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# <I>Berliner Weihnachtsmarktkarte<I>
+# Berliner Weihnachtsmarktkarte
 
-The <I>Berliner Weihnachtsmarktkarte<I> (Berlin Christmas market map) is an interactive web map of Berlin showing all christmas markets based on an open data set with further informations about opening dayy and times, special attractions or entry fees. This map will show the potential of maybe unexpected open data with some funny gadgets like the snowflake function. We wish you a charming exploration of the berlin christmas markets and merry christmas.
+The Berliner Weihnachtsmarktkarte (Berlin Christmas market map) is an interactive web map of Berlin showing all christmas markets based on an open data set with further informations about opening dayy and times, special attractions or entry fees. This map will show the potential of maybe unexpected open data with some funny gadgets like the snowflake function. We wish you a charming exploration of the berlin christmas markets and merry christmas.
 
 <!--
 
@@ -129,24 +129,31 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 <table>
   <tr>
     <td>
-      Made by <a href="https://citylab-berlin.org/de/start/">
+      <a src="https://odis-berlin.de">
         <br />
         <br />
-        <img width="200" src="https://citylab-berlin.org/wp-content/uploads/2021/05/citylab-logo.svg" />
+        <img width="200" src="https://logos.citylab-berlin.org/logo-odis-berlin.svg" />
       </a>
     </td>
     <td>
-      A project by <a href="https://www.technologiestiftung-berlin.de/">
+      Together with: <a src="https://citylab-berlin.org/en/start/">
         <br />
         <br />
-        <img width="150" src="https://citylab-berlin.org/wp-content/uploads/2021/05/tsb.svg" />
+        <img width="200" src="https://logos.citylab-berlin.org/logo-citylab-berlin.svg" />
       </a>
     </td>
     <td>
-      Supported by <a href="https://www.berlin.de/rbmskzl/">
+      A project by: <a src="https://www.technologiestiftung-berlin.de/en/">
         <br />
         <br />
-        <img width="80" src="https://citylab-berlin.org/wp-content/uploads/2021/12/B_RBmin_Skzl_Logo_DE_V_PT_RGB-300x200.png" />
+        <img width="150" src="https://logos.citylab-berlin.org/logo-technologiestiftung-berlin-en.svg" />
+      </a>
+    </td>
+    <td>
+      Supported by: <a src="https://www.berlin.de/rbmskzl/en/">
+        <br />
+        <br />
+        <img width="80" src="https://logos.citylab-berlin.org/logo-berlin-senweb-en.svg" />
       </a>
     </td>
   </tr>
