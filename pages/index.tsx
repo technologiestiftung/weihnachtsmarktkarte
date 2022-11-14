@@ -16,6 +16,9 @@ import { Layers, Filter, Info } from '@components/Icons'
 import { SidebarNav } from '@components/SidebarNav'
 import { MapNav } from '@components/MapNav'
 
+import { SnowNav } from '@components/SnowNav'
+import { IntroModal } from '@components/IntroModal'
+
 import { getMapData } from '@lib/loadMapData'
 
 export async function getStaticProps() {
@@ -31,8 +34,25 @@ export interface PopupType {
 }
 
 const MapSite: NextPage = (mapData) => {
+  // let snowLoaded = false
+  // if (typeof window != 'undefined' && !snowLoaded) {
+  //   const script = document.createElement('script')
+  //   script.src = 'snowstorm.js'
+  //   script.async = true
+  //   document.body.appendChild(script)
+  //   console.log('LOADED')
+  // }
+
+  // if (typeof window != 'undefined' && window.snowStorm && !snowLoaded) {
+  //   snowLoaded = true
+  //   window.snowStorm.toggleSnow()
+  //   console.log('HHHHH')
+  // }
+
   const { pathname, query, replace } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
+
+  let [modalOpen, setModalOpen] = useState(true)
 
   const [marketId, setMarketId] = useState<number | null>(null)
   const [marketData, setMarketData] = useState<any>()
@@ -73,7 +93,7 @@ const MapSite: NextPage = (mapData) => {
     },
   ]
   const [navView, setNavView] = useState<string>(navViews[0].value)
-  const [sidebarMenuOpen, setSidebarMenuOpen] = useState<boolean>(true)
+  const [sidebarMenuOpen, setSidebarMenuOpen] = useState<boolean>(false)
   const [sidebarInfoOpen, setSidebarInfoOpen] = useState<boolean>(false)
   const [mobileHeight, setMobileHeight] = useState<string>(navViews[0].value)
 
@@ -95,6 +115,11 @@ const MapSite: NextPage = (mapData) => {
 
   return (
     <>
+      <IntroModal
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+        setNavView={setNavView}
+      />
       <SidebarWrapper
         classes="z-20"
         position="left"
@@ -141,7 +166,9 @@ const MapSite: NextPage = (mapData) => {
         navView={navView}
         sidebarMenuOpen={sidebarMenuOpen}
         setSidebarMenuOpen={setSidebarMenuOpen}
+        setModalOpen={setModalOpen}
       />
+      <SnowNav></SnowNav>
 
       <MapComponent
         mapData={mapData}

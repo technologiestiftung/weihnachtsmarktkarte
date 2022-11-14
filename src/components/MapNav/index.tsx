@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import classNames from 'classnames'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
-import { Plus, Minus, Snow } from '../Icons'
+import { Plus, Minus, Geolocate } from '../Icons'
 
 export interface MapNavType {
   mapZoom: number
@@ -10,7 +10,7 @@ export interface MapNavType {
 
 export const MapNav: FC<MapNavType> = ({ mapZoom, setMapZoom }) => {
   const navClasses =
-    'hover:bg-gold hover:text-blueverydark bg-blueverydark text-gold h-10 w-10 mt-2 cursor-pointer list-none text-center grid place-items-center rounded-full'
+    'hover:bg-gold hover:text-darkblue bg-darkblue text-gold h-10 w-10 mt-2 cursor-pointer list-none text-center grid place-items-center rounded-full'
 
   return (
     <nav
@@ -35,10 +35,11 @@ export const MapNav: FC<MapNavType> = ({ mapZoom, setMapZoom }) => {
         </button>
         <button
           title=""
-          className={navClasses}
+          // className={navClasses}
           onClick={() => setMapZoom(mapZoom - 1)}
+          className={'maplibregl-ctrl-geolocate mapboxgl-ctrl-geolocate'}
         >
-          <Snow />
+          <Geolocate />
         </button>
       </div>
     </nav>

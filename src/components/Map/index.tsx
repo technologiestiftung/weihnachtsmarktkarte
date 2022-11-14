@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useCallback } from 'react'
-import Map, { Source, Layer, Marker } from 'react-map-gl'
+import Map, { Source, Layer, Marker, GeolocateControl } from 'react-map-gl'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import mapStyle from './mapStyle'
@@ -125,14 +125,33 @@ export const MapComponent: FC<MapComponentType> = ({
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
           <Layer {...layerStyles['toilets']} {...toiletLayerVisibilty} />
         </Source>
-
+        <GeolocateControl
+          positionOptions={{ enableHighAccuracy: true }}
+          // trackUserLocation={isMobile ? true : false}
+          showUserLocation={true}
+          // style={'display':'none'}
+          onGeolocate={(posOptions: {
+            coords: {
+              latitude: number
+              longitude: number
+            }
+          }) => {
+            const { latitude, longitude } = posOptions.coords
+            onViewStateChange({
+              longitude,
+              latitude,
+              zoom: 12,
+              transitionDuration: 2000,
+            })
+          }}
+        />
         {showMarker && (
           <Marker
             longitude={markerPosition[0]}
             latitude={markerPosition[1]}
             anchor="center"
           >
-            <img src="./star.png" width="30px" />
+            <img src="./stern_ausgewaehlt.png" width="40px" />
           </Marker>
         )}
       </Map>

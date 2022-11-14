@@ -16,36 +16,14 @@ export const Home: FC<IconPropType> = ({
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       {...props}
     >
-      <g fill="none" fillRule="evenodd">
-        <path
-          stroke={col1 || 'currentColor'}
-          fill={col1 || 'none'}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={strokeWidth}
-          d="M9,21 L9,15 C9,13.8954305 9.8954305,13 11,13 L13,13 C14.1045695,13 15,13.8954305 15,15 L15,21"
-          vectorEffect="non-scaling-stroke"
-        />
-        <path
-          stroke={col2 || 'currentColor'}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={strokeWidth}
-          d="M5,12 L5,19 C5,20.1045695 5.8954305,21 7,21 L17,21 C18.1045695,21 19,20.1045695 19,19 L19,12"
-          vectorEffect="non-scaling-stroke"
-        />
-        <polyline
-          stroke={col2 || 'currentColor'}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={strokeWidth}
-          points="5 12 3 12 12 3 21 12 19 12"
-          vectorEffect="non-scaling-stroke"
-        />
-      </g>
+      {' '}
+      <path
+        fill={col1 || 'currentColor'}
+        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"
+      />
     </svg>
   )
 }

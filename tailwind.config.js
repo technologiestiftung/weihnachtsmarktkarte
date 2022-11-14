@@ -49,10 +49,16 @@ module.exports = {
     colors: {
       white: '#fff',
       gray: '#ccc',
-      graylight: '#F5F8FE',
+      lightblue: '#F5F8FE',
       gold: '#BDA33B',
-      bluedark: '#091725',
-      blueverydark: '#091725',
+      darkblue: '#091725',
+      gray: {
+        '100': '#EDEDED',
+        '200': '#E0E0E0',
+        '300': '#C7C7C7',
+        '400': '#ADADAD',
+        '500': '#949494',
+      },
     },
     extend: {
       minWidth: {

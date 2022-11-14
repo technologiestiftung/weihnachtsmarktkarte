@@ -25,7 +25,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   return (
     <>
       <div className="text-bold p-4">
-        <h2 className="font-bold py-4 text-lg">Filtern</h2>
+        <h2 className="font-bold py-4 text-2xl">Filtern</h2>
         <p className="text-xs pb-2">
           Stellen Sie hier Ihre gewünschten Filter ein.{' '}
         </p>
