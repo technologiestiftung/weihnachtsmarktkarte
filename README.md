@@ -153,7 +153,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
       Supported by: <a src="https://www.berlin.de/rbmskzl/en/">
         <br />
         <br />
-        <img width="80" src=" https://logos.citylab-berlin.org/logo-berlin-senweb-de.svg" />
+        <img width="80" src=" https://logos.citylab-berlin.org/logo-berlin-senweb-de.svg"/>
       </a>
     </td>
   </tr>
