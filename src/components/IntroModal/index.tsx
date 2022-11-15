@@ -1,5 +1,5 @@
+import { FC } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Fragment, useState, FC } from 'react'
 import { Cross } from '../Icons'
 
 import { TsbLogo } from '@components/Logos/TsbLogo'
@@ -7,6 +7,9 @@ import { OdisLogo } from '@components/Logos/OdisLogo'
 
 export interface IntroModalType {
   modalOpen: boolean
+  setModalOpen: (date: boolean) => void
+  setNavView: (date: string) => void
+  setSidebarMenuOpen: (date: boolean) => void
 }
 
 export const IntroModal: FC<IntroModalType> = ({
@@ -42,12 +45,12 @@ export const IntroModal: FC<IntroModalType> = ({
           <div className="flex min-h-full items-center justify-center p-4">
             <Dialog.Panel className="bg-white max-h-full overflow-y-auto p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all">
               <button
-                className="focus:outline-none top-0 right-0 m-10 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
+                className="focus:outline-none top-0 right-0 m-2 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
                 onClick={closeModal}
               >
                 <Cross color1={'black'} />
               </button>
-              <h2 className="font-bold text-2xl pb-2">
+              <h2 className="font-bold text-2xl pb-2 pt-2">
                 Mit den Kollegen auf einen Glühwein?
               </h2>
               <h4 className="pb-4">
@@ -63,13 +66,13 @@ export const IntroModal: FC<IntroModalType> = ({
               </p>
 
               <button
-                className="px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded"
+                className="xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
                 onClick={closeModalExplore}
               >
                 Erkunden
               </button>
               <button
-                className="px-4 ml-4 bg-white text-darkblue text-bold border-2 border-darkblue hover:border-gold p-2 rounded"
+                className="px-4 ml-4 bg-white text-darkblue text-bold border-2 border-darkblue hover:border-gold p-2 rounded hover:text-gray-500"
                 onClick={closeModalInfo}
               >
                 Mehr Infos
@@ -83,12 +86,12 @@ export const IntroModal: FC<IntroModalType> = ({
                     Berlin
                   </i>
                 </p>
-                <div className="inline-block md:flex">
+                <div className="inline-block md:flex self-center">
                   <div className="w-36 mr-4">
-                    <TsbLogo className={`w-40`} />
+                    <TsbLogo className={`w-30`} />
                   </div>
                   <div className="w-32 mt-4 md:mt-0 self-center">
-                    <OdisLogo className={`w-40`} />
+                    <OdisLogo className={`w-30`} />
                   </div>
                 </div>
               </div>

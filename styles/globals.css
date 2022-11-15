@@ -26,6 +26,7 @@ body {
     font-family: "Clan Book", sans-serif;
     color: #222222;
   }
+
 }
 
 
@@ -34,3 +35,10 @@ body {
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+/* @layer base {
+  .xmas-btn{
+    @apply px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded;
+  }
+} */
+
+
