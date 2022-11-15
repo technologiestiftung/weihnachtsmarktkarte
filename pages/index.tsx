@@ -61,7 +61,7 @@ const MapSite: NextPage = (mapData) => {
     useState<boolean>(true)
   const [marketFilterEntry, setMarketFilterEntry] = useState<boolean>(true)
   const [marketFilterDate, setMarketFilterDate] = useState<Date>()
-  const [marketFilterTime, setMarketFilterTime] = useState<boolean>(true)
+  const [marketFilterTime, setMarketFilterTime] = useState<number[]>()
 
   const [mapCenter, setMapCenter] = useState<number[]>([0, 0])
   const [mapZoom, setMapZoom] = useState<number>(10)
@@ -149,7 +149,7 @@ const MapSite: NextPage = (mapData) => {
         )}
         {navView === 'info' && <SidebarContentInfo />}
       </SidebarWrapper>
-
+      {/* market data information */}
       <SidebarWrapper
         classes="z-30"
         position="left"
@@ -160,7 +160,6 @@ const MapSite: NextPage = (mapData) => {
       >
         {marketData && marketId && <SidebarMarket marketData={marketData} />}
       </SidebarWrapper>
-
       <SidebarNav
         navViews={navViews}
         setNavView={setNavView}
@@ -170,7 +169,6 @@ const MapSite: NextPage = (mapData) => {
         setModalOpen={setModalOpen}
       />
       <SnowNav></SnowNav>
-
       <MapComponent
         mapData={mapData}
         mapCenter={mapCenter}
@@ -186,7 +184,6 @@ const MapSite: NextPage = (mapData) => {
         marketFilterDate={marketFilterDate}
         marketFilterTime={marketFilterTime}
       />
-
       <MapNav
         mapZoom={mapZoom}
         setMapZoom={setMapZoom}

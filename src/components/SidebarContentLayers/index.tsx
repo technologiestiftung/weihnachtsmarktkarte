@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 import classNames from 'classnames'
 
+import { SidebarHeader } from '@components/SidebarHeader'
 import ExpandablePanel from '@components/ExpandablePanel'
 import { SwitchWrapper } from '@components/SwitchWrapper'
 
@@ -12,8 +13,9 @@ export const SidebarContentLayers: FC<SidebarContentLayersType> = ({
 }) => {
   return (
     <>
+      <SidebarHeader text="Kartenebenen" />
+
       <div className="text-bold p-4">
-        <h2 className="font-bold py-4 text-lg">Kartenebenen</h2>
         <p className="text-xs pb-2">
           Blenden Sie hier Ihre gewünschten zusätzlichen Kartenebenen ein.
         </p>

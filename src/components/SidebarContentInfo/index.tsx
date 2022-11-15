@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import classNames from 'classnames'
-
-import { Accordion } from '@components/Accordion'
+import { SidebarHeader } from '@components/SidebarHeader'
 import { CitylabLogo } from '@components/CitylabLogo'
 import { OdisLogo } from '@components/OdisLogo'
 import { SenWebLogo } from '@components/SenWebLogo'
@@ -18,9 +17,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = (
 ) => {
   return (
     <>
-      <h1 className="font-bold pt-8 pb-4 px-4 text-2xl sticky top-0 bg-lightblue scroll-shadow">
-        Über das Projekt
-      </h1>
+      <SidebarHeader text="Über das Projekt" />
 
       <div className="px-4">
         <p className="text-sm pb-2">
@@ -98,7 +95,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = (
           </div>
         </section>
       </div>
-      <footer className={classNames('mt-8 bg-gray-300 p-4', 'flex flex-wrap')}>
+      <footer className={classNames('mt-8 bg-gray-200 p-4', 'flex flex-wrap')}>
         <span className="text-xs w-full mb-4">
           © 2021 Technologiestiftung Berlin
         </span>

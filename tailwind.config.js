@@ -48,7 +48,6 @@ module.exports = {
     },
     colors: {
       white: '#fff',
-      gray: '#ccc',
       lightblue: '#F5F8FE',
       gold: '#BDA33B',
       darkblue: '#091725',

@@ -63,20 +63,20 @@ export const IntroModal: FC<IntroModalType> = ({
               </p>
 
               <button
-                className="bg-darkblue text-gold p-2 text-bold rounded"
+                className="px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded"
                 onClick={closeModalExplore}
               >
                 Erkunden
               </button>
               <button
-                className="bg-white text-darkblue text-bold border-2 border-darkblue p-2 rounded"
+                className="px-4 ml-4 bg-white text-darkblue text-bold border-2 border-darkblue hover:border-gold p-2 rounded"
                 onClick={closeModalInfo}
               >
                 Mehr Infos
               </button>
 
               <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
-                <p className="text-xs mb-2 md:mb-0 text-gray-700 max-w-md">
+                <p className="text-xs mb-2 md:mb-0 text-gray-500 max-w-md">
                   <i>
                     Eine prototypische Datenvisualisierung der Open Data
                     Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB

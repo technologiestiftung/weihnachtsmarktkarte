@@ -4,6 +4,7 @@ import ExpandablePanel from '@components/ExpandablePanel'
 import { SwitchWrapper } from '@components/SwitchWrapper'
 import { FilterDate } from '@components/FilterDate'
 import { FilterTime } from '@components/FilterTime'
+import { SidebarHeader } from '@components/SidebarHeader'
 
 export interface SidebarContentFilterType {
   marketFilterInternational: boolean
@@ -22,14 +23,21 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   marketFilterTime,
   setMarketFilterTime,
 }) => {
+  function resetFilter() {
+    console.log('resetting')
+    setMarketFilterEntry(false)
+    setMarketFilterInternational(false)
+    setMarketFilterDate()
+  }
+
   return (
     <>
-      <div className="text-bold p-4">
-        <h2 className="font-bold py-4 text-2xl">Filtern</h2>
-        <p className="text-xs pb-2">
-          Stellen Sie hier Ihre gewünschten Filter ein.{' '}
-        </p>
-      </div>
+      <SidebarHeader text="Filtern" />
+
+      <p className="text-xs pb-4">
+        Stellen Sie hier Ihre gewünschten Filter ein.{' '}
+      </p>
+
       <div className="px-4">
         <ExpandablePanel title={'Datum'} open={true}>
           <FilterDate
@@ -60,6 +68,14 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             setEnabled={setMarketFilterInternational}
           />
         </ExpandablePanel>
+        <div className="text-center pt-8">
+          <button
+            className="text-sm bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded"
+            onClick={resetFilter}
+          >
+            Filter zurücksetzen
+          </button>
+        </div>
       </div>
     </>
   )
