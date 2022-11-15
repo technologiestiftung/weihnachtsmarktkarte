@@ -12,9 +12,9 @@ export interface SidebarContentFilterType {
   marketFilterEntry: boolean
   setMarketFilterEntry: (enabled: boolean) => void
   marketFilterDate: Date
-  setMarketFilterDate: (date: Date) => void
+  setMarketFilterDate: (date: Date | void) => void
   marketFilterTime: number[]
-  setMarketFilterTime: (time: number[]) => void
+  setMarketFilterTime: (time: number[] | void) => void
   marketFilterDesign: boolean
   setMarketFilterDesign: (enabled: boolean) => void
 }

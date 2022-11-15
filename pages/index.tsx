@@ -27,6 +27,27 @@ export async function getStaticProps() {
   return mapData
 }
 
+const navViews = [
+  {
+    value: 'filter',
+    name: 'filter',
+    icon: <Filter color1={'black'} />,
+    mobileHeight: 'half',
+  },
+  {
+    value: 'layers',
+    name: 'Kartenlayers',
+    icon: <Layers color1={'black'} />,
+    mobileHeight: 'half',
+  },
+  {
+    value: 'info',
+    name: 'information',
+    icon: <Info color1={'black'} />,
+    mobileHeight: 'full',
+  },
+]
+
 const MapSite: NextPage = (mapData) => {
   // let snowLoaded = false
   // if (typeof window != 'undefined' && !snowLoaded) {
@@ -55,45 +76,25 @@ const MapSite: NextPage = (mapData) => {
   const [marketFilterTime, setMarketFilterTime] = useState<number[]>()
   const [marketFilterDesign, setMarketFilterDesign] = useState<boolean>(false)
 
-  const [mapCenter, setMapCenter] = useState<number[]>([0, 0])
-  const [mapZoom, setMapZoom] = useState<number>(10)
-  // if(mappedQuery.zoom && mappedQuery.zoom !== mapZoom){
-  //   console.log('MMMM???')
-  //   setMapZoom(mappedQuery.zoom )
-  // }
-
-  // setMarketFilterDate(selected.getMonth() + 1, selected.getDate())
-
-  const navViews = [
-    {
-      value: 'filter',
-      name: 'filter',
-      icon: <Filter color1={'black'} />,
-      mobileHeight: 'half',
-    },
-    {
-      value: 'layers',
-      name: 'Kartenlayers',
-      icon: <Layers color1={'black'} />,
-      mobileHeight: 'half',
-    },
-    {
-      value: 'info',
-      name: 'information',
-      icon: <Info color1={'black'} />,
-      mobileHeight: 'full',
-    },
-  ]
   const [navView, setNavView] = useState<string>(navViews[0].value)
   const [sidebarMenuOpen, setSidebarMenuOpen] = useState<boolean>(false)
   const [sidebarInfoOpen, setSidebarInfoOpen] = useState<boolean>(false)
   const [mobileHeight, setMobileHeight] = useState<string>(navViews[0].value)
 
+  const [mapCenter, setMapCenter] = useState<number[]>([0, 0])
+  const [mapZoom, setMapZoom] = useState<number>(10)
+  // if (mappedQuery.id && mappedQuery.id !== marketId) {
+  //   console.log('MMMM???')
+  //   setSidebarInfoOpen(true)
+  //   setMarketId(mappedQuery?.id)
+  // }
   useEffect(() => {
     setSidebarInfoOpen(marketId === null ? false : true)
-    // replace({ pathname, query: { id: marketId, zoom: mapZoom } }, undefined, {
-    //   shallow: true,
-    // })
+    // if (marketId) {
+    //   replace({ pathname, query: { id: marketId } }, undefined, {
+    //     shallow: true,
+    //   })
+    // }
   }, [marketId])
 
   useEffect(() => {

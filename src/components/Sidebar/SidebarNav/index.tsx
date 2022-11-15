@@ -4,8 +4,12 @@ import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { Home } from '@components/Icons'
 
 export interface SidebarNavType {
-  // // onChange: () => '',
-  // value?: 'consumption' | 'renovation'
+  navViews: any
+  setNavView: (view: string) => void
+  navView: 'info' | 'filter' | 'layers'
+  sidebarMenuOpen: boolean
+  setSidebarMenuOpen: (open: boolean) => void
+  setModalOpen: (open: boolean) => void
 }
 
 export const SidebarNav: FC<SidebarNavType> = ({

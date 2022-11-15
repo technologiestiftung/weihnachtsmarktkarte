@@ -6,15 +6,9 @@ import { OdisLogo } from '@components/Logos/OdisLogo'
 import { SenWebLogo } from '@components/Logos/SenWebLogo'
 import { TsbLogo } from '@components/Logos/TsbLogo'
 
-export interface SidebarContentInfoType {
-  // marketData: any
-}
+export interface SidebarContentInfoType {}
 
-export const SidebarContentInfo: FC<SidebarContentInfoType> = (
-  {
-    // marketData,
-  }
-) => {
+export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
   return (
     <>
       <SidebarHeader text="Über das Projekt" />

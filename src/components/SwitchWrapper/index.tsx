@@ -1,11 +1,11 @@
-import { FC, useState } from 'react'
-import classNames from 'classnames'
+import { FC } from 'react'
 
 import { Switch } from '@headlessui/react'
 
 export interface SwitchWrapperType {
   text: string
   enabled: boolean
+  setEnabled: (time: boolean) => void
 }
 
 export const SwitchWrapper: FC<SwitchWrapperType> = ({

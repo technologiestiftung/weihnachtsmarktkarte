@@ -5,7 +5,10 @@ import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 import ExpandablePanel from '@components/ExpandablePanel'
 import { SwitchWrapper } from '@components/SwitchWrapper'
 
-export interface SidebarContentLayersType {}
+export interface SidebarContentLayersType {
+  showMapLayerToilets: boolean
+  setShowMapLayerToilets: (show: boolean) => void
+}
 
 export const SidebarContentLayers: FC<SidebarContentLayersType> = ({
   showMapLayerToilets,
