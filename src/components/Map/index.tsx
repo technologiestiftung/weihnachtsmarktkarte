@@ -7,13 +7,17 @@ import { layerStyles } from './layerStyles'
 import { useState } from 'react'
 
 export interface MapComponentType {
+  mapData: any
+  setMarketId: void
+  marketId: string | null
+  setMarketData: (time: any) => void
   mapCenter?: number[]
   mapZoom?: number
-  showMapLayerToilets: boolean
+  showMapLayerToilets?: boolean
   marketFilterInternational: boolean
   marketFilterEntry: boolean
   marketFilterDate: Date
-  // marketFilterTime
+  marketFilterTime: number[]
 }
 
 export const MapComponent: FC<MapComponentType> = ({
