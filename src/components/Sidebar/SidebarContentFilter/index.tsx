@@ -8,9 +8,15 @@ import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 
 export interface SidebarContentFilterType {
   marketFilterInternational: boolean
-  // setMarketFilterInternational,
+  setMarketFilterInternational: (enabled: boolean) => void
   marketFilterEntry: boolean
-  // setMarketFilterEntry,
+  setMarketFilterEntry: (enabled: boolean) => void
+  marketFilterDate: Date
+  setMarketFilterDate: (date: Date) => void
+  marketFilterTime: number[]
+  setMarketFilterTime: (time: number[]) => void
+  marketFilterDesign: boolean
+  setMarketFilterDesign: (enabled: boolean) => void
 }
 
 export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
@@ -22,12 +28,15 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   setMarketFilterDate,
   marketFilterTime,
   setMarketFilterTime,
+  marketFilterDesign,
+  setMarketFilterDesign,
 }) => {
   function resetFilter() {
     console.log('resetting')
     setMarketFilterEntry(false)
     setMarketFilterInternational(false)
     setMarketFilterDate()
+    setMarketFilterDesign(false)
   }
 
   return (
@@ -63,14 +72,22 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
         <hr className="my-4" />
         <ExpandablePanel title={'International'} open={true}>
           <SwitchWrapper
-            text={'Nur internationale Weihnachts-märkte anzeigen. '}
+            text={'Nur internationale Weihnachtsmärkte anzeigen. '}
             enabled={marketFilterInternational}
             setEnabled={setMarketFilterInternational}
           />
         </ExpandablePanel>
+        <hr className="my-4" />
+        <ExpandablePanel title={'Designmärkte'} open={true}>
+          <SwitchWrapper
+            text={'Nur Design-Weihnachtmärkte anzeigen. '}
+            enabled={marketFilterDesign}
+            setEnabled={setMarketFilterDesign}
+          />
+        </ExpandablePanel>
         <div className="text-center pt-8">
           <button
-            className="xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
+            className="mb-8 xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
             onClick={resetFilter}
           >
             Filter zurücksetzen

@@ -8,7 +8,7 @@ const siteUrl =
   'http://localhost:3000'
 
 const faviconPath = '/favicon.ico'
-const faviconSvgPath = '/favicons/favicon.svg'
+const faviconPNGPath = '/favicons/star.png'
 
 interface HeadPropType {
   currentPagePath: string
@@ -85,10 +85,10 @@ export const Head: FC<Partial<HeadPropType>> = ({
         <meta property="og:image:alt" content={socialThumbnail} />
       )}
 
-      <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" href="/favicons/star.png" />
 
       <link href={faviconPath} type="image/x-icon" rel="shortcut icon" />
-      <link href={faviconSvgPath} type="image/svg+xml" rel="icon" />
+      <link href={faviconPNGPath} type="image/png" rel="icon" />
 
       <link rel="manifest" href="/manifest.webmanifest" />
 

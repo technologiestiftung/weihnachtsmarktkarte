@@ -45,17 +45,15 @@ const MapSite: NextPage = (mapData) => {
 
   const { pathname, query, replace } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
-
   let [modalOpen, setModalOpen] = useState(true)
-
   const [marketId, setMarketId] = useState<number | null>(null)
   const [marketData, setMarketData] = useState<any>()
-
   const [marketFilterInternational, setMarketFilterInternational] =
     useState<boolean>(false)
   const [marketFilterEntry, setMarketFilterEntry] = useState<boolean>(false)
   const [marketFilterDate, setMarketFilterDate] = useState<Date>()
   const [marketFilterTime, setMarketFilterTime] = useState<number[]>()
+  const [marketFilterDesign, setMarketFilterDesign] = useState<boolean>(false)
 
   const [mapCenter, setMapCenter] = useState<number[]>([0, 0])
   const [mapZoom, setMapZoom] = useState<number>(10)
@@ -140,6 +138,8 @@ const MapSite: NextPage = (mapData) => {
             setMarketFilterDate={setMarketFilterDate}
             marketFilterTime={marketFilterTime}
             setMarketFilterTime={setMarketFilterTime}
+            marketFilterDesign={marketFilterDesign}
+            setMarketFilterDesign={setMarketFilterDesign}
           />
         )}
         {navView === 'layers' && (
