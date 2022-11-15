@@ -34,11 +34,11 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
     <>
       <SidebarHeader text="Filtern" />
 
-      <p className="text-xs pb-4">
-        Stellen Sie hier Ihre gewünschten Filter ein.{' '}
-      </p>
-
       <div className="px-4">
+        <p className="text-sm pb-4">
+          Stellen Sie hier Ihre gewünschten Filter ein.{' '}
+        </p>
+
         <ExpandablePanel title={'Datum'} open={true}>
           <FilterDate
             marketFilterDate={marketFilterDate}
@@ -70,7 +70,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
         </ExpandablePanel>
         <div className="text-center pt-8">
           <button
-            className="text-sm bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded"
+            className="xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
             onClick={resetFilter}
           >
             Filter zurücksetzen

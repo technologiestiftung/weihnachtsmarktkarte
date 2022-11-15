@@ -58,8 +58,8 @@ const MapSite: NextPage = (mapData) => {
   const [marketData, setMarketData] = useState<any>()
 
   const [marketFilterInternational, setMarketFilterInternational] =
-    useState<boolean>(true)
-  const [marketFilterEntry, setMarketFilterEntry] = useState<boolean>(true)
+    useState<boolean>(false)
+  const [marketFilterEntry, setMarketFilterEntry] = useState<boolean>(false)
   const [marketFilterDate, setMarketFilterDate] = useState<Date>()
   const [marketFilterTime, setMarketFilterTime] = useState<number[]>()
 
