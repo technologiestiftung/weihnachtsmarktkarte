@@ -36,6 +36,8 @@ export const MapComponent: FC<MapComponentType> = ({
     zoom: mapZoom,
   }
 
+  console.log(mapData)
+
   const [showMarker, setShowMarker] = useState<boolean>(true)
   const [markerPosition, setMarkerPosition] = useState<number[]>([0, 0])
 
@@ -87,10 +89,10 @@ export const MapComponent: FC<MapComponentType> = ({
   }, [showMapLayerToilets])
 
   const onMarkerCLick = (feature): void => {
-    setMarketId(feature.properties.data.id)
-    setMarketData(feature.properties.data)
+    setMarketId(feature.id)
+    setMarketData(feature)
     setShowMarker(true)
-    setMarkerPosition(feature.geometry.coordinates)
+    setMarkerPosition([feature.lng, feature.lat])
   }
 
   const onMapCLick = (e): void => {
@@ -104,7 +106,6 @@ export const MapComponent: FC<MapComponentType> = ({
     const market = e.features.filter((d) => d.source === 'xmarkets-source')[0]
     if (market) {
       const marketData = JSON.parse(market.properties.data)
-      console.log(marketData)
       setMarketId(marketData.id)
       setMarketData(marketData)
       setShowMarker(true)
@@ -125,9 +126,9 @@ export const MapComponent: FC<MapComponentType> = ({
         ref={mapRef}
         onLoad={onMapLoad}
       >
-        <Source id="xmarkets-source" type="geojson" data={mapData.xmarkets}>
+        {/* <Source id="xmarkets-source" type="geojson" data={mapData.xmarkets}>
           <Layer {...layerStyles['xmarkets']} />
-        </Source>
+        </Source> */}
 
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
           <Layer {...layerStyles['toilets']} {...toiletLayerVisibilty} />
@@ -153,13 +154,13 @@ export const MapComponent: FC<MapComponentType> = ({
           }}
         />
 
-        {mapData.xmarkets.features.map((feature: any) => (
+        {mapData.markets.map((feature: any) => (
           <Marker
-            longitude={feature.geometry.coordinates[0]}
-            latitude={feature.geometry.coordinates[1]}
+            longitude={feature.lng}
+            latitude={feature.lat}
             anchor="center"
             onClick={() => onMarkerCLick(feature)}
-            key={feature.properties.data.id}
+            key={feature.id}
           >
             <img src="./stern_leuchtend.png" width="40px" />
           </Marker>
