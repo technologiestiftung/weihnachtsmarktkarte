@@ -97,6 +97,21 @@ const MapSite: NextPage = (mapData) => {
     // }
   }, [marketId])
 
+  // useEffect(() => {
+  //   // let snowLoaded = false
+  //   // if (typeof window != 'undefined' && !snowLoaded) {
+  //   //   snowLoaded = true
+  //   //   const script = document.createElement('script')
+  //   //   script.src = 'snowstorm.js'
+  //   //   script.async = true
+  //   //   document.body.appendChild(script)
+  //   //   console.log('LOADED')
+
+  //   //   window.snowStorm.stop()
+  //   //   window.snowStorm.toggleSnow()
+  //   // }
+  // }, [])
+
   useEffect(() => {
     if (!sidebarInfoOpen) {
       setMarketId(null)

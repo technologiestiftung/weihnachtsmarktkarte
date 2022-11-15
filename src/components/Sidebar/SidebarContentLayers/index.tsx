@@ -18,8 +18,8 @@ export const SidebarContentLayers: FC<SidebarContentLayersType> = ({
     <>
       <SidebarHeader text="Kartenebenen" />
 
-      <div className="text-bold p-4">
-        <p className="text-xs pb-2">
+      <div className="px-4">
+        <p className="text-sm pb-4">
           Blenden Sie hier Ihre gewünschten zusätzlichen Kartenebenen ein.
         </p>
 
