@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // distDir: 'build',
+  distDir: 'build',
   // basePath: '/energiekarte',
   eslint: {
     ignoreDuringBuilds: true,

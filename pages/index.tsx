@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 
 import { useRouter } from 'next/router'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
-import { useDebouncedCallback } from 'use-debounce'
+// import { useDebouncedCallback } from 'use-debounce'
+import { Head } from '@components/Head'
 
 import { MapComponent } from '@components/Map'
 import { SidebarWrapper } from '@components/Sidebar/SidebarWrapper'
@@ -24,13 +25,6 @@ import { getMapData } from '@lib/loadMapData'
 export async function getStaticProps() {
   const mapData = getMapData()
   return mapData
-}
-
-export interface PopupType {
-  visible: boolean
-  position: number[]
-  textType: string
-  textAddress: string
 }
 
 const MapSite: NextPage = (mapData) => {
@@ -121,6 +115,7 @@ const MapSite: NextPage = (mapData) => {
 
   return (
     <>
+      <Head />
       <IntroModal
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
