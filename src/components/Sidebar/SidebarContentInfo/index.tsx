@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import classNames from 'classnames'
-import { SidebarHeader } from '@components/SidebarHeader'
-import { CitylabLogo } from '@components/CitylabLogo'
-import { OdisLogo } from '@components/OdisLogo'
-import { SenWebLogo } from '@components/SenWebLogo'
-import { TsbLogo } from '@components/TsbLogo'
+import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
+import { CitylabLogo } from '@components/Logos/CitylabLogo'
+import { OdisLogo } from '@components/Logos/OdisLogo'
+import { SenWebLogo } from '@components/Logos/SenWebLogo'
+import { TsbLogo } from '@components/Logos/TsbLogo'
 
 export interface SidebarContentInfoType {
   // marketData: any

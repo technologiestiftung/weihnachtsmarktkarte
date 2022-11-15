@@ -36,8 +36,6 @@ export const MapComponent: FC<MapComponentType> = ({
     zoom: mapZoom,
   }
 
-  console.log(mapData)
-
   const [showMarker, setShowMarker] = useState<boolean>(true)
   const [markerPosition, setMarkerPosition] = useState<number[]>([0, 0])
 

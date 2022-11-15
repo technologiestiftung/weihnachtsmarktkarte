@@ -1,5 +1,5 @@
 import { FC, useState, useEffect, useRef, ReactNode } from 'react'
-import { Cross, ArrowLeft } from '../Icons'
+import { Cross, ArrowLeft } from '../../Icons'
 import classNames from 'classnames'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 

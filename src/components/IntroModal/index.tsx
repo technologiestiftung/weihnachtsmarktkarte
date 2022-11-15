@@ -2,8 +2,8 @@ import { Dialog } from '@headlessui/react'
 import { Fragment, useState, FC } from 'react'
 import { Cross } from '../Icons'
 
-import { TsbLogo } from '@components/TsbLogo'
-import { OdisLogo } from '@components/OdisLogo'
+import { TsbLogo } from '@components/Logos/TsbLogo'
+import { OdisLogo } from '@components/Logos/OdisLogo'
 
 export interface IntroModalType {
   modalOpen: boolean

@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 import classNames from 'classnames'
 
-import { SidebarHeader } from '@components/SidebarHeader'
+import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 import ExpandablePanel from '@components/ExpandablePanel'
 import { SwitchWrapper } from '@components/SwitchWrapper'
 

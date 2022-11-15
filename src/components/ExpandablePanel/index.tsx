@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import { Plus, Minus } from '@components/Icons'
 
 export interface ExpandablePanelType {
-  // marketData: any
   title: string
   open: boolean
   children: ReactNode

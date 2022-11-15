@@ -4,7 +4,10 @@ import { format } from 'date-fns'
 import { DayPicker } from 'react-day-picker'
 import 'react-day-picker/dist/style.css'
 
-export interface FilterDateType {}
+export interface FilterDateType {
+  marketFilterDate: Date
+  setMarketFilterDate: (date: Date) => void
+}
 
 export const FilterDate: FC<FilterDateType> = ({
   marketFilterDate,

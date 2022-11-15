@@ -4,7 +4,7 @@ import ExpandablePanel from '@components/ExpandablePanel'
 import { SwitchWrapper } from '@components/SwitchWrapper'
 import { FilterDate } from '@components/FilterDate'
 import { FilterTime } from '@components/FilterTime'
-import { SidebarHeader } from '@components/SidebarHeader'
+import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 
 export interface SidebarContentFilterType {
   marketFilterInternational: boolean

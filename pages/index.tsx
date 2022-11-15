@@ -6,14 +6,14 @@ import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { useDebouncedCallback } from 'use-debounce'
 
 import { MapComponent } from '@components/Map'
-import { SidebarWrapper } from '@components/SidebarWrapper'
-import { SidebarMarket } from '@components/SidebarMarket'
-import { SidebarContentInfo } from '@components/SidebarContentInfo'
-import { SidebarContentLayers } from '@components/SidebarContentLayers'
-import { SidebarContentFilter } from '@components/SidebarContentFilter'
+import { SidebarWrapper } from '@components/Sidebar/SidebarWrapper'
+import { SidebarMarket } from '@components/Sidebar/SidebarMarket'
+import { SidebarContentInfo } from '@components/Sidebar/SidebarContentInfo'
+import { SidebarContentLayers } from '@components/Sidebar/SidebarContentLayers'
+import { SidebarContentFilter } from '@components/Sidebar/SidebarContentFilter'
 
 import { Layers, Filter, Info } from '@components/Icons'
-import { SidebarNav } from '@components/SidebarNav'
+import { SidebarNav } from '@components/Sidebar/SidebarNav'
 import { MapNav } from '@components/MapNav'
 
 import { SnowNav } from '@components/SnowNav'
@@ -103,6 +103,12 @@ const MapSite: NextPage = (mapData) => {
     //   shallow: true,
     // })
   }, [marketId])
+
+  useEffect(() => {
+    if (!sidebarInfoOpen) {
+      setMarketId(null)
+    }
+  }, [sidebarInfoOpen])
 
   useEffect(() => {
     const navViewFiltered = navViews.filter((d) => d.value === navView)
