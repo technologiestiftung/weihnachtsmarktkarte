@@ -8,11 +8,14 @@ export function filterMarkets(
   marketFilterTime
 ) {
   data.forEach((d) => {
-    d.inaktiv = d['immer-kostenlos'] === '1' && marketFilterCosts ? true : false
-    // d.inaktiv = d['international'] === '1' && marketFilterCosts ? true : false
+    const costs =
+      d['immer-kostenlos'] === '1' && marketFilterCosts ? true : false
+    const international =
+      d['merged'] === '1' && marketFilterInternational ? true : false
+    d.inaktiv = costs || international
+    const design = d['design'] === '' && marketFilterDesign ? true : false
+    d.inaktiv = costs || international || design
   })
-
-  console.log('filterMarkets', data)
 
   return data
 }

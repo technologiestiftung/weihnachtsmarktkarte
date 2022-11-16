@@ -17,7 +17,7 @@ export const SwitchWrapper: FC<SwitchWrapperType> = ({
     <>
       <div className="text-bold flex">
         <div className="flex-1">
-          <p className="text-sm">{text}</p>
+          <p className="text-sm pr-2">{text}</p>
         </div>
         <Switch
           checked={enabled}
@@ -26,7 +26,7 @@ export const SwitchWrapper: FC<SwitchWrapperType> = ({
             enabled ? 'bg-gold' : 'bg-gray-300'
           } relative inline-flex h-6 w-11 items-center rounded-full`}
         >
-          <span className="sr-only">Enable notifications</span>
+          <span className="sr-only">enabled</span>
           <span
             className={`${
               enabled ? 'translate-x-6' : 'translate-x-1'
