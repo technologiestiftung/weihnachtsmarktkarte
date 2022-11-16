@@ -8,6 +8,7 @@ import { useState } from 'react'
 
 export interface MapComponentType {
   mapData: any
+  marketsData: any
   setMarketId: void
   marketId: string | null
   setMarketData: (time: any) => void
@@ -22,6 +23,7 @@ export interface MapComponentType {
 
 export const MapComponent: FC<MapComponentType> = ({
   mapData,
+  marketsData,
   setMarketId,
   marketId,
   setMarketData,
@@ -117,6 +119,8 @@ export const MapComponent: FC<MapComponentType> = ({
     }
   }
 
+  console.log('öööö', marketsData)
+
   return (
     <div className="h-screen w-screen">
       <Map
@@ -156,7 +160,7 @@ export const MapComponent: FC<MapComponentType> = ({
           }}
         />
 
-        {mapData.markets.map((feature: any) => (
+        {marketsData.map((feature: any) => (
           <Marker
             longitude={feature.lng}
             latitude={feature.lat}
@@ -164,7 +168,14 @@ export const MapComponent: FC<MapComponentType> = ({
             onClick={() => onMarkerCLick(feature)}
             key={feature.id}
           >
-            <img src="./stern_leuchtend.png" width="40px" />
+            <img
+              src={
+                feature.inaktiv
+                  ? './stern_inaktiv.png'
+                  : './stern_leuchtend.png'
+              }
+              width="40px"
+            />
           </Marker>
         ))}
         {showMarker && (

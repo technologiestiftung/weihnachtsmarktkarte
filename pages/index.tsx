@@ -21,6 +21,7 @@ import { SnowNav } from '@components/SnowNav'
 import { IntroModal } from '@components/IntroModal'
 
 import { getMapData } from '@lib/loadMapData'
+import { filterMarkets } from '@lib/filterMarkets'
 
 export async function getStaticProps() {
   const mapData = getMapData()
@@ -67,7 +68,7 @@ const MapSite: NextPage = (mapData) => {
   const { pathname, query, replace } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
   let [modalOpen, setModalOpen] = useState(true)
-  const [marketId, setMarketId] = useState<number | null>(null)
+  const [marketId, setMarketId] = useState<string | number | null>(null)
   const [marketData, setMarketData] = useState<any>()
   const [marketFilterInternational, setMarketFilterInternational] =
     useState<boolean>(false)
@@ -83,6 +84,9 @@ const MapSite: NextPage = (mapData) => {
 
   const [mapCenter, setMapCenter] = useState<number[]>([0, 0])
   const [mapZoom, setMapZoom] = useState<number>(10)
+
+  const [marketsData, setMarketsData] = useState<any>(mapData.markets)
+
   // if (mappedQuery.id && mappedQuery.id !== marketId) {
   //   console.log('MMMM???')
   //   setSidebarInfoOpen(true)
@@ -112,9 +116,18 @@ const MapSite: NextPage = (mapData) => {
   //   // }
   // }, [])
 
-  // when any filter is changed
+  // when any filter is changed -> filter market data
   useEffect(() => {
-    console.log('filter changed')
+    const newData = filterMarkets(
+      marketsData,
+      marketFilterInternational,
+      marketFilterCosts,
+      marketFilterDate,
+      marketFilterDesign,
+      marketFilterTime
+    )
+    // const newData 0
+    setMarketsData(JSON.parse(JSON.stringify(newData)))
   }, [
     marketFilterInternational,
     marketFilterCosts,
@@ -200,6 +213,7 @@ const MapSite: NextPage = (mapData) => {
       <SnowNav></SnowNav>
       <MapComponent
         mapData={mapData}
+        marketsData={marketsData}
         mapCenter={mapCenter}
         mapZoom={mapZoom}
         setMapZoom={setMapZoom}
