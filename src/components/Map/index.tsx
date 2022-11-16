@@ -9,7 +9,7 @@ import { useState } from 'react'
 export interface MapComponentType {
   mapData: any
   marketsData: any
-  setMarketId: void
+  setMarketId: (time: string | null | number) => void
   marketId: string | null
   setMarketData: (time: any) => void
   mapCenter?: number[]
@@ -55,16 +55,16 @@ export const MapComponent: FC<MapComponentType> = ({
     console.log('map loaded')
   }, [])
 
-  useEffect(() => {
-    console.log('filter intern')
-    if (mapRef.current) {
-      console.log('filter intern')
-      layerStyles['xmarkets'].paint['circle-color'] = marketFilterInternational
-        ? 'red'
-        : 'green'
-      // layerStyles['xmarkets'].filter = ['==', 'id', '207']
-    }
-  }, [marketFilterInternational])
+  // useEffect(() => {
+  //   console.log('filter intern')
+  //   if (mapRef.current) {
+  //     console.log('filter intern')
+  //     layerStyles['xmarkets'].paint['circle-color'] = marketFilterInternational
+  //       ? 'red'
+  //       : 'green'
+  //     // layerStyles['xmarkets'].filter = ['==', 'id', '207']
+  //   }
+  // }, [marketFilterInternational])
 
   useEffect(() => {
     if (mapRef.current) {
@@ -107,19 +107,17 @@ export const MapComponent: FC<MapComponentType> = ({
     }
 
     // take the first market if there are many.
-    const market = e.features.filter((d) => d.source === 'xmarkets-source')[0]
-    if (market) {
-      const marketData = JSON.parse(market.properties.data)
-      setMarketId(marketData.id)
-      setMarketData(marketData)
-      setShowMarker(true)
-      setMarkerPosition(market.geometry.coordinates)
-    } else {
-      console.log(e.features)
-    }
+    // const market = e.features.filter((d) => d.source === 'xmarkets-source')[0]
+    // if (market) {
+    //   const marketData = JSON.parse(market.properties.data)
+    //   setMarketId(marketData.id)
+    //   setMarketData(marketData)
+    //   setShowMarker(true)
+    //   setMarkerPosition(market.geometry.coordinates)
+    // } else {
+    //   console.log(e.features)
+    // }
   }
-
-  console.log('öööö', marketsData)
 
   return (
     <div className="h-screen w-screen">
