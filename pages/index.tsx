@@ -36,12 +36,12 @@ const navViews = [
     icon: <Filter color1={'black'} />,
     mobileHeight: 'half',
   },
-  {
-    value: 'layers',
-    name: 'Kartenlayers',
-    icon: <Layers color1={'black'} />,
-    mobileHeight: 'half',
-  },
+  // {
+  //   value: 'layers',
+  //   name: 'Kartenlayers',
+  //   icon: <Layers color1={'black'} />,
+  //   mobileHeight: 'half',
+  // },
   {
     value: 'info',
     name: 'information',
