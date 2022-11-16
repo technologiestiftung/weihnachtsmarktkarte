@@ -51,7 +51,7 @@ export const IntroModal: FC<IntroModalType> = ({
                 <Cross color1={'black'} />
               </button>
               <h2 className="font-bold text-2xl pb-2 pt-2">
-                Mit den Kollegen auf einen Glühwein?
+                Weihnachtsmarkt-Finder
               </h2>
               <h4 className="pb-4">
                 So lässt der Weihnachtsmarktbesuch keine Wünsche offen!

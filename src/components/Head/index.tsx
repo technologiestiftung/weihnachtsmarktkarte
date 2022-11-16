@@ -25,11 +25,11 @@ interface HeadPropType {
 }
 
 export const Head: FC<Partial<HeadPropType>> = ({
-  description = 'Interaktive Visualisierung der Berliner Haushaltsdaten',
-  siteTitle = 'Berliner Haushaltsdaten',
+  description = 'Finde Weihnachtsmärkte in Berlin',
+  siteTitle = 'Weihnachtsmarkt-Finder',
   pageTitle = 'Karte',
   fbAppId = '',
-  keywords = ['Berlin', 'Weihnachtsmärkte', 'ODIS', 'Visualisierung'],
+  keywords = ['Berlin', 'Weihnachtsmärkte', 'ODIS', 'Karte'],
   themeColor = '#091725',
   locales = ['de'],
   locale = 'de',
