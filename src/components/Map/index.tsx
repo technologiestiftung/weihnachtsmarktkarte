@@ -165,6 +165,7 @@ export const MapComponent: FC<MapComponentType> = ({
             anchor="center"
             onClick={() => onMarkerCLick(feature)}
             key={feature.id}
+            style={{ opacity: feature.inaktiv ? 0.5 : 1 }}
           >
             <img
               src={
