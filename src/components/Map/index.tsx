@@ -139,25 +139,26 @@ export const MapComponent: FC<MapComponentType> = ({
         </Source>
         <GeolocateControl
           positionOptions={{ enableHighAccuracy: true }}
-          // trackUserLocation={isMobile ? true : false}
+          trackUserLocation={true}
+          // isMobile ? true : false
           showUserLocation={true}
-          // style={'display':'none'}
+          style={{}}
           onGeolocate={(posOptions: {
             coords: {
               latitude: number
               longitude: number
             }
           }) => {
-            const { latitude, longitude } = posOptions.coords
-            onViewStateChange({
-              longitude,
-              latitude,
-              zoom: 12,
-              transitionDuration: 2000,
-            })
+            console.log(posOptions)
+            // const { latitude, longitude } = posOptions.coords
+            // onViewStateChange({
+            //   longitude,
+            //   latitude,
+            //   zoom: VIEWSTATE_ZOOMEDIN_ZOOM,
+            //   transitionDuration: VIEWSTATE_TRANSITION_DURATION,
+            // })
           }}
         />
-
         {marketsData.map((feature: any) => (
           <Marker
             longitude={feature.lng}

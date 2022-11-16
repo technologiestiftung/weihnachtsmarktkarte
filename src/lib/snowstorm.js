@@ -11,42 +11,42 @@
 /*jslint nomen: true, plusplus: true, sloppy: true, vars: true, white: true */
 /*global window, document, navigator, clearInterval, setInterval */
 
-var snowStorm = (function (window, document) {
+export function snowStorm(window, document) {
   // --- common properties ---
-
-  this.autoStart = true // Whether the snow should start automatically or not.
-  this.excludeMobile = true // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) Enable at your own risk.
-  this.flakesMax = 128 // Limit total amount of snow made (falling + sticking)
-  this.flakesMaxActive = 54 // Limit amount of snow falling at once (less = lower CPU use)
-  this.animationInterval = 33 // Theoretical "miliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
-  this.useGPU = true // Enable transform-based hardware acceleration, reduce CPU load.
-  this.className = null // CSS class name for further customization on snow elements
-  this.excludeMobile = true // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) By default, be nice.
-  this.flakeBottom = null // Integer for Y axis snow limit, 0 or null for "full-screen" snow effect
-  this.followMouse = false // Snow movement can respond to the user's mouse
-  this.snowColor = '#fff' // Don't eat (or use?) yellow snow.
-  this.snowCharacter = '&bull;' // &bull; = bullet, &middot; is square on some systems etc.
-  this.snowStick = true // Whether or not snow should "stick" at the bottom. When off, will never collect.
-  this.targetElement = null // element which snow will be appended to (null = document.body) - can be an element ID eg. 'myDiv', or a DOM node reference
-  this.useMeltEffect = true // When recycling fallen snow (or rarely, when falling), have it "melt" and fade out if browser supports it
-  this.useTwinkleEffect = false // Allow snow to randomly "flicker" in and out of view while falling
-  this.usePositionFixed = false // true = snow does not shift vertically when scrolling. May increase CPU load, disabled by default - if enabled, used only where supported
-  this.usePixelPosition = false // Whether to use pixel values for snow top/left vs. percentages. Auto-enabled if body is position:relative or targetElement is specified.
+  const that = {}
+  that.autoStart = true // Whether the snow should start automatically or not.
+  that.excludeMobile = true // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) Enable at your own risk.
+  that.flakesMax = 128 // Limit total amount of snow made (falling + sticking)
+  that.flakesMaxActive = 54 // Limit amount of snow falling at once (less = lower CPU use)
+  that.animationInterval = 33 // Theoretical "miliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
+  that.useGPU = true // Enable transform-based hardware acceleration, reduce CPU load.
+  that.className = null // CSS class name for further customization on snow elements
+  that.excludeMobile = true // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) By default, be nice.
+  that.flakeBottom = null // Integer for Y axis snow limit, 0 or null for "full-screen" snow effect
+  that.followMouse = false // Snow movement can respond to the user's mouse
+  that.snowColor = '#fff' // Don't eat (or use?) yellow snow.
+  that.snowCharacter = '&bull;' // &bull; = bullet, &middot; is square on some systems etc.
+  that.snowStick = true // Whether or not snow should "stick" at the bottom. When off, will never collect.
+  that.targetElement = 'snowId' // element which snow will be appended to (null = document.body) - can be an element ID eg. 'myDiv', or a DOM node reference
+  that.useMeltEffect = true // When recycling fallen snow (or rarely, when falling), have it "melt" and fade out if browser supports it
+  that.useTwinkleEffect = false // Allow snow to randomly "flicker" in and out of view while falling
+  that.usePositionFixed = false // true = snow does not shift vertically when scrolling. May increase CPU load, disabled by default - if enabled, used only where supported
+  that.usePixelPosition = false // Whether to use pixel values for snow top/left vs. percentages. Auto-enabled if body is position:relative or targetElement is specified.
 
   // --- less-used bits ---
 
-  this.freezeOnBlur = true // Only snow when the window is in focus (foreground.) Saves CPU.
-  this.flakeLeftOffset = 0 // Left margin/gutter space on edge of container (eg. browser window.) Bump up these values if seeing horizontal scrollbars.
-  this.flakeRightOffset = 0 // Right margin/gutter space on edge of container
-  this.flakeWidth = 8 // Max pixel width reserved for snow element
-  this.flakeHeight = 8 // Max pixel height reserved for snow element
-  this.vMaxX = 5 // Maximum X velocity range for snow
-  this.vMaxY = 4 // Maximum Y velocity range for snow
-  this.zIndex = 0 // CSS stacking order applied to each snowflake
+  that.freezeOnBlur = true // Only snow when the window is in focus (foreground.) Saves CPU.
+  that.flakeLeftOffset = 0 // Left margin/gutter space on edge of container (eg. browser window.) Bump up these values if seeing horizontal scrollbars.
+  that.flakeRightOffset = 0 // Right margin/gutter space on edge of container
+  that.flakeWidth = 8 // Max pixel width reserved for snow element
+  that.flakeHeight = 8 // Max pixel height reserved for snow element
+  that.vMaxX = 5 // Maximum X velocity range for snow
+  that.vMaxY = 4 // Maximum Y velocity range for snow
+  that.zIndex = 0 // CSS stacking order applied to each snowflake
 
-  // --- "No user-serviceable parts inside" past this point, yadda yadda ---
+  // --- "No user-serviceable parts inside" past that point, yadda yadda ---
 
-  var storm = this,
+  var storm = that,
     features,
     // UA sniffing and backCompat rendering mode checks for fixed position, etc.
     isIE = navigator.userAgent.match(/msie/i),
@@ -141,14 +141,14 @@ var snowStorm = (function (window, document) {
     return localFeatures
   })()
 
-  this.timer = null
-  this.flakes = []
-  this.disabled = false
-  this.active = false
-  this.meltFrameCount = 20
-  this.meltFrames = []
+  that.timer = null
+  that.flakes = []
+  that.disabled = false
+  that.active = false
+  that.meltFrameCount = 20
+  that.meltFrames = []
 
-  this.setXY = function (o, x, y) {
+  that.setXY = function (o, x, y) {
     if (!o) {
       return false
     }
@@ -173,7 +173,7 @@ var snowStorm = (function (window, document) {
     }
   }
 
-  this.events = (function () {
+  that.events = (function () {
     var old = !window.addEventListener && window.attachEvent,
       slice = Array.prototype.slice,
       evt = {
@@ -230,20 +230,20 @@ var snowStorm = (function (window, document) {
     return parseInt(rnd(2), 10) === 1 ? n * -1 : n
   }
 
-  this.randomizeWind = function () {
+  that.randomizeWind = function () {
     var i
     vRndX = plusMinus(rnd(storm.vMaxX, 0.2))
     vRndY = rnd(storm.vMaxY, 0.2)
-    if (this.flakes) {
-      for (i = 0; i < this.flakes.length; i++) {
-        if (this.flakes[i].active) {
-          this.flakes[i].setVelocities()
+    if (that.flakes) {
+      for (i = 0; i < that.flakes.length; i++) {
+        if (that.flakes[i].active) {
+          that.flakes[i].setVelocities()
         }
       }
     }
   }
 
-  this.scrollHandler = function () {
+  that.scrollHandler = function () {
     var i
     // "attach" snowflakes to bottom of window if no absolute bottom value was given
     scrollY = storm.flakeBottom
@@ -266,7 +266,7 @@ var snowStorm = (function (window, document) {
     }
   }
 
-  this.resizeHandler = function () {
+  that.resizeHandler = function () {
     if (window.innerWidth || window.innerHeight) {
       screenX = window.innerWidth - 16 - storm.flakeRightOffset
       screenY = storm.flakeBottom || window.innerHeight
@@ -287,14 +287,14 @@ var snowStorm = (function (window, document) {
     screenX2 = parseInt(screenX / 2, 10)
   }
 
-  this.resizeHandlerAlt = function () {
+  that.resizeHandlerAlt = function () {
     screenX = storm.targetElement.offsetWidth - storm.flakeRightOffset
     screenY = storm.flakeBottom || storm.targetElement.offsetHeight
     screenX2 = parseInt(screenX / 2, 10)
     docHeight = document.body.offsetHeight
   }
 
-  this.freeze = function () {
+  that.freeze = function () {
     // pause animation
     if (!storm.disabled) {
       storm.disabled = 1
@@ -304,7 +304,7 @@ var snowStorm = (function (window, document) {
     storm.timer = null
   }
 
-  this.resume = function () {
+  that.resume = function () {
     if (storm.disabled) {
       storm.disabled = 0
     } else {
@@ -313,7 +313,7 @@ var snowStorm = (function (window, document) {
     storm.timerInit()
   }
 
-  this.toggleSnow = function () {
+  that.toggleSnow = function () {
     if (!storm.flakes.length) {
       // first run
       storm.start()
@@ -329,11 +329,11 @@ var snowStorm = (function (window, document) {
     }
   }
 
-  this.stop = function () {
+  that.stop = function () {
     var i
-    this.freeze()
-    for (i = 0; i < this.flakes.length; i++) {
-      this.flakes[i].o.style.display = 'none'
+    that.freeze()
+    for (i = 0; i < that.flakes.length; i++) {
+      that.flakes[i].o.style.display = 'none'
     }
     storm.events.remove(window, 'scroll', storm.scrollHandler)
     storm.events.remove(window, 'resize', storm.resizeHandler)
@@ -348,50 +348,50 @@ var snowStorm = (function (window, document) {
     }
   }
 
-  this.show = function () {
+  that.show = function () {
     var i
-    for (i = 0; i < this.flakes.length; i++) {
-      this.flakes[i].o.style.display = 'block'
+    for (i = 0; i < that.flakes.length; i++) {
+      that.flakes[i].o.style.display = 'block'
     }
   }
 
-  this.SnowFlake = function (type, x, y) {
-    var s = this
-    this.type = type
-    this.x = x || parseInt(rnd(screenX - 20), 10)
-    this.y = !isNaN(y) ? y : -rnd(screenY) - 12
-    this.vX = null
-    this.vY = null
-    this.vAmpTypes = [1, 1.2, 1.4, 1.6, 1.8] // "amplification" for vX/vY (based on flake size/type)
-    this.vAmp = this.vAmpTypes[this.type] || 1
-    this.melting = false
-    this.meltFrameCount = storm.meltFrameCount
-    this.meltFrames = storm.meltFrames
-    this.meltFrame = 0
-    this.twinkleFrame = 0
-    this.active = 1
-    this.fontSize = 10 + (this.type / 5) * 10
-    this.o = document.createElement('div')
-    this.o.innerHTML = storm.snowCharacter
+  that.SnowFlake = function (type, x, y) {
+    var s = that
+    that.type = type
+    that.x = x || parseInt(rnd(screenX - 20), 10)
+    that.y = !isNaN(y) ? y : -rnd(screenY) - 12
+    that.vX = null
+    that.vY = null
+    that.vAmpTypes = [1, 1.2, 1.4, 1.6, 1.8] // "amplification" for vX/vY (based on flake size/type)
+    that.vAmp = that.vAmpTypes[that.type] || 1
+    that.melting = false
+    that.meltFrameCount = storm.meltFrameCount
+    that.meltFrames = storm.meltFrames
+    that.meltFrame = 0
+    that.twinkleFrame = 0
+    that.active = 1
+    that.fontSize = 10 + (that.type / 5) * 10
+    that.o = document.createElement('div')
+    that.o.innerHTML = storm.snowCharacter
     if (storm.className) {
-      this.o.setAttribute('class', storm.className)
+      that.o.setAttribute('class', storm.className)
     }
-    this.o.style.color = storm.snowColor
-    this.o.style.position = fixedForEverything ? 'fixed' : 'absolute'
+    that.o.style.color = storm.snowColor
+    that.o.style.position = fixedForEverything ? 'fixed' : 'absolute'
     if (storm.useGPU && features.transform.prop) {
       // GPU-accelerated snow.
-      this.o.style[features.transform.prop] = 'translate3d(0px, 0px, 0px)'
+      that.o.style[features.transform.prop] = 'translate3d(0px, 0px, 0px)'
     }
-    this.o.style.width = storm.flakeWidth + 'px'
-    this.o.style.height = storm.flakeHeight + 'px'
-    this.o.style.fontFamily = 'arial,verdana'
-    this.o.style.cursor = 'default'
-    this.o.style.overflow = 'hidden'
-    this.o.style.fontWeight = 'normal'
-    this.o.style.zIndex = storm.zIndex
-    docFrag.appendChild(this.o)
+    that.o.style.width = storm.flakeWidth + 'px'
+    that.o.style.height = storm.flakeHeight + 'px'
+    that.o.style.fontFamily = 'arial,verdana'
+    that.o.style.cursor = 'default'
+    that.o.style.overflow = 'hidden'
+    that.o.style.fontWeight = 'normal'
+    that.o.style.zIndex = storm.zIndex
+    docFrag.appendChild(that.o)
 
-    this.refresh = function () {
+    that.refresh = function () {
       if (isNaN(s.x) || isNaN(s.y)) {
         // safety check
         return false
@@ -399,7 +399,7 @@ var snowStorm = (function (window, document) {
       storm.setXY(s.o, s.x, s.y)
     }
 
-    this.stick = function () {
+    that.stick = function () {
       if (
         noFixed ||
         (storm.targetElement !== document.documentElement &&
@@ -417,7 +417,7 @@ var snowStorm = (function (window, document) {
       }
     }
 
-    this.vCheck = function () {
+    that.vCheck = function () {
       if (s.vX >= 0 && s.vX < 0.2) {
         s.vX = 0.2
       } else if (s.vX < 0 && s.vX > -0.2) {
@@ -428,7 +428,7 @@ var snowStorm = (function (window, document) {
       }
     }
 
-    this.move = function () {
+    that.move = function () {
       var vX = s.vX * windOffset,
         yDiff
       s.x += vX
@@ -483,25 +483,25 @@ var snowStorm = (function (window, document) {
       }
     }
 
-    this.animate = function () {
+    that.animate = function () {
       // main animation loop
       // move, check status, die etc.
       s.move()
     }
 
-    this.setVelocities = function () {
+    that.setVelocities = function () {
       s.vX = vRndX + rnd(storm.vMaxX * 0.12, 0.1)
       s.vY = vRndY + rnd(storm.vMaxY * 0.12, 0.1)
     }
 
-    this.setOpacity = function (o, opacity) {
+    that.setOpacity = function (o, opacity) {
       if (!opacitySupported) {
         return false
       }
       o.style.opacity = opacity
     }
 
-    this.melt = function () {
+    that.melt = function () {
       if (!storm.useMeltEffect || !s.melting) {
         s.recycle()
       } else {
@@ -521,7 +521,7 @@ var snowStorm = (function (window, document) {
       }
     }
 
-    this.recycle = function () {
+    that.recycle = function () {
       s.o.style.display = 'none'
       s.o.style.position = fixedForEverything ? 'fixed' : 'absolute'
       s.o.style.bottom = 'auto'
@@ -543,11 +543,11 @@ var snowStorm = (function (window, document) {
       s.active = 1
     }
 
-    this.recycle() // set up x/y coords etc.
-    this.refresh()
+    that.recycle() // set up x/y coords etc.
+    that.refresh()
   }
 
-  this.snow = function () {
+  that.snow = function () {
     var active = 0,
       flake = null,
       i,
@@ -572,7 +572,7 @@ var snowStorm = (function (window, document) {
     }
   }
 
-  this.mouseMove = function (e) {
+  that.mouseMove = function (e) {
     if (!storm.followMouse) {
       return true
     }
@@ -585,9 +585,12 @@ var snowStorm = (function (window, document) {
     }
   }
 
-  this.createSnow = function (limit, allowInactive) {
+  console.log('ÖÖÖÖÖ')
+
+  that.createSnow = function (limit, allowInactive) {
     var i
     for (i = 0; i < limit; i++) {
+      console.log('NNNNNNN')
       storm.flakes[storm.flakes.length] = new storm.SnowFlake(
         parseInt(rnd(flakeTypes), 10)
       )
@@ -598,12 +601,12 @@ var snowStorm = (function (window, document) {
     storm.targetElement.appendChild(docFrag)
   }
 
-  this.timerInit = function () {
+  that.timerInit = function () {
     storm.timer = true
     storm.snow()
   }
 
-  this.init = function () {
+  that.init = function () {
     var i
     for (i = 0; i < storm.meltFrameCount; i++) {
       storm.meltFrames.push(1 - i / storm.meltFrameCount)
@@ -630,7 +633,7 @@ var snowStorm = (function (window, document) {
     storm.timerInit()
   }
 
-  this.start = function (bFromOnLoad) {
+  that.start = function (bFromOnLoad) {
     if (!didInit) {
       didInit = true
     } else if (bFromOnLoad) {
@@ -675,6 +678,7 @@ var snowStorm = (function (window, document) {
     }
     fixedForEverything = storm.usePositionFixed
     if (screenX && screenY && !storm.disabled) {
+      console.log('iniiiitt')
       storm.init()
       storm.active = true
     }
@@ -701,5 +705,5 @@ var snowStorm = (function (window, document) {
     storm.events.add(window, 'load', doStart, false)
   }
 
-  return this
-})(window, document)
+  return that
+}

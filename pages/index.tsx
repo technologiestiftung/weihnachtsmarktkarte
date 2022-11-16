@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import { useState, useEffect } from 'react'
+// import { snowStorm } from '@lib/snowstorm'
 
 import { useRouter } from 'next/router'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
@@ -35,12 +36,12 @@ const navViews = [
     icon: <Filter color1={'black'} />,
     mobileHeight: 'half',
   },
-  {
-    value: 'layers',
-    name: 'Kartenlayers',
-    icon: <Layers color1={'black'} />,
-    mobileHeight: 'half',
-  },
+  // {
+  //   value: 'layers',
+  //   name: 'Kartenlayers',
+  //   icon: <Layers color1={'black'} />,
+  //   mobileHeight: 'half',
+  // },
   {
     value: 'info',
     name: 'information',
@@ -58,6 +59,7 @@ const MapSite: NextPage = (mapData) => {
   //   document.body.appendChild(script)
   //   console.log('LOADED')
   // }
+  //
 
   // if (typeof window != 'undefined' && window.snowStorm && !snowLoaded) {
   //   snowLoaded = true
@@ -101,20 +103,19 @@ const MapSite: NextPage = (mapData) => {
     // }
   }, [marketId])
 
-  // useEffect(() => {
-  //   // let snowLoaded = false
-  //   // if (typeof window != 'undefined' && !snowLoaded) {
-  //   //   snowLoaded = true
-  //   //   const script = document.createElement('script')
-  //   //   script.src = 'snowstorm.js'
-  //   //   script.async = true
-  //   //   document.body.appendChild(script)
-  //   //   console.log('LOADED')
-
-  //   //   window.snowStorm.stop()
-  //   //   window.snowStorm.toggleSnow()
-  //   // }
-  // }, [])
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const script = document.createElement('script')
+      script.src = 'snowstorm.js'
+      script.async = true
+      document.body.appendChild(script)
+      setTimeout(() => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        window.snowStorm.start()
+      }, 1000)
+    }
+  }, [])
 
   // when any filter is changed -> filter market data
   useEffect(() => {
@@ -155,6 +156,10 @@ const MapSite: NextPage = (mapData) => {
   return (
     <>
       <Head />
+      <div
+        id="snowId"
+        className="w-full h-full absolute z-50 pointer-events-none"
+      ></div>
       <IntroModal
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
