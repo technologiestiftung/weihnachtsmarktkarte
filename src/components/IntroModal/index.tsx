@@ -57,12 +57,12 @@ export const IntroModal: FC<IntroModalType> = ({
                 So lässt der Weihnachtsmarktbesuch keine Wünsche offen!
               </h4>
               <p className="pb-4">
-                Die Berliner Weihnachtsmarktkarte zeigt das vielfältige Angebot
-                der Stadt von traditionell bis internationalen Flair. Mithilfe
+                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot
+                der Berliner Weihnachtsmärkte von traditionellem bis internationalem Flair. Mit Hilfe
                 der Filterfunktionen können Weihnachtsmärkte nach Wunschdatum
                 und Öffnungszeiten angezeigt werden. Angereichert mit offenen
                 Daten zu Toilettenstandorten und Sitzbänken wird damit schon der
-                diesjährige Weihnachtmarktbesuch ein rundum gelungenes Fest.
+                diesjährige Weihnachtmarktbesuch zu einem rundum gelungenen Fest.
               </p>
 
               <button
