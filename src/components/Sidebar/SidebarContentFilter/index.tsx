@@ -9,8 +9,8 @@ import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 export interface SidebarContentFilterType {
   marketFilterInternational: boolean
   setMarketFilterInternational: (enabled: boolean) => void
-  marketFilterEntry: boolean
-  setMarketFilterEntry: (enabled: boolean) => void
+  marketFilterCosts: boolean
+  setMarketFilterCosts: (enabled: boolean) => void
   marketFilterDate: Date
   setMarketFilterDate: (date: Date | void) => void
   marketFilterTime: number[]
@@ -22,8 +22,8 @@ export interface SidebarContentFilterType {
 export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   marketFilterInternational,
   setMarketFilterInternational,
-  marketFilterEntry,
-  setMarketFilterEntry,
+  marketFilterCosts,
+  setMarketFilterCosts,
   marketFilterDate,
   setMarketFilterDate,
   marketFilterTime,
@@ -33,7 +33,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
 }) => {
   function resetFilter() {
     console.log('resetting')
-    setMarketFilterEntry(false)
+    setMarketFilterCosts(false)
     setMarketFilterInternational(false)
     setMarketFilterDate()
     setMarketFilterDesign(false)
@@ -65,8 +65,8 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
         <ExpandablePanel title={'Eintritt frei'} open={true}>
           <SwitchWrapper
             text={'Nur Weihnachtsmärkte, die immer kostenfrei sind anzeigen'}
-            enabled={marketFilterEntry}
-            setEnabled={setMarketFilterEntry}
+            enabled={marketFilterCosts}
+            setEnabled={setMarketFilterCosts}
           />
         </ExpandablePanel>
         <hr className="my-4" />

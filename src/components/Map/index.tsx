@@ -15,7 +15,7 @@ export interface MapComponentType {
   mapZoom?: number
   showMapLayerToilets?: boolean
   marketFilterInternational: boolean
-  marketFilterEntry: boolean
+  marketFilterCosts: boolean
   marketFilterDate: Date
   marketFilterTime: number[]
 }
@@ -29,7 +29,7 @@ export const MapComponent: FC<MapComponentType> = ({
   mapZoom,
   showMapLayerToilets,
   marketFilterInternational,
-  marketFilterEntry,
+  marketFilterCosts,
   marketFilterDate,
   // marketFilterTime
 }) => {

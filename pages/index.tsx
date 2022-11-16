@@ -71,7 +71,7 @@ const MapSite: NextPage = (mapData) => {
   const [marketData, setMarketData] = useState<any>()
   const [marketFilterInternational, setMarketFilterInternational] =
     useState<boolean>(false)
-  const [marketFilterEntry, setMarketFilterEntry] = useState<boolean>(false)
+  const [marketFilterCosts, setMarketFilterCosts] = useState<boolean>(false)
   const [marketFilterDate, setMarketFilterDate] = useState<Date>()
   const [marketFilterTime, setMarketFilterTime] = useState<number[]>()
   const [marketFilterDesign, setMarketFilterDesign] = useState<boolean>(false)
@@ -112,6 +112,18 @@ const MapSite: NextPage = (mapData) => {
   //   // }
   // }, [])
 
+  // when any filter is changed
+  useEffect(() => {
+    console.log('filter changed')
+  }, [
+    marketFilterInternational,
+    marketFilterCosts,
+    marketFilterDate,
+    marketFilterDesign,
+    marketFilterTime,
+  ])
+
+  // when the sidebar is closed -> set markerId to null
   useEffect(() => {
     if (!sidebarInfoOpen) {
       setMarketId(null)
@@ -148,8 +160,8 @@ const MapSite: NextPage = (mapData) => {
           <SidebarContentFilter
             marketFilterInternational={marketFilterInternational}
             setMarketFilterInternational={setMarketFilterInternational}
-            marketFilterEntry={marketFilterEntry}
-            setMarketFilterEntry={setMarketFilterEntry}
+            marketFilterCosts={marketFilterCosts}
+            setMarketFilterCosts={setMarketFilterCosts}
             marketFilterDate={marketFilterDate}
             setMarketFilterDate={setMarketFilterDate}
             marketFilterTime={marketFilterTime}
@@ -197,7 +209,7 @@ const MapSite: NextPage = (mapData) => {
         marketId={marketId}
         showMapLayerToilets={showMapLayerToilets}
         marketFilterInternational={marketFilterInternational}
-        marketFilterEntry={marketFilterEntry}
+        marketFilterCosts={marketFilterCosts}
         marketFilterDate={marketFilterDate}
         marketFilterTime={marketFilterTime}
       />

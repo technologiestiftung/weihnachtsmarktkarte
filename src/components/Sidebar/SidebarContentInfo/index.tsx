@@ -15,19 +15,16 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
 
       <div className="px-4">
         <p className="text-sm pb-2">
-          Für alle Glühweinverehrer:innen und Weihnachtsromantiker öffnen die
-          ersten Weihnachtsmärkte bereits Ende Oktober. Bis Weihnachten ziehen
-          dann die unterschiedlichsten Weihnachtsmärkte nach. Von traditionell
-          bis international zeigt Berlin sein vielfältiges Angebot für
-          Besucher:innen. Mit der Berliner Weihnachtsmarktkarte behaltet ihr
-          stets den Überblick, an welchen Tagen und zu welchen Uhrzeiten die
-          Weihnachtsmärkte offen haben. Entdeckt außerdem, welche
-          Weihnachtsmärkte kostenlos sind und wo für euch spannende Attraktionen
-          geboten sind. Falls ihr mal länger auf eure Begleitung warten müsst,
-          könnt ihr dank offener Daten Sitzbänke unweit der Weihnachtsmärkte
-          finden, genauso wie öffentliche Toiletten. Mit einem Klick über die
-          Teilenfunktion könnt ihr euren neuen Lieblingsplatz mit anderen
-          teilen.
+          Von klassisch über kitschig bis krawallig: Bei den Berliner
+          Weihnachtsmärkten ist für jeden Geschmack etwas dabei. Mit der
+          Berliner Weihnachtsmarktkarte behaltet ihr stets den Überblick, an
+          welchen Tagen und zu welchen Uhrzeiten die Weihnachtsmärkte offen
+          haben. Entdeckt außerdem, welche Weihnachtsmärkte kostenlos sind und
+          wo für euch spannende Attraktionen geboten sind. Falls ihr mal länger
+          auf eure Begleitung warten müsst, könnt ihr dank offener Daten
+          Sitzbänke unweit der Weihnachtsmärkte finden, genauso wie öffentliche
+          Toiletten. Mit einem Klick über die Teilenfunktion könnt ihr euren
+          neuen Lieblingsplatz mit anderen teilen.
         </p>
         <p className="text-sm pb-2">
           Diese Anwendung basiert komplett auf offenen Daten. Open Data ist
