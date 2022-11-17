@@ -30,9 +30,38 @@ body {
 }
 
 
+
+.maplibregl-ctrl-geolocate span {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI2IDI2Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zIC0zKSI+PHBvbHlnb24gcG9pbnRzPSIwIDAgMzIgMCAzMiAzMiAwIDMyIi8+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTIiIHN0cm9rZT0iIzExMTgyNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz48cG9seWdvbiBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBwb2ludHM9IjE2IDIyLjY2NyAxNC42NjcgMTcuMzMzIDkuMzMzIDE2IDIxLjMzMyAxMC42NjciLz48L2c+PC9zdmc+") !important;
+}
+
+.maplibregl-ctrl-geolocate span {
+  background-color: #091725;
+  color: #BDA33B;
+}
+
+/* .maplibregl-ctrl-geolocate {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0px;
+  right:0px
+} */
+.maplibregl-ctrl{
+  position: fixed;
+bottom: 16px;
+right: 19px;
+cursor: pointer;
+}
 .scrolling .scroll-shadow{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+
+
+
+
+
+
 

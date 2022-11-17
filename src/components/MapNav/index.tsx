@@ -15,7 +15,7 @@ export const MapNav: FC<MapNavType> = ({ mapZoom, setMapZoom }) => {
   return (
     <nav
       className={classNames(
-        'fixed bottom-0 p-6 ease-in-out duration-300 z-10 right-0'
+        'fixed bottom-10 p-6 ease-in-out duration-300 z-10 right-0'
       )}
     >
       <div>
@@ -33,14 +33,10 @@ export const MapNav: FC<MapNavType> = ({ mapZoom, setMapZoom }) => {
         >
           <Minus />
         </button>
-        <button
-          title=""
-          // className={navClasses}
-          onClick={() => setMapZoom(mapZoom - 1)}
-          className={'maplibregl-ctrl-geolocate mapboxgl-ctrl-geolocate'}
-        >
+        {/* <button title="" className={navClasses}>
+          {' '}
           <Geolocate />
-        </button>
+        </button> */}
       </div>
     </nav>
   )

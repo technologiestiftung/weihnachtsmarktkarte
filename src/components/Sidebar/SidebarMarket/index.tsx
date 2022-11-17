@@ -22,11 +22,9 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
 
   function TimeExeption({ hoursExc }) {
-    console.log(hoursExc)
-
     const data = hoursExc.split(',')
     return (
-      <div className="text-sm italic pt-4 text-gray-500">
+      <div className="text-sm italic pt-2 text-gray-500">
         <p>* Ausnahmen:</p>
         {data.map((d: string) => (
           <p>{d.split('=')[0] + ': ' + d.split('=')[1]}</p>
@@ -43,7 +41,11 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
     <>
       <SidebarHeader text={marketData.name} fontSize="text-lg" />
       <SidebarBody>
-        <img className="bg-darkblue w-full h-[200px] mb-4" src="" alt="" />
+        <img
+          className="bg-darkblue w-full h-[200px] mb-4"
+          src={marketData.image === '' ? '' : './images/' + marketData.image}
+          alt=""
+        />
 
         <MarketInfo title="Adresse" icon={<GeoMarker />}>
           <p className="text-sm">
