@@ -30,10 +30,6 @@ export const MapComponent: FC<MapComponentType> = ({
   mapCenter,
   mapZoom,
   showMapLayerToilets,
-  marketFilterInternational,
-  marketFilterCosts,
-  marketFilterDate,
-  // marketFilterTime
 }) => {
   const mapRef = useRef()
   const startMapView = {

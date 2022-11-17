@@ -55,7 +55,7 @@ export const IntroModal: FC<IntroModalType> = ({
                 <img
                   src="./stern_ausgewaehlt.png"
                   alt="stern"
-                  className="inline absolute -mt-4 ml-6 w-10"
+                  className="inline absolute mt-0 md:-mt-2 ml-6 w-10"
                 />
               </h2>
               <h4 className="pb-4">

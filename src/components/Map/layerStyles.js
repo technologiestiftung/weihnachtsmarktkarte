@@ -3,7 +3,7 @@ export const layerStyles = {
     id: 'layer-toilets',
     type: 'circle',
     paint: {
-      'circle-radius': 2,
+      'circle-radius': 3,
       'circle-color': '#3134dd',
     },
   },

@@ -226,11 +226,6 @@ const MapSite: NextPage = (mapData) => {
         marketData={marketData}
         setMarketData={setMarketData}
         marketId={marketId}
-        showMapLayerToilets={showMapLayerToilets}
-        marketFilterInternational={marketFilterInternational}
-        marketFilterCosts={marketFilterCosts}
-        marketFilterDate={marketFilterDate}
-        marketFilterTime={marketFilterTime}
       />
       <MapNav
         mapZoom={mapZoom}
