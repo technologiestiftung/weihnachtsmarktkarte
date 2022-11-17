@@ -5,6 +5,7 @@ import { SwitchWrapper } from '@components/SwitchWrapper'
 import { FilterDate } from '@components/FilterDate'
 import { FilterTime } from '@components/FilterTime'
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
+import { SidebarBody } from '@components/Sidebar/SidebarBody'
 
 export interface SidebarContentFilterType {
   marketFilterInternational: boolean
@@ -43,7 +44,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
     <>
       <SidebarHeader text="Filtern" />
 
-      <div className="px-4">
+      <SidebarBody>
         <p className="text-sm pb-4">
           Stellen Sie hier Ihre gewünschten Filter ein.{' '}
         </p>
@@ -93,7 +94,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             Filter zurücksetzen
           </button>
         </div>
-      </div>
+      </SidebarBody>
     </>
   )
 }

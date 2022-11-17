@@ -1,27 +1,29 @@
 import { FC } from 'react'
 import classNames from 'classnames'
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
+import { SidebarBody } from '@components/Sidebar/SidebarBody'
+
 import { CitylabLogo } from '@components/Logos/CitylabLogo'
 import { OdisLogo } from '@components/Logos/OdisLogo'
 import { SenWebLogo } from '@components/Logos/SenWebLogo'
 import { TsbLogo } from '@components/Logos/TsbLogo'
 
-export interface SidebarContentInfoType { }
+export interface SidebarContentInfoType {}
 
-export const SidebarContentInfo: FC<SidebarContentInfoType> = ({ }) => {
+export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
   return (
     <>
       <SidebarHeader text="Über das Projekt" />
 
-      <div className="px-4">
+      <SidebarBody>
         <p className="text-sm pb-2">
           Von klassisch über kitschig bis krawallig: Bei den Berliner
           Weihnachtsmärkten ist für jeden Geschmack etwas dabei. Mit dem
           Berliner Weihnachtsmarkt-Finder behaltet ihr stets den Überblick, an
-          welchen Tagen und zu welchen Uhrzeiten welche Weihnachtsmärkte zu einem Besuch einladen.
-          Entdeckt außerdem, welche Weihnachtsmärkte kostenlos sind und wo spannende Events
-          stattfinden. Falls ihr mal länger
-          auf eure Begleitung warten müsst, könnt ihr dank offener Daten
+          welchen Tagen und zu welchen Uhrzeiten welche Weihnachtsmärkte zu
+          einem Besuch einladen. Entdeckt außerdem, welche Weihnachtsmärkte
+          kostenlos sind und wo spannende Events stattfinden. Falls ihr mal
+          länger auf eure Begleitung warten müsst, könnt ihr dank offener Daten
           Sitzbänke unweit der Weihnachtsmärkte finden, genauso wie öffentliche
           Toiletten. Mit einem Klick über die Teilen-Funktion könnt ihr anderen
           euren Lieblingsweihnachtsmarkt mitteilen.
@@ -63,7 +65,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({ }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Data Informationsstelle Berlin"
-            // className={}
+              // className={}
             >
               <OdisLogo className={`w-40`} />
             </a>
@@ -75,7 +77,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({ }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="CityLAB Berlin"
-            // className={}
+              // className={}
             >
               <CitylabLogo className={`w-36`} />
             </a>
@@ -85,7 +87,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({ }) => {
             <SenWebLogo className={`w-40`} />
           </div>
         </section>
-      </div>
+      </SidebarBody>
       <footer className={classNames('mt-8 bg-gray-200 p-4', 'flex flex-wrap')}>
         <span className="text-xs w-full mb-4">
           © 2022 Technologiestiftung Berlin
