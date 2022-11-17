@@ -158,7 +158,7 @@ const MapSite: NextPage = (mapData) => {
       <Head />
       <div
         id="snowId"
-        className="w-full h-full absolute z-50 pointer-events-none"
+        className="w-full h-full absolute z-50 pointer-events-none overflow-hidden"
       ></div>
       <IntroModal
         modalOpen={modalOpen}

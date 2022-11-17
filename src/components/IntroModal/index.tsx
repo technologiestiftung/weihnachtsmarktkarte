@@ -52,17 +52,23 @@ export const IntroModal: FC<IntroModalType> = ({
               </button>
               <h2 className="font-bold text-2xl pb-2 pt-2">
                 Weihnachtsmarkt-Finder
+                <img
+                  src="./stern_ausgewaehlt.png"
+                  alt="stern"
+                  className="inline absolute -mt-4 ml-6 w-10"
+                />
               </h2>
               <h4 className="pb-4">
                 So lässt der Weihnachtsmarktbesuch keine Wünsche offen!
               </h4>
               <p className="pb-4">
-                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot
-                der Berliner Weihnachtsmärkte von traditionellem bis internationalem Flair. Mit Hilfe
-                der Filterfunktionen können Weihnachtsmärkte nach Wunschdatum
-                und Öffnungszeiten angezeigt werden. Angereichert mit offenen
-                Daten zu Toilettenstandorten und Sitzbänken wird damit schon der
-                diesjährige Weihnachtmarktbesuch zu einem rundum gelungenen Fest.
+                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot der
+                Berliner Weihnachtsmärkte von traditionellem bis internationalem
+                Flair. Mit Hilfe der Filterfunktionen können Weihnachtsmärkte
+                nach Wunschdatum und Öffnungszeiten angezeigt werden.
+                Angereichert mit offenen Daten zu Toilettenstandorten und
+                Sitzbänken wird damit schon der diesjährige Weihnachtmarktbesuch
+                zu einem rundum gelungenen Fest.
               </p>
 
               <button

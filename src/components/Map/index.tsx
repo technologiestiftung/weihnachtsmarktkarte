@@ -99,24 +99,13 @@ export const MapComponent: FC<MapComponentType> = ({
     setMarkerPosition([feature.lng, feature.lat])
   }
 
-  const onMapCLick = (e): void => {
-    if (!e.features || !e.features.length) {
+  const onMapCLick = (e: any): void => {
+    console.log('ÖÖÖÖ', e, e?.originalEvent?.originalTarget)
+
+    if (!e?.originalEvent?.originalTarget) {
       setMarketId(null)
-      setShowMarker(false)
       return
     }
-
-    // take the first market if there are many.
-    // const market = e.features.filter((d) => d.source === 'xmarkets-source')[0]
-    // if (market) {
-    //   const marketData = JSON.parse(market.properties.data)
-    //   setMarketId(marketData.id)
-    //   setMarketData(marketData)
-    //   setShowMarker(true)
-    //   setMarkerPosition(market.geometry.coordinates)
-    // } else {
-    //   console.log(e.features)
-    // }
   }
 
   return (
@@ -125,15 +114,10 @@ export const MapComponent: FC<MapComponentType> = ({
         mapLib={maplibregl}
         initialViewState={{ ...startMapView }}
         mapStyle={mapStyle()}
-        // onClick={onMapCLick}
-        // interactiveLayerIds={['layer-toilets', 'layer-xmarkets']}
+        onClick={onMapCLick}
         ref={mapRef}
         onLoad={onMapLoad}
       >
-        {/* <Source id="xmarkets-source" type="geojson" data={mapData.xmarkets}>
-          <Layer {...layerStyles['xmarkets']} />
-        </Source> */}
-
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
           <Layer {...layerStyles['toilets']} {...toiletLayerVisibilty} />
         </Source>
@@ -174,7 +158,7 @@ export const MapComponent: FC<MapComponentType> = ({
                   ? './stern_inaktiv.png'
                   : './stern_leuchtend.png'
               }
-              width="40px"
+              width="20px"
             />
           </Marker>
         ))}

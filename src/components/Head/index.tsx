@@ -87,7 +87,7 @@ export const Head: FC<Partial<HeadPropType>> = ({
 
       <link rel="apple-touch-icon" href="/favicons/star.png" />
 
-      <link href={faviconPath} type="image/x-icon" rel="shortcut icon" />
+      {/* <link href={faviconPath} type="image/x-icon" rel="shortcut icon" /> */}
       <link href={faviconPNGPath} type="image/png" rel="icon" />
 
       <link rel="manifest" href="/manifest.webmanifest" />
