@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useCallback } from 'react'
+import { FC, useEffect, useRef, useCallback, useMemo } from 'react'
 import Map, { Source, Layer, Marker, GeolocateControl } from 'react-map-gl'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
@@ -100,13 +100,34 @@ export const MapComponent: FC<MapComponentType> = ({
   }
 
   const onMapCLick = (e: any): void => {
-    console.log('ÖÖÖÖ', e, e?.originalEvent?.originalTarget)
-
-    if (!e?.originalEvent?.originalTarget) {
+    if (e?.originalEvent?.originalTarget?.nodeName === 'CANVAS') {
       setMarketId(null)
       return
     }
   }
+
+  const markers = useMemo(
+    () =>
+      marketsData.map((feature: any) => (
+        <Marker
+          longitude={feature.lng}
+          latitude={feature.lat}
+          anchor="center"
+          onClick={() => onMarkerCLick(feature)}
+          key={feature.id}
+          style={{ opacity: feature.inaktiv ? 0.5 : 1, cursor: 'pointer' }}
+        >
+          <img
+            src={
+              feature.inaktiv ? './stern_inaktiv.png' : './stern_leuchtend.png'
+            }
+            width="20px"
+          />
+        </Marker>
+      )),
+
+    [marketsData]
+  )
 
   return (
     <div className="h-screen w-screen">
@@ -143,25 +164,7 @@ export const MapComponent: FC<MapComponentType> = ({
             // })
           }}
         />
-        {marketsData.map((feature: any) => (
-          <Marker
-            longitude={feature.lng}
-            latitude={feature.lat}
-            anchor="center"
-            onClick={() => onMarkerCLick(feature)}
-            key={feature.id}
-            style={{ opacity: feature.inaktiv ? 0.5 : 1 }}
-          >
-            <img
-              src={
-                feature.inaktiv
-                  ? './stern_inaktiv.png'
-                  : './stern_leuchtend.png'
-              }
-              width="20px"
-            />
-          </Marker>
-        ))}
+        {markers}
         {showMarker && (
           <Marker
             longitude={markerPosition[0]}

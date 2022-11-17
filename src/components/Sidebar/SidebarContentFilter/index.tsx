@@ -77,14 +77,14 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             setEnabled={setMarketFilterInternational}
           />
         </ExpandablePanel>
-        <hr className="my-4" />
+        {/* <hr className="my-4" />
         <ExpandablePanel title={'Designmärkte'} open={true}>
           <SwitchWrapper
             text={'Nur Design-Weihnachtmärkte anzeigen. '}
             enabled={marketFilterDesign}
             setEnabled={setMarketFilterDesign}
           />
-        </ExpandablePanel>
+        </ExpandablePanel> */}
         <div className="text-center pt-8">
           <button
             className="mb-8 xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"

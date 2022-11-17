@@ -13,8 +13,6 @@ export function filterMarkets(
     const international =
       d['merged'] === '1' && marketFilterInternational ? true : false
     d.inaktiv = costs || international
-    const design = d['design'] === '' && marketFilterDesign ? true : false
-    d.inaktiv = costs || international || design
   })
 
   return data
