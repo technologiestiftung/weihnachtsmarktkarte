@@ -3,7 +3,14 @@ import classNames from 'classnames'
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 import { SidebarBody } from '@components/Sidebar/SidebarBody'
 import { MarketInfo } from '@components/MarketInfo'
-import { GeoMarker, Euro, Clock, Globe, Info } from '@components/Icons/'
+import {
+  GeoMarker,
+  Euro,
+  Clock,
+  Globe,
+  Info,
+  Calendar,
+} from '@components/Icons/'
 
 export interface SidebarMarketType {
   marketData: any
@@ -18,7 +25,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
     <>
       <SidebarHeader text={marketData.name} fontSize="text-lg" />
       <SidebarBody>
-        <img className="bg-darkblue w-full h-[200px] pb-4" src="" alt="" />
+        <img className="bg-darkblue w-full h-[200px] mb-4" src="" alt="" />
 
         <MarketInfo title="Adresse" icon={<GeoMarker />}>
           <p className="text-sm">
@@ -26,7 +33,32 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           </p>
         </MarketInfo>
 
-        <MarketInfo title="Öffnungszeiten" icon={<Clock />}>
+        <MarketInfo
+          title={marketData['closed-exc'] !== '0' ? 'Datum *' : 'Datum'}
+          icon={<Calendar />}
+        >
+          <p className="text-sm pb-2">
+            {marketData.von} bis {marketData.bis}
+          </p>
+
+          {marketData['closed-exc'] !== '0' && (
+            <p className="text-sm italic pt-4 text-gray-500">
+              * geschlossen am {marketData['closed-exc']}
+              {/* {marketData['closed-exc']
+                .split(',')
+                .map((date: string) => date.trim())} */}
+            </p>
+          )}
+        </MarketInfo>
+
+        <MarketInfo
+          title={
+            marketData['hours-exc'] !== '0'
+              ? 'Öffnungszeiten *'
+              : 'Öffnungszeiten'
+          }
+          icon={<Clock />}
+        >
           <ul className="columns-2 text-sm">
             <li className="font-bold pb-2">Wochentag</li>
             {days.map((day: string) => (
@@ -37,6 +69,14 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
               <li>{marketData[day] === '0' ? '-' : marketData[day]}</li>
             ))}
           </ul>
+
+          {marketData['hours-exc'] !== '0' && (
+            <p className="text-sm italic pt-4 text-gray-500">* Ausnahmen:</p>
+
+            // marketData['hours-exc']
+            //     .split(',')
+            //     .map((ex: string) => ex.split(':')[0] + '-' + ex.split(':')[1])
+          )}
         </MarketInfo>
 
         <MarketInfo title="Eintritt" icon={<Euro />}>
@@ -67,6 +107,8 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
             <p className="text-sm">{marketData.bemerkungen}</p>
           </MarketInfo>
         )}
+
+        <div className="mb-10"></div>
 
         {/* {days.map((day: string) => 
          <div>
