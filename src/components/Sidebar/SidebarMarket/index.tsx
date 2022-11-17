@@ -21,6 +21,24 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
 
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
 
+  function TimeExeption({ hoursExc }) {
+    console.log(hoursExc)
+
+    const data = hoursExc.split(',')
+    return (
+      <div className="text-sm italic pt-4 text-gray-500">
+        <p>* Ausnahmen:</p>
+        {data.map((d: string) => (
+          <p>{d.split('=')[0] + ': ' + d.split('=')[1]}</p>
+        ))}
+      </div>
+    )
+    // marketData['hours-exc']
+    // .split(',')
+    // .map((ex: string) => ex.split(':')[0] + '-' + ex.split(':')[1])
+    return <h1>My favorite color is </h1>
+  }
+
   return (
     <>
       <SidebarHeader text={marketData.name} fontSize="text-lg" />
@@ -42,7 +60,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           </p>
 
           {marketData['closed-exc'] !== '0' && (
-            <p className="text-sm italic pt-4 text-gray-500">
+            <p className="text-sm italic pt-0 text-gray-500">
               * geschlossen am {marketData['closed-exc']}
               {/* {marketData['closed-exc']
                 .split(',')
@@ -71,11 +89,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           </ul>
 
           {marketData['hours-exc'] !== '0' && (
-            <p className="text-sm italic pt-4 text-gray-500">* Ausnahmen:</p>
-
-            // marketData['hours-exc']
-            //     .split(',')
-            //     .map((ex: string) => ex.split(':')[0] + '-' + ex.split(':')[1])
+            <TimeExeption hoursExc={marketData['hours-exc']} />
           )}
         </MarketInfo>
 
