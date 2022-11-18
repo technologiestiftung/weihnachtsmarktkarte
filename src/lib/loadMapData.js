@@ -16,6 +16,7 @@ export function getMapData() {
     allowedIds.push(Number(element.id))
     element.lng = Number(element.lng.replace(',', '.'))
     element.lat = Number(element.lat.replace(',', '.'))
+    element.inaktiv = false
   })
 
   return { props: { toilets: toilets, markets: data, allowedIds: allowedIds } }
