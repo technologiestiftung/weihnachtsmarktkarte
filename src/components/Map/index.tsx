@@ -11,11 +11,10 @@ export interface MapComponentType {
   mapData: any
   marketsData: any
   setMarketId: (time: string | null | number) => void
-  marketId: string | null
+  marketId: string | number | null
   setMarketData: (time: any) => void
   zoomToCenter?: number[]
   mapZoom?: number
-  showMapLayerToilets?: boolean
   marketFilterInternational: boolean
   marketFilterCosts: boolean
   marketFilterDate: Date
@@ -30,7 +29,6 @@ export const MapComponent: FC<MapComponentType> = ({
   setMarketData,
   zoomToCenter,
   mapZoom,
-  showMapLayerToilets,
 }) => {
   const isMobile = useHasMobileSize()
   const mapRef = useRef()
@@ -127,7 +125,7 @@ export const MapComponent: FC<MapComponentType> = ({
           <Layer {...layerStyles['toilets-labels']} />
           <Layer {...layerStyles['toilets-circles']} />
         </Source>
-        <GeolocateControl
+        {/* <GeolocateControl
           positionOptions={{ enableHighAccuracy: true }}
           trackUserLocation={true}
           // isMobile ? true : false
@@ -148,7 +146,7 @@ export const MapComponent: FC<MapComponentType> = ({
             //   transitionDuration: VIEWSTATE_TRANSITION_DURATION,
             // })
           }}
-        />
+        /> */}
         {markers}
         {showMarker && (
           <Marker

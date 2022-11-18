@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react'
 // import { snowStorm } from '@lib/snowstorm'
 
 import { useRouter } from 'next/router'
-import { mapRawQueryToState } from '@lib/utils/queryUtil'
-// import { useDebouncedCallback } from 'use-debounce'
 import { Head } from '@components/Head'
 
 import { MapComponent } from '@components/Map'
@@ -14,7 +12,7 @@ import { SidebarContentInfo } from '@components/Sidebar/SidebarContentInfo'
 import { SidebarContentLayers } from '@components/Sidebar/SidebarContentLayers'
 import { SidebarContentFilter } from '@components/Sidebar/SidebarContentFilter'
 
-import { Layers, Filter, Info } from '@components/Icons'
+import { Filter, Info } from '@components/Icons'
 import { SidebarNav } from '@components/Sidebar/SidebarNav'
 import { MapNav } from '@components/MapNav'
 
@@ -51,22 +49,6 @@ const navViews = [
 ]
 
 const MapSite: NextPage = (mapData) => {
-  // let snowLoaded = false
-  // if (typeof window != 'undefined' && !snowLoaded) {
-  //   const script = document.createElement('script')
-  //   script.src = 'snowstorm.js'
-  //   script.async = true
-  //   document.body.appendChild(script)
-  //   console.log('LOADED')
-  // }
-  //
-
-  // if (typeof window != 'undefined' && window.snowStorm && !snowLoaded) {
-  //   snowLoaded = true
-  //   window.snowStorm.toggleSnow()
-  //   console.log('HHHHH')
-  // }
-
   const { pathname, query, replace, isReady } = useRouter()
   let [modalOpen, setModalOpen] = useState(false)
   const [marketId, setMarketId] = useState<string | number | null>(null)
@@ -102,17 +84,14 @@ const MapSite: NextPage = (mapData) => {
         setModalOpen(false)
         setZoomToCenter([queriedMarket.lng, queriedMarket.lat])
         setMapZoom(12)
-        // setShowMarker(true)
-        // setMarkerPosition([feature.lng, feature.lat])
       }
     } else {
       setModalOpen(true)
     }
   }, [isReady])
 
+  // when the id changes -> open the sidebar and set the query
   useEffect(() => {
-    console.log('ÖÖÖÖÖÖÖÖÖÖÖÖÖ', marketId)
-
     setSidebarInfoOpen(marketId === null ? false : true)
     if (isReady) {
       replace({ pathname, query: { id: marketId } }, undefined, {
@@ -121,6 +100,7 @@ const MapSite: NextPage = (mapData) => {
     }
   }, [marketId])
 
+  // load snow on first load
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const script = document.createElement('script')
@@ -162,9 +142,11 @@ const MapSite: NextPage = (mapData) => {
     }
   }, [sidebarInfoOpen])
 
+  // when the nav view changes
+  // -> set the mobile height (it differs for some views)
+  // and close the info sidebar
   useEffect(() => {
     const navViewFiltered = navViews.filter((d) => d.value === navView)
-    console.log('navViewFiltered', navViewFiltered)
     setMobileHeight(navViewFiltered[0].mobileHeight)
     setSidebarInfoOpen(false)
   }, [navView])
