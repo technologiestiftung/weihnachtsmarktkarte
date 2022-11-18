@@ -42,10 +42,14 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
       <SidebarHeader text={marketData.name} fontSize="text-lg" />
       <SidebarBody>
         <img
-          className="bg-darkblue w-full h-[200px] mb-4"
+          className="bg-darkblue w-full h-[200px]"
           src={marketData.image === '' ? '' : './images/' + marketData.image}
           alt=""
         />
+        <p className="text-xs text-gray-300 float-right">
+          {marketData.urheberschaft}
+        </p>
+        <div className="mb-4"></div>
 
         <MarketInfo title="Adresse" icon={<GeoMarker />}>
           <p className="text-sm">
