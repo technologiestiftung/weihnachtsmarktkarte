@@ -144,7 +144,7 @@ export const MapComponent: FC<MapComponentType> = ({
       <Map
         mapLib={maplibregl}
         initialViewState={{ ...startMapView }}
-        mapStyle={mapStyle()}
+        mapStyle={process.env.NEXT_PUBLIC_MAPTILER_STYLE}
         onClick={onMapCLick}
         ref={mapRef}
         onLoad={onMapLoad}
