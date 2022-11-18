@@ -121,7 +121,7 @@ export const MapComponent: FC<MapComponentType> = ({
         // mapStyle={mapStyle()}
         onClick={onMapCLick}
         ref={mapRef}
-        onLoad={onMapLoad}
+        // onLoad={onMapLoad}
       >
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
           <Layer {...layerStyles['toilets-labels']} />
