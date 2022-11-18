@@ -5,6 +5,7 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 import mapStyle from './mapStyle'
 import { layerStyles } from './layerStyles'
 import { useState } from 'react'
+import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 
 export interface MapComponentType {
   mapData: any
@@ -12,7 +13,7 @@ export interface MapComponentType {
   setMarketId: (time: string | null | number) => void
   marketId: string | null
   setMarketData: (time: any) => void
-  mapCenter?: number[]
+  zoomToCenter?: number[]
   mapZoom?: number
   showMapLayerToilets?: boolean
   marketFilterInternational: boolean
@@ -27,10 +28,11 @@ export const MapComponent: FC<MapComponentType> = ({
   setMarketId,
   marketId,
   setMarketData,
-  mapCenter,
+  zoomToCenter,
   mapZoom,
   showMapLayerToilets,
 }) => {
+  const isMobile = useHasMobileSize()
   const mapRef = useRef()
   const startMapView = {
     longitude: 13.341760020413858,
@@ -73,8 +75,22 @@ export const MapComponent: FC<MapComponentType> = ({
   }, [mapZoom])
 
   useEffect(() => {
+    if (mapRef.current) {
+      mapRef.current.easeTo({
+        center: zoomToCenter,
+        zoom: 13,
+        padding: { left: isMobile ? 0 : 200 },
+      })
+    }
+  }, [zoomToCenter])
+
+  useEffect(() => {
     if (marketId == null) {
       setShowMarker(false)
+    } else {
+      const queriedMarket = marketsData.filter((d: any) => d.id == marketId)[0]
+      setShowMarker(true)
+      setMarkerPosition([queriedMarket.lng, queriedMarket.lat])
     }
   }, [marketId])
 
@@ -91,8 +107,6 @@ export const MapComponent: FC<MapComponentType> = ({
   const onMarkerCLick = (feature): void => {
     setMarketId(feature.id)
     setMarketData(feature)
-    setShowMarker(true)
-    setMarkerPosition([feature.lng, feature.lat])
   }
 
   const onMapCLick = (e: any): void => {

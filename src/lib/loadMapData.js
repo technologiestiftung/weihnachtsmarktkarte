@@ -14,11 +14,12 @@ export function getMapData() {
   var data = Papa.parse(xmarketsCSV, { header: true }).data.filter(
     (d) => d.lat && d.lng && d.ignore === '0'
   )
+  const allowedIds = []
   data.forEach((element, i) => {
-    element.id = i
+    allowedIds.push(Number(element.id))
     element.lng = Number(element.lng.replace(',', '.'))
     element.lat = Number(element.lat.replace(',', '.'))
   })
 
-  return { props: { toilets: toilets, markets: data } }
+  return { props: { toilets: toilets, markets: data, allowedIds: allowedIds } }
 }

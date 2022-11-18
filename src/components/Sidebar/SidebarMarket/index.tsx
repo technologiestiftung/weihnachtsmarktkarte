@@ -17,7 +17,7 @@ export interface SidebarMarketType {
 }
 
 export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
-  console.log('marketData', marketData)
+  // console.log('marketData', marketData)
 
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
 
@@ -26,8 +26,8 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
     return (
       <div className="text-sm italic pt-2 text-gray-500">
         <p>* Ausnahmen:</p>
-        {data.map((d: string) => (
-          <p>{d.split('=')[0] + ': ' + d.split('=')[1]}</p>
+        {data.map((d: string, i: number) => (
+          <p key={'ex' + i}>{d.split('=')[0] + ': ' + d.split('=')[1]}</p>
         ))}
       </div>
     )
@@ -81,12 +81,14 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
         >
           <ul className="columns-2 text-sm">
             <li className="font-bold pb-2">Wochentag</li>
-            {days.map((day: string) => (
-              <li>{day}</li>
+            {days.map((day: string, i: number) => (
+              <li key={'day' + i}>{day}</li>
             ))}
             <li className="font-bold pb-2"> Uhrzeit</li>
-            {days.map((day: string) => (
-              <li>{marketData[day] === '0' ? '-' : marketData[day]}</li>
+            {days.map((day: string, i: number) => (
+              <li key={'time' + i}>
+                {marketData[day] === '0' ? '-' : marketData[day]}
+              </li>
             ))}
           </ul>
 
