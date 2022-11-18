@@ -1,19 +1,29 @@
 // setMarketFilterDate(selected.getMonth() + 1, selected.getDate())
 function toDate(string) {
-  const dateArray = string.split('.')
+  const dateArray = string.trim().split('.')
   const newString =
-    '20' + dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0]
+    '20' + dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0] + 'T00:00:00'
   return new Date(newString)
 }
 
 function openOnDate(date, d) {
-  console.log(
-    date >= toDate(d.von) && date <= toDate(d.bis),
-    date,
-    toDate(d.von),
-    toDate(d.bis),
-    d
-  )
+  if (d['closed-exc'] !== '0') {
+    const exeptions = d['closed-exc'].split(',')
+    let isExeption = false
+    exeptions.forEach((e) => {
+      if (e === '') {
+        isExeption = false
+        return
+      }
+      if (toDate(e).toISOString() === date.toISOString()) {
+        isExeption = true
+      }
+    })
+    if (isExeption) {
+      return false
+    }
+  }
+
   if (date >= toDate(d.von) && date <= toDate(d.bis)) {
     return true
   }
