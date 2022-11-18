@@ -1,5 +1,7 @@
 import { FC } from 'react'
 import classNames from 'classnames'
+import { useCopyToClipboard } from '@lib/hooks/useCopyToClipboard'
+
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 import { SidebarBody } from '@components/Sidebar/SidebarBody'
 import { MarketInfo } from '@components/MarketInfo'
@@ -10,6 +12,7 @@ import {
   Globe,
   Info,
   Calendar,
+  Copy,
 } from '@components/Icons/'
 
 export interface SidebarMarketType {
@@ -20,6 +23,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
   // console.log('marketData', marketData)
 
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
+  const { copyToClipboard, hasCopied } = useCopyToClipboard()
 
   function TimeExeption({ hoursExc }) {
     const data = hoursExc.split(',')
@@ -50,6 +54,20 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           {marketData.urheberschaft}
         </p>
         <div className="mb-4"></div>
+
+        <div className="flex flex-row-reverse">
+          <div
+            className="cursor-pointer hover:text-gold"
+            onClick={() => copyToClipboard(`${window.location.href}`)}
+          >
+            <Copy />
+          </div>
+          {hasCopied && (
+            <div className="text-gold text-xs mr-4 mt-1">
+              Markt-Link kopiert
+            </div>
+          )}{' '}
+        </div>
 
         <MarketInfo title="Adresse" icon={<GeoMarker />}>
           <p className="text-sm">
