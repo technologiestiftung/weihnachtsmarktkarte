@@ -6,7 +6,29 @@ function toDate(string) {
   return new Date(newString)
 }
 
+function checkOpenOnDay(date, d) {
+  const daysHelper = {
+    1: 'Mo',
+    2: 'Di',
+    3: 'Mi',
+    4: 'Do',
+    5: 'Fr',
+    6: 'Sa',
+    0: 'So',
+  }
+  // console.log(
+  //   d[daysHelper[date.getDay()]] === '0',
+  //   d[daysHelper[date.getDay()]]
+  // )
+  if (d[daysHelper[date.getDay()]] === '0') {
+    return false
+  } else {
+    return true
+  }
+}
+
 function openOnDate(date, d) {
+  //check for exceptions
   if (d['closed-exc'] !== '0') {
     const exeptions = d['closed-exc'].split(',')
     let isExeption = false
@@ -24,9 +46,15 @@ function openOnDate(date, d) {
     }
   }
 
+  // if (checkOpenOnDay(date, d)) {
+  //   return true
+  // }
+
+  // check von bis
   if (date >= toDate(d.von) && date <= toDate(d.bis)) {
     return true
   }
+
   return false
 }
 
