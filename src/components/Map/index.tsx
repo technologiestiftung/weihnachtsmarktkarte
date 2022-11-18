@@ -43,26 +43,9 @@ export const MapComponent: FC<MapComponentType> = ({
   const [showMarker, setShowMarker] = useState<boolean>(true)
   const [markerPosition, setMarkerPosition] = useState<number[]>([0, 0])
 
-  const toiletLayerVisibilty = {
-    layout: {
-      visibility: 'visible',
-    },
-  }
-
-  const onMapLoad = useCallback(() => {
-    console.log('map loaded')
-  }, [])
-
-  // useEffect(() => {
-  //   console.log('filter intern')
-  //   if (mapRef.current) {
-  //     console.log('filter intern')
-  //     layerStyles['xmarkets'].paint['circle-color'] = marketFilterInternational
-  //       ? 'red'
-  //       : 'green'
-  //     // layerStyles['xmarkets'].filter = ['==', 'id', '207']
-  //   }
-  // }, [marketFilterInternational])
+  // const onMapLoad = useCallback(() => {
+  //   console.log('map loaded')
+  // }, [])
 
   useEffect(() => {
     if (mapRef.current) {
@@ -93,16 +76,6 @@ export const MapComponent: FC<MapComponentType> = ({
       setMarkerPosition([queriedMarket.lng, queriedMarket.lat])
     }
   }, [marketId])
-
-  useEffect(() => {
-    if (mapRef.current) {
-      if (showMapLayerToilets) {
-        toiletLayerVisibilty.layout.visibility = 'visible'
-      } else {
-        toiletLayerVisibilty.layout.visibility = 'none'
-      }
-    }
-  }, [showMapLayerToilets])
 
   const onMarkerCLick = (feature): void => {
     setMarketId(feature.id)
@@ -145,12 +118,14 @@ export const MapComponent: FC<MapComponentType> = ({
         mapLib={maplibregl}
         initialViewState={{ ...startMapView }}
         mapStyle={process.env.NEXT_PUBLIC_MAPTILER_STYLE}
+        // mapStyle={mapStyle()}
         onClick={onMapCLick}
         ref={mapRef}
         onLoad={onMapLoad}
       >
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
-          <Layer {...layerStyles['toilets']} {...toiletLayerVisibilty} />
+          <Layer {...layerStyles['toilets-labels']} />
+          <Layer {...layerStyles['toilets-circles']} />
         </Source>
         <GeolocateControl
           positionOptions={{ enableHighAccuracy: true }}
