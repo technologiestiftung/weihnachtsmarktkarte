@@ -48,7 +48,7 @@ export const FilterDate: FC<FilterDateType> = ({
           }}
           defaultMonth={defaultMonth}
           fromMonth={defaultMonth}
-          toDate={new Date(2023, 0, 4)}
+          toDate={new Date(2022, 11, 31)}
           locale={de}
           weekStartsOn={1}
         />

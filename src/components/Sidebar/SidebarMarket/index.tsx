@@ -1,7 +1,5 @@
 import { FC } from 'react'
 import classNames from 'classnames'
-import { useCopyToClipboard } from '@lib/hooks/useCopyToClipboard'
-
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 import { SidebarBody } from '@components/Sidebar/SidebarBody'
 import { MarketInfo } from '@components/MarketInfo'
@@ -12,7 +10,6 @@ import {
   Globe,
   Info,
   Calendar,
-  Copy,
 } from '@components/Icons/'
 
 export interface SidebarMarketType {
@@ -20,18 +17,17 @@ export interface SidebarMarketType {
 }
 
 export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
-  // console.log('marketData', marketData)
+  console.log('marketData', marketData)
 
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
-  const { copyToClipboard, hasCopied } = useCopyToClipboard()
 
   function TimeExeption({ hoursExc }) {
     const data = hoursExc.split(',')
     return (
       <div className="text-sm italic pt-2 text-gray-500">
         <p>* Ausnahmen:</p>
-        {data.map((d: string, i: number) => (
-          <p key={'ex' + i}>{d.split('=')[0] + ': ' + d.split('=')[1]}</p>
+        {data.map((d: string) => (
+          <p>{d.split('=')[0] + ': ' + d.split('=')[1]}</p>
         ))}
       </div>
     )
@@ -46,28 +42,10 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
       <SidebarHeader text={marketData.name} fontSize="text-lg" />
       <SidebarBody>
         <img
-          className="bg-darkblue w-full h-[200px]"
+          className="bg-darkblue w-full h-[200px] mb-4"
           src={marketData.image === '' ? '' : './images/' + marketData.image}
           alt=""
         />
-        <p className="text-xs text-gray-300 float-right">
-          {marketData.urheberschaft}
-        </p>
-        <div className="mb-4"></div>
-
-        <div className="flex flex-row-reverse">
-          <div
-            className="cursor-pointer hover:text-gold"
-            onClick={() => copyToClipboard(`${window.location.href}`)}
-          >
-            <Copy />
-          </div>
-          {hasCopied && (
-            <div className="text-gold text-xs mr-4 mt-1">
-              Markt-Link kopiert
-            </div>
-          )}{' '}
-        </div>
 
         <MarketInfo title="Adresse" icon={<GeoMarker />}>
           <p className="text-sm">
@@ -103,14 +81,12 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
         >
           <ul className="columns-2 text-sm">
             <li className="font-bold pb-2">Wochentag</li>
-            {days.map((day: string, i: number) => (
-              <li key={'day' + i}>{day}</li>
+            {days.map((day: string) => (
+              <li>{day}</li>
             ))}
             <li className="font-bold pb-2"> Uhrzeit</li>
-            {days.map((day: string, i: number) => (
-              <li key={'time' + i}>
-                {marketData[day] === '0' ? '-' : marketData[day]}
-              </li>
+            {days.map((day: string) => (
+              <li>{marketData[day] === '0' ? '-' : marketData[day]}</li>
             ))}
           </ul>
 
