@@ -5,16 +5,16 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 import mapStyle from './mapStyle'
 import { layerStyles } from './layerStyles'
 import { useState } from 'react'
+import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 
 export interface MapComponentType {
   mapData: any
   marketsData: any
   setMarketId: (time: string | null | number) => void
-  marketId: string | null
+  marketId: string | number | null
   setMarketData: (time: any) => void
-  mapCenter?: number[]
+  zoomToCenter?: number[]
   mapZoom?: number
-  showMapLayerToilets?: boolean
   marketFilterInternational: boolean
   marketFilterCosts: boolean
   marketFilterDate: Date
@@ -27,10 +27,10 @@ export const MapComponent: FC<MapComponentType> = ({
   setMarketId,
   marketId,
   setMarketData,
-  mapCenter,
+  zoomToCenter,
   mapZoom,
-  showMapLayerToilets,
 }) => {
+  const isMobile = useHasMobileSize()
   const mapRef = useRef()
   const startMapView = {
     longitude: 13.341760020413858,
@@ -41,26 +41,9 @@ export const MapComponent: FC<MapComponentType> = ({
   const [showMarker, setShowMarker] = useState<boolean>(true)
   const [markerPosition, setMarkerPosition] = useState<number[]>([0, 0])
 
-  const toiletLayerVisibilty = {
-    layout: {
-      visibility: 'visible',
-    },
-  }
-
-  const onMapLoad = useCallback(() => {
-    console.log('map loaded')
-  }, [])
-
-  // useEffect(() => {
-  //   console.log('filter intern')
-  //   if (mapRef.current) {
-  //     console.log('filter intern')
-  //     layerStyles['xmarkets'].paint['circle-color'] = marketFilterInternational
-  //       ? 'red'
-  //       : 'green'
-  //     // layerStyles['xmarkets'].filter = ['==', 'id', '207']
-  //   }
-  // }, [marketFilterInternational])
+  // const onMapLoad = useCallback(() => {
+  //   console.log('map loaded')
+  // }, [])
 
   useEffect(() => {
     if (mapRef.current) {
@@ -73,26 +56,28 @@ export const MapComponent: FC<MapComponentType> = ({
   }, [mapZoom])
 
   useEffect(() => {
-    if (marketId == null) {
-      setShowMarker(false)
+    if (mapRef.current) {
+      mapRef.current.easeTo({
+        center: zoomToCenter,
+        zoom: 13,
+        padding: { left: isMobile ? 0 : 200 },
+      })
     }
-  }, [marketId])
+  }, [zoomToCenter])
 
   useEffect(() => {
-    if (mapRef.current) {
-      if (showMapLayerToilets) {
-        toiletLayerVisibilty.layout.visibility = 'visible'
-      } else {
-        toiletLayerVisibilty.layout.visibility = 'none'
-      }
+    if (marketId == null) {
+      setShowMarker(false)
+    } else {
+      const queriedMarket = marketsData.filter((d: any) => d.id == marketId)[0]
+      setShowMarker(true)
+      setMarkerPosition([queriedMarket.lng, queriedMarket.lat])
     }
-  }, [showMapLayerToilets])
+  }, [marketId])
 
   const onMarkerCLick = (feature): void => {
     setMarketId(feature.id)
     setMarketData(feature)
-    setShowMarker(true)
-    setMarkerPosition([feature.lng, feature.lat])
   }
 
   const onMapCLick = (e: any): void => {
@@ -130,15 +115,17 @@ export const MapComponent: FC<MapComponentType> = ({
       <Map
         mapLib={maplibregl}
         initialViewState={{ ...startMapView }}
-        mapStyle={mapStyle()}
+        mapStyle={process.env.NEXT_PUBLIC_MAPTILER_STYLE}
+        // mapStyle={mapStyle()}
         onClick={onMapCLick}
         ref={mapRef}
-        onLoad={onMapLoad}
+        // onLoad={onMapLoad}
       >
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
-          <Layer {...layerStyles['toilets']} {...toiletLayerVisibilty} />
+          <Layer {...layerStyles['toilets-labels']} />
+          <Layer {...layerStyles['toilets-circles']} />
         </Source>
-        <GeolocateControl
+        {/* <GeolocateControl
           positionOptions={{ enableHighAccuracy: true }}
           trackUserLocation={true}
           // isMobile ? true : false
@@ -159,7 +146,7 @@ export const MapComponent: FC<MapComponentType> = ({
             //   transitionDuration: VIEWSTATE_TRANSITION_DURATION,
             // })
           }}
-        />
+        /> */}
         {markers}
         {showMarker && (
           <Marker

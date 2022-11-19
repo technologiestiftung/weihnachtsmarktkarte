@@ -3,9 +3,6 @@ import path from 'path'
 import Papa from 'papaparse'
 
 export function getMapData() {
-  // const xmarketsPath = path.join(process.cwd(), 'public/xmarkets.json')
-  // const xmarkets = JSON.parse(fs.readFileSync(xmarketsPath, 'utf-8'))
-
   const toiletsPath = path.join(process.cwd(), 'public/toilets.json')
   const toilets = JSON.parse(fs.readFileSync(toiletsPath, 'utf-8'))
 
@@ -14,11 +11,13 @@ export function getMapData() {
   var data = Papa.parse(xmarketsCSV, { header: true }).data.filter(
     (d) => d.lat && d.lng && d.ignore === '0'
   )
+  const allowedIds = []
   data.forEach((element, i) => {
-    element.id = i
+    allowedIds.push(Number(element.id))
     element.lng = Number(element.lng.replace(',', '.'))
     element.lat = Number(element.lat.replace(',', '.'))
+    element.inaktiv = false
   })
 
-  return { props: { toilets: toilets, markets: data } }
+  return { props: { toilets: toilets, markets: data, allowedIds: allowedIds } }
 }

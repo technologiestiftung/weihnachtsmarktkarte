@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react'
 // import { snowStorm } from '@lib/snowstorm'
 
 import { useRouter } from 'next/router'
-import { mapRawQueryToState } from '@lib/utils/queryUtil'
-// import { useDebouncedCallback } from 'use-debounce'
 import { Head } from '@components/Head'
 
 import { MapComponent } from '@components/Map'
@@ -14,7 +12,7 @@ import { SidebarContentInfo } from '@components/Sidebar/SidebarContentInfo'
 import { SidebarContentLayers } from '@components/Sidebar/SidebarContentLayers'
 import { SidebarContentFilter } from '@components/Sidebar/SidebarContentFilter'
 
-import { Layers, Filter, Info } from '@components/Icons'
+import { Filter, Info } from '@components/Icons'
 import { SidebarNav } from '@components/Sidebar/SidebarNav'
 import { MapNav } from '@components/MapNav'
 
@@ -51,25 +49,8 @@ const navViews = [
 ]
 
 const MapSite: NextPage = (mapData) => {
-  // let snowLoaded = false
-  // if (typeof window != 'undefined' && !snowLoaded) {
-  //   const script = document.createElement('script')
-  //   script.src = 'snowstorm.js'
-  //   script.async = true
-  //   document.body.appendChild(script)
-  //   console.log('LOADED')
-  // }
-  //
-
-  // if (typeof window != 'undefined' && window.snowStorm && !snowLoaded) {
-  //   snowLoaded = true
-  //   window.snowStorm.toggleSnow()
-  //   console.log('HHHHH')
-  // }
-
-  const { pathname, query, replace } = useRouter()
-  const mappedQuery = mapRawQueryToState(query)
-  let [modalOpen, setModalOpen] = useState(true)
+  const { pathname, query, replace, isReady } = useRouter()
+  let [modalOpen, setModalOpen] = useState(false)
   const [marketId, setMarketId] = useState<string | number | null>(null)
   const [marketData, setMarketData] = useState<any>()
   const [marketFilterInternational, setMarketFilterInternational] =
@@ -84,25 +65,42 @@ const MapSite: NextPage = (mapData) => {
   const [sidebarInfoOpen, setSidebarInfoOpen] = useState<boolean>(false)
   const [mobileHeight, setMobileHeight] = useState<string>(navViews[0].value)
 
-  const [mapCenter, setMapCenter] = useState<number[]>([0, 0])
+  const [zoomToCenter, setZoomToCenter] = useState<number[]>([0, 0])
   const [mapZoom, setMapZoom] = useState<number>(10)
 
   const [marketsData, setMarketsData] = useState<any>(mapData.markets)
 
-  // if (mappedQuery.id && mappedQuery.id !== marketId) {
-  //   console.log('MMMM???')
-  //   setSidebarInfoOpen(true)
-  //   setMarketId(mappedQuery?.id)
-  // }
+  // when the query string is read check if we have an id
+  useEffect(() => {
+    if (!isReady) return
+    const queryId = Number(query.id)
+    const allowedId = mapData.allowedIds.includes(Number(query.id))
+    if (Boolean(query.id) && allowedId && queryId !== marketId) {
+      const queriedMarket = marketsData.filter((d: any) => d.id == queryId)[0]
+      // make 2X sure we have the data
+      if (queriedMarket) {
+        setMarketId(queryId)
+        setMarketData(queriedMarket)
+        setModalOpen(false)
+        setZoomToCenter([queriedMarket.lng, queriedMarket.lat])
+        setMapZoom(12)
+      }
+    } else {
+      setModalOpen(true)
+    }
+  }, [isReady])
+
+  // when the id changes -> open the sidebar and set the query
   useEffect(() => {
     setSidebarInfoOpen(marketId === null ? false : true)
-    // if (marketId) {
-    //   replace({ pathname, query: { id: marketId } }, undefined, {
-    //     shallow: true,
-    //   })
-    // }
+    if (isReady) {
+      replace({ pathname, query: { id: marketId } }, undefined, {
+        shallow: true,
+      })
+    }
   }, [marketId])
 
+  // load snow on first load
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const script = document.createElement('script')
@@ -144,9 +142,11 @@ const MapSite: NextPage = (mapData) => {
     }
   }, [sidebarInfoOpen])
 
+  // when the nav view changes
+  // -> set the mobile height (it differs for some views)
+  // and close the info sidebar
   useEffect(() => {
     const navViewFiltered = navViews.filter((d) => d.value === navView)
-    console.log('navViewFiltered', navViewFiltered)
     setMobileHeight(navViewFiltered[0].mobileHeight)
     setSidebarInfoOpen(false)
   }, [navView])
@@ -219,7 +219,7 @@ const MapSite: NextPage = (mapData) => {
       <MapComponent
         mapData={mapData}
         marketsData={marketsData}
-        mapCenter={mapCenter}
+        zoomToCenter={zoomToCenter}
         mapZoom={mapZoom}
         setMapZoom={setMapZoom}
         setMarketId={setMarketId}
