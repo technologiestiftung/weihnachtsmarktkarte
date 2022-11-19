@@ -24,6 +24,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
 
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
   const { copyToClipboard, hasCopied } = useCopyToClipboard()
+  const hasImage = marketData.image;
 
   function TimeExeption({ hoursExc }) {
     const data = hoursExc.split(',')
@@ -45,35 +46,35 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
     <>
       <SidebarHeader text={marketData.name} fontSize="text-lg" />
       <SidebarBody>
+      {hasImage && (
         <img
           className="bg-darkblue w-full h-[200px]"
           src={marketData.image === '' ? '' : './images/' + marketData.image}
           alt=""
         />
-        <p className="text-xs text-gray-300 float-right">
+        )}
+        <p className="text-xs text-gray-300">
           {marketData.urheberschaft}
         </p>
-        <div className="mb-4"></div>
+        <div className="mb-2"></div>
 
         <div className="flex flex-row-reverse">
+          
           <div
             className="cursor-pointer hover:text-gold"
             onClick={() => copyToClipboard(`${window.location.href}`)}
-          >
-            <Copy />
-          </div>
+          > 
+          {!hasCopied && (
+          <div className="text-xs mr-4 mt-1 flex float-left">Markt-Link kopieren</div>
+          )}{' '}
           {hasCopied && (
-            <div className="text-gold text-xs mr-4 mt-1">
+            <div className="text-gold text-xs mr-4 mt-1 flex float-left">
               Markt-Link kopiert
             </div>
           )}{' '}
+            <Copy />
+          </div>
         </div>
-
-        <MarketInfo title="Adresse" icon={<GeoMarker />}>
-          <p className="text-sm">
-            {marketData.strasse}, {marketData.plz_ort}
-          </p>
-        </MarketInfo>
 
         <MarketInfo
           title={marketData['closed-exc'] !== '0' ? 'Datum *' : 'Datum'}
@@ -101,7 +102,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           }
           icon={<Clock />}
         >
-          <ul className="columns-2 text-sm">
+          <ul className="columns-2 text-sm gap-0">
             <li className="font-bold pb-2">Wochentag</li>
             {days.map((day: string, i: number) => (
               <li key={'day' + i}>{day}</li>
@@ -127,6 +128,18 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           </p>
         </MarketInfo>
 
+        <MarketInfo title="Adresse" icon={<GeoMarker />}>
+          <p className="text-sm">
+            {marketData.strasse}, {marketData.plz_ort}
+          </p>
+        </MarketInfo>
+
+        {marketData.bemerkungen !== '' && (
+          <MarketInfo title="Informationen" icon={<Info />}>
+            <p className="text-sm">{marketData.bemerkungen}</p>
+          </MarketInfo>
+        )}
+
         {marketData.w3 !== '' && (
           <MarketInfo title="Webseite" icon={<Globe />}>
             <a
@@ -139,12 +152,6 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
                 .replace('https://', '')
                 .replace('http://', '')}
             </a>
-          </MarketInfo>
-        )}
-
-        {marketData.bemerkungen !== '' && (
-          <MarketInfo title="Informationen" icon={<Info />}>
-            <p className="text-sm">{marketData.bemerkungen}</p>
           </MarketInfo>
         )}
 
