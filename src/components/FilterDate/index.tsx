@@ -30,7 +30,7 @@ export const FilterDate: FC<FilterDateType> = ({
   }
 
   .rdp-caption_label{
-
+font-size: 16px
   }
 `
   const defaultMonth = new Date(2022, 10)

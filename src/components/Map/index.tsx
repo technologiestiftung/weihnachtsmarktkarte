@@ -16,6 +16,7 @@ export interface MapComponentType {
   zoomToCenter?: number[]
   mapZoom?: number
   marketFilterInternational: boolean
+  marketFilterAction: boolean
   marketFilterCosts: boolean
   marketFilterDate: Date
   marketFilterTime: number[]
