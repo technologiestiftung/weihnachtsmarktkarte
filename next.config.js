@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   // distDir: 'build',
-  // basePath: '/energiekarte',
+  // basePath: '/weihnachtsmarktkarte',
   eslint: {
     ignoreDuringBuilds: true,
   },
