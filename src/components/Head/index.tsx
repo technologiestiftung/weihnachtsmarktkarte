@@ -27,7 +27,7 @@ interface HeadPropType {
 export const Head: FC<Partial<HeadPropType>> = ({
   description = 'Glühwein, Glögg, Glückseligkeit - Finde Weihnachtsmärkte in Berlin basierend auf Öffnungszeiten und Themen',
   siteTitle = 'Berliner Weihnachtsmarkt-Finder',
-  pageTitle = 'Karte',
+  pageTitle = 'weihnachtsmaerkte.odis-berlin.de',
   fbAppId = '',
   keywords = ['Berlin', 'Weihnachtsmärkte','Weihnachtsmarkt', 'ODIS', 'Karte','Open Data'],
   themeColor = '#091725',
