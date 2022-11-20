@@ -128,9 +128,12 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           </p>
         </MarketInfo>
 
-        <MarketInfo title="Adresse" icon={<GeoMarker />}>
-          <p className="text-sm">
+        <MarketInfo title="Anfahrt" icon={<GeoMarker />}>
+          <p className="text-sm pb-1.5">
             {marketData.strasse}, {marketData.plz_ort}
+          </p>
+          <p className="text-sm">
+            {marketData.train}
           </p>
         </MarketInfo>
 

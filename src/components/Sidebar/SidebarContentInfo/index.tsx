@@ -13,23 +13,19 @@ export interface SidebarContentInfoType {}
 export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
   return (
     <>
-      <SidebarHeader text="Über das Projekt" />
+      <SidebarHeader text="Informationen zum Weihnachtsmarkt-Finder" />
 
       <SidebarBody>
-        <p className="text-sm pb-2">
-          Von klassisch über kitschig bis krawallig: Bei den Berliner
-          Weihnachtsmärkten ist für jeden Geschmack etwas dabei. Mit dem
+        <p className="text-sm pt-2 pb-2">
+          Von klassisch über kiezig bis krawallig: Bei den Berliner
+          Weihnachtsmärkten ist für jeden Geschmack etwas dabei. Einige der über 60 Weihnachtsmärkte sind dabei nur für wenige Tage geöffnet. Mit dem
           Berliner Weihnachtsmarkt-Finder behaltet ihr stets den Überblick, an
           welchen Tagen und zu welchen Uhrzeiten welche Weihnachtsmärkte zu
           einem Besuch einladen. Entdeckt außerdem, welche Weihnachtsmärkte
-          kostenlos sind und wo spannende Events stattfinden. Falls ihr mal
-          länger auf eure Begleitung warten müsst, könnt ihr dank offener Daten
-          Sitzbänke unweit der Weihnachtsmärkte finden, genauso wie öffentliche
-          Toiletten. Mit einem Klick über die Teilen-Funktion könnt ihr anderen
-          euren Lieblingsweihnachtsmarkt mitteilen.
+          kostenlos sind, wo es spannende Attraktionen und Programm zu erleben gibt und mehr. Zoomt in die Karte rein, um Haltestationen zu öffentlichen Verkehrsmitteln und Standorte von nahegelegenen öffentlichen Toiletten zu sehen. Mit einem Klick über die Teilen-Funktion könnt ihr den Link zu eurem Lieblingsweihnachtsmarkt kopieren und an Freund:innen verschicken.
         </p>
         <p className="text-sm pb-2">
-          Diese Anwendung basiert komplett auf offenen Daten. Open Data ist
+          Diese Anwendung basiert komplett auf offenen Daten der Berliner Verwaltung. Open Data ist
           heute ein wichtiger Bestandteil im Verwaltungshandeln Berlins und
           schafft nicht nur Transparenz und Offenheit, sondern ermöglicht auch
           Analysen und Anwendungen wie diese, um den Alltag angenehmer zu

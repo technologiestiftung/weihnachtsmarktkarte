@@ -51,7 +51,7 @@ export const IntroModal: FC<IntroModalType> = ({
                 <Cross color1={'black'} />
               </button>
               <h2 className="font-bold text-2xl pb-2 pt-2">
-                Weihnachtsmarkt-Finder
+                Berliner Weihnachtsmarkt-Finder
                 <img
                   src="./stern_ausgewaehlt.png"
                   alt="stern"
@@ -59,16 +59,13 @@ export const IntroModal: FC<IntroModalType> = ({
                 />
               </h2>
               <h4 className="pb-4">
-                So lässt der Weihnachtsmarktbesuch keine Wünsche offen!
+                Glühwein, Glögg, Glückseligkeit - alle Weihnachtsmärkte auf einen Blick!
               </h4>
               <p className="pb-4">
-                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot der
-                Berliner Weihnachtsmärkte von traditionellem bis internationalem
-                Flair. Mit Hilfe der Filterfunktionen können Weihnachtsmärkte
-                nach Wunschdatum und Öffnungszeiten angezeigt werden.
-                Angereichert mit offenen Daten zu Toilettenstandorten und
-                Sitzbänken wird damit schon der diesjährige Weihnachtmarktbesuch
-                zu einem rundum gelungenen Fest.
+                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot von über 60
+                Berliner Weihnachtsmärkten von traditionellem bis zu individuellem
+                Flair. Lass dir Weihnachtsmärkte nach Wunschdatum und Öffnungszeiten anzeigen. So verpasst du deinen Lieblingsmarkt im Kiez nie wieder. Oder nutze die Filter, um passende Märkte zu finden und teile deine Entdeckung mit deinen Freund:innen!
+                Frohe Weihnachten!
               </p>
 
               <button

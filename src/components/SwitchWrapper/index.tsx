@@ -15,7 +15,7 @@ export const SwitchWrapper: FC<SwitchWrapperType> = ({
 }) => {
   return (
     <>
-      <div className="text-bold flex">
+      <div className="text-bold flex items-center pb-1">
         <div className="flex-1">
           <p className="text-sm pr-2">{text}</p>
         </div>

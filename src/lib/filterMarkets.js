@@ -64,6 +64,7 @@ export function filterMarkets(
   marketFilterCosts,
   marketFilterDate,
   marketFilterAction,
+  marketFilterTrain,
   marketFilterTime
 ) {
   data.forEach((d) => {
@@ -77,6 +78,10 @@ export function filterMarkets(
       return
     }
     if (marketFilterAction && d['action'] === '0') {
+      d.inaktiv = true
+      return
+    }
+    if (marketFilterTrain && d['short_distance'] === '0') {
       d.inaktiv = true
       return
     }
