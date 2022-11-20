@@ -59,6 +59,7 @@ const MapSite: NextPage = (mapData) => {
   const [marketFilterDate, setMarketFilterDate] = useState<Date>()
   const [marketFilterTime, setMarketFilterTime] = useState<number[]>()
   const [marketFilterAction, setMarketFilterAction] = useState<boolean>(false)
+  const [marketFilterTrain, setMarketFilterTrain] = useState<boolean>(false)
 
   const [navView, setNavView] = useState<string>(navViews[0].value)
   const [sidebarMenuOpen, setSidebarMenuOpen] = useState<boolean>(false)
@@ -123,6 +124,7 @@ const MapSite: NextPage = (mapData) => {
       marketFilterCosts,
       marketFilterDate,
       marketFilterAction,
+      marketFilterTrain,
       marketFilterTime
     )
     // const newData 0
@@ -132,6 +134,7 @@ const MapSite: NextPage = (mapData) => {
     marketFilterCosts,
     marketFilterDate,
     marketFilterAction,
+    marketFilterTrain,
     marketFilterTime,
   ])
 
@@ -186,6 +189,8 @@ const MapSite: NextPage = (mapData) => {
             setMarketFilterTime={setMarketFilterTime}
             marketFilterAction={marketFilterAction}
             setMarketFilterAction={setMarketFilterAction}
+            marketFilterTrain={marketFilterTrain}
+            setMarketFilterTrain={setMarketFilterTrain}
           />
         )}
         {navView === 'layers' && (

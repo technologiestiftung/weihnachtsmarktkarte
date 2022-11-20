@@ -18,6 +18,8 @@ export interface SidebarContentFilterType {
   setMarketFilterTime: (time: number[] | void) => void
   marketFilterAction: boolean
   setMarketFilterAction: (enabled: boolean) => void
+  marketFilterTrain: boolean
+  setMarketFilterTrain: (enabled: boolean) => void
 }
 
 export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
@@ -31,6 +33,8 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   setMarketFilterTime,
   marketFilterAction,
   setMarketFilterAction,
+  marketFilterTrain,
+  setMarketFilterTrain,
 }) => {
   function resetFilter() {
     console.log('resetting')
@@ -38,6 +42,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
     setMarketFilterInternational(false)
     setMarketFilterDate()
     setMarketFilterAction(false)
+    setMarketFilterTrain(false)
   }
 
   return (
@@ -89,6 +94,14 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             text={'Nur Glühwein trinken ist dir zu langweilig? Zeige Märkte mit besonderen Attraktionen.'}
             enabled={marketFilterAction}
             setEnabled={setMarketFilterAction}
+          />
+        </ExpandablePanel>
+        <hr className="my-2" />
+        <ExpandablePanel title={'Kurze Wege'} open={true}>
+          <SwitchWrapper
+            text={'Mit den Öffis unterwegs? Zeige Märkte mit kurzen Wegen zu U- oder S-Bahnstationen.'}
+            enabled={marketFilterTrain}
+            setEnabled={setMarketFilterTrain}
           />
         </ExpandablePanel>
         <div className="text-center pt-8">
