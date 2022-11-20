@@ -63,7 +63,7 @@ export function filterMarkets(
   marketFilterInternational,
   marketFilterCosts,
   marketFilterDate,
-  marketFilterDesign,
+  marketFilterAction,
   marketFilterTime
 ) {
   data.forEach((d) => {
@@ -73,6 +73,10 @@ export function filterMarkets(
       return
     }
     if (marketFilterInternational && d['international'] === '0') {
+      d.inaktiv = true
+      return
+    }
+    if (marketFilterAction && d['action'] === '0') {
       d.inaktiv = true
       return
     }

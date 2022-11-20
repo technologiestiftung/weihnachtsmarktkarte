@@ -1,7 +1,7 @@
 export default function mapStyle() {
   return {
     version: 8,
-    name: 'energiekarte',
+    name: 'weihnachtsmarktkarte',
     metadata: {},
     sources: {
       osmBaseMap: {

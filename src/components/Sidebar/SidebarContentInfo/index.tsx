@@ -70,7 +70,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
               <OdisLogo className={`w-40`} />
             </a>
           </div>
-          <div className="flex flex-col mb-6">
+          {/* <div className="flex flex-col mb-6">
             <span className="text-sm mb-2">In Zusammenarbeit mit dem</span>
             <a
               href="https://www.citylab-berlin.org"
@@ -81,7 +81,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
             >
               <CitylabLogo className={`w-36`} />
             </a>
-          </div>
+          </div> */}
           <div className="flex flex-col">
             <span className="text-sm mb-2">Gefördert von</span>
             <SenWebLogo className={`w-40`} />

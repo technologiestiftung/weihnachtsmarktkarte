@@ -16,8 +16,8 @@ export interface SidebarContentFilterType {
   setMarketFilterDate: (date: Date | void) => void
   marketFilterTime: number[]
   setMarketFilterTime: (time: number[] | void) => void
-  marketFilterDesign: boolean
-  setMarketFilterDesign: (enabled: boolean) => void
+  marketFilterAction: boolean
+  setMarketFilterAction: (enabled: boolean) => void
 }
 
 export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
@@ -29,63 +29,68 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   setMarketFilterDate,
   marketFilterTime,
   setMarketFilterTime,
-  marketFilterDesign,
-  setMarketFilterDesign,
+  marketFilterAction,
+  setMarketFilterAction,
 }) => {
   function resetFilter() {
     console.log('resetting')
     setMarketFilterCosts(false)
     setMarketFilterInternational(false)
     setMarketFilterDate()
-    setMarketFilterDesign(false)
+    setMarketFilterAction(false)
   }
 
   return (
     <>
-      <SidebarHeader text="Filtern" />
+      <SidebarHeader text="Finder" />
 
       <SidebarBody>
-        <p className="text-sm pb-4">
-          Stellen Sie hier Ihre gewünschten Filter ein.{' '}
-        </p>
 
         <ExpandablePanel title={'Datum'} open={true}>
+        <p className="text-sm pb-4">
+          Wann möchtest du auf einen Weihnachtsmarkt gehen? Wähle einen Tag.{' '}
+        </p>
+        <div className="justify-center flex">
           <FilterDate
             marketFilterDate={marketFilterDate}
             setMarketFilterDate={setMarketFilterDate}
           />
+        </div>
         </ExpandablePanel>
-        <hr className="my-4" />
+        <hr className="my-2" />
         <ExpandablePanel title={'Uhrzeit'} open={true}>
+        <p className="text-sm pb-4">
+          Zeitlich nicht so flexibel? Wähle den Zeitraum, in dem der Markt offen sein soll.{' '}
+        </p>
           <FilterTime
             marketFilterTime={marketFilterTime}
             setMarketFilterTime={setMarketFilterTime}
           />
         </ExpandablePanel>
-        <hr className="my-4" />
+        <hr className="my-2 mt-12" />
         <ExpandablePanel title={'Eintritt frei'} open={true}>
           <SwitchWrapper
-            text={'Nur Weihnachtsmärkte, die immer kostenfrei sind anzeigen'}
+            text={'Keine Lust auf Eintritt zahlen? Zeige Märkte, die immer kostenfrei sind.'}
             enabled={marketFilterCosts}
             setEnabled={setMarketFilterCosts}
           />
         </ExpandablePanel>
-        <hr className="my-4" />
-        <ExpandablePanel title={'International'} open={true}>
+        <hr className="my-2" />
+        <ExpandablePanel title={'Themen-Märkte'} open={true}>
           <SwitchWrapper
-            text={'Nur internationale Weihnachtsmärkte anzeigen. '}
+            text={'Du magst es speziell? Zeige Märkte mit historischem, internationalem oder ökologischem Fokus.'}
             enabled={marketFilterInternational}
             setEnabled={setMarketFilterInternational}
           />
         </ExpandablePanel>
-        {/* <hr className="my-4" />
-        <ExpandablePanel title={'Designmärkte'} open={true}>
+        <hr className="my-2" />
+        <ExpandablePanel title={'Action bitte'} open={true}>
           <SwitchWrapper
-            text={'Nur Design-Weihnachtmärkte anzeigen. '}
-            enabled={marketFilterDesign}
-            setEnabled={setMarketFilterDesign}
+            text={'Nur Glühwein trinken ist dir zu langweilig? Zeige Märkte mit besonderen Attraktionen.'}
+            enabled={marketFilterAction}
+            setEnabled={setMarketFilterAction}
           />
-        </ExpandablePanel> */}
+        </ExpandablePanel>
         <div className="text-center pt-8">
           <button
             className="mb-8 xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
