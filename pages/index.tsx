@@ -48,7 +48,7 @@ const navViews = [
   },
 ]
 
-const MapSite: NextPage = (mapData) => {
+const MapSite: NextPage = (mapData: any) => {
   const { pathname, query, replace, isReady } = useRouter()
   let [modalOpen, setModalOpen] = useState(false)
   const [marketId, setMarketId] = useState<string | number | null>(null)

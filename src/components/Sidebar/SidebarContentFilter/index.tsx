@@ -12,10 +12,10 @@ export interface SidebarContentFilterType {
   setMarketFilterInternational: (enabled: boolean) => void
   marketFilterCosts: boolean
   setMarketFilterCosts: (enabled: boolean) => void
-  marketFilterDate: Date
-  setMarketFilterDate: (date: Date | void) => void
-  marketFilterTime: number[]
-  setMarketFilterTime: (time: number[] | void) => void
+  marketFilterDate: Date | void
+  setMarketFilterDate: (date: Date) => void
+  marketFilterTime: number[] | void
+  setMarketFilterTime: (time: number[]) => void
   marketFilterAction: boolean
   setMarketFilterAction: (enabled: boolean) => void
   marketFilterTrain: boolean
@@ -50,23 +50,23 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
       <SidebarHeader text="Finder" />
 
       <SidebarBody>
-
         <ExpandablePanel title={'Datum'} open={true}>
-        <p className="text-sm pb-4">
-          Wann möchtest du auf einen Weihnachtsmarkt gehen? Wähle einen Tag.{' '}
-        </p>
-        <div className="justify-center flex">
-          <FilterDate
-            marketFilterDate={marketFilterDate}
-            setMarketFilterDate={setMarketFilterDate}
-          />
-        </div>
+          <p className="text-sm pb-4">
+            Wann möchtest du auf einen Weihnachtsmarkt gehen? Wähle einen Tag.{' '}
+          </p>
+          <div className="justify-center flex">
+            <FilterDate
+              marketFilterDate={marketFilterDate}
+              setMarketFilterDate={setMarketFilterDate}
+            />
+          </div>
         </ExpandablePanel>
         <hr className="my-2" />
         <ExpandablePanel title={'Uhrzeit'} open={true}>
-        <p className="text-sm pb-4">
-          Zeitlich nicht so flexibel? Wähle den Zeitraum, in dem der Markt offen sein soll.{' '}
-        </p>
+          <p className="text-sm pb-4">
+            Zeitlich nicht so flexibel? Wähle den Zeitraum, in dem der Markt
+            offen sein soll.{' '}
+          </p>
           <FilterTime
             marketFilterTime={marketFilterTime}
             setMarketFilterTime={setMarketFilterTime}
@@ -75,7 +75,9 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
         <hr className="my-2 mt-12" />
         <ExpandablePanel title={'Eintritt frei'} open={true}>
           <SwitchWrapper
-            text={'Keine Lust auf Eintritt zahlen? Zeige Märkte, die immer kostenfrei sind.'}
+            text={
+              'Keine Lust auf Eintritt zahlen? Zeige Märkte, die immer kostenfrei sind.'
+            }
             enabled={marketFilterCosts}
             setEnabled={setMarketFilterCosts}
           />
@@ -83,7 +85,9 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
         <hr className="my-2" />
         <ExpandablePanel title={'Themen-Märkte'} open={true}>
           <SwitchWrapper
-            text={'Du magst es speziell? Zeige Märkte mit historischem, internationalem oder ökologischem Fokus.'}
+            text={
+              'Du magst es speziell? Zeige Märkte mit historischem, internationalem oder ökologischem Fokus.'
+            }
             enabled={marketFilterInternational}
             setEnabled={setMarketFilterInternational}
           />
@@ -91,7 +95,9 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
         <hr className="my-2" />
         <ExpandablePanel title={'Action bitte'} open={true}>
           <SwitchWrapper
-            text={'Nur Glühwein trinken ist dir zu langweilig? Zeige Märkte mit besonderen Attraktionen.'}
+            text={
+              'Nur Glühwein trinken ist dir zu langweilig? Zeige Märkte mit besonderen Attraktionen.'
+            }
             enabled={marketFilterAction}
             setEnabled={setMarketFilterAction}
           />
@@ -99,7 +105,9 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
         <hr className="my-2" />
         <ExpandablePanel title={'Kurze Wege'} open={true}>
           <SwitchWrapper
-            text={'Mit den Öffis unterwegs? Zeige Märkte mit kurzen Wegen zu U- oder S-Bahnstationen.'}
+            text={
+              'Mit den Öffis unterwegs? Zeige Märkte mit kurzen Wegen zu U- oder S-Bahnstationen.'
+            }
             enabled={marketFilterTrain}
             setEnabled={setMarketFilterTrain}
           />
