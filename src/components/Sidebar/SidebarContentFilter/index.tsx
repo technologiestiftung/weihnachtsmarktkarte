@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import ExpandablePanel from '@components/ExpandablePanel'
 import { SwitchWrapper } from '@components/SwitchWrapper'
 import { FilterDate } from '@components/FilterDate'
-import { FilterTime } from '@components/FilterTime'
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 import { SidebarBody } from '@components/Sidebar/SidebarBody'
 
@@ -14,8 +13,8 @@ export interface SidebarContentFilterType {
   setMarketFilterCosts: (enabled: boolean) => void
   marketFilterDate: Date | void
   setMarketFilterDate: (date: Date) => void
-  marketFilterTime: number[] | void
-  setMarketFilterTime: (time: number[]) => void
+  marketFilterTime: boolean
+  setMarketFilterTime: (time: boolean) => void
   marketFilterAction: boolean
   setMarketFilterAction: (enabled: boolean) => void
   marketFilterTrain: boolean
@@ -41,6 +40,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
     setMarketFilterCosts(false)
     setMarketFilterInternational(false)
     setMarketFilterDate()
+    setMarketFilterTime(false)
     setMarketFilterAction(false)
     setMarketFilterTrain(false)
   }
@@ -62,17 +62,14 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
           </div>
         </ExpandablePanel>
         <hr className="my-2" />
-        <ExpandablePanel title={'Uhrzeit'} open={true}>
-          <p className="text-sm pb-4">
-            Zeitlich nicht so flexibel? Wähle den Zeitraum, in dem der Markt
-            offen sein soll.{' '}
-          </p>
-          <FilterTime
-            marketFilterTime={marketFilterTime}
-            setMarketFilterTime={setMarketFilterTime}
+        <ExpandablePanel title={'Abends offen'} open={true}>
+          <SwitchWrapper
+            text={'Zeige mir Märkte die auch nach 19 Uhr auf haben.'}
+            enabled={marketFilterTime}
+            setEnabled={setMarketFilterTime}
           />
         </ExpandablePanel>
-        <hr className="my-2 mt-12" />
+        <hr className="my-2" />
         <ExpandablePanel title={'Eintritt frei'} open={true}>
           <SwitchWrapper
             text={
@@ -112,14 +109,22 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             setEnabled={setMarketFilterTrain}
           />
         </ExpandablePanel>
-        <div className="text-center pt-8">
+
+        <div className="mt-8"></div>
+
+        {(marketFilterTrain ||
+          marketFilterAction ||
+          marketFilterInternational ||
+          marketFilterCosts ||
+          marketFilterTime ||
+          marketFilterDate) && (
           <button
-            className="mb-8 xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
+            className="block mr-auto ml-auto sticky bottom-4 mb-8 xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
             onClick={resetFilter}
           >
             Filter zurücksetzen
           </button>
-        </div>
+        )}
       </SidebarBody>
     </>
   )

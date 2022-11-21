@@ -1,4 +1,13 @@
-// setMarketFilterDate(selected.getMonth() + 1, selected.getDate())
+const daysHelper = {
+  1: 'Mo',
+  2: 'Di',
+  3: 'Mi',
+  4: 'Do',
+  5: 'Fr',
+  6: 'Sa',
+  0: 'So',
+}
+
 function toDate(string) {
   const dateArray = string.trim().split('.')
   const newString =
@@ -7,19 +16,6 @@ function toDate(string) {
 }
 
 function checkOpenOnDay(date, d) {
-  const daysHelper = {
-    1: 'Mo',
-    2: 'Di',
-    3: 'Mi',
-    4: 'Do',
-    5: 'Fr',
-    6: 'Sa',
-    0: 'So',
-  }
-  // console.log(
-  //   d[daysHelper[date.getDay()]] === '0',
-  //   d[daysHelper[date.getDay()]]
-  // )
   if (d[daysHelper[date.getDay()]] === '0') {
     return false
   } else {
@@ -46,6 +42,19 @@ function openOnDate(date, d) {
     }
   }
 
+  if (d['hours-exc'] !== '0') {
+    let open = false
+    d['hours-exc'].split(',').forEach((dt) => {
+      const dateAndTime = dt.trim().split('=')
+      if (toDate(dateAndTime[0]).toISOString() === date.toISOString()) {
+        open = true
+      }
+    })
+    if (open) {
+      return true
+    }
+  }
+
   if (!checkOpenOnDay(date, d)) {
     return false
   }
@@ -56,6 +65,42 @@ function openOnDate(date, d) {
   }
 
   return false
+}
+
+function lastHour(timeString) {
+  return timeString.split('-')[1].split(':')[0]
+}
+
+function openLate(d, date) {
+  let openLate = false
+  const late = 19
+  if (!date) {
+    Object.values(daysHelper).forEach((day) => {
+      if (d[day] !== '0') {
+        if (lastHour(d[day]) > late) {
+          openLate = true
+        }
+      }
+    })
+    return openLate
+  } else {
+    const openingTimeOnDay = d[daysHelper[date.getDay()]]
+    if (openingTimeOnDay === '0') {
+      openLate = false
+    } else {
+      openLate = lastHour(openingTimeOnDay) > late
+    }
+    if (d['hours-exc'] !== '0') {
+      d['hours-exc'].split(',').forEach((dt) => {
+        const dateAndTime = dt.trim().split('=')
+        if (toDate(dateAndTime[0]).toISOString() === date.toISOString()) {
+          openLate = lastHour(dateAndTime[1]) > late
+        }
+      })
+    }
+
+    return openLate
+  }
 }
 
 export function filterMarkets(
@@ -86,6 +131,10 @@ export function filterMarkets(
       return
     }
     if (marketFilterDate && !openOnDate(marketFilterDate, d)) {
+      d.inaktiv = true
+      return
+    }
+    if (marketFilterTime && !openLate(d, marketFilterDate)) {
       d.inaktiv = true
       return
     }
