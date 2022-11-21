@@ -121,6 +121,10 @@ export const MapComponent: FC<MapComponentType> = ({
         // mapStyle={mapStyle()}
         onClick={onMapCLick}
         ref={mapRef}
+        maxBounds={[
+          12.536773681640625, 52.08034997571588, 14.20257568359375,
+          52.9395349771423,
+        ]}
         // onLoad={onMapLoad}
       >
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
