@@ -46,9 +46,9 @@ function openOnDate(date, d) {
     }
   }
 
-  // if (checkOpenOnDay(date, d)) {
-  //   return true
-  // }
+  if (!checkOpenOnDay(date, d)) {
+    return false
+  }
 
   // check von bis
   if (date >= toDate(d.von) && date <= toDate(d.bis)) {
