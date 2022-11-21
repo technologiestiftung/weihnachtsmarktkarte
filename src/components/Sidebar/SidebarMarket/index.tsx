@@ -24,7 +24,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
 
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
   const { copyToClipboard, hasCopied } = useCopyToClipboard()
-  const hasImage = marketData.image;
+  const hasImage = marketData.image
 
   function TimeExeption({ hoursExc }) {
     const data = hoursExc.split(',')
@@ -46,32 +46,38 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
     <>
       <SidebarHeader text={marketData.name} fontSize="text-lg" />
       <SidebarBody>
-      {hasImage && (
         <img
           className="bg-darkblue w-full h-[200px]"
-          src={marketData.image === '' ? '' : './images/' + marketData.image}
+          src={
+            marketData.image === ''
+              ? './images/placeholder.png'
+              : './images/' + marketData.image
+          }
           alt=""
         />
-        )}
+
         <p className="text-xs text-gray-300">
-          {marketData.urheberschaft}
+          {marketData.urheberschaft
+            ? marketData.urheberschaft
+            : 'freestocks.org, CC BY-SA 4.0 via Wikimedia Commons'}
         </p>
         <div className="mb-2"></div>
 
         <div className="flex flex-row-reverse">
-          
           <div
             className="cursor-pointer hover:text-gold"
             onClick={() => copyToClipboard(`${window.location.href}`)}
-          > 
-          {!hasCopied && (
-          <div className="text-xs mr-4 mt-1 flex float-left">Markt-Link kopieren</div>
-          )}{' '}
-          {hasCopied && (
-            <div className="text-gold text-xs mr-4 mt-1 flex float-left">
-              Markt-Link kopiert
-            </div>
-          )}{' '}
+          >
+            {!hasCopied && (
+              <div className="text-xs mr-4 mt-1 flex float-left">
+                Markt-Link kopieren
+              </div>
+            )}{' '}
+            {hasCopied && (
+              <div className="text-gold text-xs mr-4 mt-1 flex float-left">
+                Markt-Link kopiert
+              </div>
+            )}{' '}
             <Copy />
           </div>
         </div>
@@ -132,9 +138,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           <p className="text-sm pb-1.5">
             {marketData.strasse}, {marketData.plz_ort}
           </p>
-          <p className="text-sm">
-            {marketData.train}
-          </p>
+          <p className="text-sm">{marketData.train}</p>
         </MarketInfo>
 
         {marketData.bemerkungen !== '' && (

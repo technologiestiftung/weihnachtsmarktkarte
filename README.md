@@ -138,7 +138,7 @@ New features, fixes, etc. should always be developed on a separate branch:
 - In your local repository, checkout the `main` branch.
 - Run `git checkout -b <name-of-your-branch>` to create a new branch (ideally following [Conventional Commits guidelines](https://www.conventionalcommits.org)).
 - Make your changes
-- Push your changes to the remote: `git push -U origin HEAD`
+- Push your changes to the remote: `git push -u origin HEAD`
 - Open a pull request.
 
 You can commit using the `npm run cm` command to ensure your commits follow our conventions.
