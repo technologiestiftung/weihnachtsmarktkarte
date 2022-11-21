@@ -68,19 +68,90 @@ Original data sources
 
 The informations on the [christmas marktes is based on an open dataset](https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte-2022) at the berlin open data portal, which is annually updated by the Senatsverwaltung für Wirtschaft, Energie und Betriebe. The information on design cristmas markets is currently only available as a list via Berlin.de. They were transferred into a geodata set by means of webscraping. The locations of the public toilets can also be found in the berlin open data portal, which is regularly updated by the Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz.
    
-## Prerequisites
+## Tech stack
 
-## Installation
+This website is a NextJS app configured with:
 
-## Usage or Deployment
+- [Typescript](https://www.typescriptlang.org/)
+- Linting with [ESLint](https://eslint.org/)
+- Formatting with [Prettier](https://prettier.io/)
 
-## Development
+## Project structure
 
-## Tests
+Basic Next.js app
 
-## Contributing
+## Getting started
 
-Before you create a pull request, write an issue so we can discuss your changes.
+### Requirements
+
+#### Node.js
+
+This project is a Next.js app which requires you to have [Node.js](https://nodejs.org/en/) installed.
+
+
+### Installation
+
+Clone the repository to your local machine:
+
+```bash
+git clone git@github.com:berlin/haushaltsdaten.git
+```
+
+Move into the repository folder:
+
+```bash
+cd haushaltsdaten
+```
+
+Make sure you use the Node.js version specified in `.nvmrc`. Find out which Node version you're currently on with:
+
+```bash
+node --version
+```
+
+If this version differs from the one specified in `.nvmrc`, please install the required version, either manually, or using a tool such as [nvm](https://github.com/nvm-sh/nvm), which allows switching to the correct version via:
+
+```bash
+nvm use
+```
+
+With the correct Node version, install the dependencies:
+
+```bash
+npm install
+```
+
+Because the data is stored in a Supabase database, you will need to provide connection details in your environment. In this repository you can find a file `.env.example`. Duplicate this file and name it `.env`.
+
+In `.env` you must enter the connection details to the Supabase instance as suggested in `.env.example`. If you do not know how to obtain the necessary details, please ask a repository maintainer for access.
+
+You are now ready to start a local development server on http://localhost:3000 via:
+
+```bash
+npm run dev
+```
+
+## Workflow
+
+New features, fixes, etc. should always be developed on a separate branch:
+
+- In your local repository, checkout the `main` branch.
+- Run `git checkout -b <name-of-your-branch>` to create a new branch (ideally following [Conventional Commits guidelines](https://www.conventionalcommits.org)).
+- Make your changes
+- Push your changes to the remote: `git push -U origin HEAD`
+- Open a pull request.
+
+You can commit using the `npm run cm` command to ensure your commits follow our conventions.
+
+## Deployment
+
+The app is deployed to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+## Page analytics
+
+We use [Matomo](https://matomo.org/) for website analytics. Matomo is respectful of the users' privacy, the page visits are tracked anonymously.
+
+In the production environment, a `NEXT_PUBLIC_MATOMO_URL` and `NEXT_PUBLIC_MATOMO_SITE_ID` is configured for this purpose.
 
 ## Contributors
 

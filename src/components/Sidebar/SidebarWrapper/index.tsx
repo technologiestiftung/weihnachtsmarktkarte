@@ -10,7 +10,7 @@ export interface SidebarWrapperType {
   children: ReactNode
   position: string
   closeSymbol: 'arrow' | 'cross'
-  mobileHeight: 'full' | 'half'
+  mobileHeight?: 'full' | 'half' | string
 }
 
 export const SidebarWrapper: FC<SidebarWrapperType> = ({
