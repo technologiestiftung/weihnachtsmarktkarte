@@ -94,13 +94,13 @@ This project is a Next.js app which requires you to have [Node.js](https://nodej
 Clone the repository to your local machine:
 
 ```bash
-git clone git@github.com:berlin/haushaltsdaten.git
+git clone git@github.com:berlin/weihnachtsmarktkarte.git
 ```
 
 Move into the repository folder:
 
 ```bash
-cd haushaltsdaten
+cd weihnachtsmarktkarte
 ```
 
 Make sure you use the Node.js version specified in `.nvmrc`. Find out which Node version you're currently on with:
