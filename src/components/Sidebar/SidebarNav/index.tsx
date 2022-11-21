@@ -6,7 +6,7 @@ import { Home } from '@components/Icons'
 export interface SidebarNavType {
   navViews: any
   setNavView: (view: string) => void
-  navView: 'info' | 'filter' | 'layers'
+  navView?: 'info' | 'filter' | 'layers'
   sidebarMenuOpen: boolean
   setSidebarMenuOpen: (open: boolean) => void
   setModalOpen: (open: boolean) => void
