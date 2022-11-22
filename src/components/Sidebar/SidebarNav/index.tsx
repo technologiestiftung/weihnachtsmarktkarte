@@ -44,7 +44,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
         <div
           onClick={() => setModalOpen(true)}
           title="home"
-          className={classNames('bg-darkblue rounded mb-4 text-gold', navClasses)}
+          className={classNames('bg-darkblue rounded mb-4 text-gold hover:text-darkblue', navClasses)}
         >
           <Home />
         </div>
