@@ -47,7 +47,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
 
   return (
     <>
-      <SidebarHeader text="Finder" />
+      <SidebarHeader text="Weihnachtsmärkte entdecken" />
 
       <SidebarBody>
         <ExpandablePanel title={'Datum'} open={true}>
