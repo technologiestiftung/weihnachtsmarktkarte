@@ -48,10 +48,10 @@ export const Accordion: FC<AccordionPropType> = ({ items }) => {
               }}
               tabIndex={isActive ? 1 : 0}
             >
-              <h2 className="group-hover:text-blue-500 inline">{title}</h2>
+              <h2 className="group-hover:text-blue-500 text-sm inline">{title}</h2>
               <ChevronDown
                 className={classNames(
-                  'float-right transform transition-transform',
+                  'float-right transform transition-transform text-gold',
                   isActive ? 'rotate-180' : 'rotate-0'
                 )}
               />
