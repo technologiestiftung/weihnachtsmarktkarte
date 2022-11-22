@@ -41,7 +41,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
           <a
             target="blank"
             href="https://odis-berlin.de"
-            className="text-gray-500 underline"
+            className="text-gold"
           >
             Open Data Informationsstelle{' '}
           </a>
@@ -50,7 +50,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
           <a
             target="blank"
             href="https://daten.berlin.de"
-            className="text-gray-500 underline"
+            className="text-gold"
           >
             Berliner Datenportal
           </a>
@@ -60,7 +60,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
         <section className="mt-4 flex flex-wrap">
           <div className="flex flex-col mr-6 mb-6">
             <span className="text-sm mb-2">Ein Projekt der</span>
-            <TsbLogo className={`w-40`} />
+            <TsbLogo className={`w-30`} />
           </div>
           <div className="flex flex-col mb-6">
             <span className="text-sm mb-2">Durchgeführt von der</span>
@@ -92,7 +92,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
           </div>
         </section>
       </SidebarBody>
-      <footer className={classNames('mt-8 bg-gray-200 p-4', 'flex flex-wrap')}>
+      <footer className={classNames('mt-8 p-4', 'flex flex-wrap')}>
         <span className="text-xs w-full mb-4">
           © 2022 Technologiestiftung Berlin
         </span>

@@ -111,7 +111,7 @@ export const MapComponent: FC<MapComponentType> = ({
           anchor="center"
           onClick={() => onMarkerCLick(feature)}
           key={feature.id}
-          style={{ opacity: feature.inaktiv ? 0.5 : 1, cursor: 'pointer' }}
+          style={{ opacity: feature.inaktiv ? 0.5 : 1, cursor: 'pointer'}}
         >
           <img
             onMouseEnter={() => showPopupNow(true, feature)}
@@ -119,6 +119,7 @@ export const MapComponent: FC<MapComponentType> = ({
             src={
               feature.inaktiv ? './stern_inaktiv.png' : './stern_leuchtend.png'
             }
+            className={'hover:scale-150 hover:animate-pulse'}
             width="20px"
           />
         </Marker>
@@ -185,7 +186,9 @@ export const MapComponent: FC<MapComponentType> = ({
             latitude={markerPosition[1]}
             anchor="center"
           >
-            <img src="./stern_ausgewaehlt.png" width="40px" />
+            <img src="./stern_ausgewaehlt.png" width="40px"
+            // style={{animation:'pulse 4s infinite'}}
+             />
           </Marker>
         )}
       </Map>
