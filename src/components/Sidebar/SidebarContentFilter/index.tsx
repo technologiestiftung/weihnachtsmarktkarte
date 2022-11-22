@@ -119,8 +119,8 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
           marketFilterTime ||
           marketFilterDate) && (
             <button
-              className="block mr-auto ml-auto sticky bottom-4 mb-8 xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
-              onClick={resetFilter}
+            className="block mr-auto ml-auto sticky bottom-4 mb-8 xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-lightblue p-2 text-bold rounded border-2 border-gold hover:border-gold"
+            onClick={resetFilter}
             >
               Filter zurücksetzen
             </button>
