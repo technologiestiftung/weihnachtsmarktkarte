@@ -32,6 +32,9 @@ export const FilterDate: FC<FilterDateType> = ({
   .rdp-caption_label{
 font-size: 16px
   }
+  .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+    color: #091725;
+  }
 `
   const defaultMonth = new Date(2022, 10)
   return (

@@ -69,31 +69,31 @@ export const IntroModal: FC<IntroModalType> = ({
               </p>
 
               <button
-                className="xmas-btn px-4 bg-lightblue/90 hover:bg-gold text-darkblue hover:text-lightblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
+                className="xmas-btn px-4 bg-darkblue hover:bg-gold hover:text-lightblue text-gold p-2 text-bold rounded border-2 border-gold hover:border-gold"
                 onClick={closeModalExplore}
               >
                 Erkunden
               </button>
               <button
-                className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-gold"
+                className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
                 onClick={closeModalInfo}
               >
                 Mehr Infos
               </button>
 
               <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
-                <p className="text-xs mb-2 md:mb-0 text-gray-500 max-w-md">
+                <p className="text-xs mb-2 md:mb-0 text-gray-500 max-w-md pt-4">
                   <i>
                     Eine prototypische Datenvisualisierung der Open Data
                     Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB
                     Berlin
                   </i>
                 </p>
-                <div className="inline-block md:flex self-center">
-                  <div className="w-36 mr-4">
+                <div className="inline-block ml-4 md:flex self-center">
+                  <div className="w-32">
                     <TsbLogo className={`w-30`} />
                   </div>
-                  <div className="w-32 mt-4 md:mt-0 self-center">
+                  <div className="w-32 pt-2 mr-8 md:mt-0 self-center">
                     <OdisLogo className={`w-30`} />
                   </div>
                 </div>
