@@ -54,7 +54,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
           <p className="text-sm pb-4">
             Wann möchtest du auf einen Weihnachtsmarkt gehen? Wähle einen Tag.{' '}
           </p>
-          <div className="justify-center flex">
+          <div className="justify-center flex pb-2">
             <FilterDate
               marketFilterDate={marketFilterDate}
               setMarketFilterDate={setMarketFilterDate}
@@ -125,6 +125,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
               Filter zurücksetzen
             </button>
           )}
+
       </SidebarBody>
     </>
   )

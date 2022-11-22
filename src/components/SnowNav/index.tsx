@@ -34,7 +34,7 @@ export const SnowNav: FC<SnowNavType> = ({}) => {
           <button
             title="snow on/off"
             className={classNames(
-              snow ? 'bg-darkblue text-gold' : 'bg-gold text-darkblue',
+              snow ? 'bg-darkblue text-gold' : 'bg-gold text-darkblue ',
               navClasses
             )}
             onClick={() => snowToggle()}

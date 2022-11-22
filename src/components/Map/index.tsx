@@ -1,5 +1,11 @@
 import { FC, useEffect, useRef, useCallback, useMemo } from 'react'
-import Map, { Source, Layer, Marker, GeolocateControl } from 'react-map-gl'
+import Map, {
+  Source,
+  Layer,
+  Marker,
+  GeolocateControl,
+  Popup,
+} from 'react-map-gl'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import mapStyle from './mapStyle'
@@ -41,11 +47,11 @@ export const MapComponent: FC<MapComponentType> = ({
   }
 
   const [showMarker, setShowMarker] = useState<boolean>(true)
-  const [markerPosition, setMarkerPosition] = useState<number[]>([0, 0])
+  const [popupVisible, setPopupVisible] = useState<boolean>(false)
+  const [popupText, setPopupText] = useState<string>('')
+  const [popupCoo, setPopupCoo] = useState<number[]>([0, 0])
 
-  // const onMapLoad = useCallback(() => {
-  //   console.log('map loaded')
-  // }, [])
+  const [markerPosition, setMarkerPosition] = useState<number[]>([0, 0])
 
   useEffect(() => {
     if (mapRef.current) {
@@ -82,6 +88,13 @@ export const MapComponent: FC<MapComponentType> = ({
     setMarketData(feature)
   }
 
+  const showPopupNow = (visible: boolean, data: any): void => {
+    setPopupVisible(visible)
+    if (visible) {
+      setPopupText(data.name)
+      setPopupCoo([data.lat, data.lng])
+    }
+  }
   const onMapCLick = (e: any): void => {
     if (e?.originalEvent?.originalTarget?.nodeName === 'CANVAS') {
       setMarketId(null)
@@ -98,12 +111,15 @@ export const MapComponent: FC<MapComponentType> = ({
           anchor="center"
           onClick={() => onMarkerCLick(feature)}
           key={feature.id}
-          style={{ opacity: feature.inaktiv ? 0.5 : 1, cursor: 'pointer' }}
+          style={{ opacity: feature.inaktiv ? 0.5 : 1, cursor: 'pointer'}}
         >
           <img
+            onMouseEnter={() => showPopupNow(true, feature)}
+            onMouseOut={() => showPopupNow(false, false)}
             src={
               feature.inaktiv ? './stern_inaktiv.png' : './stern_leuchtend.png'
             }
+            className={'hover:scale-150 hover:animate-pulse'}
             width="20px"
           />
         </Marker>
@@ -121,6 +137,10 @@ export const MapComponent: FC<MapComponentType> = ({
         // mapStyle={mapStyle()}
         onClick={onMapCLick}
         ref={mapRef}
+        maxBounds={[
+          12.536773681640625, 52.08034997571588, 14.20257568359375,
+          52.9395349771423,
+        ]}
         // onLoad={onMapLoad}
       >
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
@@ -149,6 +169,16 @@ export const MapComponent: FC<MapComponentType> = ({
             // })
           }}
         /> */}
+        {popupVisible && (
+          <Popup
+            longitude={popupCoo[1]}
+            latitude={popupCoo[0]}
+            closeButton={false}
+            anchor={'bottom'}
+          >
+            {popupText}
+          </Popup>
+        )}
         {markers}
         {showMarker && (
           <Marker
@@ -156,7 +186,9 @@ export const MapComponent: FC<MapComponentType> = ({
             latitude={markerPosition[1]}
             anchor="center"
           >
-            <img src="./stern_ausgewaehlt.png" width="40px" />
+            <img src="./stern_ausgewaehlt.png" width="40px"
+            // style={{animation:'pulse 4s infinite'}}
+             />
           </Marker>
         )}
       </Map>
