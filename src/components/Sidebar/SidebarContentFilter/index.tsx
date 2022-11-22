@@ -64,7 +64,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
         <hr className="my-2" />
         <ExpandablePanel title={'Abends offen'} open={true}>
           <SwitchWrapper
-            text={'Zeige mir Märkte die auch nach 19 Uhr auf haben.'}
+            text={'Appetit auf gebrannte Mandeln zum Feierabend? Zeige Märkte die nach 19 Uhr offen haben.'}
             enabled={marketFilterTime}
             setEnabled={setMarketFilterTime}
           />
@@ -118,13 +118,14 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
           marketFilterCosts ||
           marketFilterTime ||
           marketFilterDate) && (
-          <button
+            <button
             className="block mr-auto ml-auto sticky bottom-4 mb-8 xmas-btn px-4 bg-darkblue text-gold hover:bg-gold hover:text-lightblue p-2 text-bold rounded border-2 border-gold hover:border-gold"
             onClick={resetFilter}
-          >
-            Filter zurücksetzen
-          </button>
-        )}
+            >
+              Filter zurücksetzen
+            </button>
+          )}
+
       </SidebarBody>
     </>
   )
