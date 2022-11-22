@@ -7,13 +7,14 @@ import { CitylabLogo } from '@components/Logos/CitylabLogo'
 import { OdisLogo } from '@components/Logos/OdisLogo'
 import { SenWebLogo } from '@components/Logos/SenWebLogo'
 import { TsbLogo } from '@components/Logos/TsbLogo'
+import { Accordion } from '@components/Accordion'
 
 export interface SidebarContentInfoType {}
 
 export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
   return (
     <>
-      <SidebarHeader text="Informationen zum Weihnachtsmarkt-Finder" />
+      <SidebarHeader text="Über den Finder" />
 
       <SidebarBody>
         <p className="text-sm pt-2 pb-2">
@@ -24,37 +25,47 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
           einem Besuch einladen. Entdeckt außerdem, welche Weihnachtsmärkte
           kostenlos sind, wo es spannende Attraktionen und Programm zu erleben gibt und mehr. Zoomt in die Karte rein, um Haltestationen zu öffentlichen Verkehrsmitteln und Standorte von nahegelegenen öffentlichen Toiletten zu sehen. Mit einem Klick über die Teilen-Funktion könnt ihr den Link zu eurem Lieblingsweihnachtsmarkt kopieren und an Freund:innen verschicken.
         </p>
-        <p className="text-sm pb-2">
-          Diese Anwendung basiert komplett auf offenen Daten der Berliner Verwaltung. Open Data ist
-          heute ein wichtiger Bestandteil im Verwaltungshandeln Berlins und
-          schafft nicht nur Transparenz und Offenheit, sondern ermöglicht auch
-          Analysen und Anwendungen wie diese, um den Alltag angenehmer zu
-          machen. Deshalb unterstützt und berät die{' '}
-          <a
-            target="blank"
-            href="https://odis-berlin.de"
-            className="text-gray-500 underline"
-          >
-            Open Data Informationsstelle{' '}
-          </a>
-          Berliner Behörden bei der Bereitstellung von Open Data. Mehr offene
-          Daten findet ihr im{' '}
-          <a
-            target="blank"
-            href="https://daten.berlin.de"
-            className="text-gray-500 underline"
-          >
-            Berliner Datenportal
-          </a>
-          .
-        </p>
 
-        <section className="mt-4 flex flex-wrap">
+        <Accordion items={[{  id: '1', title: 'Woher kommen die Infos?', content: 'tbd' }]} />
+        <Accordion items={[{  id: '2', title: 'Was ist Open Data?', content: 'tbd' }]} />
+        <Accordion items={[{  id: '3', title: 'Wie kann ich mitmachen?', content: 'tbd' }]} />
+        <Accordion items={[{  id: '4', title: 'Was ist mit anderen Städten?', content: 'tbd' }]} />
+        <Accordion items={[{  id: '5', title: 'Über uns', 
+        content: 
+          <>
+          <p className="text-sm pb-2">
+                  Diese Anwendung basiert komplett auf offenen Daten der Berliner Verwaltung. Open Data ist
+                  heute ein wichtiger Bestandteil im Verwaltungshandeln Berlins und
+                  schafft nicht nur Transparenz und Offenheit, sondern ermöglicht auch
+                  Analysen und Anwendungen wie diese, um den Alltag angenehmer zu
+                  machen. Deshalb unterstützt und berät die{' '}
+                  <a
+                    target="blank"
+                    href="https://odis-berlin.de"
+                    className="text-gold"
+                  >
+                    Open Data Informationsstelle{' '}
+                  </a>
+                  Berliner Behörden bei der Bereitstellung von Open Data. Mehr offene
+                  Daten findet ihr im{' '}
+                  <a
+                    target="blank"
+                    href="https://daten.berlin.de"
+                    className="text-gold"
+                  >
+                    Berliner Datenportal
+                  </a>
+                  .
+                </p>
+          </>}]} />
+
+
+        <section className="mt-6 flex flex-wrap">
           <div className="flex flex-col mr-6 mb-6">
-            <span className="text-sm mb-2">Ein Projekt der</span>
-            <TsbLogo className={`w-40`} />
+            <span className="text-sm mb-3">Ein Projekt der</span>
+            <TsbLogo className={`w-30`} />
           </div>
-          <div className="flex flex-col mb-6">
+          <div className="flex flex-col mb-2">
             <span className="text-sm mb-2">Durchgeführt von der</span>
             <a
               href="https://odis-berlin.de/"
@@ -84,7 +95,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
           </div>
         </section>
       </SidebarBody>
-      <footer className={classNames('mt-8 bg-gray-200 p-4', 'flex flex-wrap')}>
+      <footer className={classNames('mt-8 p-4', 'flex flex-wrap')}>
         <span className="text-xs w-full mb-4">
           © 2022 Technologiestiftung Berlin
         </span>
