@@ -91,7 +91,7 @@ export const MapComponent: FC<MapComponentType> = ({
   const showPopupNow = (visible: boolean, data: any): void => {
     setPopupVisible(visible)
     if (visible) {
-      setPopupText(data.name)
+      setPopupText(data.shortname)
       setPopupCoo([data.lat, data.lng])
     }
   }

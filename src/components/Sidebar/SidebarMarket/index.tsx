@@ -54,7 +54,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
 
   return (
     <>
-      <SidebarHeader text={marketData.name} fontSize="text-lg" />
+      <SidebarHeader text={marketData.shortname} fontSize="text-lg" />
       <SidebarBody>
         <img
           className="bg-darkblue w-full h-[200px]"
