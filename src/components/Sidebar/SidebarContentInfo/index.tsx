@@ -7,13 +7,14 @@ import { CitylabLogo } from '@components/Logos/CitylabLogo'
 import { OdisLogo } from '@components/Logos/OdisLogo'
 import { SenWebLogo } from '@components/Logos/SenWebLogo'
 import { TsbLogo } from '@components/Logos/TsbLogo'
+import { Accordion } from '@components/Accordion'
 
 export interface SidebarContentInfoType {}
 
 export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
   return (
     <>
-      <SidebarHeader text="Informationen zum Weihnachtsmarkt-Finder" />
+      <SidebarHeader text="Über den Finder" />
 
       <SidebarBody>
         <p className="text-sm pt-2 pb-2">
@@ -24,6 +25,13 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
           einem Besuch einladen. Entdeckt außerdem, welche Weihnachtsmärkte
           kostenlos sind, wo es spannende Attraktionen und Programm zu erleben gibt und mehr. Zoomt in die Karte rein, um Haltestationen zu öffentlichen Verkehrsmitteln und Standorte von nahegelegenen öffentlichen Toiletten zu sehen. Mit einem Klick über die Teilen-Funktion könnt ihr den Link zu eurem Lieblingsweihnachtsmarkt kopieren und an Freund:innen verschicken.
         </p>
+
+        <Accordion items={[{  id: '1', title: 'Woher kommen die Infos?', content: 'Open Data ist sehr gut!' }]} />
+        <Accordion items={[{  id: '2', title: 'Was ist Open Data?', content: 'Open Data ist sehr gut!' }]} />
+        <Accordion items={[{  id: '3', title: 'Wie kann ich mitmachen?', content: 'Open Data ist sehr gut!' }]} />
+        <Accordion items={[{  id: '4', title: 'Können andere Städte die Anwendung auch nutzen?', content: 'Open Data ist sehr gut!' }]} />
+        <Accordion items={[{  id: '5', title: 'Über uns', content: 'Open Data ist sehr gut!' }]} />
+        
         <p className="text-sm pb-2">
           Diese Anwendung basiert komplett auf offenen Daten der Berliner Verwaltung. Open Data ist
           heute ein wichtiger Bestandteil im Verwaltungshandeln Berlins und
