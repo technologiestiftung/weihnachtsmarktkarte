@@ -69,7 +69,7 @@ export const IntroModal: FC<IntroModalType> = ({
               </p>
 
               <button
-                className="xmas-btn px-4 bg-lightblue/90 hover:bg-gold text-darkblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
+                className="xmas-btn px-4 bg-lightblue/90 hover:bg-gold text-darkblue hover:text-lightblue p-2 text-bold rounded border-2 border-darkblue hover:border-gold"
                 onClick={closeModalExplore}
               >
                 Erkunden

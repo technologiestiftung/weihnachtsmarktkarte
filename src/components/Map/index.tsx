@@ -104,6 +104,7 @@ export const MapComponent: FC<MapComponentType> = ({
             src={
               feature.inaktiv ? './stern_inaktiv.png' : './stern_leuchtend.png'
             }
+            className={'animate-pulse hover:scale-125'}
             width="20px"
           />
         </Marker>

@@ -44,11 +44,11 @@ export const SidebarNav: FC<SidebarNavType> = ({
         <div
           onClick={() => setModalOpen(true)}
           title="home"
-          className={classNames('bg-lightblue rounded mb-4', navClasses)}
+          className={classNames('bg-darkblue rounded mb-4 text-lightblue', navClasses)}
         >
           <Home />
         </div>
-        <div className="w-14 flex flex-col list-none rounded overflow-hidden shadow-lg ">
+        <div className="w-14 flex flex-col list-none rounded overflow-hidden shadow-lg">
           {navViews.map((listView) => (
             <div
               key={listView.value}
@@ -57,7 +57,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
               className={classNames(
                 listView.value === navView && sidebarMenuOpen
                   ? 'bg-gold'
-                  : 'bg-lightblue',
+                  : 'bg-darkblue',
                 navClasses
               )}
             >

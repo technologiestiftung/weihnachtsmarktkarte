@@ -31,7 +31,7 @@ const navViews = [
   {
     value: 'filter',
     name: 'filter',
-    icon: <Filter color1={'black'} />,
+    icon: <Filter color1={'#F5F8FE'}/>,
     mobileHeight: 'half',
   },
   // {
@@ -43,7 +43,7 @@ const navViews = [
   {
     value: 'info',
     name: 'information',
-    icon: <Info color1={'black'} />,
+    icon: <Info color1={'#F5F8FE'}/>,
     mobileHeight: 'full',
   },
 ]
@@ -207,7 +207,7 @@ const MapSite: NextPage = (mapData: any) => {
         position="left"
         isOpen={sidebarInfoOpen}
         setOpen={setSidebarInfoOpen}
-        closeSymbol="arrow"
+        closeSymbol="cross"
         mobileHeight="full"
       >
         {marketData && marketId && <SidebarMarket marketData={marketData} />}
