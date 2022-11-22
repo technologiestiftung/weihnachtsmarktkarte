@@ -23,6 +23,16 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
   // console.log('marketData', marketData)
 
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
+  const daysHelper = {
+    Mo: 'Montag',
+    Di: 'Dienstag',
+    Mi: 'Mittwoch',
+    Do: 'Donnerstag',
+    Fr: 'Freitag',
+    Sa: 'Samstag',
+    So: 'Sonntag',
+  }
+
   const { copyToClipboard, hasCopied } = useCopyToClipboard()
   const hasImage = marketData.image
 
@@ -56,7 +66,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           alt=""
         />
 
-        <p className="text-xs text-gray-300">
+        <p className="text-xs text-gray-500 mt-1">
           {marketData.urheberschaft
             ? marketData.urheberschaft
             : 'freestocks.org, CC BY-SA 4.0 via Wikimedia Commons'}
@@ -65,7 +75,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
 
         <div className="flex flex-row-reverse">
           <div
-            className="cursor-pointer hover:text-gold"
+            className="cursor-pointerxmas-btn px-4 py-1.5 border-gold text-gold hover:text-lightblue hover:bg-gold p-1 text-bold rounded border-2 hover:border-gold"
             onClick={() => copyToClipboard(`${window.location.href}`)}
           >
             {!hasCopied && (
@@ -74,8 +84,8 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
               </div>
             )}{' '}
             {hasCopied && (
-              <div className="text-gold text-xs mr-4 mt-1 flex float-left">
-                Markt-Link kopiert
+              <div className="text-xs mr-4 mt-1 flex float-left">
+                 Markt-Link kopiert!  
               </div>
             )}{' '}
             <Copy />
@@ -87,7 +97,12 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           icon={<Calendar />}
         >
           <p className="text-sm pb-2">
-            {marketData.von} bis {marketData.bis}
+            {marketData.von === marketData.bis && <span>{marketData.von}</span>}
+            {marketData.von !== marketData.bis && (
+              <span>
+                {marketData.von} bis {marketData.bis}
+              </span>
+            )}
           </p>
 
           {marketData['closed-exc'] !== '0' && (
@@ -111,7 +126,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
           <ul className="columns-2 text-sm gap-0">
             <li className="font-bold pb-2">Wochentag</li>
             {days.map((day: string, i: number) => (
-              <li key={'day' + i}>{day}</li>
+              <li key={'day' + i}>{daysHelper[day]}</li>
             ))}
             <li className="font-bold pb-2"> Uhrzeit</li>
             {days.map((day: string, i: number) => (
