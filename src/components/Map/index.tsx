@@ -1,5 +1,11 @@
 import { FC, useEffect, useRef, useCallback, useMemo } from 'react'
-import Map, { Source, Layer, Marker, GeolocateControl } from 'react-map-gl'
+import Map, {
+  Source,
+  Layer,
+  Marker,
+  GeolocateControl,
+  Popup,
+} from 'react-map-gl'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import mapStyle from './mapStyle'
@@ -41,11 +47,11 @@ export const MapComponent: FC<MapComponentType> = ({
   }
 
   const [showMarker, setShowMarker] = useState<boolean>(true)
-  const [markerPosition, setMarkerPosition] = useState<number[]>([0, 0])
+  const [popupVisible, setPopupVisible] = useState<boolean>(false)
+  const [popupText, setPopupText] = useState<string>('')
+  const [popupCoo, setPopupCoo] = useState<number[]>([0, 0])
 
-  // const onMapLoad = useCallback(() => {
-  //   console.log('map loaded')
-  // }, [])
+  const [markerPosition, setMarkerPosition] = useState<number[]>([0, 0])
 
   useEffect(() => {
     if (mapRef.current) {
@@ -82,6 +88,13 @@ export const MapComponent: FC<MapComponentType> = ({
     setMarketData(feature)
   }
 
+  const showPopupNow = (visible: boolean, data: any): void => {
+    setPopupVisible(visible)
+    if (visible) {
+      setPopupText(data.name)
+      setPopupCoo([data.lat, data.lng])
+    }
+  }
   const onMapCLick = (e: any): void => {
     if (e?.originalEvent?.originalTarget?.nodeName === 'CANVAS') {
       setMarketId(null)
@@ -101,6 +114,8 @@ export const MapComponent: FC<MapComponentType> = ({
           style={{ opacity: feature.inaktiv ? 0.5 : 1, cursor: 'pointer' }}
         >
           <img
+            onMouseEnter={() => showPopupNow(true, feature)}
+            onMouseOut={() => showPopupNow(false, false)}
             src={
               feature.inaktiv ? './stern_inaktiv.png' : './stern_leuchtend.png'
             }
@@ -153,6 +168,16 @@ export const MapComponent: FC<MapComponentType> = ({
             // })
           }}
         /> */}
+        {popupVisible && (
+          <Popup
+            longitude={popupCoo[1]}
+            latitude={popupCoo[0]}
+            closeButton={false}
+            anchor={'bottom'}
+          >
+            {popupText}
+          </Popup>
+        )}
         {markers}
         {showMarker && (
           <Marker
