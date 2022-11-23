@@ -10,6 +10,8 @@ export interface SidebarNavType {
   sidebarMenuOpen: boolean
   setSidebarMenuOpen: (open: boolean) => void
   setModalOpen: (open: boolean) => void
+  marketId: string | number | null
+  setMarketId: (time: string | null | number) => void
 }
 
 export const SidebarNav: FC<SidebarNavType> = ({
@@ -19,10 +21,17 @@ export const SidebarNav: FC<SidebarNavType> = ({
   sidebarMenuOpen,
   setSidebarMenuOpen,
   setModalOpen,
+  marketId,
+  setMarketId,
 }) => {
   const hasMobileSize = useHasMobileSize()
-  const navPositionClasses =
+  let navPositionClasses =
     !sidebarMenuOpen || hasMobileSize ? 'left-[0px]' : 'left-sidebar'
+
+  if (marketId) {
+    navPositionClasses = 'left-sidebar'
+  }
+
   const padding = sidebarMenuOpen ? (hasMobileSize ? 'pl-4' : 'pl-0') : 'pl-4'
   const navClasses =
     'h-14 cursor-pointer list-none text-center grid place-items-center hover:bg-gold'
@@ -31,6 +40,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
       setSidebarMenuOpen(true)
     }
     setNavView(listView.value)
+    setMarketId(null)
   }
   return (
     <nav

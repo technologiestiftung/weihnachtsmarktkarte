@@ -75,7 +75,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
 
         <div className="flex flex-row-reverse">
           <div
-            className="cursor-pointerxmas-btn px-4 py-1.5 border-gold text-gold hover:text-lightblue hover:bg-gold p-1 text-bold rounded border-2 hover:border-gold"
+            className="cursor-pointer xmas-btn px-4 py-1.5 border-gold text-gold hover:text-lightblue hover:bg-gold p-1 text-bold rounded border-2 hover:border-gold"
             onClick={() => copyToClipboard(`${window.location.href}`)}
           >
             {!hasCopied && (
@@ -85,7 +85,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData }) => {
             )}{' '}
             {hasCopied && (
               <div className="text-xs mr-4 mt-1 flex float-left">
-                 Markt-Link kopiert!  
+                Markt-Link kopiert!
               </div>
             )}{' '}
             <Copy />

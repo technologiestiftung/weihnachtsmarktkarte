@@ -219,6 +219,8 @@ const MapSite: NextPage = (mapData: any) => {
         sidebarMenuOpen={sidebarMenuOpen}
         setSidebarMenuOpen={setSidebarMenuOpen}
         setModalOpen={setModalOpen}
+        marketId={marketId}
+        setMarketId={setMarketId}
       />
       <SnowNav></SnowNav>
       <MapComponent

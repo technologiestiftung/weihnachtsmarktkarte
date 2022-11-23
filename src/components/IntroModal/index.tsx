@@ -40,7 +40,7 @@ export const IntroModal: FC<IntroModalType> = ({
         className="relative z-50"
         onClose={closeModal}
       >
-        <div className="fixed inset-0 bg-darkblue/60" aria-hidden="true" />
+        <div className="fixed inset-0 bg-darkblue/30" aria-hidden="true" />
         <div className="fixed inset-0 overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4 leading-7">
             <Dialog.Panel className="bg-darkblue/80 text-lightblue/90 max-h-full overflow-y-auto p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all">
@@ -59,13 +59,17 @@ export const IntroModal: FC<IntroModalType> = ({
                 />
               </h2>
               <h4 className="pb-4">
-                Glühwein, Glögg, Glückseligkeit - alle Weihnachtsmärkte auf einen Blick!
+                Glühwein, Glögg, Glückseligkeit - alle Weihnachtsmärkte auf
+                einen Blick!
               </h4>
               <p className="pb-4">
-                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot von über 60
-                Berliner Weihnachtsmärkten von traditionellem bis zu individuellem
-                Flair. Lass dir Weihnachtsmärkte nach Wunschdatum und Öffnungszeiten anzeigen. So verpasst du deinen Lieblingsmarkt im Kiez nie wieder. Oder nutze die Filter, um passende Märkte zu finden und teile deine Entdeckung mit deinen Freund:innen!
-                Frohe Weihnachten!
+                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot von
+                über 60 Berliner Weihnachtsmärkten von traditionellem bis zu
+                individuellem Flair. Lass dir Weihnachtsmärkte nach Wunschdatum
+                und Öffnungszeiten anzeigen. So verpasst du deinen
+                Lieblingsmarkt im Kiez nie wieder. Oder nutze die Filter, um
+                passende Märkte zu finden und teile deine Entdeckung mit deinen
+                Freund:innen! Frohe Weihnachten!
               </p>
 
               <button
