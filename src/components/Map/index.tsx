@@ -141,6 +141,7 @@ export const MapComponent: FC<MapComponentType> = ({
           12.536773681640625, 52.08034997571588, 14.20257568359375,
           52.9395349771423,
         ]}
+        attributionControl={false}
         // onLoad={onMapLoad}
       >
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
@@ -194,6 +195,16 @@ export const MapComponent: FC<MapComponentType> = ({
           </Marker>
         )}
       </Map>
+      <div>
+        <div className="fixed bottom-2 right-2 text-gray-500/60 text-xs">
+          <a href="https://www.maptiler.com/copyright/" target="_blank">
+            © MapTiler
+          </a>{' '}
+          <a href="https://www.openstreetmap.org/copyright" target="_blank">
+            © OpenStreetMap contributors
+          </a>
+        </div>
+      </div>
     </div>
   )
 }
