@@ -28,7 +28,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
   let navPositionClasses =
     !sidebarMenuOpen || hasMobileSize ? 'left-[0px]' : 'left-sidebar'
 
-  if (marketId) {
+  if (marketId && !hasMobileSize) {
     navPositionClasses = 'left-sidebar'
   }
 
