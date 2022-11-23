@@ -175,7 +175,6 @@ export const MapComponent: FC<MapComponentType> = ({
             latitude={popupCoo[0]}
             closeButton={false}
             anchor={'bottom'}
-            className={'text-gold'}
           >
             {popupText}
           </Popup>

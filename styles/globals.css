@@ -58,15 +58,6 @@ cursor: pointer;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.mapboxgl-popup-content{
-  background-color: #091725e9 !important;
-  color: #f5f8fee9;
-  padding: 1px
-}
-.mapboxgl-popup-tip  {background-color: #091725 !important;
-border-top: none !important;
-}
-
 
 
 
