@@ -49,10 +49,13 @@ export const SidebarNav: FC<SidebarNavType> = ({
           onClick={() => setModalOpen(true)}
           title="home"
           className={classNames(
-            'mr-auto ml-auto w-fit cursor-pointer bg-darkblue text-gold font-bold hover:text-darkblue hover:bg-gold rounded-full mb-4 p-4'
+            'text-xs md:text-base mr-auto ml-auto w-fit cursor-pointer bg-darkblue font-bold hover:bg-gold rounded-2xl mb-4 px-4 py-2.5 group'
           )}
         >
-          Weihnachtsmarkt-Finder
+          <span
+          className={'text-gold group-hover:text-darkblue'}>Weihnachtsmarkt</span>
+          <span
+          className={'text-lightblue'}>Finder</span>
         </div>
       </div>
 
