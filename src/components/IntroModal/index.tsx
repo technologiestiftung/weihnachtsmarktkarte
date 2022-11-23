@@ -45,10 +45,10 @@ export const IntroModal: FC<IntroModalType> = ({
           <div className="flex min-h-full items-center justify-center p-4 leading-7">
             <Dialog.Panel className="bg-darkblue/80 text-lightblue/90 max-h-full overflow-y-auto p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all">
               <button
-                className="focus:outline-none top-0 right-0 m-2 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
+                className="text-lightblue focus:outline-none top-0 right-0 m-2 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
                 onClick={closeModal}
               >
-                <Cross color1={'black'} />
+                <Cross />
               </button>
               <h2 className="font-bold text-2xl pb-2 pt-2 text-lightblue/80">
                 Berliner Weihnachtsmarkt-Finder
