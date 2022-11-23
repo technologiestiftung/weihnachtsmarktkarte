@@ -57,9 +57,6 @@ Year after year the Senatsverwaltung für Wirtschaft, Energie und Betriebe (Sena
 This application is almost completely based on open data. Open data is now an important part of Berlin's administrative activities and not only creates transparency and openness, but also enables analysis and applications like this to explore the city and come together for pre-christmas time. 
 You can find more open data at the [Berlin Open Data Portal](https://daten.berlin.de).
 
-
-## Tech stack
-   
    
 ## Data
 This repository contains the original data for the Berliner Weihnachtsmarktkarte.
