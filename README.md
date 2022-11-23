@@ -144,6 +144,12 @@ You can commit using the `npm run cm` command to ensure your commits follow our 
 
 The app is deployed to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
+## Map
+
+The basemap style was created with maptiler (https://www.maptiler.com/). The dark map style that is used in the application is located in our repo under: 
+weihnachtsmarktkarte/src/components/Map/mapstyle.json. If you would like to use this particular style feel free to copy it. Please note, that you would need to update the MAPKEY with your own project's mapkey.   
+ 
+
 ## Page analytics
 
 We use [Matomo](https://matomo.org/) for website analytics. Matomo is respectful of the users' privacy, the page visits are tracked anonymously.
