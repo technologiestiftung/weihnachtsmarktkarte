@@ -10,6 +10,8 @@ export interface SidebarNavType {
   sidebarMenuOpen: boolean
   setSidebarMenuOpen: (open: boolean) => void
   setModalOpen: (open: boolean) => void
+  marketId: string | number | null
+  setMarketId: (time: string | null | number) => void
 }
 
 export const SidebarNav: FC<SidebarNavType> = ({
@@ -19,10 +21,17 @@ export const SidebarNav: FC<SidebarNavType> = ({
   sidebarMenuOpen,
   setSidebarMenuOpen,
   setModalOpen,
+  marketId,
+  setMarketId,
 }) => {
   const hasMobileSize = useHasMobileSize()
-  const navPositionClasses =
+  let navPositionClasses =
     !sidebarMenuOpen || hasMobileSize ? 'left-[0px]' : 'left-sidebar'
+
+  if (marketId) {
+    navPositionClasses = 'left-sidebar'
+  }
+
   const padding = sidebarMenuOpen ? (hasMobileSize ? 'pl-4' : 'pl-0') : 'pl-4'
   const navClasses =
     'h-14 cursor-pointer list-none text-center grid place-items-center hover:bg-gold'
@@ -31,6 +40,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
       setSidebarMenuOpen(true)
     }
     setNavView(listView.value)
+    setMarketId(null)
   }
   return (
     <nav
@@ -40,11 +50,14 @@ export const SidebarNav: FC<SidebarNavType> = ({
         'fixed top-0 p-4 transition-left ease-in-out duration-300 z-10 rounded overflow-hidden'
       )}
     >
-      <div className="w-14 flex flex-col list-none overflow-hidden shadow-lg ">
+      <div className="w-14 flex flex-col list-none overflow-hidden shadow-lg text-gold ">
         <div
           onClick={() => setModalOpen(true)}
           title="home"
-          className={classNames('bg-darkblue rounded mb-4 text-gold hover:text-darkblue', navClasses)}
+          className={classNames(
+            'bg-darkblue hover:text-darkblue rounded mb-4',
+            navClasses
+          )}
         >
           <Home />
         </div>
@@ -55,9 +68,11 @@ export const SidebarNav: FC<SidebarNavType> = ({
               title={listView.name}
               onClick={() => onNavClick(listView)}
               className={classNames(
+                'text-gold',
+                // 'text-gold hover:text-darkblue',
                 listView.value === navView && sidebarMenuOpen
-                  ? 'bg-gold'
-                  : 'bg-darkblue',
+                  ? 'bg-gold text-darkblue'
+                  : 'bg-darkblue text-gold',
                 navClasses
               )}
             >

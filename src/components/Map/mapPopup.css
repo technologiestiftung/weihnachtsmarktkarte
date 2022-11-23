@@ -1,0 +1,7 @@
+.maplibregl-popup-content  {
+    @apply !bg-gold text-darkblue font-bold rounded-lg text-base
+}
+
+.maplibregl-popup-tip{
+    border-top-color: #BDA33B !important
+}

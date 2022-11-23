@@ -12,7 +12,7 @@ import { SidebarContentInfo } from '@components/Sidebar/SidebarContentInfo'
 import { SidebarContentLayers } from '@components/Sidebar/SidebarContentLayers'
 import { SidebarContentFilter } from '@components/Sidebar/SidebarContentFilter'
 
-import { Filter, Info } from '@components/Icons'
+import { Filter, Info, Search } from '@components/Icons'
 import { SidebarNav } from '@components/Sidebar/SidebarNav'
 import { MapNav } from '@components/MapNav'
 
@@ -31,7 +31,7 @@ const navViews = [
   {
     value: 'filter',
     name: 'filter',
-    icon: <Filter color1={'#F5F8FE'}/>,
+    icon: <Search />,
     mobileHeight: 'half',
   },
   // {
@@ -43,7 +43,7 @@ const navViews = [
   {
     value: 'info',
     name: 'information',
-    icon: <Info color1={'#F5F8FE'}/>,
+    icon: <Info />,
     mobileHeight: 'full',
   },
 ]
@@ -219,6 +219,8 @@ const MapSite: NextPage = (mapData: any) => {
         sidebarMenuOpen={sidebarMenuOpen}
         setSidebarMenuOpen={setSidebarMenuOpen}
         setModalOpen={setModalOpen}
+        marketId={marketId}
+        setMarketId={setMarketId}
       />
       <SnowNav></SnowNav>
       <MapComponent
