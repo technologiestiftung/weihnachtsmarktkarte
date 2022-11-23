@@ -148,10 +148,9 @@ export const MapComponent: FC<MapComponentType> = ({
           <Layer {...layerStyles['toilets-labels']} />
           <Layer {...layerStyles['toilets-circles']} />
         </Source>
-        {/* <GeolocateControl
+        <GeolocateControl
           positionOptions={{ enableHighAccuracy: true }}
           trackUserLocation={true}
-          // isMobile ? true : false
           showUserLocation={true}
           style={{}}
           onGeolocate={(posOptions: {
@@ -160,16 +159,16 @@ export const MapComponent: FC<MapComponentType> = ({
               longitude: number
             }
           }) => {
-            console.log(posOptions)
-            // const { latitude, longitude } = posOptions.coords
-            // onViewStateChange({
-            //   longitude,
-            //   latitude,
-            //   zoom: VIEWSTATE_ZOOMEDIN_ZOOM,
-            //   transitionDuration: VIEWSTATE_TRANSITION_DURATION,
-            // })
+            // console.log(posOptions)
+            // // const { latitude, longitude } = posOptions.coords
+            // // onViewStateChange({
+            // //   longitude,
+            // //   latitude,
+            // //   zoom: VIEWSTATE_ZOOMEDIN_ZOOM,
+            // //   transitionDuration: VIEWSTATE_TRANSITION_DURATION,
+            // // })
           }}
-        /> */}
+        />
         {popupVisible && !isMobile && (
           <Popup
             longitude={popupCoo[1]}

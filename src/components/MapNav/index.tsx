@@ -15,7 +15,7 @@ export const MapNav: FC<MapNavType> = ({ mapZoom, setMapZoom }) => {
   return (
     <nav
       className={classNames(
-        'mb-3 fixed bottom-6 p-6 ease-in-out duration-300 z-10 right-0'
+        'mb-3 fixed bottom-12 p-6 ease-in-out duration-300 z-10 right-0'
       )}
     >
       <div>

@@ -43,44 +43,48 @@ export const SidebarNav: FC<SidebarNavType> = ({
     setMarketId(null)
   }
   return (
-    <nav
-      className={classNames(
-        navPositionClasses,
-        padding,
-        'fixed top-0 p-4 transition-left ease-in-out duration-300 z-10 rounded overflow-hidden'
-      )}
-    >
-      <div className="w-14 flex flex-col list-none overflow-hidden shadow-lg text-gold ">
+    <>
+      <div className="fixed w-full top-4 z-10 text-center">
         <div
           onClick={() => setModalOpen(true)}
           title="home"
           className={classNames(
-            'bg-darkblue hover:text-darkblue rounded mb-4',
-            navClasses
+            'mr-auto ml-auto w-fit cursor-pointer bg-darkblue text-gold font-bold hover:text-darkblue hover:bg-gold rounded-full mb-4 p-4'
           )}
         >
-          <Home />
-        </div>
-        <div className="w-14 flex flex-col list-none rounded overflow-hidden shadow-lg">
-          {navViews.map((listView) => (
-            <div
-              key={listView.value}
-              title={listView.name}
-              onClick={() => onNavClick(listView)}
-              className={classNames(
-                'text-gold',
-                'hover:text-darkblue',
-                listView.value === navView && sidebarMenuOpen
-                  ? 'bg-gold text-darkblue'
-                  : 'bg-darkblue text-gold',
-                navClasses
-              )}
-            >
-              {listView.icon}
-            </div>
-          ))}
+          Weihnachtsmarkt-Finder
         </div>
       </div>
-    </nav>
+
+      <nav
+        className={classNames(
+          navPositionClasses,
+          padding,
+          'fixed top-0 p-4 transition-left ease-in-out duration-300 z-10 rounded overflow-hidden'
+        )}
+      >
+        <div className="w-14 flex flex-col list-none overflow-hidden shadow-lg text-gold ">
+          <div className="w-14 flex flex-col list-none rounded overflow-hidden shadow-lg">
+            {navViews.map((listView) => (
+              <div
+                key={listView.value}
+                title={listView.name}
+                onClick={() => onNavClick(listView)}
+                className={classNames(
+                  'text-gold',
+                  'hover:text-darkblue',
+                  listView.value === navView && sidebarMenuOpen
+                    ? 'bg-gold text-darkblue'
+                    : 'bg-darkblue text-gold',
+                  navClasses
+                )}
+              >
+                {listView.icon}
+              </div>
+            ))}
+          </div>
+        </div>
+      </nav>
+    </>
   )
 }
