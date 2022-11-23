@@ -8,7 +8,7 @@
 
 The Berliner Weihnachtsmarktkarte (Berlin Christmas market map) is an interactive web map of Berlin showing all christmas markets 2022 based on an open dataset. You can filter the markets by date and opening hours and also by marktes with no entry fee or with a special focus like international or design marktes. As a further example this map makes the meaning of open data clear by exploring the city in a new way. We wish you a charming exploration of the berlin christmas markets and merry christmas.
 
-
+[!image](/public/social-image.jpg)
 
 <!--
 
@@ -52,7 +52,7 @@ Get fancy shields at https://shields.io
 
 ## Context
    
-Year after year the Senatsverwaltung für Wirtschaft, Energie und Betriebe (Senate Department for Economy, Energy and businesses) publishs an open dataset about christmas markets. This year the [Open Data Informationsstelle Berlin (ODIS)](https://odis-berlin.de) looked a bit deeper into the data and built an interactive map allowing the visitors to explore berlin christmas markets in a new way. It does exist an overview about christmas markets on the official website of berlin called Das offizielle Hauptstadtporal, though these informations are only discoverable under individual articles. One key function of the map is to filter by individual interests: Which christmas markets are open on my desired date? Which are completly free? And can you show me only international christmas markets on the map? This map gives an answer to all these questions and allows you to plan the visit ahead. Additionally you can see public transport stations and public toilets nearby on the map. With one click via the share function, you can share your favorite christmas market with others.
+Year after year the Senatsverwaltung für Wirtschaft, Energie und Betriebe (Economics, Energy and Public Enterprises) publishs an open dataset about [christmas markets](https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte-2022). This year the [Open Data Informationsstelle Berlin (ODIS)](https://odis-berlin.de) looked a bit deeper into the data and built an interactive map allowing the visitors to explore berlin christmas markets in a new way. It does exist an overview about christmas markets on the official website of berlin called Das offizielle Hauptstadtporal, though these informations are only discoverable under individual articles. One key function of the map is to filter by individual interests: Which christmas markets are open on my desired date? Which are completly free? And can you show me only international christmas markets on the map? This map gives an answer to all these questions and allows you to plan the visit ahead. Additionally you can see public transport stations and public toilets nearby on the map. With one click via the share function, you can share your favorite christmas market with others.
 
 This application is almost completely based on open data. Open data is now an important part of Berlin's administrative activities and not only creates transparency and openness, but also enables analysis and applications like this to explore the city and come together for pre-christmas time. 
 You can find more open data at the [Berlin Open Data Portal](https://daten.berlin.de).
@@ -188,6 +188,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## Content Licencing
+
+The Christmas market data used is under CC-BY license. We have processed and enriched the data for this application. If you use this dataset processed by us, you must indicate that the original raw data came from the Senatsverwaltung für Wirtschaft, Energie und Betriebe (Senate Department for Economics, Energy and Public Enterprises).
 
 ## Credits
 
