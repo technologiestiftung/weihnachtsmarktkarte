@@ -31,7 +31,7 @@ const navViews = [
   {
     value: 'filter',
     name: 'filter',
-    icon: <Search />,
+    icon: <Filter />,
     mobileHeight: 'half',
   },
   // {

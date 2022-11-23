@@ -32,14 +32,44 @@ body {
 
 
 .maplibregl-ctrl-geolocate span {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI2IDI2Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zIC0zKSI+PHBvbHlnb24gcG9pbnRzPSIwIDAgMzIgMCAzMiAzMiAwIDMyIi8+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTIiIHN0cm9rZT0iIzExMTgyNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz48cG9seWdvbiBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBwb2ludHM9IjE2IDIyLjY2NyAxNC42NjcgMTcuMzMzIDkuMzMzIDE2IDIxLjMzMyAxMC42NjciLz48L2c+PC9zdmc+") !important;
+  background-image: url("data:image/svg+xml;base64,PHN2Zwp4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCndpZHRoPScyNCcKaGVpZ2h0PScyNCcKZmlsbD0nI0JEQTMzQicKdmlld0JveD0iMCAwIDIwIDIwIgo+CjxwYXRoCiAgZD0iTTEwIDRDOSA0IDkgNSA5IDV2LjFBNSA1IDAgMCAwIDUuMSA5SDVzLTEgMC0xIDEgMSAxIDEgMWguMUE1IDUgMCAwIDAgOSAxNC45di4xczAgMSAxIDEgMS0xIDEtMXYtLjFhNSA1IDAgMCAwIDMuOS0zLjloLjFzMSAwIDEtMS0xLTEtMS0xaC0uMUE1IDUgMCAwIDAgMTEgNS4xVjVzMC0xLTEtMXptMCAyLjVhMy41IDMuNSAwIDEgMSAwIDcgMy41IDMuNSAwIDEgMSAwLTd6IgovPgo8Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIyIiAvPgo8cGF0aAogIGQ9Ik0xNCA1bDEgMS05IDktMS0xIDktOXoiCiAgZGlzcGxheT0ibm9uZSIKLz4KPC9zdmc+") !important;
+}
+
+.maplibregl-ctrl-geolocate span:hover {
+  background-image: url("data:image/svg+xml;base64,PHN2Zwp4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCndpZHRoPScyNCcKaGVpZ2h0PScyNCcKZmlsbD0nIzAwMCcKdmlld0JveD0iMCAwIDIwIDIwIgo+CjxwYXRoCiAgZD0iTTEwIDRDOSA0IDkgNSA5IDV2LjFBNSA1IDAgMCAwIDUuMSA5SDVzLTEgMC0xIDEgMSAxIDEgMWguMUE1IDUgMCAwIDAgOSAxNC45di4xczAgMSAxIDEgMS0xIDEtMXYtLjFhNSA1IDAgMCAwIDMuOS0zLjloLjFzMSAwIDEtMS0xLTEtMS0xaC0uMUE1IDUgMCAwIDAgMTEgNS4xVjVzMC0xLTEtMXptMCAyLjVhMy41IDMuNSAwIDEgMSAwIDcgMy41IDMuNSAwIDEgMSAwLTd6IgovPgo8Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIyIiAvPgo8cGF0aAogIGQ9Ik0xNCA1bDEgMS05IDktMS0xIDktOXoiCiAgZGlzcGxheT0ibm9uZSIKLz4KPC9zdmc+") !important;
+}
+
+
+
+
+.maplibregl-ctrl{
+  background: none !important
 }
 
 .maplibregl-ctrl-geolocate span {
   background-color: #091725;
   color: #BDA33B;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 90px;
 }
 
+.maplibregl-ctrl-geolocate span:hover {
+  background-color: #BDA33B;
+
+}
+
+.mapboxgl-user-location-dot{
+  background-color:#BDA33B !important;
+}
+
+.mapboxgl-user-location-dot::before, .maplibregl-user-location-dot::before{
+  background-color: #BDA33B !important;
+}
+
+.mapboxgl-user-location-accuracy-circle, .maplibregl-user-location-accuracy-circle{
+  background-color: #BDA33B33 !important;
+}
 /* .maplibregl-ctrl-geolocate {
   cursor: pointer;
   position: fixed;
@@ -48,8 +78,8 @@ body {
 } */
 .maplibregl-ctrl{
   position: fixed;
-bottom: 16px;
-right: 19px;
+bottom: 45px;
+right: 25px;
 cursor: pointer;
 }
 .scrolling .scroll-shadow{
