@@ -70,6 +70,11 @@ body {
 .mapboxgl-user-location-accuracy-circle, .maplibregl-user-location-accuracy-circle{
   background-color: #BDA33B33 !important;
 }
+
+.mapboxgl-ctrl-group button, .maplibregl-ctrl-group button{
+  width: 40px !important;
+  height: 40px !important;
+}
 /* .maplibregl-ctrl-geolocate {
   cursor: pointer;
   position: fixed;
@@ -78,8 +83,8 @@ body {
 } */
 .maplibregl-ctrl{
   position: fixed;
-bottom: 45px;
-right: 25px;
+bottom: 36px;
+right: 15px;
 cursor: pointer;
 }
 .scrolling .scroll-shadow{
