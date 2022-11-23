@@ -170,7 +170,7 @@ export const MapComponent: FC<MapComponentType> = ({
             // })
           }}
         /> */}
-        {popupVisible && (
+        {popupVisible && !isMobile && (
           <Popup
             longitude={popupCoo[1]}
             latitude={popupCoo[0]}

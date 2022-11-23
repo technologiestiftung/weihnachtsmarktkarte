@@ -69,7 +69,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
               onClick={() => onNavClick(listView)}
               className={classNames(
                 'text-gold',
-                // 'text-gold hover:text-darkblue',
+                'hover:text-darkblue',
                 listView.value === navView && sidebarMenuOpen
                   ? 'bg-gold text-darkblue'
                   : 'bg-darkblue text-gold',
