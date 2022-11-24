@@ -23,8 +23,8 @@ export const SwitchWrapper: FC<SwitchWrapperType> = ({
           checked={enabled}
           onChange={setEnabled}
           className={`${
-            enabled ? 'bg-gold border-gold' : 'bg-darkblue'
-          } relative inline-flex h-6 w-11 items-center rounded-full border-2 hover:border-gold`}
+            enabled ? 'bg-gold border-gold' : 'bg-darkblue border-gold hover:bg-gold'
+          } relative inline-flex h-6 w-11 items-center rounded-full border-2 `}
         >
           <span className="sr-only">enabled</span>
           <span
