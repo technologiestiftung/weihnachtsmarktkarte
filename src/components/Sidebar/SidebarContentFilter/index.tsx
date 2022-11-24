@@ -61,7 +61,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             />
           </div>
         </ExpandablePanel>
-        <hr className="my-2" />
+        <hr className="my-2 border-lightblue/70" />
         <ExpandablePanel title={'Abends offen'} open={true}>
           <SwitchWrapper
             text={'Appetit auf gebrannte Mandeln zum Feierabend? Zeige Märkte die nach 19 Uhr offen haben.'}
@@ -69,7 +69,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             setEnabled={setMarketFilterTime}
           />
         </ExpandablePanel>
-        <hr className="my-2" />
+        <hr className="my-2 border-lightblue/70" />
         <ExpandablePanel title={'Eintritt frei'} open={true}>
           <SwitchWrapper
             text={
@@ -79,7 +79,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             setEnabled={setMarketFilterCosts}
           />
         </ExpandablePanel>
-        <hr className="my-2" />
+        <hr className="my-2 border-lightblue/70" />
         <ExpandablePanel title={'Themen-Märkte'} open={true}>
           <SwitchWrapper
             text={
@@ -89,7 +89,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             setEnabled={setMarketFilterInternational}
           />
         </ExpandablePanel>
-        <hr className="my-2" />
+        <hr className="my-2 border-lightblue/70" />
         <ExpandablePanel title={'Action bitte'} open={true}>
           <SwitchWrapper
             text={
@@ -99,7 +99,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             setEnabled={setMarketFilterAction}
           />
         </ExpandablePanel>
-        <hr className="my-2" />
+        <hr className="my-2 border-lightblue/70" />
         <ExpandablePanel title={'Kurze Wege'} open={true}>
           <SwitchWrapper
             text={
