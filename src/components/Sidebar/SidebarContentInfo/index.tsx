@@ -184,7 +184,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({ }) => {
         }]} />
 
         <Accordion items={[{
-          id: '2', title: `I don’t speak German: What's this?`, content:
+          id: '2', title: `I don’t speak German: What's going on here?`, content:
             <>
               <p className="text-sm pb-2">
                 The Berlin Christmas Market Finder shows all of Berlin’s Christmas markets embedded in an
