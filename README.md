@@ -118,9 +118,9 @@ With the correct Node version, install the dependencies:
 npm install
 ```
 
-Because the data is stored in a Supabase database, you will need to provide connection details in your environment. In this repository you can find a file `.env.example`. Duplicate this file and name it `.env`.
+Because the map uses a basemap from maptiler (https://www.maptiler.com/), you will need to provide connection details in your environment. In this repository you can find a file `.env.example`. Duplicate this file and name it `.env`. 
 
-In `.env` you must enter the connection details to the Supabase instance as suggested in `.env.example`. If you do not know how to obtain the necessary details, please ask a repository maintainer for access.
+In `.env` you must enter the connection details to the Maptiler style file as suggested in `.env.example`.  If you do not know how to obtain the necessary details, please ask a repository maintainer for access. You can also use other basemaps by providing your own style file.  
 
 You are now ready to start a local development server on http://localhost:3000 via:
 
