@@ -8,6 +8,7 @@ import { OdisLogo } from '@components/Logos/OdisLogo'
 import { SenWebLogo } from '@components/Logos/SenWebLogo'
 import { TsbLogo } from '@components/Logos/TsbLogo'
 import { Accordion } from '@components/Accordion'
+import { SenInLogo } from '@components/Logos/SenInLogo'
 
 export interface SidebarContentInfoType {}
 
@@ -228,7 +229,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
           </div> */}
           <div className="flex flex-col">
             <span className="text-sm mb-2">Gefördert von</span>
-            <SenWebLogo className={`w-40`} />
+            <SenInLogo className="w-40" />
           </div>
         </section>
       </SidebarBody>
