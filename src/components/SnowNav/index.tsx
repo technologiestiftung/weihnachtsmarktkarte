@@ -9,11 +9,15 @@ export const SnowNav: FC<SnowNavType> = ({}) => {
   const [snow, setSnow] = useState(false)
 
   function snowToggle() {
+    // @ts-ignore
     if (window.snowStorm) {
       if (snow) {
+        // @ts-ignore
         window.snowStorm.toggleSnow()
+        // @ts-ignore
         window.snowStorm.toggleSnow()
       } else {
+        // @ts-ignore
         window.snowStorm.stop()
       }
       setSnow(!snow)
@@ -25,6 +29,7 @@ export const SnowNav: FC<SnowNavType> = ({}) => {
 
   return (
     <>
+      {/* @ts-ignore */}
       {typeof window !== 'undefined' && window.snowStorm && (
         <nav
           className={

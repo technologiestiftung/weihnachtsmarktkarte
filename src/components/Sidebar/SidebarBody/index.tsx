@@ -1,6 +1,10 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
-export const SidebarBody: FC = ({ children }) => {
+export interface SidebarBodyType {
+  children: ReactNode
+}
+
+export const SidebarBody: FC<SidebarBodyType> = ({ children }) => {
   return (
     <>
       <div className="px-4">{children}</div>

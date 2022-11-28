@@ -5,8 +5,8 @@ import { Home } from '@components/Icons'
 
 export interface SidebarNavType {
   navViews: any
-  setNavView: (view: string) => void
-  navView?: 'info' | 'filter' | 'layers'
+  setNavView: (view: 'info' | 'filter') => void
+  navView?: 'info' | 'filter'
   sidebarMenuOpen: boolean
   setSidebarMenuOpen: (open: boolean) => void
   setModalOpen: (open: boolean) => void
@@ -35,7 +35,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
   const padding = sidebarMenuOpen ? (hasMobileSize ? 'pl-4' : 'pl-0') : 'pl-4'
   const navClasses =
     'h-14 cursor-pointer list-none text-center grid place-items-center hover:bg-gold'
-  function onNavClick(listView) {
+  function onNavClick(listView: any) {
     if (!sidebarMenuOpen) {
       setSidebarMenuOpen(true)
     }
@@ -52,10 +52,10 @@ export const SidebarNav: FC<SidebarNavType> = ({
             'text-xs md:text-base mr-auto ml-auto w-fit cursor-pointer bg-darkblue font-bold hover:bg-gold rounded-2xl mb-4 px-4 py-2.5 group'
           )}
         >
-          <span
-          className={'text-gold group-hover:text-darkblue'}>Weihnachtsmarkt</span>
-          <span
-          className={'text-lightblue'}>Finder</span>
+          <span className={'text-gold group-hover:text-darkblue'}>
+            Weihnachtsmarkt
+          </span>
+          <span className={'text-lightblue'}>Finder</span>
         </div>
       </div>
 
@@ -68,7 +68,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
       >
         <div className="w-14 flex flex-col list-none overflow-hidden shadow-lg text-gold ">
           <div className="w-14 flex flex-col list-none rounded overflow-hidden shadow-lg">
-            {navViews.map((listView) => (
+            {navViews.map((listView: any) => (
               <div
                 key={listView.value}
                 title={listView.name}

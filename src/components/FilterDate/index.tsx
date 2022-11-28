@@ -6,8 +6,8 @@ import de from 'date-fns/locale/de'
 import 'react-day-picker/dist/style.css'
 
 export interface FilterDateType {
-  marketFilterDate: Date
-  setMarketFilterDate: (date: Date) => void
+  marketFilterDate: Date | boolean
+  setMarketFilterDate: (date: Date | boolean) => void
 }
 
 export const FilterDate: FC<FilterDateType> = ({
@@ -44,6 +44,7 @@ font-size: 16px
         <DayPicker
           mode="single"
           selected={marketFilterDate}
+          // @ts-ignore
           onSelect={setMarketFilterDate}
           modifiersClassNames={{
             selected: '!bg-gold hover:bg-gold',

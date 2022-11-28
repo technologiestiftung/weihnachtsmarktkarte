@@ -4,6 +4,7 @@ import classNames from 'classnames'
 export interface MarketInfoType {
   icon: ReactNode
   title: string
+  children: ReactNode
 }
 
 export const MarketInfo: FC<MarketInfoType> = ({ icon, title, children }) => {

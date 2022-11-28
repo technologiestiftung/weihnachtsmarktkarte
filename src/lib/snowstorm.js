@@ -585,12 +585,9 @@ export function snowStorm(window, document) {
     }
   }
 
-  console.log('ÖÖÖÖÖ')
-
   that.createSnow = function (limit, allowInactive) {
     var i
     for (i = 0; i < limit; i++) {
-      console.log('NNNNNNN')
       storm.flakes[storm.flakes.length] = new storm.SnowFlake(
         parseInt(rnd(flakeTypes), 10)
       )
@@ -678,7 +675,6 @@ export function snowStorm(window, document) {
     }
     fixedForEverything = storm.usePositionFixed
     if (screenX && screenY && !storm.disabled) {
-      console.log('iniiiitt')
       storm.init()
       storm.active = true
     }
