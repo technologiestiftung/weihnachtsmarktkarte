@@ -226,5 +226,3 @@ The Christmas market data used is under CC-BY license. We have processed and enr
     </td>
   </tr>
 </table>
-
-## Related Projects
