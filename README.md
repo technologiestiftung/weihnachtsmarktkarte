@@ -218,7 +218,7 @@ The Christmas market data used is under CC-BY license. We have processed and enr
       </a>
     </td>
     <td>
-      Supported by: <a href="https://www.berlin.de/sen/web/">
+      Supported by: <a href="https://www.berlin.de/sen/inneres/">
         <br />
         <br />
         <img width="80" src="https://logos.citylab-berlin.org/logo-berlin-senweb-de.svg"/>
