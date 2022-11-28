@@ -26,7 +26,6 @@ export const SidebarWrapper: FC<SidebarWrapperType> = ({
   const positionClass = position === 'left' ? 'left-0' : 'right-0'
   const positionClassClosed =
     position === 'left' ? '-translate-x-full' : 'translate-x-full'
-  //   const heightOnMobile = hasMobileSize ? mobileHeight
   const heightOnMobile = mobileHeight === 'full' ? 'h-full' : 'h-1/2'
 
   const classesMobile = hasMobileSize
@@ -41,7 +40,7 @@ export const SidebarWrapper: FC<SidebarWrapperType> = ({
     : positionClassClosed
 
   // scrolling stuff
-  const sidebarRef = useRef()
+  const sidebarRef = useRef<HTMLDivElement>(null)
   const [hasScrolled, setHasScrolled] = useState<boolean>(false)
   useEffect(() => {
     const scrollContainer = sidebarRef.current
@@ -54,7 +53,9 @@ export const SidebarWrapper: FC<SidebarWrapperType> = ({
         setHasScrolled(false)
       }
     }
+    // @ts-ignore
     scrollContainer.addEventListener('scroll', onScroll)
+    // @ts-ignore
     return () => scrollContainer.removeEventListener('scroll', onScroll)
   }, [hasScrolled])
   const scrolling = hasScrolled ? 'scrolling' : ''

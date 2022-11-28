@@ -11,8 +11,8 @@ export interface SidebarContentFilterType {
   setMarketFilterInternational: (enabled: boolean) => void
   marketFilterCosts: boolean
   setMarketFilterCosts: (enabled: boolean) => void
-  marketFilterDate: Date | void
-  setMarketFilterDate: (date: Date | void) => void
+  marketFilterDate: Date | boolean
+  setMarketFilterDate: (date: Date | boolean) => void
   marketFilterTime: boolean
   setMarketFilterTime: (time: boolean) => void
   marketFilterAction: boolean
@@ -36,10 +36,9 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   setMarketFilterTrain,
 }) => {
   function resetFilter() {
-    console.log('resetting')
     setMarketFilterCosts(false)
     setMarketFilterInternational(false)
-    setMarketFilterDate()
+    setMarketFilterDate(false)
     setMarketFilterTime(false)
     setMarketFilterAction(false)
     setMarketFilterTrain(false)
