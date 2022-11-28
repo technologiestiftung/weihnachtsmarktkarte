@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 export interface SidebarHeaderType {
   text: string
-  fontSize: string
+  fontSize?: string
 }
 
 export const SidebarHeader: FC<SidebarHeaderType> = ({

@@ -56,15 +56,15 @@ const MapSite: NextPage = (mapData: any) => {
   const [marketFilterInternational, setMarketFilterInternational] =
     useState<boolean>(false)
   const [marketFilterCosts, setMarketFilterCosts] = useState<boolean>(false)
-  const [marketFilterDate, setMarketFilterDate] = useState<Date>()
-  const [marketFilterTime, setMarketFilterTime] = useState<number[]>()
+  const [marketFilterDate, setMarketFilterDate] = useState<Date | void>()
+  const [marketFilterTime, setMarketFilterTime] = useState<boolean>(false)
   const [marketFilterAction, setMarketFilterAction] = useState<boolean>(false)
   const [marketFilterTrain, setMarketFilterTrain] = useState<boolean>(false)
 
-  const [navView, setNavView] = useState<string>(navViews[0].value)
+  const [navView, setNavView] = useState<'filter' | 'info'>('filter')
   const [sidebarMenuOpen, setSidebarMenuOpen] = useState<boolean>(false)
   const [sidebarInfoOpen, setSidebarInfoOpen] = useState<boolean>(false)
-  const [mobileHeight, setMobileHeight] = useState<string>(navViews[0].value)
+  const [mobileHeight, setMobileHeight] = useState<'half' | 'full'>('half')
 
   const [zoomToCenter, setZoomToCenter] = useState<number[]>([0, 0])
   const [mapZoom, setMapZoom] = useState<number>(10)
@@ -150,6 +150,7 @@ const MapSite: NextPage = (mapData: any) => {
   // and close the info sidebar
   useEffect(() => {
     const navViewFiltered = navViews.filter((d) => d.value === navView)
+    // @ts-ignore
     setMobileHeight(navViewFiltered[0].mobileHeight)
     setSidebarInfoOpen(false)
   }, [navView])
@@ -193,12 +194,6 @@ const MapSite: NextPage = (mapData: any) => {
             setMarketFilterTrain={setMarketFilterTrain}
           />
         )}
-        {navView === 'layers' && (
-          <SidebarContentLayers
-            showMapLayerToilets={showMapLayerToilets}
-            setShowMapLayerToilets={setShowMapLayerToilets}
-          />
-        )}
         {navView === 'info' && <SidebarContentInfo />}
       </SidebarWrapper>
       {/* market data information */}
@@ -228,17 +223,11 @@ const MapSite: NextPage = (mapData: any) => {
         marketsData={marketsData}
         zoomToCenter={zoomToCenter}
         mapZoom={mapZoom}
-        setMapZoom={setMapZoom}
         setMarketId={setMarketId}
-        marketData={marketData}
         setMarketData={setMarketData}
         marketId={marketId}
       />
-      <MapNav
-        mapZoom={mapZoom}
-        setMapZoom={setMapZoom}
-        sidebarMenuOpen={sidebarMenuOpen}
-      />
+      <MapNav mapZoom={mapZoom} setMapZoom={setMapZoom} />
     </>
   )
 }

@@ -21,12 +21,6 @@ export interface MapComponentType {
   setMarketData: (time: any) => void
   zoomToCenter?: number[]
   mapZoom?: number
-  marketFilterInternational: boolean
-  marketFilterAction: boolean
-  marketFilterTrain: boolean
-  marketFilterCosts: boolean
-  marketFilterDate: Date
-  marketFilterTime: number[]
 }
 
 export const MapComponent: FC<MapComponentType> = ({
@@ -39,7 +33,7 @@ export const MapComponent: FC<MapComponentType> = ({
   mapZoom,
 }) => {
   const isMobile = useHasMobileSize()
-  const mapRef = useRef()
+  const mapRef = useRef<mapboxgl.Map>()
   const startMapView = {
     longitude: 13.341760020413858,
     latitude: 52.510831578689704,
@@ -55,7 +49,9 @@ export const MapComponent: FC<MapComponentType> = ({
 
   useEffect(() => {
     if (mapRef.current) {
+      // @ts-ignore
       if (mapRef.current.getZoom() !== mapZoom) {
+        // @ts-ignore
         mapRef.current.zoomTo(mapZoom, {
           duration: 200,
         })
@@ -65,9 +61,12 @@ export const MapComponent: FC<MapComponentType> = ({
 
   useEffect(() => {
     if (mapRef.current) {
+      // @ts-ignore
       mapRef.current.easeTo({
+        // @ts-ignore
         center: zoomToCenter,
         zoom: 13,
+        // @ts-ignore
         padding: { left: isMobile ? 0 : 200 },
       })
     }
@@ -83,7 +82,7 @@ export const MapComponent: FC<MapComponentType> = ({
     }
   }, [marketId])
 
-  const onMarkerCLick = (feature): void => {
+  const onMarkerCLick = (feature: any): void => {
     setMarketId(feature.id)
     setMarketData(feature)
   }
@@ -136,6 +135,7 @@ export const MapComponent: FC<MapComponentType> = ({
         mapStyle={process.env.NEXT_PUBLIC_MAPTILER_STYLE}
         // mapStyle={mapStyle()}
         onClick={onMapCLick}
+        // @ts-ignore
         ref={mapRef}
         maxBounds={[
           12.536773681640625, 52.08034997571588, 14.20257568359375,
@@ -145,7 +145,9 @@ export const MapComponent: FC<MapComponentType> = ({
         // onLoad={onMapLoad}
       >
         <Source id="toilets-source" type="geojson" data={mapData.toilets}>
+          {/* @ts-ignore */}
           <Layer {...layerStyles['toilets-labels']} />
+          {/* @ts-ignore */}
           <Layer {...layerStyles['toilets-circles']} />
         </Source>
         <GeolocateControl

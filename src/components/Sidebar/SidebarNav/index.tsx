@@ -5,8 +5,8 @@ import { Home } from '@components/Icons'
 
 export interface SidebarNavType {
   navViews: any
-  setNavView: (view: string) => void
-  navView?: 'info' | 'filter' | 'layers'
+  setNavView: (view: 'info' | 'filter') => void
+  navView?: 'info' | 'filter'
   sidebarMenuOpen: boolean
   setSidebarMenuOpen: (open: boolean) => void
   setModalOpen: (open: boolean) => void
@@ -52,10 +52,10 @@ export const SidebarNav: FC<SidebarNavType> = ({
             'text-xs md:text-base mr-auto ml-auto w-fit cursor-pointer bg-darkblue font-bold hover:bg-gold rounded-2xl mb-4 px-4 py-2.5 group'
           )}
         >
-          <span
-          className={'text-gold group-hover:text-darkblue'}>Weihnachtsmarkt</span>
-          <span
-          className={'text-lightblue'}>Finder</span>
+          <span className={'text-gold group-hover:text-darkblue'}>
+            Weihnachtsmarkt
+          </span>
+          <span className={'text-lightblue'}>Finder</span>
         </div>
       </div>
 

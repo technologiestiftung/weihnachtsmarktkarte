@@ -8,7 +8,7 @@ import { OdisLogo } from '@components/Logos/OdisLogo'
 export interface IntroModalType {
   modalOpen: boolean
   setModalOpen: (date: boolean) => void
-  setNavView: (date: string) => void
+  setNavView: (date: 'info' | 'filter') => void
   setSidebarMenuOpen: (date: boolean) => void
 }
 

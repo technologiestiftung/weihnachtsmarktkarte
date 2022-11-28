@@ -12,7 +12,6 @@ export const SenInLogo: FC<HTMLProps<HTMLAnchorElement>> = (props) => (
       data-name="Ebene 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 871.08 584.52"
-      fill
     >
       <defs></defs>
       <path

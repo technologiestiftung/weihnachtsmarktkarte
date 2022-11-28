@@ -6,8 +6,8 @@ import de from 'date-fns/locale/de'
 import 'react-day-picker/dist/style.css'
 
 export interface FilterDateType {
-  marketFilterDate: Date
-  setMarketFilterDate: (date: Date) => void
+  marketFilterDate: Date | void
+  setMarketFilterDate: (date: Date | void) => void
 }
 
 export const FilterDate: FC<FilterDateType> = ({
