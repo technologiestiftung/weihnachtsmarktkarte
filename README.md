@@ -129,6 +129,26 @@ You are now ready to start a local development server on http://localhost:3000 v
 npm run dev
 ```
 
+## Input Data 
+
+id;shortname;strasse;plz_ort;von;bis;;w3;
+bemerkungen;lat;lng;immer-kostenlos;Mo;Di;Mi;Do;Fr;Sa;So;closed-exc;hours-exc;ignore;merged;international;action;image;urheberschaft;train;short_distance
+
+w3 webseite https://
+
+
+name | type | purpose |
+--- | --- | --- | ---
+id |
+
+
+id | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+
+
 ## Workflow
 
 New features, fixes, etc. should always be developed on a separate branch:
