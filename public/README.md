@@ -1,11 +1,14 @@
+## Input data
+
+
 name | type | purpose | example
---- | --- | ---
+--- | --- | --- | ---
 id | `string` | a unique id - must be a number  | "1"
 shortname | `string` | name of the market  | 
 strasse | `string` | street name  | 
 plz_ort | `string` | post code  | 
 train | `string` | text about public transport  | 
-image | `string` | image name including type e.g. .png  | 
+image | `string` | image name including file type e.g. .png  | 
 urheberschaft | `string` | image copyright text  | 
 von | `string` | opening date  |  "17.11.22"
 bis | `string` | closing date  |  "17.11.22"
@@ -26,4 +29,4 @@ ignore | `string` | if you want to ignore the entry |  '0' or '1'
 immer-kostenlos | `string` | filter free |  '0' or '1' 
 international | `string` | filter international |  '0' or '1' 
 action | `string` | filter action |  '0' or '1' 
-short_distance | `string` | filter short_distance: '0' | '1'
+short_distance | `string` | filter short_distance |  '0' or '1' 
