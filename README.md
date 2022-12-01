@@ -129,6 +129,10 @@ You are now ready to start a local development server on http://localhost:3000 v
 npm run dev
 ```
 
+## Input Data 
+
+The required input data is documented [here](./public/README.md).
+
 ## Workflow
 
 New features, fixes, etc. should always be developed on a separate branch:
