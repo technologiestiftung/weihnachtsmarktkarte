@@ -35,8 +35,14 @@ font-size: 16px
   .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
     color: #091725;
   }
+
+  .rdp-day_today:not(.rdp-day_outside) {
+    color: #BDA33B;
+  }
+
 `
-  const defaultMonth = new Date(2022, 10)
+  const currentMonth = new Date().getMonth()
+  const defaultMonth = new Date(2022, currentMonth)
   return (
     <>
       <div className="self-center">
@@ -47,7 +53,7 @@ font-size: 16px
           // @ts-ignore
           onSelect={setMarketFilterDate}
           modifiersClassNames={{
-            selected: '!bg-gold hover:bg-gold',
+            selected: '!bg-gold hover:bg-gold !text-darkblue',
             mouseover: '!bg-gold',
           }}
           defaultMonth={defaultMonth}
