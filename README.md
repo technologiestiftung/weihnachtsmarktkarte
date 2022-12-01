@@ -131,23 +131,7 @@ npm run dev
 
 ## Input Data 
 
-id;shortname;strasse;plz_ort;von;bis;;w3;
-bemerkungen;lat;lng;immer-kostenlos;Mo;Di;Mi;Do;Fr;Sa;So;closed-exc;hours-exc;ignore;merged;international;action;image;urheberschaft;train;short_distance
-
-w3 webseite https://
-
-
-name | type | purpose |
---- | --- | --- | ---
-id |
-
-
-id | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-
+The required input data is documented [here](./public/README.md).
 
 ## Workflow
 
