@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react'
 
 import { format } from 'date-fns'
 import { DayPicker } from 'react-day-picker'
@@ -41,8 +41,19 @@ font-size: 16px
   }
 
 `
-  const currentMonth = new Date().getMonth()
-  const defaultMonth = new Date(2022, currentMonth)
+
+  const [defaultMonth, setDefaultMonth] = useState<Date>()
+  const [today, setToday] = useState<Date>()
+  const fromMonth = new Date(2022, 10)
+  const toDate = new Date(2023, 0, 4)
+
+  useEffect(() => {
+    const today = new Date()
+    const maxOrToday = today.getTime() > toDate.getTime() ? toDate : today
+    setToday(maxOrToday)
+    setDefaultMonth(new Date(maxOrToday.getFullYear(), maxOrToday.getMonth()))
+  }, [])
+
   return (
     <>
       <div className="self-center">
@@ -57,8 +68,9 @@ font-size: 16px
             mouseover: '!bg-gold',
           }}
           defaultMonth={defaultMonth}
-          fromMonth={defaultMonth}
-          toDate={new Date(2023, 0, 4)}
+          today={today}
+          fromMonth={fromMonth}
+          toDate={toDate}
           locale={de}
           weekStartsOn={1}
         />
