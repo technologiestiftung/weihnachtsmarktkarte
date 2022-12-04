@@ -21,7 +21,7 @@
     "react-day-picker": "8.3.6",
     "react-dom": "18.2.0",
     "react-map-gl": "7.0.19",
-    "use-debounce": "8.0.4"
+    "use-debounce": "9.0.2"
   },
   "devDependencies": {
     "@types/node": "18.11.7",
