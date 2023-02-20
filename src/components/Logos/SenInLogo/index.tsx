@@ -2,7 +2,7 @@ import { FC, HTMLProps } from 'react'
 
 export const SenInLogo: FC<HTMLProps<HTMLAnchorElement>> = (props) => (
   <a
-    href="https://www.berlin.de/sen/web/"
+    href="https://www.berlin.de/sen/inneres/"
     target="_blank"
     rel="noreferrer"
     {...props}
