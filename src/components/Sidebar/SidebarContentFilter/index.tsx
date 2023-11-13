@@ -5,6 +5,7 @@ import { SwitchWrapper } from '@components/SwitchWrapper'
 import { FilterDate } from '@components/FilterDate'
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 import { SidebarBody } from '@components/Sidebar/SidebarBody'
+import { WeatherOverlay } from '@components/WeatherOverlay'
 
 export interface SidebarContentFilterType {
   marketFilterInternational: boolean

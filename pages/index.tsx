@@ -19,6 +19,8 @@ import { MapNav } from '@components/MapNav'
 import { SnowNav } from '@components/SnowNav'
 import { IntroModal } from '@components/IntroModal'
 
+import { WeatherOverlay } from '@components/WeatherOverlay'
+
 import { getMapData } from '@lib/loadMapData'
 import { filterMarkets } from '@lib/filterMarkets'
 
@@ -220,6 +222,7 @@ const MapSite: NextPage = (mapData: any) => {
         setMarketId={setMarketId}
       />
       <SnowNav></SnowNav>
+      <WeatherOverlay marketFilterDate={marketFilterDate} />
       <MapComponent
         mapData={mapData}
         marketsData={marketsData}
