@@ -222,10 +222,10 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | false }> = ({
                 />
               )}
             </div>
-            <div className="flex m-auto font-medium text-xl">
+            <div className="flex m-auto  font-medium text-xl">
               {ICON_MAPPING[weatherRecords[hour].icon]}
               {weatherRecords[hour].temperature && (
-                <p className="my-auto mx-auto pl-6">
+                <p className="my-auto text-lightblue/80 mx-auto pl-6">
                   {weatherRecords[hour].temperature} °C
                 </p>
               )}
