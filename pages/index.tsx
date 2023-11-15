@@ -17,6 +17,7 @@ import { SidebarNav } from '@components/Sidebar/SidebarNav'
 import { MapNav } from '@components/MapNav'
 
 import { SnowNav } from '@components/SnowNav'
+import { AudioPlayer } from '@components/AudioPlayer'
 import { IntroModal } from '@components/IntroModal'
 
 import { getMapData } from '@lib/loadMapData'
@@ -220,6 +221,7 @@ const MapSite: NextPage = (mapData: any) => {
         setMarketId={setMarketId}
       />
       <SnowNav></SnowNav>
+      <AudioPlayer></AudioPlayer>
       <MapComponent
         mapData={mapData}
         marketsData={marketsData}
