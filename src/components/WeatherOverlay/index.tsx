@@ -79,7 +79,7 @@ export const WeatherOption: FC<WeatherOptionPropType> = ({ icon, value }) => {
     </div>
   )
 }
-export const WeatherOverlay: FC<{ marketFilterDate: Date | false }> = ({
+export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
   marketFilterDate,
 }) => {
   const [isWeatherOpened, setIsWeatherOpened] = useState(false)
@@ -92,7 +92,8 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | false }> = ({
     SourceType['station_name'] | null
   >(null)
 
-  const current = marketFilterDate || new Date()
+  const current =
+    marketFilterDate instanceof Date ? marketFilterDate : new Date()
 
   const date = `${current.getDate()}.${
     current.getMonth() + 1
