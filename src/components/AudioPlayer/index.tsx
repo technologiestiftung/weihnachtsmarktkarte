@@ -45,7 +45,9 @@ export const AudioPlayer = () => {
         )}
         onClick={togglePlayPause}
       >
-        <Music />
+        <span className="mr-1">
+          <Music />
+        </span>
       </button>
     </nav>
   )
