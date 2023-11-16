@@ -37,9 +37,9 @@ export const AudioPlayer = () => {
       <audio ref={audioRef} src={src} onEnded={handleSongEnd} />
 
       <button
-        title="snow on/off"
+        title="audio on/off"
         className={classNames(
-          isPlaying ? 'bg-darkblue text-gold' : 'bg-gold text-darkblue ',
+          !isPlaying ? 'bg-darkblue text-gold' : 'bg-gold text-darkblue ',
           navClasses
         )}
         onClick={togglePlayPause}
