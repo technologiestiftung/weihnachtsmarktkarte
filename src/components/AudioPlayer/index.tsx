@@ -21,7 +21,6 @@ export const AudioPlayer = () => {
   }
 
   const handleSongEnd = () => {
-    setIsPlaying(false)
     if (audioRef.current) {
       audioRef.current.currentTime = 0
     }
