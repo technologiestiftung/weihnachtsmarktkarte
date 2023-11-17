@@ -45,10 +45,10 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                     gezeigten Weihnachtsmärkte stammen aus dem Datensatz{' '}
                     <a
                       target="blank"
-                      href="https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte-2022"
+                      href="https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte"
                       className="text-gold"
                     >
-                      Berliner Weihnachtsmärkte 2022{' '}
+                      Berliner Weihnachtsmärkte{' '}
                     </a>
                     , der jährlich von der Senatsverwaltung für Wirtschaft,
                     Energie und Betriebe bereitgestellt wird. Dadurch sind nur
@@ -63,8 +63,9 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                       Standorte der öffentlichen Toiletten{' '}
                     </a>
                     , die sich ebenfalls im Berliner Open Data Portal befinden
-                    und regelmäßig durch die Senatsverwaltung für Umwelt,
-                    Mobilität, Verbraucher- und Klimaschutz aktualisiert werden.
+                    und regelmäßig durch die Senatsverwaltung für Mobilität, 
+                    Verkehr, Klimaschutz und Umwelt
+                    aktualisiert werden.
                     Für die Identifizierung der nahelegenen{' '}
                     <a
                       target="blank"
@@ -105,6 +106,44 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                       Pixabay Music
                     </a>
                     .
+                    <br />
+                    Die Wetterdaten stammen vom 
+                    <a
+                      target="blank"
+                      href="https://www.dwd.de/DE/Home/home_node.html"
+                      className="text-gold"
+                    >
+                      {' '}
+                      Deutschen Wetterdienst (DWD)
+                    </a>
+                    , 
+                    der im Rahmen seines 
+                    <a
+                      target="blank"
+                      href="https://www.dwd.de/DE/leistungen/opendata/opendata.html"
+                      className="text-gold"
+                    >
+                      {' '}
+                      Open-Data-Programms 
+
+                    </a>
+                    <br />
+                     eine Vielzahl von meteorologischen Beobachtungen und Berechnungen 
+                    veröffentlicht.
+                    Das Open-Source-Projekt 
+                    <a
+                      target="blank"
+                      href="https://brightsky.dev"
+                      className="text-gold"
+                    >
+                      {' '}
+                      BrightSky
+                    </a>
+                    
+                    , bietet eine kostenlose JSON-API an, 
+                    um Wetterdaten ganz einfach abzufragen. So können die Wettervorhersagen 
+                    für Berlin stundengenau dargestellt werden.
+
                   </p>
                 </>
               ),
@@ -240,8 +279,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                       Open Data Informationsstelle{' '}
                     </a>
                     in Zusammenarbeit mit dem CityLAB Berlin. Die ODIS wird von
-                    der Berliner Senatsverwaltung für Inneres, Digitalisierung
-                    und Sport und der Investitionsbank Berlin aus den Mitteln
+                    der Senatskanzlei Berlin und der Investitionsbank Berlin aus den Mitteln
                     des Landes Berlin gefördert und ist ein Projekt der{' '}
                     <a
                       target="blank"
@@ -347,7 +385,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
       </SidebarBody>
       <footer className={classNames('mt-8 p-4', 'flex flex-wrap')}>
         <span className="text-xs w-full mb-4">
-          © 2022 Technologiestiftung Berlin
+          © 2023 Technologiestiftung Berlin
         </span>
         <a
           href="https://www.technologiestiftung-berlin.de/de/impressum/"
