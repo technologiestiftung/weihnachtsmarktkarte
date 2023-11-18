@@ -21,11 +21,18 @@ interface WeatherOptionPropType {
   icon: ReactNode
 }
 
+interface WeatherRowPropType {
+  weatherRecords: WeatherType[] // Assuming you have an array of WeatherType objects
+  hour: number
+  ICON_MAPPING: { [key: string]: React.ReactNode } // Assuming ICON_MAPPING is an object with string keys and ReactNode values
+  hourString: string
+}
+
 interface WeatherType {
   timestamp: string | null | undefined
-  temperature: number | null | undefined
-  precipitation: number | null | undefined
-  wind_speed: number | null | undefined
+  temperature: number
+  precipitation: number
+  wind_speed: number
   cloud_cover: number | null | undefined
   pressure_msl: number | null | undefined
   icon:
@@ -72,13 +79,53 @@ const formatDate = (dateString: Date) => {
 export const WeatherOption: FC<WeatherOptionPropType> = ({ icon, value }) => {
   return (
     <div className="flex last-of-type:mb-0 mb-1">
-      <div className="pr-4 flex">
+      <div className="flex">
         {icon}
-        <p className="text-sm text-gray-400 italic pl-2">{value}</p>
+        <p className="text-sm text-gray-400 italic pl-2 w-20">{value}</p>
       </div>
     </div>
   )
 }
+
+export const WeatherRow: FC<WeatherRowPropType> = ({
+  weatherRecords,
+  hour,
+  ICON_MAPPING,
+  hourString,
+}) => {
+  return (
+    <div className="grid grid-flow-col auto-cols-max gap-x-4">
+      <div className="text-sm font-bold text-lightblue/80 my-auto mx-auto pl-2">
+        {hourString}
+      </div>
+      <div className="border-l border-lightblue/90 pl-3">
+        {typeof weatherRecords[hour].precipitation !== 'undefined' && (
+          <WeatherOption
+            icon={<PrecipitationIcon />}
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+            value={`${weatherRecords[hour].precipitation} mm/h`}
+          />
+        )}
+        {typeof weatherRecords[hour].wind_speed !== 'undefined' && (
+          <WeatherOption
+            icon={<WindSpeedIcon />}
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+            value={`${Math.round(weatherRecords[hour].wind_speed)} km/h`}
+          />
+        )}
+      </div>
+      <div className="my-auto mx-auto">
+        <span className="">{ICON_MAPPING[weatherRecords[hour].icon]}</span>
+      </div>
+      {weatherRecords[hour].temperature && (
+        <div className="my-auto text-lg font-bold text-lightblue/90 mx-auto">
+          {weatherRecords[hour].temperature} °C
+        </div>
+      )}
+    </div>
+  )
+}
+
 export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
   marketFilterDate,
 }) => {
@@ -92,8 +139,9 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
     SourceType['station_name'] | null
   >(null)
 
-  const current =
-    marketFilterDate instanceof Date ? marketFilterDate : new Date()
+  const today = new Date()
+
+  const current = marketFilterDate instanceof Date ? marketFilterDate : today
 
   const date = `${current.getDate()}.${
     current.getMonth() + 1
@@ -104,6 +152,11 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
 
   console.log(dateAPI)
   const hour = current.getHours()
+
+  const dayCheck = (): boolean => {
+    return current === today
+  }
+  const isSameDay = dayCheck()
 
   const ICON_MAPPING = {
     'clear-day': <ClearDayIcon />,
@@ -201,37 +254,45 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
                 Stelle im Kalender den Tag ein, für den du das Wetter sehen
                 möchtest.
               </p>
-              <span className="text-md text-lightblue/80">
+              <span className="text-md font-bold text-lightblue/80">
                 {`${formatDate(current)}`}
               </span>
             </div>
           </div>
-          <div className="flex">
+          {isSameDay && (
             <div>
-              {typeof weatherRecords[hour].precipitation !== 'undefined' && (
-                <WeatherOption
-                  icon={<PrecipitationIcon />}
-                  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-                  value={`${weatherRecords[hour].precipitation} mm/h`}
-                />
-              )}
-              {typeof weatherRecords[hour].wind_speed !== 'undefined' && (
-                <WeatherOption
-                  icon={<WindSpeedIcon />}
-                  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-                  value={`${weatherRecords[hour].wind_speed} km/h`}
-                />
-              )}
+              <WeatherRow
+                weatherRecords={weatherRecords}
+                hour={hour}
+                ICON_MAPPING={ICON_MAPPING}
+                hourString={'aktuell'}
+              />
+              <hr className="border-lightblue/80 mt-2 mb-2" />
             </div>
-            <div className="flex m-auto  font-medium text-xl">
-              {ICON_MAPPING[weatherRecords[hour].icon]}
-              {weatherRecords[hour].temperature && (
-                <p className="my-auto text-lightblue/80 mx-auto pl-6">
-                  {weatherRecords[hour].temperature} °C
-                </p>
-              )}
-            </div>
-          </div>
+          )}
+
+          <WeatherRow
+            weatherRecords={weatherRecords}
+            hour={12}
+            ICON_MAPPING={ICON_MAPPING}
+            hourString={'12 Uhr'}
+          />
+          <hr className="border-lightblue/80 mt-2 mb-2" />
+          <WeatherRow
+            weatherRecords={weatherRecords}
+            hour={17}
+            ICON_MAPPING={ICON_MAPPING}
+            hourString={'17 Uhr'}
+          />
+          <hr className="border-lightblue/80 mt-2 mb-2" />
+          <WeatherRow
+            weatherRecords={weatherRecords}
+            hour={22}
+            ICON_MAPPING={ICON_MAPPING}
+            hourString={'22 Uhr'}
+          />
+          <hr className="border-lightblue/80 mt-2 mb-2" />
+
           {weatherStation && (
             <p className="text-xs text-lightblue/80 italic mb-1 mt-3">
               {`Wetterstation  ${capitalizeWords(weatherStation)}`}
