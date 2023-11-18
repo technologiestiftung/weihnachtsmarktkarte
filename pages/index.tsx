@@ -17,6 +17,7 @@ import { SidebarNav } from '@components/Sidebar/SidebarNav'
 import { MapNav } from '@components/MapNav'
 
 import { SnowNav } from '@components/SnowNav'
+import { AudioPlayer } from '@components/AudioPlayer'
 import { IntroModal } from '@components/IntroModal'
 
 import { WeatherOverlay } from '@components/WeatherOverlay'
@@ -223,6 +224,8 @@ const MapSite: NextPage = (mapData: any) => {
       />
       <SnowNav></SnowNav>
       <WeatherOverlay marketFilterDate={marketFilterDate} />
+
+      <AudioPlayer></AudioPlayer>
       <MapComponent
         mapData={mapData}
         marketsData={marketsData}
