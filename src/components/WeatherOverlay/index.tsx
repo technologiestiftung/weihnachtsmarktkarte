@@ -10,6 +10,10 @@ import {
   ThunderstormIcon,
   ClearNightIcon,
   PartlyCloudyNightIcon,
+  FogyIcon,
+  SnowyIcon,
+  SleetyIcon,
+  HailyIcon,
 } from '@components/Icons'
 import classNames from 'classnames'
 import { FC, ReactNode, useEffect, useState } from 'react'
@@ -30,9 +34,9 @@ interface WeatherRowPropType {
 
 interface WeatherType {
   timestamp: string | null | undefined
-  temperature: number
-  precipitation: number
-  wind_speed: number
+  temperature: number | null | undefined
+  precipitation: number | null | undefined
+  wind_speed: number | null | undefined
   cloud_cover: number | null | undefined
   pressure_msl: number | null | undefined
   icon:
@@ -99,25 +103,28 @@ export const WeatherRow: FC<WeatherRowPropType> = ({
         {hourString}
       </div>
       <div className="border-l border-lightblue/90 pl-3">
-        {typeof weatherRecords[hour].precipitation !== 'undefined' && (
-          <WeatherOption
-            icon={<PrecipitationIcon />}
-            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-            value={`${weatherRecords[hour].precipitation} mm/h`}
-          />
-        )}
-        {typeof weatherRecords[hour].wind_speed !== 'undefined' && (
-          <WeatherOption
-            icon={<WindSpeedIcon />}
-            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-            value={`${Math.round(weatherRecords[hour].wind_speed)} km/h`}
-          />
-        )}
+        {weatherRecords[hour] &&
+          typeof weatherRecords[hour].precipitation !== 'undefined' && (
+            <WeatherOption
+              icon={<PrecipitationIcon />}
+              value={`${weatherRecords[hour].precipitation} mm/h`}
+            />
+          )}
+        {weatherRecords[hour] &&
+          typeof weatherRecords[hour].wind_speed !== 'undefined' && (
+            <WeatherOption
+              icon={<WindSpeedIcon />}
+              //@ts-ignore
+              value={`${Math.round(weatherRecords[hour].wind_speed)} km/h`}
+            />
+          )}
       </div>
-      <div className="my-auto mx-auto">
-        <span className="">{ICON_MAPPING[weatherRecords[hour].icon]}</span>
-      </div>
-      {weatherRecords[hour].temperature && (
+      {weatherRecords[hour] && (
+        <div className="my-auto mx-auto">
+          <span className="">{ICON_MAPPING[weatherRecords[hour].icon]}</span>
+        </div>
+      )}
+      {weatherRecords[hour] && weatherRecords[hour].temperature && (
         <div className="my-auto text-lg font-bold text-lightblue/90 mx-auto">
           {weatherRecords[hour].temperature} °C
         </div>
@@ -141,20 +148,44 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
 
   const today = new Date()
 
-  const current = marketFilterDate instanceof Date ? marketFilterDate : today
+  let current = marketFilterDate instanceof Date ? marketFilterDate : today
+
+  // Umwandlung in Millisekunden
+  const todayTimestamp = today.getTime()
+  const currentTimestamp = current.getTime()
+
+  // Differenz in Millisekunden berechnen
+  const timeDifference = currentTimestamp - todayTimestamp
+
+  // Differenz in Tagen umrechnen
+  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+
+  let forecastCheck
+  // Überprüfen, ob das ausgewählte Datum mehr als 9 Tage in der Zukunft liegt
+  if (daysDifference > 8) {
+    current = today
+    forecastCheck = false
+  } else {
+    forecastCheck = true
+  }
 
   const date = `${current.getDate()}.${
     current.getMonth() + 1
   }.${current.getFullYear()}`
-  const dateAPI = `${current.getFullYear()}-${(
-    '0' + (current.getMonth() + 1).toString()
-  ).slice(-2)}-${current.getDate()}`
 
-  console.log(dateAPI)
-  const hour = current.getHours()
+  const monthWithLeadingZero = (current.getMonth() + 1)
+    .toString()
+    .padStart(2, '0')
+  const dayWithLeadingZero = current.getDate().toString().padStart(2, '0')
+  const dateAPI = `${current.getFullYear()}-${monthWithLeadingZero}-${dayWithLeadingZero}`
+
+  const hour = today.getHours()
 
   const dayCheck = (): boolean => {
-    return current === today
+    return (
+      new Date(current).setHours(0, 0, 0, 0) ===
+      new Date(today).setHours(0, 0, 0, 0)
+    )
   }
   const isSameDay = dayCheck()
 
@@ -165,10 +196,10 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
     wind: <WindyIcon />,
     thunderstorm: <ThunderstormIcon />,
     cloudy: <CloudyIcon />,
-    fog: <CloudyIcon />,
-    snow: <CloudyIcon />,
-    sleet: <CloudyIcon />,
-    hail: <CloudyIcon />,
+    fog: <FogyIcon />,
+    snow: <SnowyIcon />,
+    sleet: <SleetyIcon />,
+    hail: <HailyIcon />,
     'clear-night': <ClearNightIcon />,
     'partly-cloudy-night': <PartlyCloudyNightIcon />,
   }
@@ -206,7 +237,7 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
         setWeatherRecords(weatherVariables)
         setWeatherStation(station)
       } catch (error) {
-        console.error('Error fetching weather data:', error)
+        console.log('Error fetching weather data:', error)
       }
     }
     // Fetch data when dateAPI changes
@@ -222,7 +253,7 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
             onClick={() => setIsWeatherOpened(!isWeatherOpened)}
             aria-label="Wettervorhersage"
             className={classNames(
-              'rounded-full w-10 h-10 mt-20',
+              'rounded-full w-10 h-10 mt-32',
               'fixed right-4 text-center py-2 z-10',
               'bg-darkblue text-gold',
               isWeatherOpened && 'bg-gold text-darkblue',
@@ -248,8 +279,8 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
           <h3 className="font-bold text-lg text-lightblue/80 sm:text-xl pr-20 mb-2">
             Wie wird das Wetter?{' '}
           </h3>
-          <div className="flex mb-4 last-of-type:mb-0">
-            <div className="pr-4">
+          <div className="flex mb-2 last-of-type:mb-0">
+            <div className="pr-4 mb-2">
               <p className="text-sm text-gold italic mb-2">
                 Stelle im Kalender den Tag ein, für den du das Wetter sehen
                 möchtest.
@@ -259,42 +290,57 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
               </span>
             </div>
           </div>
-          {isSameDay && (
+          {!forecastCheck && (
             <div>
+              <p className="text-lightblue/80 text-sm mb-4">
+                Für diesen Tag ist noch keine Wettervorhersage verfügbar. Du
+                kannst das Wetter für 9 Tage im Voraus sehen.
+              </p>
+            </div>
+          )}
+          {isSameDay && weatherRecords[hour] && (
+            <div className="">
               <WeatherRow
                 weatherRecords={weatherRecords}
                 hour={hour}
                 ICON_MAPPING={ICON_MAPPING}
                 hourString={'aktuell'}
               />
-              <hr className="border-lightblue/80 mt-2 mb-2" />
             </div>
           )}
-
-          <WeatherRow
-            weatherRecords={weatherRecords}
-            hour={12}
-            ICON_MAPPING={ICON_MAPPING}
-            hourString={'12 Uhr'}
-          />
-          <hr className="border-lightblue/80 mt-2 mb-2" />
-          <WeatherRow
-            weatherRecords={weatherRecords}
-            hour={17}
-            ICON_MAPPING={ICON_MAPPING}
-            hourString={'17 Uhr'}
-          />
-          <hr className="border-lightblue/80 mt-2 mb-2" />
-          <WeatherRow
-            weatherRecords={weatherRecords}
-            hour={22}
-            ICON_MAPPING={ICON_MAPPING}
-            hourString={'22 Uhr'}
-          />
-          <hr className="border-lightblue/80 mt-2 mb-2" />
-
+          {forecastCheck && isSameDay && weatherRecords[hour] && (
+            <hr className="border-lightblue/80 mt-2 mb-2" />
+          )}
+          {weatherRecords[12] &&
+            weatherRecords[17] &&
+            weatherRecords[22] &&
+            forecastCheck && (
+              <div className="">
+                <WeatherRow
+                  weatherRecords={weatherRecords}
+                  hour={12}
+                  ICON_MAPPING={ICON_MAPPING}
+                  hourString={'12 Uhr'}
+                />
+                <hr className="border-lightblue/80 mt-2 mb-2" />
+                <WeatherRow
+                  weatherRecords={weatherRecords}
+                  hour={17}
+                  ICON_MAPPING={ICON_MAPPING}
+                  hourString={'17 Uhr'}
+                />
+                <hr className="border-lightblue/80 mt-2 mb-2" />
+                <WeatherRow
+                  weatherRecords={weatherRecords}
+                  hour={22}
+                  ICON_MAPPING={ICON_MAPPING}
+                  hourString={'22 Uhr'}
+                />
+                <hr className="border-lightblue/80 mt-2" />
+              </div>
+            )}
           {weatherStation && (
-            <p className="text-xs text-lightblue/80 italic mb-1 mt-3">
+            <p className="text-xs text-lightblue/80 italic mt-6">
               {`Wetterstation  ${capitalizeWords(weatherStation)}`}
             </p>
           )}
