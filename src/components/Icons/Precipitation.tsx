@@ -5,7 +5,7 @@ export const PrecipitationIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     width="16"
     height="16"
-    fill="#76B3A6"
+    fill="#ADADAD"
     viewBox="0 0 16 16"
     {...props}
   >

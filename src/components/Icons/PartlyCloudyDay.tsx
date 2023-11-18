@@ -3,9 +3,9 @@ import React, { FC, SVGProps } from 'react'
 export const PartlyCloudyDayIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="50"
-    height="50"
-    fill="#1F2937"
+    width="40"
+    height="40"
+    fill="#BDA33B"
     viewBox="0 0 16 16"
     {...props}
   >
