@@ -45,7 +45,7 @@ export const IntroModal: FC<IntroModalType> = ({
           <div className="flex min-h-full items-center justify-center p-4 leading-7">
             <Dialog.Panel className="border-2 border-gold/50  bg-darkblue text-lightblue/90 max-h-full p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all">
               <button
-                className="text-lightblue focus:outline-none top-0 right-0 m-2 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
+                className="text-lightblue focus:outline-none top-0 right-0 m-6 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
                 onClick={closeModal}
               >
                 <Cross />
@@ -66,10 +66,9 @@ export const IntroModal: FC<IntroModalType> = ({
                 Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot von
                 über 60 Berliner Weihnachtsmärkten von traditionellem bis zu
                 individuellem Flair. Lass dir Weihnachtsmärkte nach Wunschdatum
-                und Öffnungszeiten anzeigen. So verpasst du deinen
-                Lieblingsmarkt im Kiez nie wieder. Oder nutze die Filter, um
-                passende Märkte zu finden und teile deine Entdeckung mit deinen
-                Freund:innen! Frohe Weihnachten!
+                anzeigen, nutze die Filter, um passende Märkte zu finden und
+                teile deine Entdeckung mit deinen Freund:innen! Frohe
+                Weihnachten!
               </p>
 
               <button
@@ -93,7 +92,7 @@ export const IntroModal: FC<IntroModalType> = ({
                     Berlin
                   </i>
                 </p>
-                <div className="inline-block ml-4 md:flex self-center">
+                <div className="ml-4 flex self-center">
                   <div className="w-32">
                     <TsbLogo className={`w-30`} />
                   </div>
