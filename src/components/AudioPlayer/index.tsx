@@ -34,7 +34,7 @@ export const AudioPlayer = () => {
         'fixed bottom-0 p-4 ease-in-out duration-300 z-10 right-0 top-12 h-min'
       }
     >
-      <audio ref={audioRef} src={src} onEnded={handleSongEnd} />
+      <audio ref={audioRef} src={src} onEnded={handleSongEnd} loop />
 
       <button
         title="audio on/off"
