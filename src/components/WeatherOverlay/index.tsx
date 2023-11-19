@@ -136,9 +136,10 @@ export const WeatherRow: FC<WeatherRowPropType> = ({
   )
 }
 
-export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
-  marketFilterDate,
-}) => {
+export const WeatherOverlay: FC<{
+  marketFilterDate: Date | boolean
+  setSidebarMenuOpen: (date: boolean) => void
+}> = ({ marketFilterDate, setSidebarMenuOpen }) => {
   const [isWeatherOpened, setIsWeatherOpened] = useState(false)
   //const elRef = useClickOutside<HTMLDivElement>(() => setIsWeatherOpened(false))
 
@@ -148,6 +149,13 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
   const [weatherStation, setWeatherStation] = useState<
     SourceType['station_name'] | null
   >(null)
+
+  function openWindows() {
+    setIsWeatherOpened(!isWeatherOpened)
+    if (!isWeatherOpened) {
+      setSidebarMenuOpen(true)
+    }
+  }
 
   const today = new Date()
 
@@ -206,6 +214,7 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
     'clear-night': <ClearNightIcon />,
     'partly-cloudy-night': <PartlyCloudyNightIcon />,
   }
+
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -253,7 +262,7 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
         weatherRecords[hour] &&
         weatherRecords[hour].temperature && (
           <button
-            onClick={() => setIsWeatherOpened(!isWeatherOpened)}
+            onClick={() => openWindows()}
             aria-label="Wettervorhersage"
             className={classNames(
               'rounded-full w-10 h-10 mt-32',

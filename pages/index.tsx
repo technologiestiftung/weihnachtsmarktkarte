@@ -223,7 +223,10 @@ const MapSite: NextPage = (mapData: any) => {
         setMarketId={setMarketId}
       />
       <SnowNav></SnowNav>
-      <WeatherOverlay marketFilterDate={marketFilterDate} />
+      <WeatherOverlay
+        marketFilterDate={marketFilterDate}
+        setSidebarMenuOpen={setSidebarMenuOpen}
+      />
 
       <AudioPlayer></AudioPlayer>
       <MapComponent
