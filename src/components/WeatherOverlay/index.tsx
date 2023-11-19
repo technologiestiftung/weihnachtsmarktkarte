@@ -284,7 +284,7 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
           </h3>
           <div className="flex mb-1 last-of-type:mb-0">
             <div className="pr-4 mb-2">
-              <p className="text-xs sm:text-sm text-gold italic mb-2 w-10/12 sm:w-11/12">
+              <p className="text-sm text-gold italic mb-2 w-11/12 sm:w-11/12">
                 Stelle im Filtermenü den Tag ein, für den du das Wetter sehen
                 möchtest.
               </p>
@@ -350,7 +350,7 @@ export const WeatherOverlay: FC<{ marketFilterDate: Date | boolean }> = ({
             </p>
           )}
           <button
-            className="text-lightblue/80 top-0 right-0 mr-8 mt-6 absolute cursor-pointer z-20 border-lightblue border-2 hover:bg-gold hover:border-gold rounded-full p-0"
+            className="text-lightblue/80 top-0 right-0 mr-6 mt-6 absolute cursor-pointer z-20 border-lightblue border-2 hover:bg-gold hover:border-gold rounded-full p-0"
             onClick={() => setIsWeatherOpened(false)}
           >
             <Cross />
