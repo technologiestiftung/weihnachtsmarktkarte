@@ -2,8 +2,8 @@ import React, { FC, SVGProps } from 'react'
 
 export const SunIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="40"
-    height="40"
+    width="38"
+    height="38"
     fill="#BDA33B"
     viewBox="0 0 67 67"
     xmlns="http://www.w3.org/2000/svg"

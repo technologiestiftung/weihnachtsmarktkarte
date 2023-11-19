@@ -3,8 +3,8 @@ import React, { FC, SVGProps } from 'react'
 export const ClearNightIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="40"
-    height="40"
+    width="36"
+    height="36"
     fill="#BDA33B"
     viewBox="0 0 16 16"
     {...props}
