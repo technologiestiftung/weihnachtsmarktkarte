@@ -85,9 +85,7 @@ export const WeatherOption: FC<WeatherOptionPropType> = ({ icon, value }) => {
     <div className="flex last-of-type:mb-0 mb-1">
       <div className="flex">
         {icon}
-        <p className="text-xs sm:text-sm text-gray-400 italic pl-2 w-20">
-          {value}
-        </p>
+        <p className="text-xs sm:text-sm text-gray-400 pl-2 w-20">{value}</p>
       </div>
     </div>
   )
@@ -288,14 +286,17 @@ export const WeatherOverlay: FC<{
           )}
           style={{ maxWidth: 'calc(100% - 32px)' }}
         >
-          <h3 className="font-bold text-md text-lightblue/80 sm:text-xl pr-20 mb-2">
+          <h3 className="font-bold text-lg text-lightblue/80 sm:text-xl pr-20 mb-2">
             Wie wird das Wetter?{' '}
           </h3>
           <div className="flex mb-1 last-of-type:mb-0">
             <div className="pr-4 mb-2">
-              <p className="text-sm text-gold italic mb-2 w-11/12 sm:w-11/12">
+              <p className="text-sm hidden sm:block text-gold mb-2 w-11/12 sm:w-11/12">
                 Stelle im Filtermenü den Tag ein, für den du das Wetter sehen
                 möchtest.
+              </p>
+              <p className="text-sm sm:hidden text-gold mb-2">
+                Stelle im Filtermenü einen Tag ein.
               </p>
               <p className="text-md sm:text-lg font-bold text-lightblue/80 sm:pt-2">
                 {`${formatDate(current)}`}
@@ -354,7 +355,7 @@ export const WeatherOverlay: FC<{
             )}
           <hr className="border-lightblue/80 mt-2 hidden sm:block" />
           {weatherStation && (
-            <p className="text-xs text-lightblue/80 italic mt-3 sm:mt-6">
+            <p className="text-xs text-lightblue/80 mt-3 sm:mt-6">
               {`Wetterstation  ${capitalizeWords(weatherStation)}`}
             </p>
           )}

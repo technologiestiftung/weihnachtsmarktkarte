@@ -52,7 +52,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
       <SidebarBody>
         <>
           <ExpandablePanel title={'Datum'} open={true}>
-            <p className="text-sm pb-4">
+            <p className="text-sm pb-2 sm:pb-4">
               Wann möchtest du auf einen Weihnachtsmarkt gehen? Wähle einen Tag.{' '}
             </p>
             <div className="justify-center flex pb-2">
