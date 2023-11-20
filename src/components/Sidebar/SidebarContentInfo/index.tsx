@@ -65,8 +65,9 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                       Standorte der öffentlichen Toiletten
                     </a>
                     , die sich ebenfalls im Berliner Open Data Portal befinden
-                    und regelmäßig durch die Senatsverwaltung für Umwelt,
-                    Mobilität, Verbraucher- und Klimaschutz aktualisiert werden.
+                    und regelmäßig durch die Senatsverwaltung für Mobilität, 
+                    Verkehr, Klimaschutz und Umwelt
+                    aktualisiert werden.
                     <br />
                     Für die Identifizierung der nahelegenen{' '}
                     <a
@@ -269,8 +270,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                       Open Data Informationsstelle{' '}
                     </a>
                     in Zusammenarbeit mit dem CityLAB Berlin. Die ODIS wird von
-                    der Berliner Senatsverwaltung für Inneres, Digitalisierung
-                    und Sport und der Investitionsbank Berlin aus den Mitteln
+                    der Senatskanzlei Berlin und der Investitionsbank Berlin aus den Mitteln
                     des Landes Berlin gefördert und ist ein Projekt der{' '}
                     <a
                       target="blank"
