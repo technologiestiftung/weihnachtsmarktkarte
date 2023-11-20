@@ -85,18 +85,18 @@ export const IntroModal: FC<IntroModalType> = ({
               </button>
 
               <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
-                <p className="text-xs mb-2 md:mb-0 text-gray-500 max-w-md pt-4">
+                <p className="text-xs mb-2 md:mb-0 text-gray-500 w-11/12 md:w-full pt-4">
                   <i>
                     Eine prototypische Datenvisualisierung der Open Data
                     Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB
                     Berlin
                   </i>
                 </p>
-                <div className="ml-4 flex self-center">
+                <div className="ml-2 flex self-center w-10/12">
                   <div className="w-32">
                     <TsbLogo className={`w-30`} />
                   </div>
-                  <div className="w-32 pt-2 mr-8 md:mt-0 self-center">
+                  <div className="w-32 pt-2 mr-8 md:mt-0 self-center md:pl-4">
                     <OdisLogo className={`w-30`} />
                   </div>
                 </div>
