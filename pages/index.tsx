@@ -58,6 +58,8 @@ const MapSite: NextPage = (mapData: any) => {
   const [marketData, setMarketData] = useState<any>()
   const [marketFilterInternational, setMarketFilterInternational] =
     useState<boolean>(false)
+  const [marketFilterAccessible, setMarketFilterAccessible] =
+    useState<boolean>(false)
   const [marketFilterCosts, setMarketFilterCosts] = useState<boolean>(false)
   const [marketFilterDate, setMarketFilterDate] = useState<Date | boolean>(
     false
@@ -126,6 +128,7 @@ const MapSite: NextPage = (mapData: any) => {
     const newData = filterMarkets(
       marketsData,
       marketFilterInternational,
+      marketFilterAccessible,
       marketFilterCosts,
       marketFilterDate,
       marketFilterAction,
@@ -136,6 +139,7 @@ const MapSite: NextPage = (mapData: any) => {
     setMarketsData(JSON.parse(JSON.stringify(newData)))
   }, [
     marketFilterInternational,
+    marketFilterAccessible,
     marketFilterCosts,
     marketFilterDate,
     marketFilterAction,
@@ -187,6 +191,8 @@ const MapSite: NextPage = (mapData: any) => {
           <SidebarContentFilter
             marketFilterInternational={marketFilterInternational}
             setMarketFilterInternational={setMarketFilterInternational}
+            marketFilterAccessible={marketFilterAccessible}
+            setMarketFilterAccessible={setMarketFilterAccessible}
             marketFilterCosts={marketFilterCosts}
             setMarketFilterCosts={setMarketFilterCosts}
             marketFilterDate={marketFilterDate}

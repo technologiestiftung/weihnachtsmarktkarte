@@ -28,5 +28,6 @@ lng | `number` | coordinate | 13.45436119
 ignore | `string` | if you want to ignore the entry |  '0' or '1' 
 immer-kostenlos | `string` | filter free |  '0' or '1' 
 international | `string` | filter international |  '0' or '1' 
+barrierefrei | `string` | filter barrierefrei |  '0' or '1' 
 action | `string` | filter action |  '0' or '1' 
 short_distance | `string` | filter short_distance |  '0' or '1' 
