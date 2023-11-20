@@ -8,7 +8,7 @@ import { OdisLogo } from '@components/Logos/OdisLogo'
 import { SenWebLogo } from '@components/Logos/SenWebLogo'
 import { TsbLogo } from '@components/Logos/TsbLogo'
 import { Accordion } from '@components/Accordion'
-import { SenInLogo } from '@components/Logos/SenInLogo'
+import { SenatskanzleiLogo } from '@components/Logos/SenatskanzleiLogo'
 
 export interface SidebarContentInfoType {}
 
@@ -48,24 +48,27 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                       href="https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte"
                       className="text-gold"
                     >
-                      Berliner Weihnachtsmärkte{' '}
+                      Berliner Weihnachtsmärkte
                     </a>
                     , der jährlich von der Senatsverwaltung für Wirtschaft,
                     Energie und Betriebe bereitgestellt wird. Dadurch sind nur
-                    die der Senatsverwaltung gemeldeten Märkte aufgeführt und es
-                    besteht kein Anspruch auf Vollständigkeit. Weiterhin liegen
-                    in der Karte{' '}
+                    zu den der Senatsverwaltung gemeldeten Märkte Informationen
+                    vorhanden und es besteht kein Anspruch auf Vollständigkeit.
+                    <br />
+                    <br />
+                    Weiterhin liegen in der Karte{' '}
                     <a
                       target="blank"
                       href="https://daten.berlin.de/datensaetze/standorte-der-öffentlichen-toiletten"
                       className="text-gold"
                     >
-                      Standorte der öffentlichen Toiletten{' '}
+                      Standorte der öffentlichen Toiletten
                     </a>
                     , die sich ebenfalls im Berliner Open Data Portal befinden
                     und regelmäßig durch die Senatsverwaltung für Mobilität, 
                     Verkehr, Klimaschutz und Umwelt
                     aktualisiert werden.
+                    <br />
                     Für die Identifizierung der nahelegenen{' '}
                     <a
                       target="blank"
@@ -86,7 +89,9 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                     >
                       GitHub-Repository{' '}
                     </a>
-                    zu finden. Die Hintergrundkarte basiert auf der{' '}
+                    zu finden.
+                    <br />
+                    Die Hintergrundkarte basiert auf der{' '}
                     <a
                       target="blank"
                       href="https://www.openstreetmap.de"
@@ -94,7 +99,9 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                     >
                       OpenStreetMap
                     </a>
-                    . Die Musik{' '}
+                    .
+                    <br />
+                    Die Musik{' '}
                     <i>Christmas Chill lofi Launge (IG Version 60s)</i> von
                     Lesfm kommt von
                     <a
@@ -107,43 +114,27 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
                     </a>
                     .
                     <br />
-                    Die Wetterdaten stammen vom 
-                    <a
-                      target="blank"
-                      href="https://www.dwd.de/DE/Home/home_node.html"
-                      className="text-gold"
-                    >
-                      {' '}
-                      Deutschen Wetterdienst (DWD)
-                    </a>
-                    , 
-                    der im Rahmen seines 
+                    Die Wetterdaten stammen vom{' '}
                     <a
                       target="blank"
                       href="https://www.dwd.de/DE/leistungen/opendata/opendata.html"
                       className="text-gold"
                     >
-                      {' '}
-                      Open-Data-Programms 
-
+                      Deutschen Wetterdienst (DWD)
                     </a>
-                    <br />
-                     eine Vielzahl von meteorologischen Beobachtungen und Berechnungen 
-                    veröffentlicht.
-                    Das Open-Source-Projekt 
+                    , der im Rahmen seines Open-Data-Programms eine Vielzahl von
+                    meteorologischen Beobachtungen und Berechnungen
+                    veröffentlicht. Das Open-Source-Projekt{' '}
                     <a
                       target="blank"
-                      href="https://brightsky.dev"
+                      href="https://brightsky.dev/"
                       className="text-gold"
                     >
-                      {' '}
                       BrightSky
                     </a>
-                    
-                    , bietet eine kostenlose JSON-API an, 
-                    um Wetterdaten ganz einfach abzufragen. So können die Wettervorhersagen 
-                    für Berlin stundengenau dargestellt werden.
-
+                    , bietet eine kostenlose JSON-API an, um Wetterdaten ganz
+                    einfach abzufragen. So können die Wettervorhersagen für
+                    Berlin stundengenau dargestellt werden.
                   </p>
                 </>
               ),
@@ -379,7 +370,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({}) => {
           </div> */}
           <div className="flex flex-col">
             <span className="text-sm mb-2">Gefördert von</span>
-            <SenInLogo className="w-40" />
+            <SenatskanzleiLogo className="w-40" />
           </div>
         </section>
       </SidebarBody>

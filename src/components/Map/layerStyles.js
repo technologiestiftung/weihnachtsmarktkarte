@@ -11,7 +11,7 @@ export const layerStyles = {
         ['exponential', 0.5],
         ['zoom'],
         // When zoom is 15, buildings will be beige.
-        14,
+        11.5,
         0,
         // When zoom is 18 or higher, buildings will be yellow.
         15,
@@ -31,7 +31,7 @@ export const layerStyles = {
         ['exponential', 0.5],
         ['zoom'],
         // When zoom is 15, buildings will be beige.
-        14,
+        13,
         0,
         // When zoom is 18 or higher, buildings will be yellow.
         15,
@@ -46,7 +46,7 @@ export const layerStyles = {
       'text-anchor': 'bottom',
       'text-radial-offset': 0.7,
       'text-justify': 'auto',
-      'icon-image': 'square',
+      //'icon-image': 'square',
     },
   },
 }

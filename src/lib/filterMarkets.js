@@ -106,6 +106,7 @@ function openLate(d, date) {
 export function filterMarkets(
   data,
   marketFilterInternational,
+  marketFilterAccessible,
   marketFilterCosts,
   marketFilterDate,
   marketFilterAction,
@@ -115,6 +116,10 @@ export function filterMarkets(
   data.forEach((d) => {
     d.inaktiv = false
     if (marketFilterCosts && d['immer-kostenlos'] === '0') {
+      d.inaktiv = true
+      return
+    }
+    if (marketFilterAccessible && d['barrierefrei'] === '0') {
       d.inaktiv = true
       return
     }
