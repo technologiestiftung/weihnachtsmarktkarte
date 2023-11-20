@@ -64,7 +64,7 @@ This repository contains the original data for the Berliner Weihnachtsmarktkarte
 
 Original data sources
 
-The informations on the [christmas marktes is based on an open dataset](https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte-2022) at the berlin open data portal, which is annually updated by the Senatsverwaltung für Wirtschaft, Energie und Betriebe. The information on design cristmas markets is currently only available as a list via Berlin.de. They were transferred into a geodata set by means of webscraping. The locations of the public toilets can also be found in the berlin open data portal, which is regularly updated by the Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz.
+The informations on the [christmas marktes is based on an open dataset](https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte) at the berlin open data portal, which is annually updated by the Senatsverwaltung für Wirtschaft, Energie und Betriebe. The information on design cristmas markets is currently only available as a list via Berlin.de. They were transferred into a geodata set by means of webscraping. The locations of the public toilets can also be found in the berlin open data portal, which is regularly updated by the Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz.
    
 ## Tech stack
 
@@ -222,10 +222,10 @@ The Christmas market data used is under CC-BY license. We have processed and enr
       </a>
     </td>
     <td>
-       Supported by: <a href="https://www.berlin.de/sen/inneres/">
+       Supported by: <a href="https://www.berlin.de/senatskanzlei/">
         <br />
         <br />
-        <img width="80" src="./resources/B_SEN_InnDS_Logo_DE_V_PW_RGB.svg"/>
+        <img width="80" src="https://logos.citylab-berlin.org/logo-berlin-senatskanzelei-en.svg"/>
       </a>
     </td>
   </tr>

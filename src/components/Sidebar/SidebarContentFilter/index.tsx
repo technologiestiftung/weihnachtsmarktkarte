@@ -5,10 +5,13 @@ import { SwitchWrapper } from '@components/SwitchWrapper'
 import { FilterDate } from '@components/FilterDate'
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 import { SidebarBody } from '@components/Sidebar/SidebarBody'
+import { WeatherOverlay } from '@components/WeatherOverlay'
 
 export interface SidebarContentFilterType {
   marketFilterInternational: boolean
   setMarketFilterInternational: (enabled: boolean) => void
+  marketFilterAccessible: boolean
+  setMarketFilterAccessible: (enabled: boolean) => void
   marketFilterCosts: boolean
   setMarketFilterCosts: (enabled: boolean) => void
   marketFilterDate: Date | boolean
@@ -24,6 +27,8 @@ export interface SidebarContentFilterType {
 export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   marketFilterInternational,
   setMarketFilterInternational,
+  marketFilterAccessible,
+  setMarketFilterAccessible,
   marketFilterCosts,
   setMarketFilterCosts,
   marketFilterDate,
@@ -38,6 +43,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
   function resetFilter() {
     setMarketFilterCosts(false)
     setMarketFilterInternational(false)
+    setMarketFilterAccessible(false)
     setMarketFilterDate(false)
     setMarketFilterTime(false)
     setMarketFilterAction(false)
@@ -51,7 +57,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
       <SidebarBody>
         <>
           <ExpandablePanel title={'Datum'} open={true}>
-            <p className="text-sm pb-4">
+            <p className="text-sm pb-2 sm:pb-4">
               Wann möchtest du auf einen Weihnachtsmarkt gehen? Wähle einen Tag.{' '}
             </p>
             <div className="justify-center flex pb-2">
@@ -92,6 +98,14 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
             />
           </ExpandablePanel>
           <hr className="my-2 border-lightblue/70" />
+          <ExpandablePanel title={'Barrierefrei'} open={true}>
+            <SwitchWrapper
+              text={'Zeige Märkte an, die barrierefrei sind.'}
+              enabled={marketFilterAccessible}
+              setEnabled={setMarketFilterAccessible}
+            />
+          </ExpandablePanel>
+          <hr className="my-2 border-lightblue/70" />
           <ExpandablePanel title={'Action bitte'} open={true}>
             <SwitchWrapper
               text={
@@ -117,6 +131,7 @@ export const SidebarContentFilter: FC<SidebarContentFilterType> = ({
           {(marketFilterTrain ||
             marketFilterAction ||
             marketFilterInternational ||
+            marketFilterAccessible ||
             marketFilterCosts ||
             marketFilterTime ||
             marketFilterDate) && (
