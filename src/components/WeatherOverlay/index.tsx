@@ -312,14 +312,24 @@ export const WeatherOverlay: FC<{
             </div>
           )}
           {isSameDay && weatherRecords[hour] && (
-            <div className="">
-              <WeatherRow
-                weatherRecords={weatherRecords}
-                hour={hour}
-                ICON_MAPPING={ICON_MAPPING}
-                hourString={'jetzt'}
-              />
-            </div>
+            <>
+              <div className="block xs:hidden ">
+                <WeatherRow
+                  weatherRecords={weatherRecords}
+                  hour={hour}
+                  ICON_MAPPING={ICON_MAPPING}
+                  hourString={'jetzt'}
+                />
+              </div>
+              <div className="hidden xs:block">
+                <WeatherRow
+                  weatherRecords={weatherRecords}
+                  hour={hour}
+                  ICON_MAPPING={ICON_MAPPING}
+                  hourString={'aktuell'}
+                />
+              </div>
+            </>
           )}
           {forecastCheck && isSameDay && weatherRecords[hour] && (
             <hr className="border-lightblue/80 mt-2 mb-2" />

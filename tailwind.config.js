@@ -9,7 +9,11 @@ module.exports = {
     './src/modules/**/*.{js,ts,jsx,tsx}',
     './src/layouts/**/*.{js,ts,jsx,tsx}',
   ],
+
   theme: {
+    screens: {
+      xs: '360px',
+    },
     fontFamily: {
       sans: [
         'Clan Medium',
