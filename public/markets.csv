@@ -1,8 +1,8 @@
 id;name;shortname;strasse;plz_ort;bezirk;veranstalter;von;bis;oeffnungszeiten;email;w3;bemerkungen;lat;lng;rss_titel;rss_beschreibung;barrierefrei;immer-kostenlos;Mo;Di;Mi;Do;Fr;Sa;So;closed-exc;hours-exc;merged;international;barrierefrei;action;image;urheberschaft;train;train_distance;short_distance;ignore
 1;"25. ""etwas anderer"" Weihnachtsmarkt";"Der ""etwas andere"" Weihnachtsmarkt";Brennereiweg 45;14823 Rabenstein/Fläming OT Raben;Land Brandenburg;"Naturparkverein Hoher Fläming e.V.
 Tel. 033848 - 60004
-www.naturpark-hoher-flaeming.de";02.12.23;03.12.23;12:00 - 18:00 Uhr;mailto:info@flaeming.net;www.naturpark-hoher-flaeming.de;Tradioneller Familienweihnachtsmarkt im Naturparkzentrum mit vielen Mitmach-Angeboten, Fackelwanderung zur Burg Rabenstein, Lichtergarten, Freiluftkino, Puppentheater, Märchenerzählerin und vielem mehr. Der Eintritt ist frei!;52.04136;12.57822;Weihnachtsmarkt Rabenstein/Fläming;Naturparkzentrum Hoher Fläming;;1;0;0;0;0;0;12:00-18:00;12:00-18:00;0;0;0;0;0;1;;;;;0;0
-2;25. Alt-Kaulsdorfer Weihnachtsmarkt;Alt-Kaulsdorfer Weihnachtsmarkt;Dorfstraße;12621 Berlin;Marzahn-Hellersdorf;Heimatverein Marzahn-Hellersdorf unter Mitwirkung ortsansässiger Gewerbebetriebe/Kirchen, der Anwohner und der Interessengemeinschaft Alt-Kaulsdorfer Weihnachtsmarkt, Kontakt: Dr. Marco Frank Rebhann, Tel.: 0157/37 65 46 60;09.12.23;09.12.23;13:00-19:00 Uhr;mailto:marco-rebhann@gmx.de;www.kaulsdorfer-weihnachtsmarkt.de;"Jubiläum 25. Markt
+www.naturpark-hoher-flaeming.de";02.12.23;03.12.23;12:00 - 18:00 Uhr;mailto:info@flaeming.net;https://www.naturpark-hoher-flaeming.de;Tradioneller Familienweihnachtsmarkt im Naturparkzentrum mit vielen Mitmach-Angeboten, Fackelwanderung zur Burg Rabenstein, Lichtergarten, Freiluftkino, Puppentheater, Märchenerzählerin und vielem mehr. Der Eintritt ist frei!;52.04136;12.57822;Weihnachtsmarkt Rabenstein/Fläming;Naturparkzentrum Hoher Fläming;;1;0;0;0;0;0;12:00-18:00;12:00-18:00;0;0;0;0;0;1;;;;;0;0
+2;25. Alt-Kaulsdorfer Weihnachtsmarkt;Alt-Kaulsdorfer Weihnachtsmarkt;Dorfstraße;12621 Berlin;Marzahn-Hellersdorf;Heimatverein Marzahn-Hellersdorf unter Mitwirkung ortsansässiger Gewerbebetriebe/Kirchen, der Anwohner und der Interessengemeinschaft Alt-Kaulsdorfer Weihnachtsmarkt, Kontakt: Dr. Marco Frank Rebhann, Tel.: 0157/37 65 46 60;09.12.23;09.12.23;13:00-19:00 Uhr;mailto:marco-rebhann@gmx.de;https://www.kaulsdorfer-weihnachtsmarkt.de;"Jubiläum 25. Markt
 im alten Dorfkern rund um die Kirche, Handwerker, gemeinmützige Organisationen stellen aus und verkaufen";52.50836;13.58123;25. Alt-Kaulsdorfer Weihnachtsmarkt;Dorfstraße;;1;0;0;0;0;0;13:00-19:00;0;0;0;0;0;0;0;;;S Kaulsdorf (S5);8,515,512,907,132;0;0
 3;28. Weihnachtsmarkt auf Lehmanns Bauernhof;Weihnachtsmarkt auf Lehmanns Bauernhof;Alt-Marienfelde 35 - 37;12277 Berlin;Tempelhof-Schöneberg;"Lehmanns Bauernhof
 E&E Trade UG (haftungsbeschränkt) 
@@ -11,11 +11,11 @@ Telefon: 030 72 01 41 50";08.12.23;17.12.23;"Fr 14:00-20:00 Uhr
 Sa, So 12:00-20:00 UhrFr 14:00-20:00 Uhr
 Sa, So 12:00-20:00 UhrFr 14:00-20:00 Uhr
 Sa, So 12:00-20:00 UhrFr 14:00-20:00 Uhr
-Sa, So 12:00-20:00 Uhr";mailto:karstenemail@gmx.de;www.lehmannsbauernhof.de;"Auf einem denkmalgeschützten Vierseitenhof, direkt gegenüber der Dorfkirche an der romantischen Dorfaue gelegen, findet zum 28. Mal ein familiär geprägter Weihnachtsmarkt statt. Der Fokus liegt auf Kunsthandwerk und außergewöhnlichen Geschenkideen. 
+Sa, So 12:00-20:00 Uhr";mailto:karstenemail@gmx.de;https://www.lehmannsbauernhof.de;"Auf einem denkmalgeschützten Vierseitenhof, direkt gegenüber der Dorfkirche an der romantischen Dorfaue gelegen, findet zum 28. Mal ein familiär geprägter Weihnachtsmarkt statt. Der Fokus liegt auf Kunsthandwerk und außergewöhnlichen Geschenkideen. 
 Ein Bühnenprogramm, eine Märchenerzählerin sowie Ponyreiten und die Tiere des Hofes runden das Erlebnis bei freiem Eintritt ab.";52.41206;13.36709;Weihnachtsmarkt auf Lehmanns Bauernhof am Zweiten und Dritten Advent;Alt-Marienfelde 35 - 37;;1;0;0;0;0;14:00-20:00;12:00-20:00;12:00-20:00;0;0;1;0;0;1;;;S Buckower Chaussee (S2);10,578,085,444,213;0;0
 4;45. Lichtenrader Lichtermarkt;Lichtenrader Lichtermarkt;Alt-Lichtenrade;12309 Berlin;Tempelhof-Schöneberg;"Bezirksamt Tempelhof-Schöneberg 
 Ansprechpartnerin: Frau Frömberg, Tel.: 902 77 34 97
-veranstaltungen-pressestelle@ba-ts.berlin.de";03.12.23;03.12.23;13:00-19:00 Uhr;mailto:veranstaltungen-pressestelle@ba-ts.berlin.de;www.berlin.de/ba-ts/lichtenrader-lichtermarkt.de;"Er ist eine feste Größe in den Veranstaltungskalendern im vorweihnachtlichen Berlin: der Lichtenrader Lichtermarkt. Rund 100 Vereine, Initiativen und gemeinnützige Organisationen präsentieren ihre Angebote an einem Stand und läuten die Adventszeit in Tempelhof-Schöneberg mit ein. 
+veranstaltungen-pressestelle@ba-ts.berlin.de";03.12.23;03.12.23;13:00-19:00 Uhr;mailto:veranstaltungen-pressestelle@ba-ts.berlin.de;https://www.berlin.de/ba-ts/lichtenrader-lichtermarkt.de;"Er ist eine feste Größe in den Veranstaltungskalendern im vorweihnachtlichen Berlin: der Lichtenrader Lichtermarkt. Rund 100 Vereine, Initiativen und gemeinnützige Organisationen präsentieren ihre Angebote an einem Stand und läuten die Adventszeit in Tempelhof-Schöneberg mit ein. 
 Es werden unter anderem verschiedenste Bastel- und Handarbeiten, Keramik, Holzwaren, Imkererzeugnisse, Nostalgisches, kunstgewerbliche Arbeiten und Spielsachen zum Verkauf angeboten. Kulinarische Köstlichkeiten laden an den weihnachtlich geschmückten Ständen in friedvoller Atmosphäre des ehemaligen Dorfkerns zum Verweilen ein. Lassen Sie sich vom Lichterglanz verzaubern und in vorweihnachtliche Stimmung versetzen! 
 Eintritt frei! 
 
@@ -27,25 +27,25 @@ Mariendorfer Damm 1
 Sonntag: 12-18 UhrSamstags: 15-19 Uhr 
 Sonntag: 12-18 UhrSamstags: 15-19 Uhr 
 Sonntag: 12-18 UhrSamstags: 15-19 Uhr 
-Sonntag: 12-18 Uhr";mailto:veranstaltungen@suedgelaende.de;www.natur-park-suedgelaende.de;"Adventszauber mit weihnachtlichen Märchen und Musik, Sound-Installationen, Kerzenlabyrinth, fabelhaften Leuchtgestalten und vielem mehr.
+Sonntag: 12-18 Uhr";mailto:veranstaltungen@suedgelaende.de;https://www.natur-park-suedgelaende.de;"Adventszauber mit weihnachtlichen Märchen und Musik, Sound-Installationen, Kerzenlabyrinth, fabelhaften Leuchtgestalten und vielem mehr.
 Der Natur Park Südgelände hüllt sich an den ersten beiden Adventswochenenden in ein weihnachtliches und märchenhaftes Gewand. Licht- und Soundinstallationen verleihen dem Park eine besondere, festliche Atmosphäre ohne die Hektik von klassischen Weihnachtsmärkten und mit einer kleinen Auswahl an Verkaufsständen. 
 Eintrittspreis: 1 Euro (ab 14 Jahren).
 Bitte die Sonderöffnungszeiten beachten.";52.45891;13.3565;Advent im Park Natur-Park Schöneberger Südgelände;Priesterweg;;0;0;0;0;0;0;15:00-19:00;12:00-18:00;0;0;0;0;0;0;;;S Priesterweg (S25, S26);450,147,792,837;1;0
 6;Adventsbasar: „Wo Vorfreude lebt, wird Weihnachten ein Fest“;Adventsbasar;Bahnhofstr. 32;13129 Berlin;Pankow;"Albert Schweizer Stiftung - 
 Wohnen & Betreuen
 Tel.: 030 474 77 345
-www.ass-berlin.org";02.12.23;02.12.23;15:00 - 18:00 Uhr;mailto:kontakt@ass-berlin.org;www.ass-berlin.org;Freuen Sie sich auf den Weihnachtsmann und die heiligen drei Könige, die Sie auf dem Stiftungsgelände begrüßen werden. Stöbern Sie nach individuellen Geschenken für Ihre Liebsten an den zahlreichen Marktständen und genießen Sie einen heißen Punsch, Waffeln, Pelmeni und vieles mehr. Ein stimmungsvolles Bühnenprogramm, eine Feuershow und tolle Mitmach-Aktionen für Groß und Klein sorgen für vorweihnachtliche Atmosphäre. Kinderherzen höher schlagen lassen ein Karussell, eine Eisenbahn, ein geschmückter Streichelzoo und vieles mehr. Der Eintritt ist frei.;52.5912;13.44888;Adventsbasar Albert Schweizer Stiftung;Bahnhofstr.;;1;0;0;0;0;0;15:00 - 18:00;0;0;0;0;0;0;1;;;;;1;0
+www.ass-berlin.org";02.12.23;02.12.23;15:00 - 18:00 Uhr;mailto:kontakt@ass-berlin.org;https://www.ass-berlin.org;Freuen Sie sich auf den Weihnachtsmann und die heiligen drei Könige, die Sie auf dem Stiftungsgelände begrüßen werden. Stöbern Sie nach individuellen Geschenken für Ihre Liebsten an den zahlreichen Marktständen und genießen Sie einen heißen Punsch, Waffeln, Pelmeni und vieles mehr. Ein stimmungsvolles Bühnenprogramm, eine Feuershow und tolle Mitmach-Aktionen für Groß und Klein sorgen für vorweihnachtliche Atmosphäre. Kinderherzen höher schlagen lassen ein Karussell, eine Eisenbahn, ein geschmückter Streichelzoo und vieles mehr. Der Eintritt ist frei.;52.5912;13.44888;Adventsbasar Albert Schweizer Stiftung;Bahnhofstr.;;1;0;0;0;0;0;15:00 - 18:00;0;0;0;0;0;0;1;;;;;1;0
 7;Adventsmarkt auf der Domäne Dahlem;Adventsmarkt auf der Domäne Dahlem;Königin-Luise-Str. 49;14195 Berlin;Steglitz-Zehlendorf;Domäne Dahlem Veranstaltungsgesellschaft mbH, Tel.: 66 63 00 19, Fax: 66 63 00 20;01.12.23;17.12.23;"Fr 14.00 - 20:00 Uhr
 Sa & So 11:00 - 20:00 UhrFr 14.00 - 20:00 Uhr
 Sa & So 11:00 - 20:00 UhrFr 14.00 - 20:00 Uhr
 Sa & So 11:00 - 20:00 UhrFr 14.00 - 20:00 Uhr
-Sa & So 11:00 - 20:00 Uhr";mailto:marktfeste@domaene-dahlem.de;www.domaene-dahlem.de;"Direkt am U-Bahnhof Dahlem Dorf. Im besonderen Ambiente des historischen Gutshofes erwarten Sie erlesenes Kunsthandwerk und besondere Geschenkideen, Bastelangebote für Kinder, weihnachtliche Klänge und handwerkliche saisonale Leckereien. Mit Bio-Weihnachtsbaum-Verkauf.
+Sa & So 11:00 - 20:00 Uhr";mailto:marktfeste@domaene-dahlem.de;https://www.domaene-dahlem.de;"Direkt am U-Bahnhof Dahlem Dorf. Im besonderen Ambiente des historischen Gutshofes erwarten Sie erlesenes Kunsthandwerk und besondere Geschenkideen, Bastelangebote für Kinder, weihnachtliche Klänge und handwerkliche saisonale Leckereien. Mit Bio-Weihnachtsbaum-Verkauf.
 Eintrittspreise: regulär 3,50€, ermäßigt 2,00€, Kinder bis 12 Jahren frei";52.45826;13.28927;Adventsmarkt auf der Domäne Dahlem;Königin-Luise-Str. 49;;0;0;0;0;0;14:00-20:00;11:00-20:00;11:00-20:00;0;0;1;0;0;0;;;U Dahlem-Dorf (U3);996,819,922,381;1;0
 8;Adventsmarkt Hermannswerder (Potsdam);Adventsmarkt Hermannswerder;Hermannswerder 22;14473 Potsdam;Land Brandenburg;"Hoffbauer-Stiftung
 Tel. 0331 2313105
 www.hoffbauer-stiftung.de";10.12.23;10.12.23;14:00 - 18:00 Uhr;mailto:heidrun.spengler@hoffbauer-stiftung.de;https://www.hoffbauer-stiftung.de/veranstaltungen/event/adventsmarkt-auf-hermannswerder/;"Einer der idyllischten Adventsmärkte in Potsdam.
 Festwiese vor dem Tagungshaus";52.38306;13.03429;Adventsmarkt Hermannswerder;Hermannswerder 22;;1;0;0;0;0;0;0;14:00-18:00;0;0;0;0;0;0;;;;;0;0
-9;Alt-Buckower Adventsmarkt;Alt-Buckower Adventsmarkt;Alt-Buckow 36 - 38;12349 Berlin;Neukölln;Evangelische Dorfkirchengemeinde Berlin-Alt-Buckow, Tel.: 0303 604 10 10;02.12.23;02.12.23;14:00-22:00 Uhr;mailto:buero@dorfkirche-alt-buckow.de;www.dorfkirche-alt-buckow.de;"rund um das Gemeindehaus
+9;Alt-Buckower Adventsmarkt;Alt-Buckower Adventsmarkt;Alt-Buckow 36 - 38;12349 Berlin;Neukölln;Evangelische Dorfkirchengemeinde Berlin-Alt-Buckow, Tel.: 0303 604 10 10;02.12.23;02.12.23;14:00-22:00 Uhr;mailto:buero@dorfkirche-alt-buckow.de;https://www.dorfkirche-alt-buckow.de;"rund um das Gemeindehaus
 13:30 Uhr Eröffnungsandacht
 ab 14:00 Uhr Kinderaktivitäten, Speisen und Getränke";52.42203;13.43107;Adventsmarkt der Evangelischen Kirchengemeinde Alt-Buckow;Alt-Buckow 36 - 38;;1;0;0;0;0;0;14:00-22:00;0;0;0;0;0;0;0;;;U Johannisthaler Chaussee (U7);15,583,953,635,191;0;0
 10;Berliner Weihnachtszeit mit der Eiswelt am Neptunbrunnen vor dem Roten Rathaus;Berliner Weihnachtszeit am Neptunbrunnen;Rathausstr. 15;10178 Berlin;Mitte;"Laubinger Event GmbH
@@ -77,7 +77,7 @@ Heiligabend geschlossen
 25.12. 11:00 - 21:00 Uhr
 26.12. 12:00 - 22:00 Uhr
 31.12. 12:00 - 20:00 Uhr
-07.01. 11:00 - 20:00 Uhr";mailto:ch.laubinger@laubinger.de;www.berliner-weihnachtszeit.de;"Informationen erhalten Sie auf folgender Seite:
+07.01. 11:00 - 20:00 Uhr";mailto:ch.laubinger@laubinger.de;https://www.berliner-weihnachtszeit.de;"Informationen erhalten Sie auf folgender Seite:
 www.berliner-weihnachtszeit.de
 
 Heiligabend geschlossen";52.519494;13.407032;Berliner Weihnachtszeit mit der Eiswelt am Neptunbrunnen vor dem Roten Rathaus;Rathausstr. 15;;1;12:00-22:00;12:00-22:00;12:00-22:00;12:00-22:00;12:00-22:00;11:00-22:00;11:00-22:00;24.12.23;25.12.23=11:00-21:00, 26.12.23=12:00-22:00, 31.12.23=12:00-20:00, 07.01.23=11:00-20:00;0;0;0;1;Weihnachtsmarkt_Rotes_Rathaus.jpg;Angela Monika Arnold, Berlin, CC BY-SA 3.0, via Wikimedia Commons;U Rotes Rathaus (U5), S+U Alexanderplatz Bhf;1,148,549,332,228;1;0
@@ -134,14 +134,14 @@ Die Kleinsten dürfen sich auf's Mitmachen, Mitsingen, und vor allem Mitbacken i
 17;Historische Weihnacht;Historische Weihnacht;Revaler Straße 99;10245 Berlin;Friedrichshain-Kreuzberg;Carnica-Veranstaltungen GmbH;16.11.23;22.12.23;"Mo-Fr 15:00-22:00 Uhr
 Sa-So 12:00-22:00 UhrMo-Fr 15:00-22:00 Uhr
 Sa-So 12:00-22:00 UhrMo-Fr 15:00-22:00 Uhr
-Sa-So 12:00-22:00 Uhr";mailto:veranstaltungen@carnica.de;www.carnica-spectaculi.de;"Täglich Programm: Akrobatik, Feuershow, Jonglage
+Sa-So 12:00-22:00 Uhr";mailto:veranstaltungen@carnica.de;https://www.carnica-spectaculi.de;"Täglich Programm: Akrobatik, Feuershow, Jonglage
 Historischer Markt mit Handwerk und Handel. Holzriesenrad und Karussell.";52.5076327;13.45436119;Historische Weihnacht;RAW Gelände;;0;15:00-22:00;15:00-22:00;15:00-22:00;15:00-22:00;15:00-22:00;12:00-22:00;12:00-22:00;26.11.23;0;0;1;0;1;;;S + U Warschauer Str.;261,960,953,096;1;0
 18;Kunsthandwerklicher Advent am Karl-August-Platz;Kunsthandwerklicher Advent am Karl-August-Platz;Karl-August-Platz;10625 Berlin;Charlottenburg-Wilmersdorf;"Family & Friends e. V.
 Tel.: 030/305 55 21 oder 01782385521, 
 https://www.family-and-friends-ev.de";03.12.23;10.12.23;11:00 - 18:00 Uhr;mailto:stadtkultur@family-and-friends-eV.de;https://www.family-and-friends-ev.de/kunsthandwerklicher-advent-am-karl-august-platz;Chöre mit weihnachtlichem Liederprogramm;52.50837;13.31019;Advent am Karl-August-Platz;Karl-August-Platz;;1;0;0;0;0;0;0;11:00-18:00;0;0;1;0;0;0;;;U Wilmersdorfer Str. (U7), U Bismarckstr. (U2, U7), S Charlottenburg Bhf;2,874,379,905,093;1;0
 19;Kunsthandwerklicher Weihnachtsmarkt Frohnau;Kunsthandwerklicher Weihnachtsmarkt Frohnau;Willinger Straße;13465 Berlin;Reinickendorf;"KUNSTHAND-BERLIN Cornelja Hasler
 Tel.: 030 - 406 37 031
-www.kunsthand-berlin.de";09.12.23;10.12.23;11:00-18:00;mailto:info@kunsthand-berlin.de;www.kunsthand-berlin.de;Nähe S-Bahnhof Frohnau;52.63313;13.289572;Kunsthandwerklicher Weihnachtsmarkt Frohnau;Willinger Straße;;1;0;0;0;0;0;11:00-18:00;11:00-18:00;0;0;0;0;0;0;;;S Frohnau (S1);191,477,102,566;1;0
+www.kunsthand-berlin.de";09.12.23;10.12.23;11:00-18:00;mailto:info@kunsthand-berlin.de;https://www.kunsthand-berlin.de;Nähe S-Bahnhof Frohnau;52.63313;13.289572;Kunsthandwerklicher Weihnachtsmarkt Frohnau;Willinger Straße;;1;0;0;0;0;0;11:00-18:00;11:00-18:00;0;0;0;0;0;0;;;S Frohnau (S1);191,477,102,566;1;0
 20;Kunsthandwerklicher Weihnachtsmarkt vor dem Bröhan-Museum;Kunsthandwerklicher Weihnachtsmarkt vor dem Bröhan-Museum;Schloßstr. 1 A;14059 Berlin;Charlottenburg-Wilmersdorf;"KiezKulturWerkstadt e. V. 
 Tel.: 0179 931 57 53";09.12.23;10.12.23;"Sa 14:00-20:00 Uhr
 So 12:00-18:00 UhrSa 14:00-20:00 Uhr
@@ -151,20 +151,20 @@ So 12:00-18:00 Uhr";mailto:kontakt@kiezkulturwerkstadt.de;http://www.kiezkulturw
 Sa-So 13:00-22:00 UhrMo-Fr 15:00-22:00 Uhr
 Sa-So 13:00-22:00 UhrMo-Fr 15:00-22:00 Uhr
 Sa-So 13:00-22:00 Uhr";mailto:info@ketering.de;https://www.lucia-weihnachtsmarkt.de/;Eintritt kostenlos;52.53836;13.41275;Lucia Weihnachtsmarkt in der Kulturbrauerei 2023;Schönhauser Allee 36;;1;15:00-22:00;15:00-22:00;15:00-22:00;15:00-22:00;15:00-22:00;13:00-22:00;13:00-22:00;0;0;0;1;0;0;Lucia_Weihnachtsmarkt.jpg;Auto1234, CC BY-SA 3.0 via Wikimedia Commons;U Eberswalder Str. (U2);1,662,783,638,767;1;0
-22;Marienfelder Weihnachtsmarkt des TSV Marienfelde 1890 e. V.;Marienfelder Weihnachtsmarkt des TSV Marienfelde 1890 e. V.;Alt-Marienfelde 36;12277 Berlin;Tempelhof-Schöneberg;TSV Marienfelde 1890 e. V.;09.12.23;10.12.23;Sa & So 13:00-20:00 Uhr;mailto:sport@tsv-marienfelde.de;www.tsv-marienfelde.de;;52.41264;13.36751;Marienfelder Weihnachtsmarkt des TSV Marienfelde 1890 e. V.;Alt-Marienfelde 36;;1;0;0;0;0;0;13:00-20:00;13:00-20:00;0;0;0;0;0;0;;;S Buckower Chaussee (S2);11,819,965,777,664;0;0
+22;Marienfelder Weihnachtsmarkt des TSV Marienfelde 1890 e. V.;Marienfelder Weihnachtsmarkt des TSV Marienfelde 1890 e. V.;Alt-Marienfelde 36;12277 Berlin;Tempelhof-Schöneberg;TSV Marienfelde 1890 e. V.;09.12.23;10.12.23;Sa & So 13:00-20:00 Uhr;mailto:sport@tsv-marienfelde.de;https://www.tsv-marienfelde.de;;52.41264;13.36751;Marienfelder Weihnachtsmarkt des TSV Marienfelde 1890 e. V.;Alt-Marienfelde 36;;1;0;0;0;0;0;13:00-20:00;13:00-20:00;0;0;0;0;0;0;;;S Buckower Chaussee (S2);11,819,965,777,664;0;0
 23;Neuzeller Märchenadventsmarkt;Neuzeller Märchenadventsmarkt;Stiftsplatz;15898 Neuzelle;Land Brandenburg;"Amt Neuzelle
 Tel.: 033652 6102";09.12.23;10.12.23;"Sa 12:00 - 19:00 Uhr
 So 11:00 - 18:00 UhrSa 12:00 - 19:00 Uhr
 So 11:00 - 18:00 UhrSa 12:00 - 19:00 Uhr
-So 11:00 - 18:00 Uhr";mailto:tourismus@neuzelle.de;www.neuzelle.de;"Freier Eintritt auf das Festgelände, 
+So 11:00 - 18:00 Uhr";mailto:tourismus@neuzelle.de;https://www.neuzelle.de;"Freier Eintritt auf das Festgelände, 
 ein märchenhafter Weihnachtszauber im hellen Lichterglanz des Klosters Neuzelle,
 Konzertangebote im Kloster";52.08958;14.65386;Neuzeller Märchenadventsmarkt;Stiftsplatz (Kloster);;1;0;0;0;0;0;12:00-19:00;11:00-18:00;0;0;0;0;0;0;;;;;0;0
 24;Nikolausmarkt der Beschäftigungs- und Bildungsträger im Rathaus Charlottenburg;Nikolausmarkt der Beschäftigungs- und Bildungsträger im Rathaus Charlottenburg;Otto-Suhr-Allee 100;10585 Berlin;Charlottenburg-Wilmersdorf;Bezirksamt Charlottenburg-Wilmersdorf von Berlin, Abt. Bürgerdienste und Soziales, Tel.: 902 91 43 04;29.11.23;29.11.23;11:00-14:00 Uhr;mailto:cw311003@charlottenburg-wilmersdorf.de;;;52.51727;13.30872;Nikolausmarkt der Beschäftigungs- und Bildungsträger im Rathaus Charlottenburg;Otto-Suhr-Allee 100;;1;0;0;11:00-14:00 Uhr;0;0;0;0;0;0;0;0;0;0;;;U Richard-Wagner-Platz (U7);589,497,320,355;1;0
 25;Nowkoelln Advents Flowmarkt;Nowkoelln Advents Flowmarkt;Maybachufer 32;12047 Berlin;Neukölln;"Flowmarkt
-www.nowkoelln.de";10.12.23;10.12.23;10:00-16:30 Uhr;mailto:info@nowkoelln.de;www.nowkoelln.de;"Der Flowmarkt zum 2. Advent
+www.nowkoelln.de";10.12.23;10.12.23;10:00-16:30 Uhr;mailto:info@nowkoelln.de;https://www.nowkoelln.de;"Der Flowmarkt zum 2. Advent
 Eintritt frei";52.49268;13.43076;Nowkoelln Advents Flowmarkt;Maybachufer 32;;1;0;0;0;0;0;0;10:00-16:30;0;0;0;0;0;0;;;U Schönleinstr. (U7);;0;0
-26;Ökoadventsmarkt am Kollwitzplatz;Ökoadventsmarkt am Kollwitzplatz;Wörther Straße 35;10405 Berlin;Pankow;Grüne Liga Berlin e.V., Tel.: 030 44 33 91-0;03.12.23;17.12.23;12:00-19:00;mailto:info@grueneliga-berlin.de;www.grueneliga-berlin.de;Rund 60 Händler*innen bieten hochwertige Spielwaren, Textilien, Kunsthandwerk und Köstlichkeiten aus der ganzen Welt. Zum Angebot gehören ausschließlich Produkte, die soziale und ökologische Standards erfüllen. Für das leibliche Wohl sorgen unsere Öko-Imbiss- und Getränkeanbieter mit ihrem frischen, reichhaltigen Angebot. Kollwitzplatz;52.53667;13.41713;Ökoadventsmarkt;Kollwitzplatz;;1;0;0;0;0;0;0;12:00-19:00;0;0;1;1;0;0;;;U Senefelderplatz (U2);5,178,114,329,322;0;0
-27;Ökumenischer Adventsbasar im Pfarrgarten;Ökumenischer Adventsbasar im Pfarrgarten;Alt-Lübars 24;13469 Berlin;Reinickendorf;Evangelische Kirchengemeinde Lübars, Tel.: 402 30 14;03.12.23;03.12.23;12:00 - 17:00;mailto:kirche-luebars@web.de;www.noomi-evangelisch.de;;52.62064;13.35622;Ökumenischer Adventsbasar im Pfarrgarten;Alt-Lübars 24;;1;0;0;0;0;0;0;12:00-17:00;0;0;0;0;0;0;;;S Waidmannslust(S1, S26);28,517,892,957,105;0;0
+26;Ökoadventsmarkt am Kollwitzplatz;Ökoadventsmarkt am Kollwitzplatz;Wörther Straße 35;10405 Berlin;Pankow;Grüne Liga Berlin e.V., Tel.: 030 44 33 91-0;03.12.23;17.12.23;12:00-19:00;mailto:info@grueneliga-berlin.de;https://www.grueneliga-berlin.de;Rund 60 Händler*innen bieten hochwertige Spielwaren, Textilien, Kunsthandwerk und Köstlichkeiten aus der ganzen Welt. Zum Angebot gehören ausschließlich Produkte, die soziale und ökologische Standards erfüllen. Für das leibliche Wohl sorgen unsere Öko-Imbiss- und Getränkeanbieter mit ihrem frischen, reichhaltigen Angebot. Kollwitzplatz;52.53667;13.41713;Ökoadventsmarkt;Kollwitzplatz;;1;0;0;0;0;0;0;12:00-19:00;0;0;1;1;0;0;;;U Senefelderplatz (U2);5,178,114,329,322;0;0
+27;Ökumenischer Adventsbasar im Pfarrgarten;Ökumenischer Adventsbasar im Pfarrgarten;Alt-Lübars 24;13469 Berlin;Reinickendorf;Evangelische Kirchengemeinde Lübars, Tel.: 402 30 14;03.12.23;03.12.23;12:00 - 17:00;mailto:kirche-luebars@web.de;https://www.noomi-evangelisch.de;;52.62064;13.35622;Ökumenischer Adventsbasar im Pfarrgarten;Alt-Lübars 24;;1;0;0;0;0;0;0;12:00-17:00;0;0;0;0;0;0;;;S Waidmannslust(S1, S26);28,517,892,957,105;0;0
 28;PLATZ für KUNST - Kunsthandwerklicher Weihnachtsmarkt Mexikoplatz;PLATZ für KUNST - Kunsthandwerklicher Weihnachtsmarkt Mexikoplatz;Mexikoplatz;14163 Berlin;Steglitz-Zehlendorf;"KUNSTHAND-BERLIN Cornelja Hasler
 Tel.: 030 - 406 37 031
 www.kunsthand-berlin.de";03.12.23;17.12.23;11:00-18:00 Uhr;mailto:info@kunsthand-berlin.de;https://www.kunsthand-berlin.de/veranstaltungen/kunsthandwerklicher-weihnachtsmarkt-mexikoplatz.html;"direkt am S-Bahnhof Mexikoplatz
@@ -173,25 +173,25 @@ Keine Handels-/Importware. Freier Eintritt, kein Rahmenprogramm, Klein-Gastronom
 29;Rudower Weihnachtsmeile;Rudower Weihnachtsmeile;Alt-Rudow 1;12357 Berlin;Neukölln;Jüttner Entertainment, Christian Jüttner Tel.: 0152/33 90 83 98;16.12.23;17.12.23;"Sa 12:00-22:00 Uhr
 So 11:00-20:00 UhrSa 12:00-22:00 Uhr
 So 11:00-20:00 UhrSa 12:00-22:00 Uhr
-So 11:00-20:00 Uhr";mailto:info@juettner-entertainment.de;www.juettner-entertainment.de;"Eintritt Kostenfrei, Barrierefrei,  
+So 11:00-20:00 Uhr";mailto:info@juettner-entertainment.de;https://www.juettner-entertainment.de;"Eintritt Kostenfrei, Barrierefrei,  
 Weihnachtliche Konzerte auf 2 Bühnen, Kunsthandwerk, Kinderfahrgeschäfte und weihnachtliche Gastronomie";52.4202;13.49235;Rudower Weihnachtsmeile;Alt-Rudow 1;1;1;0;0;0;0;0;12:00-22:00;11:00-20:00;0;0;0;0;1;1;;;U Rudow (U7);4,665,127,948,546;0;0
 30;Spandauer Weihnachtsmarkt - Spandau Markt;Spandauer Weihnachtsmarkt;Markt;13597 Berlin;Spandau;"Partner für Spandau Gesellschaft für Bezirks-Marketing mbH
 Breite Str. 37, 13597 Berlin
 www.partner-fuer-spandau.de";27.11.23;23.12.23;"So-Do 11:00-20:00 Uhr
 Fr-Sa 11:00-22:00 UhrSo-Do 11:00-20:00 Uhr
 Fr-Sa 11:00-22:00 UhrSo-Do 11:00-20:00 Uhr
-Fr-Sa 11:00-22:00 Uhr";mailto:info@partner-fuer-spandau.de;www.spandauer-weihnachtsmarkt.de;"50 Jahre Spandauer Weihnachtsmarkt 1974 – 2023
+Fr-Sa 11:00-22:00 Uhr";mailto:info@partner-fuer-spandau.de;https://www.spandauer-weihnachtsmarkt.de;"50 Jahre Spandauer Weihnachtsmarkt 1974 – 2023
 Eintritt frei";52.53735;13.2043;Spandauer Weihnachtsmarkt;Markt;;1;11:00-20:00;11:00-20:00;11:00-20:00;11:00-20:00;11:00-22:00;11:00-22:00;11:00-20:00;0;0;0;0;0;0;Spandau_Weihnachtsmarkt.jpg;Colin Smith, CC BY-SA 2.0 via Wikimedia Commons;U Altstadt Spandau (U7), S+U Rathaus Spandau (U7, S3, S9);2,526,704,556,995;1;0
 31;Traditioneller Adventsmarkt im Evangelischen Johannesstift;Adventsmarkt im Evangelischen Johannesstift;Schönwalder Allee 26;13587 Berlin;Spandau;"Evangelisches Johannesstift, Tel. 030 33609-0
-www.evangelisches-johannesstift.de";03.12.23;03.12.23;12:00 - 19:00 Uhr;mailto:kommunikation@evangelisches-johannesstift.de;www.evangelisches-johannesstift.de;"11 Uhr Gottesdienst
+www.evangelisches-johannesstift.de";03.12.23;03.12.23;12:00 - 19:00 Uhr;mailto:kommunikation@evangelisches-johannesstift.de;https://www.evangelisches-johannesstift.de;"11 Uhr Gottesdienst
 ,danach Markt rund um die Stiftskirche (12-19 Uhr). Posaunenmusik, christliche Weihnachtstraditionen.";52.56992;13.19578;Traditioneller Adventsmarkt im Evangelischen Johannesstift;Schönwalder Allee 26;;1;0;0;0;0;0;0;12:00-19:00;0;0;0;0;0;0;;;U Altstadt Spandau (U7);35,752,021,122,752;0;0
 32;Umwelt- und Weihnachtsmarkt in der Sophienstraße;Umwelt- und Weihnachtsmarkt Sophienstraße;Sophienstraße;10178 Berlin;Mitte;EVENTS - R. Bielefeldt, Zehdenicker Str. 14, 10119 Berlin;02.12.23;17.12.23;"Sa 12:00-20:00 Uhr
 So 11:00-19:00 UhrSa 12:00-20:00 Uhr
-So 11:00-19:00 Uhr";mailto:post@weihnachtsmarkt-sophienstrasse.de;www.weihnachtsmarkt-sophienstrasse.de;"Direkt neben den Hackeschen Höfen in einer der ältesten Straßen von Berlin, erwartet Sie ein außergewöhnliches Angebot an einzigartiger Designer- und Künstlerware. Das einmalige Konzept wurde bereits 1996 mit dem 1. Preis des Umweltwettbewerbs honoriert und hebt sich von den anderen Weihnachtsmärkten der Stadt wohltuend ab.
+So 11:00-19:00 Uhr";mailto:post@weihnachtsmarkt-sophienstrasse.de;https://www.weihnachtsmarkt-sophienstrasse.de;"Direkt neben den Hackeschen Höfen in einer der ältesten Straßen von Berlin, erwartet Sie ein außergewöhnliches Angebot an einzigartiger Designer- und Künstlerware. Das einmalige Konzept wurde bereits 1996 mit dem 1. Preis des Umweltwettbewerbs honoriert und hebt sich von den anderen Weihnachtsmärkten der Stadt wohltuend ab.
 
 Freier Eintritt!";52.525647;13.400861;Umwelt- und Weihnachtsmarkt in der Sophienstraße;Sophienstraße;;1;0;0;0;0;0;12:00-20:00;11:00-19:00;0;0;1;1;0;0;;;U Weinmeisterstr. (U8), S Hackescher Markt (S3, S5, S7, S9);1,817,499,367,418;1;0
 33;WaldWeihnacht Eberswalde;WaldWeihnacht Eberswalde;Schwappachweg;16225 Eberswalde;Land Brandenburg;Stiftung WaldWelten Eberswalde, 03334 657476, www.waldwelten.de;16.12.23;17.12.23;Sa & So 14:00 - 19:00 Uhr;mailto:info@waldwelten.de;https://waldwelten.de/event/waldweihnacht-2023/;Beschauliche Weihnachtsfeier der besonderen Art im Forstbotanischen Garten. Mit Speis', Trank, Feuerzauber & magischen Momenten für die ganze Familie.;52.82508;13.79651;WaldWeihnacht Eberswalde;Forstbotanischer Garten;;0;0;0;0;0;0;14:00-19:00;14:00-19:00;0;0;0;0;0;1;;;;;0;0
-34;Weihnachstsmarkt Stadt Storkow;Weihnachstsmarkt Stadt Storkow;Am Markt 10;15859 Storkow (Mark);Land Brandenburg;Jüttner Entertainment, Christian Jüttner Tel.: 0152 - 339 083 98;08.12.23;10.12.23;noch nicht bekannt;mailto:info@juettner-entertainment.de;www.juettner-entertainment.de;"Eintritt Kostenfrei, Barrierefrei,  
+34;Weihnachstsmarkt Stadt Storkow;Weihnachstsmarkt Stadt Storkow;Am Markt 10;15859 Storkow (Mark);Land Brandenburg;Jüttner Entertainment, Christian Jüttner Tel.: 0152 - 339 083 98;08.12.23;10.12.23;noch nicht bekannt;mailto:info@juettner-entertainment.de;https://www.juettner-entertainment.de;"Eintritt Kostenfrei, Barrierefrei,  
 Mit weihnachtlichen Konzerten und Weihnachtlicher Gastronomie";52.25524;13.9316;Weihnachtsmarkt Storkow (Mark);Am Markt;1;1;0;0;0;0;18:00-23:00;12:00-23:00;12:00-18:00;0;0;0;0;1;0;;;;;0;0
 35;"Weihnacht ""to go"" im Kranoldkiez";"Weihnacht ""to go"" im Kranoldkiez";Oberhofer Weg, Kranoldplatz, Jägerstraße;12209 Berlin;Steglitz-Zehlendorf;Standortgemeinschaft Mein LiLa - Lichterfelde/Lankwitz e. V.;16.12.23;16.12.23;14:00-19:00;mailto:togo@meinlila.de;http://www.meinlila.de;Auf einem Rundweg zwischen dem Oberhofer Weg, der Lorenzstraße sowie auf den darauf zuführenden Straßen werden Geschäfte bis 19 Uhr geöffnet sein und Händler des traditionellen Weihnachtsmarktes vor oder im Geschäft aufnehmen;52.42673;13.32695;"Weihnacht ""to go"" im Kranoldkiez";Oberhofer Weg;;1;0;0;0;0;0;14:00-19:00;0;0;0;0;0;0;0;;;S Lichterfelde Ost Bhf (S25, S26);649,526,599,968;0;0
 36;Weihnachten in Westend;Weihnachten in Westend;Preußenallee;14052 Berlin;Charlottenburg-Wilmersdorf;"Family & Friends e. V.
@@ -208,11 +208,11 @@ Am Freitag swedische Volksmusik.";52.48764;13.32895;Weihnachtsbasar der schwedis
 Sa 12:00 - 22:00 Uhr
 So 12:00 - 18:00 UhrMo - Fr: 14:00 - 20:00 Uhr
 Sa 12:00 - 22:00 Uhr
-So 12:00 - 18:00 Uhr";mailto:gsm@prenzlau.de;www.prenzlau.de;freier Eintritt;53.31331;13.85697;Weihnachtsmarkt Prenzlau;Marktberg;;1;14:00-20:00;14:00-20:00;14:00-20:00;14:00-20:00;14:00-20:00;12:00-22:00;12:00-18:00;0;0;0;0;0;1;;;;;0;0
-39;"Weihnachtsmarkt ""Lichterglanz im Tannenwald"" in den Späth'schen Baumschulen";"Weihnachtsmarkt ""Lichterglanz im Tannenwald"" in den Späth'schen Baumschulen";Späthstr. 80/81;12437 Berlin;Treptow-Köpenick;Späth'sche Baumschulen Handel GmbH;02.12.23;17.12.23;11:00-20:00 Uhr;mailto:i.zahn@spaethsche-baumschulen.de;www.spaethsche-baumschulen.de;Großes Bühnenprogramm mit Konzerten, Monbijou-Theater und Märchenerzählerin, Weihnachtsmann und Engel, Kremserfahrten und Weihnachtsbasteln, Feuer-Performances, 100 Stände mit Geschenkideen, Weihnachtsbaumwald;52.45434;13.47371;"Weihnachtsmarkt ""Lichterglanz im Tannenwald"" in den Späth'schen Baumschulen";Späthstr. 80/81;;0;0;0;0;0;0;11:00-20:00;11:00-20:00;0;0;0;0;0;1;;;U Blaschkoallee (U7);16,908,262,672,467;0;0
+So 12:00 - 18:00 Uhr";mailto:gsm@prenzlau.de;https://www.prenzlau.de;freier Eintritt;53.31331;13.85697;Weihnachtsmarkt Prenzlau;Marktberg;;1;14:00-20:00;14:00-20:00;14:00-20:00;14:00-20:00;14:00-20:00;12:00-22:00;12:00-18:00;0;0;0;0;0;1;;;;;0;0
+39;"Weihnachtsmarkt ""Lichterglanz im Tannenwald"" in den Späth'schen Baumschulen";"Weihnachtsmarkt ""Lichterglanz im Tannenwald"" in den Späth'schen Baumschulen";Späthstr. 80/81;12437 Berlin;Treptow-Köpenick;Späth'sche Baumschulen Handel GmbH;02.12.23;17.12.23;11:00-20:00 Uhr;mailto:i.zahn@spaethsche-baumschulen.de;https://www.spaethsche-baumschulen.de;Großes Bühnenprogramm mit Konzerten, Monbijou-Theater und Märchenerzählerin, Weihnachtsmann und Engel, Kremserfahrten und Weihnachtsbasteln, Feuer-Performances, 100 Stände mit Geschenkideen, Weihnachtsbaumwald;52.45434;13.47371;"Weihnachtsmarkt ""Lichterglanz im Tannenwald"" in den Späth'schen Baumschulen";Späthstr. 80/81;;0;0;0;0;0;0;11:00-20:00;11:00-20:00;0;0;0;0;0;1;;;U Blaschkoallee (U7);16,908,262,672,467;0;0
 40;Weihnachtsmarkt am Tempelhofer Hafen;Weihnachtsmarkt am Tempelhofer Hafen;Tempelhofer Damm 227;12099 Berlin;Tempelhof-Schöneberg;Jüttner Entertainment, Christian Jüttner Tel.: 0152/33 90 83 98;01.12.23;22.12.23;"Mo - Sa 11:00-21:00 Uhr
 So 13:00-19:00 UhrMo - Sa 11:00-21:00 Uhr
-So 13:00-19:00 Uhr";mailto:info@juettner-entertainment.de;www.juettner-entertainment.de;"Eintritt Kostenfrei, Barrierefrei,  
+So 13:00-19:00 Uhr";mailto:info@juettner-entertainment.de;https://www.juettner-entertainment.de;"Eintritt Kostenfrei, Barrierefrei,  
 Mit weihnachtlichen Konzerten und Weihnachtlicher Gastronomie";52.4550315;13.3850294;Weihnachtsmarkt Am Tempelhofer Hafen;Tempelhofer Damm 227;1;1;11:00-21:00;11:00-21:00;11:00-21:00;11:00-21:00;11:00-21:00;11:00-21:00;13:00-19:00;0;0;0;0;1;0;Weihnachtsmarkt_Tempelhofer_Hafen.jpg;Dguendel, CC BY 4.0 via Wikimedia Commons;;;1;0
 41;Weihnachtsmarkt an der Kaiser-Wilhelm-Gedächtniskirche;Weihnachtsmarkt an der Kaiser-Wilhelm-Gedächtniskirche;Tauenzienstr. 9;10789 Berlin;Charlottenburg-Wilmersdorf;"Schaustellerverband Berlin e.V.
 Tel.: 030 213 32 90
@@ -228,11 +228,11 @@ Fr-Sa 11:00-22:00 Uhr
 25./26.12. 13:00-21:00 Uhr
 31.12. 11:00-20:00 Uhr
 01.01. 13:00-21:00 Uhr";mailto:info@svbev.de;https://www.schaustellerverband-berlin.de/weihnachtsmarkt-berlin.html;Eintritt frei;52.504886;13.335511;Weihnachtsmarkt an der Kaiser-Wilhem-Gedächtniskirche;Breitscheidplatz;;1;11:00-21:00;11:00-21:00;11:00-21:00;11:00-21:00;11:00-22:00;11:00-22:00;11:00-21:00;0;24.12.23=11:00-14:00, 25.12.23=13:00-21:00, 26.12.23=13:00-21:00, 31.12.23=11:00-20:00, 01.01.24=13:00-21:00;0;0;0;0;weihnachtsmarkt_Breitscheidplatz.jpg;Ralf Roletschek, GFDL 1.2 via Wikimedia Commons;S+U Zoologischer Garten Bhf, U Kurfürstendamm;2,958,532,332,868;1;0
-42;Weihnachtsmarkt auf der Dicken Linda;Weihnachtsmarkt auf der Dicken Linda;Kranoldplatz;12051 Berlin;Neukölln;diemarktplaner Dipl.-Ing. Nikolaus Fink, Sanderstr. 4, 12047 Berlin, Tel.: 030 29 30 96 01 www.diemarktplaner.de;16.12.23;16.12.23;10:00-18:00 Uhr;mailto:info@diemarktplaner.de;www.diemarktplaner.de;"Eintritt frei, Live Musik, Schwedenfeuer,
+42;Weihnachtsmarkt auf der Dicken Linda;Weihnachtsmarkt auf der Dicken Linda;Kranoldplatz;12051 Berlin;Neukölln;diemarktplaner Dipl.-Ing. Nikolaus Fink, Sanderstr. 4, 12047 Berlin, Tel.: 030 29 30 96 01 www.diemarktplaner.de;16.12.23;16.12.23;10:00-18:00 Uhr;mailto:info@diemarktplaner.de;https://www.diemarktplaner.de;"Eintritt frei, Live Musik, Schwedenfeuer,
 Weihnachtsmarkt integriert in einen regionalen Wochenmarkt";52.46623;13.43743;Weihnachtsmarkt auf der Dicken Linda;Kranoldplatz;;1;0;0;0;0;0;10:00-18:00;0;0;0;0;0;0;0;;;S+U Hermannstr. (U8, S41, S42, S45, S46);3,758,999,323,573;1;0
 43;Weihnachtsmarkt Hallen am Borsigturm;Weihnachtsmarkt Hallen am Borsigturm;Am Borsigturm 2;13507 Berlin;Reinickendorf;Jüttner Entertainment, Christian Jüttner Tel.: 0152/33 90 83 98;01.12.23;22.12.23;"Mo-Sa 11:00-21:00 Uhr
 So 13:00-19:00 UhrMo-Sa 11:00-21:00 Uhr
-So 13:00-19:00 Uhr";mailto:info@juettner-entertainment.de;www.juettner-entertainment.de;"Eintritt Kostenfrei, Barrierefrei,  
+So 13:00-19:00 Uhr";mailto:info@juettner-entertainment.de;https://www.juettner-entertainment.de;"Eintritt Kostenfrei, Barrierefrei,  
 Mit weihnachtlichen Konzerten und Weihnachtlicher Gastronomie";52.584894;13.285817;Weihnachtsmarkt Hallen am Borsigturm;Am Borsigturm 2;1;1;11:00-21:00;11:00-21:00;11:00-21:00;11:00-21:00;11:00-21:00;11:00-21:00;13:00-19:00;0;0;0;0;1;0;;;U Alt-Tegel (U6), S Tegel (S25);421,041,359,682;0;0
 44;Weihnachtsmarkt in der Fußgängerzone Wilmersdorfer Straße;Weihnachtsmarkt in der Fußgängerzone Wilmersdorfer Straße;Wilmersdorfer Straße;10627 Berlin;Charlottenburg-Wilmersdorf;A. Lauenburger Veranstaltungen, Tel.: 0178/8543859;23.11.23;23.12.23;"Mo - Sa 11:00-20:00
 So 12:00-19:00
@@ -240,7 +240,7 @@ Am 26.11.2023 geschlossen!Mo - Sa 11:00-20:00
 So 12:00-19:00
 Am 26.11.2023 geschlossen!";mailto:lauenburger-pony@gmx.de;;Am 26.11.2023 geschlossen!;52.509313;13.305994;Weihnachtsmarkt in der Fußgängerzone Wilmersdorfer Straße;Wilmersdorfer Straße;;1;11:00-20:00;11:00-20:00;11:00-20:00;11:00-20:00;11:00-20:00;11:00-20:00;12:00-19:00;26.11.23;0;0;0;0;0;;;U Bismarckstr. (U2, U7), S Charlottenburg Bhf;2,521,491,399,126;1;0
 45;Weihnachtsmarkt in Linde;Weihnachtsmarkt in Linde;Johannisberger Str. 15 A;14197 Berlin;Charlottenburg-Wilmersdorf;"Evangelische Lindenkirchengemeinde, Tel.: 827 92 20
-www.lindenkirche.de";09.12.23;09.12.23;12:00-18:00 Uhr;mailto:buero@lindenkirche.de;www.lindenkirche.de/;"Kunsthandwerk, Kinderkarussell, Cafeteria, Bücher, Angebote für Kinder, Musik u.v.m.
+www.lindenkirche.de";09.12.23;09.12.23;12:00-18:00 Uhr;mailto:buero@lindenkirche.de;https://www.lindenkirche.de/;"Kunsthandwerk, Kinderkarussell, Cafeteria, Bücher, Angebote für Kinder, Musik u.v.m.
 Johannisberger Str. 15a / Ecke Homburger Str. 48";52.47452;13.31062;Weihnachtsmarkt der Lindenkirchengemeinde;Johannisberger Str. 15 A;;1;0;0;0;0;0;12:00-18:00;0;0;0;0;0;0;0;;;U Rüdesheimer Platz (U3);395,688,525,076;1;0
 46;Weihnachtsmarkt Karlshorst;Weihnachtsmarkt Karlshorst;Treskowallee 159;10318 Berlin;Lichtenberg;iKARUS stadtteilzentrum der SozDia Jugend, Bildung und Arbeit gGmbH (Tel: 89622552, Internet: https://www.sozdia.de/taetigkeitsbereiche/gemeinwesen/ikarus/ueber-uns );09.12.23;10.12.23;"Sa 09.12.: 13:00-22:00
 So 10.12.: 13:00-19:00Sa 09.12.: 13:00-22:00
@@ -249,7 +249,7 @@ So 10.12.: 13:00-19:00";mailto:ikarus@sozdia.de;https://www.facebook.com/ikaruss
 Jüttner Entertainment
 Tel.: 0152 - 339 083 98";22.12.23;23.12.23;"Freitag 14:00 - 22:00 Uhr
 Samstag 12:00 - 22:00 UhrFreitag 14:00 - 22:00 Uhr
-Samstag 12:00 - 22:00 Uhr";mailto:info@juettner-entertainment.de;www.hauptstadtkultur.berlin;Es  wird ein weihnachtliches Bühnenprogramm geben.  Der Eintritt ist frei.;52.484916;13.480451;Weihnachtsmarkt Alt Treptow;Bulgarische Straße Ecke Alt Treptow;;1;0;0;0;0;14:00-22:00;12:00-22:00;0;0;0;0;0;0;0;;;;;0;0
+Samstag 12:00 - 22:00 Uhr";mailto:info@juettner-entertainment.de;https://www.hauptstadtkultur.berlin;Es  wird ein weihnachtliches Bühnenprogramm geben.  Der Eintritt ist frei.;52.484916;13.480451;Weihnachtsmarkt Alt Treptow;Bulgarische Straße Ecke Alt Treptow;;1;0;0;0;0;14:00-22:00;12:00-22:00;0;0;0;0;0;0;0;;;;;0;0
 48;Weihnachtsmarkt vor dem Schloss Charlottenburg;Weihnachtsmarkt vor dem Schloss Charlottenburg;Spandauer Damm 20;14059 Berlin;Charlottenburg-Wilmersdorf;"Jens Schmidt GmbH
 Tel. 0171 / 6883011
 Tel. 0163 / 6768850
@@ -264,11 +264,11 @@ www.weihnachtsmarkt-berlin.de";27.11.23;31.12.23;"So-Do 12:00 - 22:00 Uhr
 Fr, Sa 12:00 - 23:00 Uhr
 Heiligabend 12:00 - 18:00 Uhr
 Silvester 12:00 - 01:00 Uhr
-Von 12:00 - 14:00 Uhr freier Eintritt";mailto:info@weihnachtsmarkt-berlin.de;www.weihnachtsmarkt-berlin.de;"Der WeihnachtsZauber Gendarmenmarkt an der Staatsoper findet auf Grund der klimagerechten Sanierung des Gendarmenmarktes in den Jahren 2022 bis 2024 auf den geschichtsträchtigen Bebelplatz statt. Genießen Sie dieses historische Ambiente im Zentrum von Berlin gegenüber der Humboldt-Universität. Hier heißen wir unsere Besucher in gewohnt weihnachtlich-zauberhafter Atmosphäre willkommen.
+Von 12:00 - 14:00 Uhr freier Eintritt";mailto:info@weihnachtsmarkt-berlin.de;https://www.weihnachtsmarkt-berlin.de;"Der WeihnachtsZauber Gendarmenmarkt an der Staatsoper findet auf Grund der klimagerechten Sanierung des Gendarmenmarktes in den Jahren 2022 bis 2024 auf den geschichtsträchtigen Bebelplatz statt. Genießen Sie dieses historische Ambiente im Zentrum von Berlin gegenüber der Humboldt-Universität. Hier heißen wir unsere Besucher in gewohnt weihnachtlich-zauberhafter Atmosphäre willkommen.
 Die besten Aussteller, Gastronomen und Künstler freuen sich auf Ihren Besuch!";52.516664; 13.394126;WeihnachtsZauber Gendarmenmarkt an der Staatsoper;Bebelplatz;;0;12:00-22:00;12:00-22:00;12:00-22:00;12:00-22:00;12:00-23:00;12:00-23:00;12:00-22:00;0;24.12.23=12:00-18:00, 31.12.23=12:00-01:00;0;0;0;1;Weihnachsmarkt_Staatsoper.jpg;Jörg Reichert, CC BY-SA 3.0;U Unter den Linden (U5);2,099,298,949,036;1;0
 50;Wintermarkt Schlossplatz;Wintermarkt Schlossplatz;Am Schlossplatz 1;10178 Berlin;Mitte;"Wollenschlaeger GmbH
 Tel.: 0163/400 05 00 und 0163/500 06 00
-www.wollenschlaeger-berlin.de";01.12.23;07.01.24;;mailto:info@wollenschlaeger-berlin.de;www.wollenschlaeger-berlin.de;"Ohne Eintritt,
+www.wollenschlaeger-berlin.de";01.12.23;07.01.24;;mailto:info@wollenschlaeger-berlin.de;https://www.wollenschlaeger-berlin.de;"Ohne Eintritt,
 Beleuchtung des gesamten Innenhofes, Kinderattraktionen
 Unterhaltung: Trompeter und Chöre.
 
