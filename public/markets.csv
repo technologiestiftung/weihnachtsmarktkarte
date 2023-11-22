@@ -20,7 +20,7 @@ Es werden unter anderem verschiedenste Bastel- und Handarbeiten, Keramik, Holzwa
 Eintritt frei! 
 
 Der Lichtermarkt ist nicht gewinnorientiert. Die Einnahmeüberschüsse werden sozialen Zwecken zugeführt.";52.39112;13.40987;45. Lichtenrader Lichtermarkt;Alt-Lichtenrade;;1;0;0;0;0;0;0;13:00-19:00;0;0;0;0;0;0;;;S Lichtenrade (S2);10,573,108,253,381;0;0
-5;Advent im Park;Advent im Park;"Natur Park Südgelände";12157 Berlin;Tempelhof-Schöneberg;"Grün Berlin GmbH
+5;Advent im Park;Advent im Park;Natur Park Südgelände;12157 Berlin;Tempelhof-Schöneberg;"Grün Berlin GmbH
 Ullsteinhaus, 3. OG
 Mariendorfer Damm 1
 12099 Berlin";02.12.23;10.12.23;"Samstags: 15-19 Uhr 
@@ -130,7 +130,7 @@ Sa 11:00-21:00 Uhr
 So 11:00-19:00 Uhr";mailto:nsimon@henningsdorf.de;https://www.hennigsdorf.de/weihnachtsmarkt23;"Eintritt frei. 
 Blicken Sie den Kunsthandwerkern in Schauwerkstätten über die Schultern, entdecken einzigartige Geschenke und handgefertigte Kunstwerke für Ihre Lieben, genießen köstliche Weihnachtsleckereien wie gebrannte Mandeln, Glühwein, und frisch gebackene Plätzchen und erleben stimmungsvolle Musik und Klänge von der Open-Air-Bühne auf dem Weihnachtsmarkt, die den Geist der Weihnacht für Sie einfängt.
 
-Die Kleinsten dürfen sich auf's Mitmachen, Mitsingen, und vor allem Mitbacken in der Weihnachtsbäckerei freuen.";52.6375; 13.2046;Henningsdorfer Weihnachtsmarkt;Postplatz;;1;0;0;0;0;15:00-21:00;11:00-21:00;11:00-19:00;0;0;0;0;0;0;;;;;0;0
+Die Kleinsten dürfen sich auf's Mitmachen, Mitsingen, und vor allem Mitbacken in der Weihnachtsbäckerei freuen.";52.6375;13.2046;Henningsdorfer Weihnachtsmarkt;Postplatz;;1;0;0;0;0;15:00-21:00;11:00-21:00;11:00-19:00;0;0;0;0;0;0;;;;;0;0
 17;Historische Weihnacht;Historische Weihnacht;Revaler Straße 99;10245 Berlin;Friedrichshain-Kreuzberg;Carnica-Veranstaltungen GmbH;16.11.23;22.12.23;"Mo-Fr 15:00-22:00 Uhr
 Sa-So 12:00-22:00 UhrMo-Fr 15:00-22:00 Uhr
 Sa-So 12:00-22:00 UhrMo-Fr 15:00-22:00 Uhr
@@ -265,7 +265,7 @@ Fr, Sa 12:00 - 23:00 Uhr
 Heiligabend 12:00 - 18:00 Uhr
 Silvester 12:00 - 01:00 Uhr
 Von 12:00 - 14:00 Uhr freier Eintritt";mailto:info@weihnachtsmarkt-berlin.de;www.weihnachtsmarkt-berlin.de;"Der WeihnachtsZauber Gendarmenmarkt an der Staatsoper findet auf Grund der klimagerechten Sanierung des Gendarmenmarktes in den Jahren 2022 bis 2024 auf den geschichtsträchtigen Bebelplatz statt. Genießen Sie dieses historische Ambiente im Zentrum von Berlin gegenüber der Humboldt-Universität. Hier heißen wir unsere Besucher in gewohnt weihnachtlich-zauberhafter Atmosphäre willkommen.
-Die besten Aussteller, Gastronomen und Künstler freuen sich auf Ihren Besuch!";52.516664; 13.394126;WeihnachtsZauber Gendarmenmarkt an der Staatsoper;Bebelplatz;;0;12:00-22:00;12:00-22:00;12:00-22:00;12:00-22:00;12:00-23:00;12:00-23:00;12:00-22:00;0;24.12.23=12:00-18:00, 31.12.23=12:00-01:00;0;0;0;1;Weihnachsmarkt_Staatsoper.jpg;Jörg Reichert, CC BY-SA 3.0;U Unter den Linden (U5);2,099,298,949,036;1;0
+Die besten Aussteller, Gastronomen und Künstler freuen sich auf Ihren Besuch!";52.516664;13.394126;WeihnachtsZauber Gendarmenmarkt an der Staatsoper;Bebelplatz;;0;12:00-22:00;12:00-22:00;12:00-22:00;12:00-22:00;12:00-23:00;12:00-23:00;12:00-22:00;0;24.12.23=12:00-18:00, 31.12.23=12:00-01:00;0;0;0;1;Weihnachsmarkt_Staatsoper.jpg;Jörg Reichert, CC BY-SA 3.0;U Unter den Linden (U5);2,099,298,949,036;1;0
 50;Wintermarkt Schlossplatz;Wintermarkt Schlossplatz;Am Schlossplatz 1;10178 Berlin;Mitte;"Wollenschlaeger GmbH
 Tel.: 0163/400 05 00 und 0163/500 06 00
 www.wollenschlaeger-berlin.de";01.12.23;07.01.24;;mailto:info@wollenschlaeger-berlin.de;www.wollenschlaeger-berlin.de;"Ohne Eintritt,
@@ -296,4 +296,5 @@ Weihnachtsfeiertage: 12 - 20 Uhr";mailto:info@strandbad-wendenschloss.berlin;htt
 Markt: 11:00 – 22:00 Uhr
 Pyramide “PartyTreff”: 11:00 – 24:00 Uhr
 Partyhaus vom Nikolaus: 11:00 – 03:00 Uhr";52.521918;13.413215;Weihnachtsmarkt Alex;Alexanderplatz;;1;10:00-22:00;10:00-22:00;10:00-22:00;10:00-22:00;10:00-22:00;10:00-22:00;10:00-22:00;0;24.12.23=10:00-16:00;0;0;0;1;Weihnachtsmarkt_Alex.jpg;Pascal Volk from Berlin, Germany, CC BY-SA 2.0 via Wikimedia Commons;S+U Alexanderplatz Bhf;999,260,150,342;1;0
-55;Heissa Holzmarkt;Heissa Holzmarkt;Holzmarktstr. 25;10243 Berlin;Friedrichshain-Kreuzberg;;23.11.23;23.12.23;Donnerstag und Freitag von 16 bis 22 Uhr, Samstag und Sonntag von 14 bis 22 Uhr;;;"Leider liegen uns keine weiteren Informationen vor. ";52.511493;13.426775;Heissa Holzmarkt;Holzmarkt;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;;;;;0;0
+55;Heissa Holzmarkt;Heissa Holzmarkt;Holzmarktstr. 25;10243 Berlin;Friedrichshain-Kreuzberg;;23.11.23;23.12.23;Donnerstag und Freitag von 16 bis 22 Uhr, Samstag und Sonntag von 14 bis 22 Uhr;;;"Leider liegen uns keine weiteren Informationen vor. ";52.511493;13.426775;Heissa Holzmarkt;Holzmarkt;;0;0;0;0;16:00-22:00;16:00-22:00;14:00-22:00;14:00-22:00;0;0;0;0;1;0;;;S+U Jannowitzbrücke;;0;0
+56;Alt-Rixdorfer Weihnachtsmarkt;Alt-Rixdorfer Weihnachtsmarkt;Richardplatz;12055 Berlin;Neukölln;;08.12.23;10.12.23;;;;"Leider liegen uns keine weiteren Informationen vor. ";52.474222;13.445179;Alt-Rixdorfer Weihnachtsmarkt;Alt-Rixdorfer Weihnachtsmarkt;;0;0;0;0;0;17:00-21:00;14:00-21:00;14:00-20:00;0;0;0;0;0;1;;;U Karl-Marx-Str., S+U Neukölln;;0;0
