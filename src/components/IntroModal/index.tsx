@@ -63,8 +63,8 @@ export const IntroModal: FC<IntroModalType> = ({
                 einen Blick!
               </h4>
               <p className="pb-4">
-                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot von
-                über 60 Berliner Weihnachtsmärkten von traditionellem bis zu
+                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot der
+                Berliner Weihnachtsmärkte von traditionellem bis zu
                 individuellem Flair. Lass dir Weihnachtsmärkte nach Wunschdatum
                 anzeigen, nutze die Filter, um passende Märkte zu finden und
                 teile deine Entdeckung mit deinen Freund:innen! Frohe
