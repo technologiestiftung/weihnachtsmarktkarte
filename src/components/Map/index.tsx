@@ -132,8 +132,8 @@ export const MapComponent: FC<MapComponentType> = ({
       <Map
         mapLib={maplibregl}
         initialViewState={{ ...startMapView }}
-        mapStyle={process.env.NEXT_PUBLIC_MAPTILER_STYLE}
-        // mapStyle={mapStyle()}
+        // mapStyle={process.env.NEXT_PUBLIC_MAPTILER_STYLE}
+        mapStyle={mapStyle()}
         onClick={onMapCLick}
         // @ts-ignore
         ref={mapRef}

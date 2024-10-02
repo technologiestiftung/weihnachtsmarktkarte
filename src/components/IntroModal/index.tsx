@@ -5,11 +5,14 @@ import { Cross } from '../Icons'
 import { TsbLogo } from '@components/Logos/TsbLogo'
 import { OdisLogo } from '@components/Logos/OdisLogo'
 
+import { LanguageText } from '@lib/getText'
+
 export interface IntroModalType {
   modalOpen: boolean
   setModalOpen: (date: boolean) => void
   setNavView: (date: 'info' | 'filter') => void
   setSidebarMenuOpen: (date: boolean) => void
+  text: LanguageText
 }
 
 export const IntroModal: FC<IntroModalType> = ({
@@ -17,6 +20,7 @@ export const IntroModal: FC<IntroModalType> = ({
   setModalOpen,
   setNavView,
   setSidebarMenuOpen,
+  text,
 }) => {
   function closeModal() {
     setModalOpen(false)
@@ -51,46 +55,32 @@ export const IntroModal: FC<IntroModalType> = ({
                 <Cross />
               </button>
               <h2 className="font-bold text-2xl pb-2 pt-2 text-lightblue/80">
-                Berliner Weihnachtsmarkt-Finder
+                {text.introModal.header}{' '}
                 <img
                   src="./stern_ausgewaehlt.png"
                   alt="stern"
                   className="inline absolute mt-0 md:-mt-2 ml-6 w-10"
                 />
               </h2>
-              <h4 className="pb-4">
-                Glühwein, Glögg, Glückseligkeit - alle Weihnachtsmärkte auf
-                einen Blick!
-              </h4>
-              <p className="pb-4">
-                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot der
-                Berliner Weihnachtsmärkte von traditionellem bis zu
-                individuellem Flair. Lass dir Weihnachtsmärkte nach Wunschdatum
-                anzeigen, nutze die Filter, um passende Märkte zu finden und
-                teile deine Entdeckung mit deinen Freund:innen! Frohe
-                Weihnachten!
-              </p>
+              <h4 className="pb-4">{text.introModal.subHeader}</h4>
+              <p className="pb-4">{text.introModal.about}</p>
 
               <button
                 className="xmas-btn px-4 bg-darkblue hover:bg-gold hover:text-lightblue text-gold p-2 text-bold rounded border-2 border-gold hover:border-gold"
                 onClick={closeModalExplore}
               >
-                Erkunden
+                {text.introModal.explore}
               </button>
               <button
                 className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
                 onClick={closeModalInfo}
               >
-                Mehr Infos
+                {text.introModal.moreInfo}
               </button>
 
               <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
                 <p className="text-xs mb-2 md:mb-0 text-gray-500 w-11/12 md:w-full pt-4">
-                  <i>
-                    Eine prototypische Datenvisualisierung der Open Data
-                    Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB
-                    Berlin
-                  </i>
+                  <i>{text.introModal.info}</i>
                 </p>
                 <div className="ml-2 flex self-center w-10/12">
                   <div className="w-32">
