@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Cross } from '../Icons'
+import { Cross, UnderConstruction } from '../Icons'
 
 import { TsbLogo } from '@components/Logos/TsbLogo'
 import { OdisLogo } from '@components/Logos/OdisLogo'
@@ -10,6 +10,7 @@ export interface IntroModalType {
   setModalOpen: (date: boolean) => void
   setNavView: (date: 'info' | 'filter') => void
   setSidebarMenuOpen: (date: boolean) => void
+  underConstruction: boolean
 }
 
 export const IntroModal: FC<IntroModalType> = ({
@@ -17,6 +18,7 @@ export const IntroModal: FC<IntroModalType> = ({
   setModalOpen,
   setNavView,
   setSidebarMenuOpen,
+  underConstruction,
 }) => {
   function closeModal() {
     setModalOpen(false)
@@ -62,27 +64,60 @@ export const IntroModal: FC<IntroModalType> = ({
                 Glühwein, Glögg, Glückseligkeit - alle Weihnachtsmärkte auf
                 einen Blick!
               </h4>
-              <p className="pb-4">
-                Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot der
-                Berliner Weihnachtsmärkte von traditionellem bis zu
-                individuellem Flair. Lass dir Weihnachtsmärkte nach Wunschdatum
-                anzeigen, nutze die Filter, um passende Märkte zu finden und
-                teile deine Entdeckung mit deinen Freund:innen! Frohe
-                Weihnachten!
-              </p>
+              {underConstruction ? (
+                <>
+                  <p className="pb-4">
+                    Im Weihnachtsmarkt-Finder werden gerade die Daten für die
+                    Weihnachtszeit 2024 aktualisiert!{' '}
+                    <span className="text-gold font-bold">
+                      {' '}
+                      Sie sind Betreiber:in eines Weihanchtsmarktes? Dann können
+                      Ihren Markt zur Eintragung in der Karte bei der
+                      Senatsverwaltung für Wirtschaft, Energie und Betriebe
+                      melden.
+                    </span>{' '}
+                    Ende Oktober steht der neue Weihnachtsmarkt-Finder 2024 zur
+                    Verfügung.
+                  </p>
 
-              <button
-                className="xmas-btn px-4 bg-darkblue hover:bg-gold hover:text-lightblue text-gold p-2 text-bold rounded border-2 border-gold hover:border-gold"
-                onClick={closeModalExplore}
-              >
-                Erkunden
-              </button>
-              <button
-                className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
-                onClick={closeModalInfo}
-              >
-                Mehr Infos
-              </button>
+                  <a
+                    className="xmas-btn px-4 bg-darkblue hover:bg-gold hover:text-lightblue text-gold p-3 text-bold rounded border-2 border-gold hover:border-gold"
+                    href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
+                  >
+                    Markt melden
+                  </a>
+                  <button
+                    className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
+                    onClick={closeModalExplore}
+                  >
+                    Märkte 2023 erkunden
+                  </button>
+                </>
+              ) : (
+                <>
+                  <p className="pb-4">
+                    Der Weihnachtsmarkt-Finder zeigt das vielfältige Angebot der
+                    Berliner Weihnachtsmärkte von traditionellem bis zu
+                    individuellem Flair. Lass dir Weihnachtsmärkte nach
+                    Wunschdatum anzeigen, nutze die Filter, um passende Märkte
+                    zu finden und teile deine Entdeckung mit deinen
+                    Freund:innen! Frohe Weihnachten!
+                  </p>
+
+                  <button
+                    className="xmas-btn px-4 bg-darkblue hover:bg-gold hover:text-lightblue text-gold p-2 text-bold rounded border-2 border-gold hover:border-gold"
+                    onClick={closeModalExplore}
+                  >
+                    Erkunden
+                  </button>
+                  <button
+                    className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
+                    onClick={closeModalInfo}
+                  >
+                    Mehr Infos
+                  </button>
+                </>
+              )}
 
               <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
                 <p className="text-xs mb-2 md:mb-0 text-gray-500 w-11/12 md:w-full pt-4">
