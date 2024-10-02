@@ -66,32 +66,46 @@ export const IntroModal: FC<IntroModalType> = ({
               </h4>
               {underConstruction ? (
                 <>
-                  <p className="pb-4">
-                    Im Weihnachtsmarkt-Finder werden gerade die Daten für die
-                    Weihnachtszeit 2024 aktualisiert!{' '}
-                    <span className="text-gold font-bold">
+                  <div className="block md:flex">
+                    <div>
+                      <div className="px-2 pb-2 md:hidden flex">
+                        <UnderConstruction />
+                        <UnderConstruction />
+                        <UnderConstruction />
+                      </div>
+                      <div className="px-2  hidden md:block">
+                        <UnderConstruction />
+                      </div>
+                    </div>
+                    <div>
                       {' '}
-                      Sie sind Betreiber:in eines Weihanchtsmarktes? Dann können
-                      Ihren Markt zur Eintragung in der Karte bei der
-                      Senatsverwaltung für Wirtschaft, Energie und Betriebe
-                      melden.
-                    </span>{' '}
-                    Ende Oktober steht der neue Weihnachtsmarkt-Finder 2024 zur
-                    Verfügung.
-                  </p>
-
-                  <a
-                    className="xmas-btn px-4 bg-darkblue hover:bg-gold hover:text-lightblue text-gold p-3 text-bold rounded border-2 border-gold hover:border-gold"
-                    href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
-                  >
-                    Markt melden
-                  </a>
-                  <button
-                    className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
-                    onClick={closeModalExplore}
-                  >
-                    Märkte 2023 erkunden
-                  </button>
+                      <p className="pb-4">
+                        Im Weihnachtsmarkt-Finder werden gerade die Daten für
+                        die Weihnachtszeit 2024 aktualisiert!{' '}
+                        <span className="text-gold font-bold">
+                          {' '}
+                          Sie sind Betreiber:in eines Weihanchtsmarktes? Dann
+                          können Ihren Markt zur Eintragung in der Karte bei der
+                          Senatsverwaltung für Wirtschaft, Energie und Betriebe
+                          melden.
+                        </span>{' '}
+                        Ende Oktober steht der neue Weihnachtsmarkt-Finder 2024
+                        zur Verfügung.
+                      </p>
+                      <a
+                        className="xmas-btn px-4 hover:bg-darkblue bg-gold text-lightblue hover:text-gold p-3 text-bold rounded border-2 border-gold hover:border-gold"
+                        href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
+                      >
+                        Markt melden
+                      </a>
+                      <button
+                        className="mt-6 md:mt-0 px-4 md:ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
+                        onClick={closeModalExplore}
+                      >
+                        Märkte 2023 erkunden
+                      </button>
+                    </div>
+                  </div>
                 </>
               ) : (
                 <>
