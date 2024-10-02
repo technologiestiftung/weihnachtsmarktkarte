@@ -73,13 +73,13 @@ export const IntroModal: FC<IntroModalType> = ({
                         <UnderConstruction />
                         <UnderConstruction />
                       </div>
-                      <div className="px-2  hidden md:block">
+                      <div className="px-2 hidden md:block h-full mt-[50%]">
                         <UnderConstruction />
                       </div>
                     </div>
-                    <div>
+                    <div className="flex flex-col md:block">
                       {' '}
-                      <p className="pb-4">
+                      <p className="pb-4 ">
                         Im Weihnachtsmarkt-Finder werden gerade die Daten für
                         die Weihnachtszeit 2024 aktualisiert!{' '}
                         <span className="text-gold font-bold">
@@ -93,13 +93,13 @@ export const IntroModal: FC<IntroModalType> = ({
                         zur Verfügung.
                       </p>
                       <a
-                        className="xmas-btn px-4 hover:bg-darkblue bg-gold text-lightblue hover:text-gold p-3 text-bold rounded border-2 border-gold hover:border-gold"
+                        className="xmas-btn px-4 hover:bg-darkgold bg-gold text-lightblue  p-2 md:p-3 text-center text-bold rounded border-2 border-gold hover:border-gold"
                         href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
                       >
                         Markt melden
                       </a>
                       <button
-                        className="mt-6 md:mt-0 px-4 md:ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
+                        className="mt-2 md:mt-0 px-4 md:ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
                         onClick={closeModalExplore}
                       >
                         Märkte 2023 erkunden
