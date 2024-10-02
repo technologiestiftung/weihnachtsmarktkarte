@@ -93,7 +93,7 @@ export const IntroModal: FC<IntroModalType> = ({
                         zur Verfügung.
                       </p>
                       <a
-                        className="xmas-btn px-4 hover:bg-darkgold bg-gold text-lightblue  p-2 md:p-3 text-center text-bold rounded border-2 border-gold hover:border-gold"
+                        className="xmas-btn px-4 hover:bg-darkgold bg-gold text-lightblue  p-2 md:p-3 text-center text-bold rounded border-2 border-gold hover:border-darkgold"
                         href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
                       >
                         Markt melden
