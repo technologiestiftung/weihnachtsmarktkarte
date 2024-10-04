@@ -84,8 +84,8 @@ export const IntroModal: FC<IntroModalType> = ({
                         die Weihnachtszeit 2024 aktualisiert!{' '}
                         <span className="text-gold font-bold">
                           {' '}
-                          Sie sind Betreiber:in eines Weihanchtsmarktes? Dann
-                          können Ihren Markt zur Eintragung in der Karte bei der
+                          Sie sind Betreiber:in eines Weihnachtsmarkts? Dann
+                          können Sie Ihren Markt zur Eintragung in der Karte bei der
                           Senatsverwaltung für Wirtschaft, Energie und Betriebe
                           melden.
                         </span>{' '}
