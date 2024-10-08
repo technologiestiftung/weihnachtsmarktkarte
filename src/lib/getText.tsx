@@ -10,6 +10,9 @@ export interface LanguageText {
     explore: string
     moreInfo: string
     info: string
+    infoConstruction: string
+    reportMarket: string
+    exploreMarkets: string
   }
   sidebarFilter: {
     header: string
@@ -95,6 +98,18 @@ const text: Text = {
       explore: 'Erkunden',
       moreInfo: 'Mehr Infos',
       info: 'Eine prototypische Datenvisualisierung der Open Data Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB Berlin',
+      infoConstruction: `Im Weihnachtsmarkt-Finder werden gerade die Daten für
+      die Weihnachtszeit 2024 aktualisiert!
+      <span class="text-gold font-bold">
+        Sie sind Betreiber:in eines Weihnachtsmarkts? Dann
+        können Sie Ihren Markt zur Eintragung in der Karte bei
+        der Senatsverwaltung für Wirtschaft, Energie und
+        Betriebe melden.
+      </span>
+      Ende Oktober steht der neue Weihnachtsmarkt-Finder 2024
+      zur Verfügung.`,
+      reportMarket: 'Markt melden',
+      exploreMarkets: 'Märkte 2023 erkunden',
     },
     sidebarFilter: {
       header: 'Weihnachtsmärkte entdecken',
@@ -380,6 +395,13 @@ const text: Text = {
       explore: 'Explore',
       moreInfo: 'About',
       info: '???',
+      infoConstruction: `???!
+      <span className="text-gold font-bold">
+        ???.
+      </span>
+      ???`,
+      reportMarket: 'Report market',
+      exploreMarkets: 'Explore markets from 2023',
     },
     sidebarFilter: {
       header: 'Discover Christmas Markets',

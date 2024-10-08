@@ -84,30 +84,23 @@ export const IntroModal: FC<IntroModalType> = ({
                     </div>
                     <div className="flex flex-col md:block">
                       {' '}
-                      <p className="pb-4 ">
-                        Im Weihnachtsmarkt-Finder werden gerade die Daten für
-                        die Weihnachtszeit 2024 aktualisiert!{' '}
-                        <span className="text-gold font-bold">
-                          {' '}
-                          Sie sind Betreiber:in eines Weihnachtsmarkts? Dann
-                          können Sie Ihren Markt zur Eintragung in der Karte bei
-                          der Senatsverwaltung für Wirtschaft, Energie und
-                          Betriebe melden.
-                        </span>{' '}
-                        Ende Oktober steht der neue Weihnachtsmarkt-Finder 2024
-                        zur Verfügung.
-                      </p>
+                      <p
+                        className="pb-4"
+                        dangerouslySetInnerHTML={{
+                          __html: text.introModal.infoConstruction,
+                        }}
+                      ></p>
                       <a
                         className="xmas-btn px-4 hover:bg-darkgold bg-gold text-lightblue  p-2 md:p-3 text-center text-bold rounded border-2 border-gold hover:border-darkgold"
                         href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
                       >
-                        Markt melden
+                        {text.introModal.reportMarket}
                       </a>
                       <button
                         className="mt-2 md:mt-0 px-4 md:ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
                         onClick={closeModalExplore}
                       >
-                        Märkte 2023 erkunden
+                        {text.introModal.exploreMarkets}
                       </button>
                     </div>
                   </div>
