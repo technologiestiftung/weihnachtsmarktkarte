@@ -84,6 +84,9 @@ const MapSite: NextPage = (mapData: any) => {
 
   const [marketsData, setMarketsData] = useState<any>(mapData.markets)
 
+  // if the intro modal should show a under construction text
+  const [underConstruction, setUnderConstruction] = useState<boolean>(false)
+
   // when the query string is read check if we have an id
   useEffect(() => {
     if (!isReady) return
@@ -210,6 +213,7 @@ const MapSite: NextPage = (mapData: any) => {
         setModalOpen={setModalOpen}
         setNavView={setNavView}
         setSidebarMenuOpen={setSidebarMenuOpen}
+        underConstruction={underConstruction}
         text={text}
       />
       <SidebarWrapper

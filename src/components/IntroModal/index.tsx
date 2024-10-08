@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Cross } from '../Icons'
+import { Cross, UnderConstruction } from '../Icons'
 
 import { TsbLogo } from '@components/Logos/TsbLogo'
 import { OdisLogo } from '@components/Logos/OdisLogo'
@@ -12,6 +12,7 @@ export interface IntroModalType {
   setModalOpen: (date: boolean) => void
   setNavView: (date: 'info' | 'filter') => void
   setSidebarMenuOpen: (date: boolean) => void
+  underConstruction: boolean
   text: LanguageText
 }
 
@@ -20,6 +21,7 @@ export const IntroModal: FC<IntroModalType> = ({
   setModalOpen,
   setNavView,
   setSidebarMenuOpen,
+  underConstruction,
   text,
 }) => {
   function closeModal() {
@@ -66,20 +68,68 @@ export const IntroModal: FC<IntroModalType> = ({
                 />
               </h2>
               <h4 className="pb-4">{text.introModal.subHeader}</h4>
-              <p className="pb-4">{text.introModal.about}</p>
 
-              <button
-                className="xmas-btn px-4 bg-darkblue hover:bg-gold hover:text-lightblue text-gold p-2 text-bold rounded border-2 border-gold hover:border-gold"
-                onClick={closeModalExplore}
-              >
-                {text.introModal.explore}
-              </button>
-              <button
-                className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
-                onClick={closeModalInfo}
-              >
-                {text.introModal.moreInfo}
-              </button>
+              {underConstruction ? (
+                <>
+                  <div className="block md:flex">
+                    <div>
+                      <div className="px-2 pb-2 md:hidden flex">
+                        <UnderConstruction />
+                        <UnderConstruction />
+                        <UnderConstruction />
+                      </div>
+                      <div className="px-2 hidden md:block h-full mt-[50%]">
+                        <UnderConstruction />
+                      </div>
+                    </div>
+                    <div className="flex flex-col md:block">
+                      {' '}
+                      <p className="pb-4 ">
+                        Im Weihnachtsmarkt-Finder werden gerade die Daten für
+                        die Weihnachtszeit 2024 aktualisiert!{' '}
+                        <span className="text-gold font-bold">
+                          {' '}
+                          Sie sind Betreiber:in eines Weihnachtsmarkts? Dann
+                          können Sie Ihren Markt zur Eintragung in der Karte bei
+                          der Senatsverwaltung für Wirtschaft, Energie und
+                          Betriebe melden.
+                        </span>{' '}
+                        Ende Oktober steht der neue Weihnachtsmarkt-Finder 2024
+                        zur Verfügung.
+                      </p>
+                      <a
+                        className="xmas-btn px-4 hover:bg-darkgold bg-gold text-lightblue  p-2 md:p-3 text-center text-bold rounded border-2 border-gold hover:border-darkgold"
+                        href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
+                      >
+                        Markt melden
+                      </a>
+                      <button
+                        className="mt-2 md:mt-0 px-4 md:ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
+                        onClick={closeModalExplore}
+                      >
+                        Märkte 2023 erkunden
+                      </button>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p className="pb-4">{text.introModal.about}</p>
+
+                  <button
+                    className="xmas-btn px-4 bg-darkblue hover:bg-gold hover:text-lightblue text-gold p-2 text-bold rounded border-2 border-gold hover:border-gold"
+                    onClick={closeModalExplore}
+                  >
+                    {text.introModal.explore}
+                  </button>
+                  <button
+                    className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
+                    onClick={closeModalInfo}
+                  >
+                    {text.introModal.moreInfo}
+                  </button>
+                </>
+              )}
 
               <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
                 <p className="text-xs mb-2 md:mb-0 text-gray-500 w-11/12 md:w-full pt-4">
