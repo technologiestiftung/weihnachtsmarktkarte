@@ -56,6 +56,21 @@ export interface LanguageText {
     closedOn: string
     date: string
     openingTimes: string
+    openingWeekday: string
+    openingTime: string
+    fee: string
+    feeFree: string
+    feePay: string
+    connection: string
+    info: string
+    website: string
+    daysHelper: object
+  }
+  weather: {
+    header: string
+    subHeader: string
+    current: string
+    station: string
   }
 }
 
@@ -327,6 +342,30 @@ const text: Text = {
       closedOn: 'geschlossen am',
       date: 'Datum',
       openingTimes: 'Öffnungszeiten',
+      openingWeekday: 'Wochentag',
+      openingTime: 'Uhrzeit',
+      fee: 'Eintritt',
+      feeFree: 'Kostenlos',
+      feePay: '(Teilweise) Kostenpflichtig',
+      connection: 'Anfahrt',
+      info: 'Informationen',
+      website: 'Webseite',
+      daysHelper: {
+        Mo: 'Montag',
+        Di: 'Dienstag',
+        Mi: 'Mittwoch',
+        Do: 'Donnerstag',
+        Fr: 'Freitag',
+        Sa: 'Samstag',
+        So: 'Sonntag',
+      },
+    },
+    weather: {
+      header: 'Wie wird das Wetter?',
+      subHeader:
+        'Stelle im Filtermenü den Tag ein, für den du das Wetter sehen möchtest.',
+      current: 'aktuell',
+      station: 'Wetterstation',
     },
   },
   en: {
@@ -343,7 +382,7 @@ const text: Text = {
       info: '???',
     },
     sidebarFilter: {
-      header: 'Discover Markets',
+      header: 'Discover Christmas Markets',
       filterDateHeader: 'Date',
       filterDate: 'When do you want to go to a christmas market? Choose a day.',
       filterEveningHeader: 'Evenings open',
@@ -387,6 +426,29 @@ const text: Text = {
       closedOn: 'closed on',
       date: 'Date',
       openingTimes: 'Opening times',
+      openingWeekday: 'Weekday',
+      openingTime: 'Time',
+      fee: 'Fee',
+      feeFree: 'Free',
+      feePay: '(??) ??',
+      connection: '???',
+      info: 'Information',
+      website: 'Website',
+      daysHelper: {
+        Mo: 'Monday',
+        Di: 'Tuesday',
+        Mi: 'Wednesday',
+        Do: 'Thursday',
+        Fr: 'Friday',
+        Sa: 'Saturday',
+        So: 'Sunday',
+      },
+    },
+    weather: {
+      header: 'What will the weather be like? ',
+      subHeader: '???',
+      current: 'now  ',
+      station: 'Weather station',
     },
   },
 }

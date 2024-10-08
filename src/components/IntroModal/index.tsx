@@ -41,8 +41,11 @@ export const IntroModal: FC<IntroModalType> = ({
       <Dialog
         open={modalOpen}
         as="div"
-        className="relative z-50"
-        onClose={closeModal}
+        className="relative z-30"
+        onClose={() => {}}
+        onClick={() => {
+          setModalOpen(false)
+        }}
       >
         <div className="fixed inset-0 bg-darkblue/60" aria-hidden="true" />
         <div className="fixed inset-0 overflow-y-auto">

@@ -203,6 +203,8 @@ const MapSite: NextPage = (mapData: any) => {
         id="snowId"
         className="w-full h-full absolute z-50 pointer-events-none overflow-hidden"
       ></div>
+      <LanguageSwitcher language={language} setLanguage={setLanguage} />
+
       <IntroModal
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
@@ -268,6 +270,7 @@ const MapSite: NextPage = (mapData: any) => {
       <WeatherOverlay
         marketFilterDate={marketFilterDate}
         setSidebarMenuOpen={setSidebarMenuOpen}
+        text={text}
       />
 
       <AudioPlayer></AudioPlayer>
@@ -281,7 +284,6 @@ const MapSite: NextPage = (mapData: any) => {
         marketId={marketId}
       />
       <MapNav mapZoom={mapZoom} setMapZoom={setMapZoom} />
-      <LanguageSwitcher language={language} setLanguage={setLanguage} />
     </>
   )
 }
