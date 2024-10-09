@@ -389,30 +389,30 @@ const text: Text = {
       finder: 'Finder',
     },
     introModal: {
-      header: 'Berliner XMas-Finder',
-      subHeader: '???',
-      about: 'About text',
+      header: 'Berlin Christmas Market Finder',
+      subHeader: 'Mulled Wine, Cheer, and Winter Magic – All Berlin Christmas Markets at a Glance!',
+      about: "The Christmas Market Finder showcases the diversity of Berlin's Christmas Markets, from its traditional to unique offerings. Browse markets by your preferred dates, use the filters to find the perfect ones and share your favourite ones with your friends! Happy Holidays!",
       explore: 'Explore',
       moreInfo: 'About',
-      info: '???',
-      infoConstruction: `???!
+      info: 'A data visualization prototype of the Open Data Informationsstelle (ODIS) Berlin in cooperation with CityLAB Berlin',
+      infoConstruction: `The Christmas Market Finder is currently being updated with dates for the 2024 Christmas season!
       <span className="text-gold font-bold">
-        ???.
+        Are you the operator of a Christmas Market? Then you can register your market with the Senate Department for Economics, Energy and Enterprise to be included in the map.
       </span>
-      ???`,
+      The updated Christmas Market Finder for 2024 will be made available at the end of October.`,
       reportMarket: 'Report market',
       exploreMarkets: 'Explore markets from 2023',
     },
     sidebarFilter: {
       header: 'Discover Christmas Markets',
       filterDateHeader: 'Date',
-      filterDate: 'When do you want to go to a christmas market? Choose a day.',
-      filterEveningHeader: 'Evenings open',
-      filterEvening: '???',
+      filterDate: 'When do you want to visit a christmas market? Choose a day.',
+      filterEveningHeader: 'Open late',
+      filterEvening: 'Fancy a drink after work? Show markets that stay open past 7pm',
       filterFreeHeader: 'Free entry',
-      filterFree: '???',
-      filterThemeHeader: '???',
-      filterTheme: '???',
+      filterFree: "Don't feel like paying admission? Show markets that are always free of charge.",
+      filterThemeHeader: 'Markets with a theme',
+      filterTheme: 'Do you have a special interest? Show markets with historical, international, or eco-friendly theme.',
       filterAccessibleHeader: 'Accessible?',
       filterAccessible: '???',
       filterActionHeader: 'Action please',
