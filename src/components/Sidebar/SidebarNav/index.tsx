@@ -2,6 +2,7 @@ import { FC } from 'react'
 import classNames from 'classnames'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { Home } from '@components/Icons'
+import { LanguageText } from '@lib/getText'
 
 export interface SidebarNavType {
   navViews: any
@@ -12,6 +13,7 @@ export interface SidebarNavType {
   setModalOpen: (open: boolean) => void
   marketId: string | number | null
   setMarketId: (time: string | null | number) => void
+  text: LanguageText
 }
 
 export const SidebarNav: FC<SidebarNavType> = ({
@@ -23,6 +25,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
   setModalOpen,
   marketId,
   setMarketId,
+  text,
 }) => {
   const hasMobileSize = useHasMobileSize()
   let navPositionClasses =
@@ -53,9 +56,9 @@ export const SidebarNav: FC<SidebarNavType> = ({
           )}
         >
           <span className={'text-gold group-hover:text-darkblue'}>
-            Weihnachtsmarkt
+            {text.title.market}
           </span>
-          <span className={'text-lightblue'}>Finder</span>
+          <span className={'text-lightblue'}>{text.title.finder}</span>
         </div>
       </div>
 

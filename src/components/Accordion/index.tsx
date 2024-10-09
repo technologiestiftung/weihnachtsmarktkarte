@@ -53,9 +53,12 @@ export const Accordion: FC<AccordionPropType> = ({ items }) => {
               />
             </button>
             {isActive && (
-              <p style={{ margin: 0 }} className={classes.content}>
-                {content}
-              </p>
+              <p
+                style={{ margin: 0 }}
+                className={classes.content}
+                // @ts-ignore
+                dangerouslySetInnerHTML={{ __html: content }}
+              ></p>
             )}
           </div>
         )

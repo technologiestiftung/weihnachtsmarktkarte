@@ -19,6 +19,7 @@ import classNames from 'classnames'
 import { FC, ReactNode, useEffect, useState } from 'react'
 import { format } from 'date-fns'
 import { de } from 'date-fns/locale'
+import { LanguageText } from '@lib/getText'
 
 interface WeatherOptionPropType {
   value: ReactNode
@@ -138,7 +139,8 @@ export const WeatherRow: FC<WeatherRowPropType> = ({
 export const WeatherOverlay: FC<{
   marketFilterDate: Date | boolean
   setSidebarMenuOpen: (date: boolean) => void
-}> = ({ marketFilterDate, setSidebarMenuOpen }) => {
+  text: LanguageText
+}> = ({ marketFilterDate, setSidebarMenuOpen, text }) => {
   const [isWeatherOpened, setIsWeatherOpened] = useState(false)
   //const elRef = useClickOutside<HTMLDivElement>(() => setIsWeatherOpened(false))
 
@@ -256,7 +258,7 @@ export const WeatherOverlay: FC<{
   }, [dateAPI]) // Add dateAPI as a dependency to useEffect
 
   return (
-    <span>
+    <nav>
       {weatherRecords &&
         weatherRecords[hour] &&
         weatherRecords[hour].temperature && (
@@ -264,7 +266,7 @@ export const WeatherOverlay: FC<{
             onClick={() => openWindows()}
             aria-label="Wettervorhersage"
             className={classNames(
-              'rounded-full w-10 h-10 mt-32',
+              'rounded-full w-10 h-10 mt-40',
               'fixed right-4 text-center py-2 z-10',
               'bg-darkblue text-gold',
               isWeatherOpened && 'bg-gold text-darkblue',
@@ -288,13 +290,12 @@ export const WeatherOverlay: FC<{
           style={{ maxWidth: 'calc(100% - 32px)' }}
         >
           <h3 className="font-bold text-lg text-lightblue/80 sm:text-xl pr-20 mb-2">
-            Wie wird das Wetter?{' '}
+            {text.weather.header}
           </h3>
           <div className="flex mb-1 last-of-type:mb-0">
             <div className="pr-4 mb-2">
               <p className="text-sm hidden sm:block text-gold mb-2 w-11/12 sm:w-11/12">
-                Stelle im Filtermenü den Tag ein, für den du das Wetter sehen
-                möchtest.
+                {text.weather.subHeader}
               </p>
               {/* <p className="text-sm sm:hidden text-gold mb-2">
                 Stelle im Filtermenü einen Tag ein.
@@ -327,7 +328,7 @@ export const WeatherOverlay: FC<{
                   weatherRecords={weatherRecords}
                   hour={hour}
                   ICON_MAPPING={ICON_MAPPING}
-                  hourString={'aktuell'}
+                  hourString={text.weather.current}
                 />
               </div>
             </>
@@ -367,17 +368,18 @@ export const WeatherOverlay: FC<{
           <hr className="border-lightblue/80 mt-2 hidden sm:block" />
           {weatherStation && (
             <p className="text-xs text-lightblue/80 mt-3 sm:mt-6">
-              {`Wetterstation  ${capitalizeWords(weatherStation)}`}
+              {`${text.weather.station}  ${capitalizeWords(weatherStation)}`}
             </p>
           )}
           <button
             className="text-lightblue/80 top-0 right-0 mr-6 mt-6 absolute cursor-pointer z-20 border-lightblue border-2 hover:bg-gold hover:border-gold rounded-full p-0"
             onClick={() => setIsWeatherOpened(false)}
+            title="close"
           >
             <Cross />
           </button>
         </div>
       )}
-    </span>
+    </nav>
   )
 }
