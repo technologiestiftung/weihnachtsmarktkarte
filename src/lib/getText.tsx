@@ -539,7 +539,7 @@ const text: Text = {
       </a>
       .
       </p>`,
-      infoTakePartHeader: 'How can I participate?',
+      infoTakePartHeader: 'How can I contribute?',
       infoTakePart: `<p class="text-sm pb-2">
       Do you want to play an active role in improving the 
       Christmas Market Finder? It was built with  
@@ -580,7 +580,34 @@ const text: Text = {
       on GitHub.
       </p>`,
       infoAboutHeader: 'About',
-      infoAbout: '???',
+      infoAbout: `<p class="text-sm pb-2">
+      The Berlin Christmas Market Finder is a project by the 
+      <a
+          target="blank"
+          href="https://odis-berlin.de"
+          class="text-gold"
+      >
+          Open Data Informationsstelle 
+      </a>
+      in collaboration with CityLAB Berlin. ODIS is funded by the 
+      Berlin Senate Chancellery and the Investitionsbank Berlin from funds of the 
+      State of Berlin and is a project of the 
+      <a
+          target="blank"
+          href="https://www.technologiestiftung-berlin.de/en"
+          class="text-gold"
+      >
+          Technologiestiftung Berlin
+      </a>
+      . Since 2018, ODIS has been supporting Berlin on its path towards a 
+      participatory, sustainable, and data-driven society with a focus on the 
+      provision and use of open data. Do you have feedback or would like to 
+      find out more? Visit our website or contact us at
+      <a href="mailto:odis@ts.berlin" class="text-gold">
+          odis@ts.berlin
+      </a>
+      .
+      </p>`,
       projectBy: 'A Project by',
       madeBy: 'Made by',
       supportedBy: 'Supported by',
