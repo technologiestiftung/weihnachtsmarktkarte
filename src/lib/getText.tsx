@@ -397,7 +397,7 @@ const text: Text = {
       info: 'A data visualization prototype of the Open Data Informationsstelle (ODIS) Berlin in cooperation with CityLAB Berlin',
       infoConstruction: `The Christmas Market Finder is currently being updated with dates for the 2024 Christmas season!
       <span className="text-gold font-bold">
-        Are you the operator of a Christmas Market? Then you can register your market with the Senate Department for Economics, Energy and Enterprise to be included in the map.
+        Are you the operator of a Christmas Market? Then you can register your market with the Senate Department for Economics, Energy and Enterprises to be included in the map.
       </span>
       The updated Christmas Market Finder for 2024 will be made available at the end of October.`,
       reportMarket: 'Report market',
@@ -414,25 +414,172 @@ const text: Text = {
       filterThemeHeader: 'Markets with a theme',
       filterTheme: 'Do you have a special interest? Show markets with historical, international, or eco-friendly theme.',
       filterAccessibleHeader: 'Accessible?',
-      filterAccessible: '???',
+      filterAccessible: 'Show markets that are accessible to people using a wheelchair.',
       filterActionHeader: 'Action please',
-      filterAction: '???',
-      filterPathsHeader: '???',
-      filterPaths: '???',
-      filterReset: 'reset filter',
+      filterAction: 'Drinking mulled wine is not thrilling enough for you? Show markets with special attractions, rides and entertainment.',
+      filterPathsHeader: 'Quick detour',
+      filterPaths: 'Taking public transport? Show markets within short distance from Metro and S-Bahn stops.',
+      filterReset: 'Reset filter',
     },
     sidebarInfo: {
-      header: 'About',
-      intro: '???',
-      infoWhereHeader: '???',
-      infoWhere: '???',
+      header: "About the Finder",
+      intro: "From traditional to quirky: there is something for everyone's tastes and preferences at Berlin's Christmas markets. Some of the more than 60 christmas markets are only open for a few days. With the Berlin Christmas Market Finder, you can always keep track which markets are open on specific days and during specific times. You can additionally filter markets by which ones offer free entry, or which ones feature exciting attractions and other entertainment, for example. Zoom in on the map to see public transport stops and locations of nearby public toilets. With a click on the share button, you can copy the link to your favourite Christmas market and send it to you friends. ",
+      infoWhereHeader: 'Where does the data come from?',
+      infoWhere: `<p class="text-sm pb-2">
+      The map is generated using publicly available data only. Information
+      about christmas markets is taken from the data set on  
+      <a
+          target="blank"
+          href="https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte"
+          class="text-gold"
+      >
+          Berlin christmas markets
+      </a>
+      , published annually by the Senate Department for  Senatsverwaltung für Economics, Energy and Enterprises. 
+      Information about markets is only available for markets registered with the Senate Department and
+      thus might not represent the entirety of venues in Berlin.
+      <br />
+      <br />
+      The map additionally shows the
+      <a
+          target="blank"
+          href="https://daten.berlin.de/datensaetze/standorte-der-öffentlichen-toiletten"
+          class="text-gold"
+      >
+          locations of public toilets
+      </a>
+      , which are published to Berlin's Open Data portal and regularly updated by the Senate Department
+      for Mobility, Traffic and Climate Protection.
+      <br />
+      In order to identify the nearest 
+      <a
+          target="blank"
+          href="https://daten.berlin.de/datensaetze/koordinaten-der-zugangsmöglichkeiten-zu-stationen"
+          class="text-gold"
+      >
+          S-Bahn and metro stops 
+      </a> 
+      an additional data set published by the Transit Association for Berlin and Brandenburg was used.
+      Christmas markets located within a 400 meter radius from a station are displayed when the filter
+      "Quick Detour" is selected. The processed data alongside scripts for data processing can be accessed via   
+      <a
+          target="blank"
+          href="https://github.com/technologiestiftung/weihnachtsmarktkarte"
+          class="text-gold"
+      >
+          this repository  
+      </a>
+      on GitHub.
+      <br />
+      The basemap is taken from 
+      <a
+          target="blank"
+          href="https://www.openstreetmap.de"
+          class="text-gold"
+      >
+          OpenStreetMap
+      </a>
+      .
+      <br />
+      The background music 
+      <i>Christmas Chill lofi Launge (IG Version 60s)</i> by
+      Lesfm is taken from
+      <a
+          target="blank"
+          href="https://pixabay.com"
+          class="text-gold"
+      >
+           
+          Pixabay Music
+      </a>
+      .
+      <br />
+      Weather data is provided by the  
+      <a
+          target="blank"
+          href="https://www.dwd.de/DE/leistungen/opendata/opendata.html"
+          class="text-gold"
+      >
+          German Weather Service (DWD)
+      </a>
+      , which publishes a variety of meteorological observations and calculations
+      as part of its open data service. The open source project 
+      <a
+          target="blank"
+          href="https://brightsky.dev/"
+          class="text-gold"
+      >
+          BrightSky
+      </a>
+      offers an easy to use API that provides weather data as JSON files at no cost.
+      This way, hourly weather forecasts for Berlin can be included in the map.
+      </p>`,
       infoOpenDataHeader: 'What is Open Data?',
-      infoOpenData: '???',
-      infoTakePartHeader: '???',
-      infoTakePart: '???',
-      infoTownsHeader: '???',
-      infoTowns: '???',
-      infoAboutHeader: '???',
+      infoOpenData: `<p  class="text-sm pb-2">
+      Open Data commonly includes data held or generated by public administration 
+      that is machine-readable, made accessible freely at no cost and can be found permanently at a central location,
+      such as an open data portal. Today, open data is an important part of Berlin's administrative activities and
+      not only creates transparency and openness, but also enable analyses and applications like this one, 
+      making everyday life in Berlin more convenient. To this end, the
+      <a
+          target="blank"
+          href="https://odis-berlin.de"
+           class="text-gold"
+      >
+          Open Data Infor­mations­stelle 
+      </a>
+      supports Berlin's authorities in the provision of open data.
+      More publicly available data can be found in the 
+      <a
+          target="blank"
+          href="https://daten.berlin.de"
+           class="text-gold"
+      >
+          Open Data Portal Berlin
+      </a>
+      .
+      </p>`,
+      infoTakePartHeader: 'How can I participate?',
+      infoTakePart: `<p class="text-sm pb-2">
+      Do you want to play an active role in improving the 
+      Christmas Market Finder? It was built with  
+      <a
+          target="blank"
+          href="https://github.com/technologiestiftung/weihnachtsmarktkarte"
+          class="text-gold"
+      >
+          open source code 
+      </a>
+      , which means you can replicate it yourself and develop it further or suggest
+      improvements and new functionalities to the current project. You may have noticed 
+      that many christmas markets contain a placeholder image. We decided to only
+      use images available at Wikimedia Commons, a central and open media archive.
+      We invite you to capture your next visit to a christmas market with your camera
+      and upload the image to
+      <a
+          target="blank"
+          href="https://commons.wikimedia.org/wiki/Commons:First_steps/Uploading_files/en"
+          class="text-gold"
+      >
+          Wikimedia
+      </a>
+      under a free license.
+      </p>`,
+      infoTownsHeader: 'What about other cities?',
+      infoTowns: `<p  class="text-sm pb-2">
+      The Christmas Market Finder is an open source project, published under an MIT license.
+      Accordingly, the idea, including its source code can be used free of charge for implementation
+      and further development in other cities. If you are interested in this, visit our 
+      <a
+          target="blank"
+          href="https://github.com/technologiestiftung/weihnachtsmarktkarte"
+           class="text-gold"
+      >
+          repository 
+      </a>
+      on GitHub.
+      </p>`,
+      infoAboutHeader: 'About',
       infoAbout: '???',
       projectBy: 'A Project by',
       madeBy: 'Made by',
@@ -450,10 +597,10 @@ const text: Text = {
       openingTimes: 'Opening times',
       openingWeekday: 'Weekday',
       openingTime: 'Time',
-      fee: 'Fee',
+      fee: 'Entrance fee',
       feeFree: 'Free',
-      feePay: '(??) ??',
-      connection: '???',
+      feePay: 'Partial entrance fee',
+      connection: 'How to get there',
       info: 'Information',
       website: 'Website',
       daysHelper: {
@@ -468,8 +615,8 @@ const text: Text = {
     },
     weather: {
       header: 'What will the weather be like? ',
-      subHeader: '???',
-      current: 'now  ',
+      subHeader: 'Set the day for which you want to see weather info in the filter menu.',
+      current: 'now',
       station: 'Weather station',
     },
   },
