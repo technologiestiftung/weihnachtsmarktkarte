@@ -2,7 +2,7 @@ import { FC } from 'react'
 import classNames from 'classnames'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { Home } from '@components/Icons'
-import { LanguageText } from '@lib/'
+import { LanguageText } from '@lib/getText'
 
 export interface SidebarNavType {
   navViews: any
