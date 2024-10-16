@@ -19,13 +19,18 @@ import { LanguageText } from '@lib/getText'
 export interface SidebarMarketType {
   marketData: any
   text: LanguageText
+  language: string
 }
 
 export interface TimeExeptionType {
   hoursExc: string
 }
 
-export const SidebarMarket: FC<SidebarMarketType> = ({ marketData, text }) => {
+export const SidebarMarket: FC<SidebarMarketType> = ({
+  marketData,
+  text,
+  language,
+}) => {
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
   const daysHelper = text.sidebarMarket.daysHelper
 
@@ -157,7 +162,11 @@ export const SidebarMarket: FC<SidebarMarketType> = ({ marketData, text }) => {
 
         {marketData.bemerkungen !== '' && (
           <MarketInfo title={text.sidebarMarket.info} icon={<Info />}>
-            <p className="text-sm">{marketData.bemerkungen}</p>
+            <p className="text-sm">
+              {language === 'de'
+                ? marketData.bemerkungen
+                : marketData.bemerkungen_en || marketData.bemerkungen}
+            </p>
           </MarketInfo>
         )}
 

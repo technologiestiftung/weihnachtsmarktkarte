@@ -390,8 +390,10 @@ const text: Text = {
     },
     introModal: {
       header: 'Berlin Christmas Market Finder',
-      subHeader: 'Mulled Wine, Cheer, and Winter Magic – All Berlin Christmas Markets at a Glance!',
-      about: "The Christmas Market Finder showcases the diversity of Berlin's Christmas Markets, from its traditional to unique offerings. Browse markets by your preferred dates, use the filters to find the perfect ones and share your favourite ones with your friends! Happy Holidays!",
+      subHeader:
+        'Mulled Wine, Cheer, and Winter Magic – All Berlin Christmas Markets at a Glance!',
+      about:
+        "The Christmas Market Finder showcases the diversity of Berlin's Christmas Markets, from its traditional to unique offerings. Browse markets by your preferred dates, use the filters to find the perfect ones and share your favourite ones with your friends! Happy Holidays!",
       explore: 'Explore',
       moreInfo: 'About',
       info: 'A data visualization prototype of the Open Data Informationsstelle (ODIS) Berlin in cooperation with CityLAB Berlin',
@@ -408,22 +410,29 @@ const text: Text = {
       filterDateHeader: 'Date',
       filterDate: 'When do you want to visit a christmas market? Choose a day.',
       filterEveningHeader: 'Open late',
-      filterEvening: 'Fancy a drink after work? Show markets that stay open past 7pm',
+      filterEvening:
+        'Fancy a drink after work? Show markets that stay open past 7pm',
       filterFreeHeader: 'Free entry',
-      filterFree: "Don't feel like paying admission? Show markets that are always free of charge.",
+      filterFree:
+        "Don't feel like paying admission? Show markets that are always free of charge.",
       filterThemeHeader: 'Markets with a theme',
-      filterTheme: 'Do you have a special interest? Show markets with historical, international, or eco-friendly theme.',
+      filterTheme:
+        'Do you have a special interest? Show markets with historical, international, or eco-friendly theme.',
       filterAccessibleHeader: 'Accessible?',
-      filterAccessible: 'Show markets that are accessible to people using a wheelchair.',
+      filterAccessible:
+        'Show markets that are accessible to people using a wheelchair.',
       filterActionHeader: 'Action please',
-      filterAction: 'Drinking mulled wine is not thrilling enough for you? Show markets with special attractions, rides and entertainment.',
+      filterAction:
+        'Drinking mulled wine is not thrilling enough for you? Show markets with special attractions, rides and entertainment.',
       filterPathsHeader: 'Quick detour',
-      filterPaths: 'Taking public transport? Show markets within short distance from Metro and S-Bahn stops.',
+      filterPaths:
+        'Taking public transport? Show markets within short distance from Metro and S-Bahn stops.',
       filterReset: 'Reset filter',
     },
     sidebarInfo: {
-      header: "About the Finder",
-      intro: "From traditional to quirky: there is something for everyone's tastes and preferences at Berlin's Christmas markets. Some of the more than 60 christmas markets are only open for a few days. With the Berlin Christmas Market Finder, you can always keep track which markets are open on specific days and during specific times. You can additionally filter markets by which ones offer free entry, or which ones feature exciting attractions and other entertainment, for example. Zoom in on the map to see public transport stops and locations of nearby public toilets. With a click on the share button, you can copy the link to your favourite Christmas market and send it to you friends. ",
+      header: 'About the Finder',
+      intro:
+        "From traditional to quirky: there is something for everyone's tastes and preferences at Berlin's Christmas markets. Some of the more than 60 christmas markets are only open for a few days. With the Berlin Christmas Market Finder, you can always keep track which markets are open on specific days and during specific times. You can additionally filter markets by which ones offer free entry, or which ones feature exciting attractions and other entertainment, for example. Zoom in on the map to see public transport stops and locations of nearby public toilets. With a click on the share button, you can copy the link to your favourite Christmas market and send it to you friends. ",
       infoWhereHeader: 'Where does the data come from?',
       infoWhere: `<p class="text-sm pb-2">
       The map is generated using publicly available data only. Information
@@ -642,7 +651,8 @@ const text: Text = {
     },
     weather: {
       header: 'What will the weather be like? ',
-      subHeader: 'Set the day for which you want to see weather info in the filter menu.',
+      subHeader:
+        'Set the day for which you want to see weather info in the filter menu.',
       current: 'now',
       station: 'Weather station',
     },
@@ -651,5 +661,5 @@ const text: Text = {
 
 // Function to get text based on the language
 export function getText(lang: keyof Text) {
-  return text[lang]
+  return text[lang] || text['de']
 }

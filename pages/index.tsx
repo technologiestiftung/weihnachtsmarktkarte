@@ -256,7 +256,11 @@ const MapSite: NextPage = (mapData: any) => {
         mobileHeight="full"
       >
         {marketData && marketId && (
-          <SidebarMarket marketData={marketData} text={text} />
+          <SidebarMarket
+            marketData={marketData}
+            text={text}
+            language={language}
+          />
         )}
       </SidebarWrapper>
       <SidebarNav
