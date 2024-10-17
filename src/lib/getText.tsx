@@ -51,6 +51,9 @@ export interface LanguageText {
     privacy: string
     legal: string
   }
+  sidebarSearch: {
+    header: string
+  }
   sidebarMarket: {
     exceptions: string
     marketLink: string
@@ -134,6 +137,9 @@ const text: Text = {
       filterPaths:
         'Mit den Öffis unterwegs? Zeige Märkte mit kurzen Wegen zu U- oder S-Bahnstationen.',
       filterReset: 'Filter zurücksetzen',
+    },
+    sidebarSearch: {
+      header: 'Marktsuche',
     },
     sidebarInfo: {
       header: 'Über den Finder',
@@ -428,6 +434,9 @@ const text: Text = {
       filterPaths:
         'Taking public transport? Show markets located a short distance from Metro and S-Bahn stops.',
       filterReset: 'Reset filter',
+    },
+    sidebarSearch: {
+      header: 'Market search',
     },
     sidebarInfo: {
       header: 'About the Finder',

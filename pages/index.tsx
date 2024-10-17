@@ -9,7 +9,7 @@ import { MapComponent } from '@components/Map'
 import { SidebarWrapper } from '@components/Sidebar/SidebarWrapper'
 import { SidebarMarket } from '@components/Sidebar/SidebarMarket'
 import { SidebarContentInfo } from '@components/Sidebar/SidebarContentInfo'
-import { SidebarContentLayers } from '@components/Sidebar/SidebarContentLayers'
+import { SidebarContentSearch } from '@components/Sidebar/SidebarContentSearch'
 import { SidebarContentFilter } from '@components/Sidebar/SidebarContentFilter'
 
 import { Filter, Info, Search } from '@components/Icons'
@@ -40,12 +40,12 @@ const navViews = [
     icon: <Filter />,
     mobileHeight: 'half',
   },
-  // {
-  //   value: 'layers',
-  //   name: 'Kartenlayers',
-  //   icon: <Layers color1={'black'} />,
-  //   mobileHeight: 'half',
-  // },
+  {
+    value: 'search',
+    name: 'Search',
+    icon: <Search />,
+    mobileHeight: 'half',
+  },
   {
     value: 'info',
     name: 'information',
@@ -74,7 +74,7 @@ const MapSite: NextPage = (mapData: any) => {
   const [marketFilterAction, setMarketFilterAction] = useState<boolean>(false)
   const [marketFilterTrain, setMarketFilterTrain] = useState<boolean>(false)
 
-  const [navView, setNavView] = useState<'filter' | 'info'>('filter')
+  const [navView, setNavView] = useState<'filter' | 'info' | 'search'>('filter')
   const [sidebarMenuOpen, setSidebarMenuOpen] = useState<boolean>(false)
   const [sidebarInfoOpen, setSidebarInfoOpen] = useState<boolean>(false)
   const [mobileHeight, setMobileHeight] = useState<'half' | 'full'>('half')
@@ -85,7 +85,7 @@ const MapSite: NextPage = (mapData: any) => {
   const [marketsData, setMarketsData] = useState<any>(mapData.markets)
 
   // if the intro modal should show a under construction text
-  const [underConstruction, setUnderConstruction] = useState<boolean>(false)
+  const [underConstruction, setUnderConstruction] = useState<boolean>(true)
 
   // when the query string is read check if we have an id
   useEffect(() => {
@@ -197,8 +197,6 @@ const MapSite: NextPage = (mapData: any) => {
     setSidebarInfoOpen(false)
   }, [navView])
 
-  const [showMapLayerToilets, setShowMapLayerToilets] = useState(true)
-
   return (
     <>
       <Head />
@@ -245,6 +243,16 @@ const MapSite: NextPage = (mapData: any) => {
           />
         )}
         {navView === 'info' && <SidebarContentInfo text={text} />}
+        {navView === 'search' && (
+          <SidebarContentSearch
+            marketsData={marketsData}
+            setMarketId={setMarketId}
+            setMarketData={setMarketData}
+            setZoomToCenter={setZoomToCenter}
+            setMapZoom={setMapZoom}
+            text={text}
+          />
+        )}
       </SidebarWrapper>
       {/* market data information */}
       <SidebarWrapper

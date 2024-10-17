@@ -7,7 +7,7 @@ import { LanguageText } from '@lib/getText'
 export interface SidebarNavType {
   navViews: any
   setNavView: (view: 'info' | 'filter') => void
-  navView?: 'info' | 'filter'
+  navView?: 'info' | 'filter' | 'search'
   sidebarMenuOpen: boolean
   setSidebarMenuOpen: (open: boolean) => void
   setModalOpen: (open: boolean) => void
