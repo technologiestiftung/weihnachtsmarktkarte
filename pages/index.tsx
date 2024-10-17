@@ -15,6 +15,7 @@ import { SidebarContentFilter } from '@components/Sidebar/SidebarContentFilter'
 import { Filter, Info, Search } from '@components/Icons'
 import { SidebarNav } from '@components/Sidebar/SidebarNav'
 import { MapNav } from '@components/MapNav'
+import { LanguageSwitcher } from '@components/LanguageSwitcher'
 
 import { SnowNav } from '@components/SnowNav'
 import { AudioPlayer } from '@components/AudioPlayer'
@@ -24,6 +25,8 @@ import { WeatherOverlay } from '@components/WeatherOverlay'
 
 import { getMapData } from '@lib/loadMapData'
 import { filterMarkets } from '@lib/filterMarkets'
+import { getText } from '@lib/getText'
+import { LanguageText } from '@lib/getText'
 
 export async function getStaticProps() {
   const mapData = getMapData()
@@ -55,6 +58,9 @@ const MapSite: NextPage = (mapData: any) => {
   const { pathname, query, replace, isReady } = useRouter()
   let [modalOpen, setModalOpen] = useState(false)
   const [marketId, setMarketId] = useState<string | number | null>(null)
+  const [language, setLanguage] = useState<string>('de')
+  const [text, setText] = useState<LanguageText>(getText('de'))
+
   const [marketData, setMarketData] = useState<any>()
   const [marketFilterInternational, setMarketFilterInternational] =
     useState<boolean>(false)
@@ -99,17 +105,41 @@ const MapSite: NextPage = (mapData: any) => {
     } else {
       setModalOpen(true)
     }
+
+    // set language
+    const queryLang = query.lang
+    if (queryLang === 'de' || queryLang === 'en') {
+      setLanguage(queryLang)
+    }
   }, [isReady])
 
   // when the id changes -> open the sidebar and set the query
   useEffect(() => {
     setSidebarInfoOpen(marketId === null ? false : true)
     if (isReady) {
-      replace({ pathname, query: { id: marketId } }, undefined, {
-        shallow: true,
-      })
+      replace(
+        { pathname, query: { id: marketId, lang: language } },
+        undefined,
+        {
+          shallow: true,
+        }
+      )
     }
   }, [marketId])
+
+  useEffect(() => {
+    if (isReady) {
+      replace(
+        { pathname, query: { id: marketId, lang: language } },
+        undefined,
+        {
+          shallow: true,
+        }
+      )
+      // @ts-ignore
+      setText(getText(language))
+    }
+  }, [language])
 
   // load snow on first load
   useEffect(() => {
@@ -174,12 +204,15 @@ const MapSite: NextPage = (mapData: any) => {
         id="snowId"
         className="w-full h-full absolute z-50 pointer-events-none overflow-hidden"
       ></div>
+      <LanguageSwitcher language={language} setLanguage={setLanguage} />
+
       <IntroModal
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
         setNavView={setNavView}
         setSidebarMenuOpen={setSidebarMenuOpen}
         underConstruction={underConstruction}
+        text={text}
       />
       <SidebarWrapper
         classes="z-20"
@@ -205,9 +238,11 @@ const MapSite: NextPage = (mapData: any) => {
             setMarketFilterAction={setMarketFilterAction}
             marketFilterTrain={marketFilterTrain}
             setMarketFilterTrain={setMarketFilterTrain}
+            text={text}
+            language={language}
           />
         )}
-        {navView === 'info' && <SidebarContentInfo />}
+        {navView === 'info' && <SidebarContentInfo text={text} />}
         {navView === 'search' && (
           <SidebarContentSearch
             marketsData={marketsData}
@@ -215,6 +250,7 @@ const MapSite: NextPage = (mapData: any) => {
             setMarketData={setMarketData}
             setZoomToCenter={setZoomToCenter}
             setMapZoom={setMapZoom}
+            text={text}
           />
         )}
       </SidebarWrapper>
@@ -227,7 +263,13 @@ const MapSite: NextPage = (mapData: any) => {
         closeSymbol="cross"
         mobileHeight="full"
       >
-        {marketData && marketId && <SidebarMarket marketData={marketData} />}
+        {marketData && marketId && (
+          <SidebarMarket
+            marketData={marketData}
+            text={text}
+            language={language}
+          />
+        )}
       </SidebarWrapper>
       <SidebarNav
         navViews={navViews}
@@ -238,11 +280,13 @@ const MapSite: NextPage = (mapData: any) => {
         setModalOpen={setModalOpen}
         marketId={marketId}
         setMarketId={setMarketId}
+        text={text}
       />
       <SnowNav></SnowNav>
       <WeatherOverlay
         marketFilterDate={marketFilterDate}
         setSidebarMenuOpen={setSidebarMenuOpen}
+        text={text}
       />
 
       <AudioPlayer></AudioPlayer>

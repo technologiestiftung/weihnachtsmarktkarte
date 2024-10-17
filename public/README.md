@@ -22,7 +22,8 @@ So | `string` | opening times Sunday  |  "15:00-22:00"
 closed-exc | `string` | date exeptions  |  "20.11.22, 24.12.22"
 hours-exc | `string` | time exeptions | "25.12.22=11:00-21:00, 26.12.22=11:00-21:00"
 w3 | `string` | market website including https://www.  | 
-bemerkungen | `string` | some extra text about the market  | 
+bemerkungen | `string` | some extra text about the market in german | 
+bemerkungen_en | `string` | some extra text about the market in english | 
 lat | `number` | coordinate | 52.5076327
 lng | `number` | coordinate | 13.45436119
 ignore | `string` | if you want to ignore the entry |  '0' or '1' 

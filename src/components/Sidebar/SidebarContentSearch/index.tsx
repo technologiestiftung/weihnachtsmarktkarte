@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 import classNames from 'classnames'
+import { LanguageText } from '@lib/getText'
 
 import { SidebarHeader } from '@components/Sidebar/SidebarHeader'
 
@@ -9,6 +10,7 @@ export interface SidebarContentSearchType {
   setMarketData: (d: any) => void
   setZoomToCenter: (d: any) => void
   setMapZoom: (d: any) => void
+  text: LanguageText
 }
 
 export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
@@ -17,6 +19,7 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
   setMarketData,
   setZoomToCenter,
   setMapZoom,
+  text,
 }) => {
   const [markets, setMarkets] = useState<any>(marketsData)
 
@@ -41,7 +44,7 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
 
   return (
     <>
-      <SidebarHeader text="Marktsuche" />
+      <SidebarHeader text={text.sidebarSearch.header} />
 
       <span className="sticky top-16">
         <div className="px-4 bg-darkblue">
@@ -60,19 +63,17 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
           {markets
             .sort((a: any, b: any) => a.shortname.localeCompare(b.shortname))
             .map((market: any) => (
-              <>
-                <li key={market.id} className=" px-4">
-                  <p
-                    className="pl-3 pr-8 py-2 hover:bg-gold hover:text-white text-sm font-bold flex-1 cursor-pointer"
-                    title={market.shortname}
-                    onClick={() => onMarketSelect(market)}
-                  >
-                    {' '}
-                    {market.shortname}
-                  </p>
-                </li>
-                <hr className=" mx-4 border-lightblue/70"></hr>
-              </>
+              <li key={market.id.toString()} className="px-4">
+                <p
+                  className="pl-3 pr-8 py-2 hover:bg-gold hover:text-white text-sm font-bold flex-1 cursor-pointer"
+                  title={market.shortname}
+                  onClick={() => onMarketSelect(market)}
+                >
+                  {' '}
+                  {market.shortname}
+                </p>
+                <hr className=" border-lightblue/70"></hr>
+              </li>
             ))}
         </ul>
       </div>
