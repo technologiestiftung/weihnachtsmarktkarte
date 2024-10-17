@@ -41,11 +41,11 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
 
   return (
     <>
-      <SidebarHeader text="Markt Suche" />
+      <SidebarHeader text="Marktsuche" />
 
-      <span className="sticky top-10">
+      <span className="sticky top-16">
         <div className="px-4 bg-darkblue">
-          <p className="text-sm pb-4">Suche nach einem Markt</p>
+          <p className="text-sm pb-4"></p>
         </div>
         <div className="relative w-full px-4 pb-4 bg-darkblue">
           <input
@@ -61,12 +61,9 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
             .sort((a: any, b: any) => a.shortname.localeCompare(b.shortname))
             .map((market: any) => (
               <>
-                <li
-                  key={market.id}
-                  className="hover:bg-gold hover:text-white py-2 px-4"
-                >
+                <li key={market.id} className=" px-4">
                   <p
-                    className="text-sm font-bold flex-1 cursor-pointer"
+                    className="pl-3 pr-8 py-2 hover:bg-gold hover:text-white text-sm font-bold flex-1 cursor-pointer"
                     title={market.shortname}
                     onClick={() => onMarketSelect(market)}
                   >
@@ -74,7 +71,7 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
                     {market.shortname}
                   </p>
                 </li>
-                <hr className="my-2 mx-4 border-lightblue/70"></hr>
+                <hr className=" mx-4 border-lightblue/70"></hr>
               </>
             ))}
         </ul>
