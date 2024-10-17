@@ -39,7 +39,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({
   const TimeExeption: FC<TimeExeptionType> = ({ hoursExc }) => {
     const data = hoursExc.split(',')
     return (
-      <div className="text-sm italic pt-2 text-gray-500">
+      <div className="text-sm pt-2 text-lightgray">
         <p>* {text.sidebarMarket.exceptions}:</p>
         {data.map((d: string, i: number) => (
           <p key={'ex' + i}>{d.split('=')[0] + ': ' + d.split('=')[1]}</p>
@@ -62,25 +62,26 @@ export const SidebarMarket: FC<SidebarMarketType> = ({
           alt=""
         />
 
-        <p className="text-xs text-gray-500 mt-1">
+        <p className="text-xs text-lightgray mt-1">
+          ©{' '}
           {marketData.urheberschaft
             ? marketData.urheberschaft
             : 'freestocks.org, CC BY-SA 4.0 via Wikimedia Commons'}
         </p>
         <div className="mb-2"></div>
 
-        <div className="flex flex-row-reverse">
+        <div className="flex flex-row-reverse align-center">
           <div
-            className="cursor-pointer xmas-btn px-4 py-1.5 border-gold text-gold hover:text-lightblue hover:bg-gold p-1 text-bold rounded border-2 hover:border-gold"
+            className="font-clanbold cursor-pointer xmas-btn px-4 py-1.5 border-gold text-gold hover:text-lightblue hover:bg-gold p-1 rounded-full border-2 hover:border-gold"
             onClick={() => copyToClipboard(`${window.location.href}`)}
           >
             {!hasCopied && (
-              <div className="text-xs mr-4 mt-1 flex float-left">
+              <div className=" mr-4 mt-1 flex float-left ">
                 {text.sidebarMarket.marketLink}
               </div>
             )}{' '}
             {hasCopied && (
-              <div className="text-xs mr-4 mt-1 flex float-left">
+              <div className=" mr-4 mt-1 flex float-left">
                 {text.sidebarMarket.marketLinkCopied}
               </div>
             )}{' '}
@@ -106,7 +107,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({
           </p>
 
           {marketData['closed-exc'] !== '0' && (
-            <p className="text-sm italic pt-0 text-gray-500">
+            <p className="text-sm pt-0 text-lightgray">
               * {text.sidebarMarket.closedOn} {marketData['closed-exc']}
             </p>
           )}

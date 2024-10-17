@@ -357,7 +357,7 @@ const text: Text = {
     },
     sidebarMarket: {
       exceptions: 'Ausnahmen',
-      marketLink: 'Markt-Link kopieren',
+      marketLink: 'Markt teilen',
       marketLinkCopied: 'Markt-Link kopiert!',
       until: 'von',
       closedOn: 'geschlossen am',
@@ -634,7 +634,7 @@ const text: Text = {
     },
     sidebarMarket: {
       exceptions: 'Exceptions',
-      marketLink: 'Copy Market-Link',
+      marketLink: 'Share Market',
       marketLinkCopied: 'Market-Link copied!',
       until: 'to',
       closedOn: 'closed on',

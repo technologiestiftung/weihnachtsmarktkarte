@@ -94,6 +94,7 @@ module.exports = {
         '400': '#ADADAD',
         '500': '#949494',
       },
+      lightgray: '#9fb1c6',
     },
     extend: {
       minWidth: {
