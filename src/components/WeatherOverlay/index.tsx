@@ -14,6 +14,7 @@ import {
   SnowyIcon,
   SleetyIcon,
   HailyIcon,
+  Thermometer,
 } from '@components/Icons'
 import classNames from 'classnames'
 import { FC, ReactNode, useEffect, useState } from 'react'
@@ -100,7 +101,7 @@ export const WeatherRow: FC<WeatherRowPropType> = ({
 }) => {
   return (
     <div className="grid grid-flow-col  gap-x-3 sm:gap-x-4">
-      <div className="text-xs sm:text-sm font-bold text-lightblue/80 my-auto mx-auto pl-2">
+      <div className="text-xs sm:text-sm font-clanbold text-lightblue/80 my-auto mx-auto pl-2">
         {hourString}
       </div>
       <div className="border-l border-lightblue/90 pl-3">
@@ -127,7 +128,7 @@ export const WeatherRow: FC<WeatherRowPropType> = ({
       )}
       {weatherRecords[hour] &&
         weatherRecords[hour].temperature !== undefined && (
-          <div className="my-auto text-xs sm:text-lg font-bold text-lightblue/90 ml-auto sm:mr-1 w-12 sm:w-14">
+          <div className="my-auto text-xs sm:text-lg font-clanbold text-lightblue/90 ml-auto sm:mr-1 w-12 sm:w-14">
             {/* @ts-ignore */}
             {Math.round(weatherRecords[hour].temperature)} °C
           </div>
@@ -273,11 +274,9 @@ export const WeatherOverlay: FC<{
               !isWeatherOpened && 'hover:bg-gold hover:text-darkblue'
             )}
           >
-            {' '}
-            <span className="font-bold">
-              {weatherRecords[hour].temperature?.toFixed()}
+            <span className="inline-block">
+              <Thermometer></Thermometer>
             </span>
-            <span className="text-sm">°C</span>
           </button>
         )}
       {isWeatherOpened && weatherRecords && (
@@ -289,7 +288,7 @@ export const WeatherOverlay: FC<{
           )}
           style={{ maxWidth: 'calc(100% - 32px)' }}
         >
-          <h3 className="font-bold text-lg text-lightblue/80 sm:text-xl pr-20 mb-2">
+          <h3 className="font-clanbold text-lg text-lightblue/80 sm:text-xl pr-20 mb-2">
             {text.weather.header}
           </h3>
           <div className="flex mb-1 last-of-type:mb-0">
@@ -300,7 +299,7 @@ export const WeatherOverlay: FC<{
               {/* <p className="text-sm sm:hidden text-gold mb-2">
                 Stelle im Filtermenü einen Tag ein.
               </p> */}
-              <p className="text-md sm:text-lg font-bold text-lightblue/80 sm:pt-2">
+              <p className="text-md sm:text-lg font-clanbold text-lightblue/80 sm:pt-2">
                 {`${formatDate(current)}`}
               </p>
             </div>

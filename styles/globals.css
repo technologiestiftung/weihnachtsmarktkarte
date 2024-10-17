@@ -22,6 +22,11 @@ body {
       src: url('/fonts/clan-book.woff') format("woff");
   }
 
+  @font-face {
+    font-family: "Clan Bold";
+    src: url('/fonts/clan-bold.woff') format("woff");
+  }
+
   html, body, #__next {
     font-family: "Clan Book", sans-serif;
     color: #222222;

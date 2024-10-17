@@ -21,7 +21,7 @@ export const ExpandablePanel: FC<ExpandablePanelType> = ({
         className="text-bold flex py-1.5 cursor-pointer"
         onClick={() => setOpenLocal(!openLocal)}
       >
-        <h4 className="font-bold max-w-[90%] flex-1">{title}</h4>
+        <h4 className="font-clanbold max-w-[90%] flex-1">{title}</h4>
         <p className="text-xs pb-1.5 hover:text-gold">
           {openLocal ? <Minus /> : <Plus />}
         </p>
