@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import classNames from 'classnames'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
-import { Home } from '@components/Icons'
 
 export interface SidebarNavType {
   navViews: any

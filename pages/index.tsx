@@ -9,7 +9,7 @@ import { MapComponent } from '@components/Map'
 import { SidebarWrapper } from '@components/Sidebar/SidebarWrapper'
 import { SidebarMarket } from '@components/Sidebar/SidebarMarket'
 import { SidebarContentInfo } from '@components/Sidebar/SidebarContentInfo'
-import { SidebarContentLayers } from '@components/Sidebar/SidebarContentLayers'
+import { SidebarContentSearch } from '@components/Sidebar/SidebarContentSearch'
 import { SidebarContentFilter } from '@components/Sidebar/SidebarContentFilter'
 
 import { Filter, Info, Search } from '@components/Icons'
@@ -32,17 +32,17 @@ export async function getStaticProps() {
 
 const navViews = [
   {
+    value: 'search',
+    name: 'Search',
+    icon: <Search />,
+    mobileHeight: 'half',
+  },
+  {
     value: 'filter',
     name: 'filter',
     icon: <Filter />,
     mobileHeight: 'half',
   },
-  // {
-  //   value: 'layers',
-  //   name: 'Kartenlayers',
-  //   icon: <Layers color1={'black'} />,
-  //   mobileHeight: 'half',
-  // },
   {
     value: 'info',
     name: 'information',
@@ -210,6 +210,15 @@ const MapSite: NextPage = (mapData: any) => {
           />
         )}
         {navView === 'info' && <SidebarContentInfo />}
+        {navView === 'search' && (
+          <SidebarContentSearch
+            marketsData={marketsData}
+            setMarketId={setMarketId}
+            setMarketData={setMarketData}
+            setZoomToCenter={setZoomToCenter}
+            setMapZoom={setMapZoom}
+          />
+        )}
       </SidebarWrapper>
       {/* market data information */}
       <SidebarWrapper
