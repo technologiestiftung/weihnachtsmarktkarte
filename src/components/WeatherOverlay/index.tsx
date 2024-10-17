@@ -14,6 +14,7 @@ import {
   SnowyIcon,
   SleetyIcon,
   HailyIcon,
+  Thermometer,
 } from '@components/Icons'
 import classNames from 'classnames'
 import { FC, ReactNode, useEffect, useState } from 'react'
@@ -273,11 +274,9 @@ export const WeatherOverlay: FC<{
               !isWeatherOpened && 'hover:bg-gold hover:text-darkblue'
             )}
           >
-            {' '}
-            <span className="font-clanbold">
-              {weatherRecords[hour].temperature?.toFixed()}
+            <span className="inline-block">
+              <Thermometer></Thermometer>
             </span>
-            <span className="text-sm">°C</span>
           </button>
         )}
       {isWeatherOpened && weatherRecords && (
