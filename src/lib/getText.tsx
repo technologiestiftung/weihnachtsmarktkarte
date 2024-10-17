@@ -417,7 +417,7 @@ const text: Text = {
         "Don't feel like paying admission? Show markets that are always free of charge.",
       filterThemeHeader: 'Markets with a theme',
       filterTheme:
-        'Do you have a special interest? Show markets with historical, international, or eco-friendly theme.',
+        'Do you have a special interest? Show markets with historical, international, or eco-friendly themes.',
       filterAccessibleHeader: 'Accessible?',
       filterAccessible:
         'Show markets that are accessible to people using a wheelchair.',
@@ -426,13 +426,13 @@ const text: Text = {
         'Drinking mulled wine is not thrilling enough for you? Show markets with special attractions, rides and entertainment.',
       filterPathsHeader: 'Quick detour',
       filterPaths:
-        'Taking public transport? Show markets within short distance from Metro and S-Bahn stops.',
+        'Taking public transport? Show markets located a short distance from Metro and S-Bahn stops.',
       filterReset: 'Reset filter',
     },
     sidebarInfo: {
       header: 'About the Finder',
       intro:
-        "From traditional to quirky: there is something for everyone's tastes and preferences at Berlin's Christmas markets. Some of the more than 60 christmas markets are only open for a few days. With the Berlin Christmas Market Finder, you can always keep track which markets are open on specific days and during specific times. You can additionally filter markets by which ones offer free entry, or which ones feature exciting attractions and other entertainment, for example. Zoom in on the map to see public transport stops and locations of nearby public toilets. With a click on the share button, you can copy the link to your favourite Christmas market and send it to you friends. ",
+        "From traditional to quirky: there is something for everyone's tastes and preferences at Berlin's Christmas markets. Some of the more than 60 christmas markets are only open for a few days. thankfully the Berlin Christmas Market Finder can help you keep track of which markets are open on specific days and during specific times. Additionally you can filter markets for specific interests. For example, which ones offer free entry, or feature exciting attractions and other entertainment. Zoom in on the map to see public transport stops and locations of nearby public toilets. With a click on the share button, you can copy the link to your favourite Christmas market and send it to a friend. ",
       infoWhereHeader: 'Where does the data come from?',
       infoWhere: `<p class="text-sm pb-2">
       The map is generated using publicly available data only. Information
