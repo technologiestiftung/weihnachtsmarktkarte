@@ -59,7 +59,7 @@ export const IntroModal: FC<IntroModalType> = ({
               >
                 <Cross />
               </button>
-              <h2 className="font-bold text-2xl pb-2 pt-2 text-lightblue/80">
+              <h2 className="font-clanbold text-2xl pb-2 pt-2 text-lightblue/80">
                 {text.introModal.header}{' '}
                 <img
                   src="./stern_ausgewaehlt.png"

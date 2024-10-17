@@ -121,7 +121,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({
           icon={<Clock />}
         >
           <ul className="columns-2 text-sm gap-0">
-            <li className="font-bold pb-2">
+            <li className="font-clanbold pb-2">
               {text.sidebarMarket.openingWeekday}
             </li>
             {days.map((day: string, i: number) => (
@@ -129,7 +129,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({
                 {daysHelper[day as keyof typeof daysHelper]}
               </li>
             ))}
-            <li className="font-bold pb-2">
+            <li className="font-clanbold pb-2">
               {' '}
               {text.sidebarMarket.openingTime}
             </li>

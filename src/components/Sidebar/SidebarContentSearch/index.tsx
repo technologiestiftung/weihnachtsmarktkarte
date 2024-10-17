@@ -65,7 +65,7 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
             .map((market: any) => (
               <li key={market.id.toString()} className="px-4">
                 <p
-                  className="pl-3 pr-8 py-2 hover:bg-gold hover:text-white text-sm font-bold flex-1 cursor-pointer"
+                  className="pl-3 pr-8 py-2 hover:bg-gold hover:text-white text-sm  flex-1 cursor-pointer"
                   title={market.shortname}
                   onClick={() => onMarketSelect(market)}
                 >

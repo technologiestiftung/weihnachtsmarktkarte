@@ -103,7 +103,7 @@ const text: Text = {
       info: 'Eine prototypische Datenvisualisierung der Open Data Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB Berlin',
       infoConstruction: `Im Weihnachtsmarkt-Finder werden gerade die Daten für
       die Weihnachtszeit 2024 aktualisiert!
-      <span class="text-gold font-bold">
+      <span class="text-gold font-clanbold">
         Sie sind Betreiber:in eines Weihnachtsmarkts? Dann
         können Sie Ihren Markt zur Eintragung in der Karte bei
         der Senatsverwaltung für Wirtschaft, Energie und
@@ -404,7 +404,7 @@ const text: Text = {
       moreInfo: 'About',
       info: 'A data visualization prototype of the Open Data Informationsstelle (ODIS) Berlin in cooperation with CityLAB Berlin',
       infoConstruction: `The Christmas Market Finder is currently being updated with dates for the 2024 Christmas season!
-      <span className="text-gold font-bold">
+      <span className="text-gold font-clanbold">
         Are you the operator of a Christmas Market? Then you can register your market with the Senate Department for Economics, Energy and Enterprises to be included in the map.
       </span>
       The updated Christmas Market Finder for 2024 will be made available at the end of October.`,
