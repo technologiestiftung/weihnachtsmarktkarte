@@ -68,7 +68,7 @@ const MapSite: NextPage = (mapData: any) => {
   const [marketFilterAction, setMarketFilterAction] = useState<boolean>(false)
   const [marketFilterTrain, setMarketFilterTrain] = useState<boolean>(false)
 
-  const [navView, setNavView] = useState<'filter' | 'info'>('filter')
+  const [navView, setNavView] = useState<'filter' | 'info' | 'search'>('filter')
   const [sidebarMenuOpen, setSidebarMenuOpen] = useState<boolean>(false)
   const [sidebarInfoOpen, setSidebarInfoOpen] = useState<boolean>(false)
   const [mobileHeight, setMobileHeight] = useState<'half' | 'full'>('half')
@@ -166,8 +166,6 @@ const MapSite: NextPage = (mapData: any) => {
     setMobileHeight(navViewFiltered[0].mobileHeight)
     setSidebarInfoOpen(false)
   }, [navView])
-
-  const [showMapLayerToilets, setShowMapLayerToilets] = useState(true)
 
   return (
     <>
