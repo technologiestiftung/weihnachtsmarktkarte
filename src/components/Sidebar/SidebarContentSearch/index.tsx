@@ -41,11 +41,11 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
 
   return (
     <>
-      <SidebarHeader text="Suche" />
+      <SidebarHeader text="Markt Suche" />
 
       <span className="sticky top-10">
         <div className="px-4 bg-darkblue">
-          <p className="text-sm pb-4">Suchen Sie nach einem Markt</p>
+          <p className="text-sm pb-4">Suche nach einem Markt</p>
         </div>
         <div className="relative w-full px-4 pb-4 bg-darkblue">
           <input

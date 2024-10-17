@@ -32,15 +32,15 @@ export async function getStaticProps() {
 
 const navViews = [
   {
-    value: 'search',
-    name: 'Search',
-    icon: <Search />,
-    mobileHeight: 'half',
-  },
-  {
     value: 'filter',
     name: 'filter',
     icon: <Filter />,
+    mobileHeight: 'half',
+  },
+  {
+    value: 'search',
+    name: 'Search',
+    icon: <Search />,
     mobileHeight: 'half',
   },
   {
