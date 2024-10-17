@@ -70,9 +70,9 @@ export const SidebarMarket: FC<SidebarMarketType> = ({
         </p>
         <div className="mb-2"></div>
 
-        <div className="flex flex-row-reverse align-center">
+        <div className="text-center">
           <div
-            className="font-clanbold cursor-pointer xmas-btn px-4 py-1.5 border-gold text-gold hover:text-lightblue hover:bg-gold p-1 rounded-full border-2 hover:border-gold"
+            className="font-clanbold cursor-pointer xmas-btn px-4 py-1.5 border-gold text-gold hover:text-lightblue hover:bg-gold p-1 rounded-full border-2 hover:border-gold inline-block"
             onClick={() => copyToClipboard(`${window.location.href}`)}
           >
             {!hasCopied && (
