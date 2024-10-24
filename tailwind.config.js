@@ -47,7 +47,24 @@ module.exports = {
         'Noto Color Emoji',
       ],
       bold: [
-        'Clan Book',
+        'Clan Bold',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'Noto Sans',
+        'sans-serif',
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol',
+        'Noto Color Emoji',
+      ],
+      clanbold: [
+        'Clan Bold',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
@@ -77,6 +94,7 @@ module.exports = {
         '400': '#ADADAD',
         '500': '#949494',
       },
+      lightgray: '#9fb1c6',
     },
     extend: {
       minWidth: {

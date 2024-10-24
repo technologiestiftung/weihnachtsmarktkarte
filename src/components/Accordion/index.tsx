@@ -42,7 +42,7 @@ export const Accordion: FC<AccordionPropType> = ({ items }) => {
               }}
               tabIndex={isActive ? 1 : 0}
             >
-              <h2 className="text-left font-bold max-w-[90%] flex-1 group-hover:text-blue-500 text-sm">
+              <h2 className="text-left  font-clanbold max-w-[90%] flex-1 group-hover:text-blue-500 text-sm">
                 {title}
               </h2>
               <ChevronDown
@@ -53,9 +53,12 @@ export const Accordion: FC<AccordionPropType> = ({ items }) => {
               />
             </button>
             {isActive && (
-              <p style={{ margin: 0 }} className={classes.content}>
-                {content}
-              </p>
+              <p
+                style={{ margin: 0 }}
+                className={classes.content}
+                // @ts-ignore
+                dangerouslySetInnerHTML={{ __html: content }}
+              ></p>
             )}
           </div>
         )
