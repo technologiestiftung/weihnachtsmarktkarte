@@ -2,16 +2,18 @@ import { FC } from 'react'
 import classNames from 'classnames'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { Home } from '@components/Icons'
+import { LanguageText } from '@lib/getText'
 
 export interface SidebarNavType {
   navViews: any
   setNavView: (view: 'info' | 'filter') => void
-  navView?: 'info' | 'filter'
+  navView?: 'info' | 'filter' | 'search'
   sidebarMenuOpen: boolean
   setSidebarMenuOpen: (open: boolean) => void
   setModalOpen: (open: boolean) => void
   marketId: string | number | null
   setMarketId: (time: string | null | number) => void
+  text: LanguageText
 }
 
 export const SidebarNav: FC<SidebarNavType> = ({
@@ -23,6 +25,7 @@ export const SidebarNav: FC<SidebarNavType> = ({
   setModalOpen,
   marketId,
   setMarketId,
+  text,
 }) => {
   const hasMobileSize = useHasMobileSize()
   let navPositionClasses =
@@ -49,13 +52,13 @@ export const SidebarNav: FC<SidebarNavType> = ({
           onClick={() => setModalOpen(true)}
           title="home"
           className={classNames(
-            'text-xs md:text-base mr-auto ml-auto w-fit cursor-pointer bg-darkblue font-bold hover:bg-gold rounded-2xl mb-4 px-4 py-2.5 group'
+            'text-xs md:text-base mr-auto ml-auto w-fit cursor-pointer bg-darkblue font-clanbold hover:bg-gold rounded-2xl mb-4 px-4 py-2.5 group'
           )}
         >
           <span className={'text-gold group-hover:text-darkblue'}>
-            Weihnachtsmarkt
+            {text.title.market}
           </span>
-          <span className={'text-lightblue'}>Finder</span>
+          <span className={'text-lightblue'}>{text.title.finder}</span>
         </div>
       </div>
 

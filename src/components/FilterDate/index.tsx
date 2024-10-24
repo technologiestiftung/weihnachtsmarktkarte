@@ -1,18 +1,21 @@
 import { FC, useState, useEffect } from 'react'
 
-import { format } from 'date-fns'
 import { DayPicker } from 'react-day-picker'
 import de from 'date-fns/locale/de'
+import enGB from 'date-fns/locale/en-GB'
+
 import 'react-day-picker/dist/style.css'
 
 export interface FilterDateType {
   marketFilterDate: Date | boolean
   setMarketFilterDate: (date: Date | boolean) => void
+  language: string
 }
 
 export const FilterDate: FC<FilterDateType> = ({
   marketFilterDate,
   setMarketFilterDate,
+  language,
 }) => {
   const css = `
   .rdp {
@@ -58,6 +61,7 @@ font-size: 16px
     <>
       <div className="self-center">
         <style>{css}</style>
+
         <DayPicker
           mode="single"
           selected={marketFilterDate}
@@ -71,7 +75,7 @@ font-size: 16px
           today={today}
           fromMonth={fromMonth}
           toDate={toDate}
-          locale={de}
+          locale={language === 'de' ? de : enGB}
           weekStartsOn={1}
         />
       </div>
