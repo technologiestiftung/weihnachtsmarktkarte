@@ -151,12 +151,12 @@ const text: Text = {
         gezeigten Weihnachtsmärkte stammen aus dem Datensatz 
         <a
             target="blank"
-            href="https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte"
+            href="https://daten.berlin.de/datensaetze/simple_search_wwwberlindesenwebservicemaerktefesteweihnachtsmaerkte"
             class="text-gold"
         >
-            Berliner Weihnachtsmärkte
+            Berliner Weihnachtsmärkte,
         </a>
-        , der jährlich von der Senatsverwaltung für Wirtschaft,
+         der jährlich von der Senatsverwaltung für Wirtschaft,
         Energie und Betriebe bereitgestellt wird. Dadurch sind nur
         zu den der Senatsverwaltung gemeldeten Märkte Informationen
         vorhanden und es besteht kein Anspruch auf Vollständigkeit.
@@ -165,19 +165,19 @@ const text: Text = {
         Weiterhin liegen in der Karte 
         <a
             target="blank"
-            href="https://daten.berlin.de/datensaetze/standorte-der-öffentlichen-toiletten"
+            href="https://daten.berlin.de/datensaetze/toiletten"
             class="text-gold"
         >
-            Standorte der öffentlichen Toiletten
+            Standorte der öffentlichen Toiletten,
         </a>
-        , die sich ebenfalls im Berliner Open Data Portal befinden
+         die sich ebenfalls im Berliner Open Data Portal befinden
         und regelmäßig durch die Senatsverwaltung für Mobilität,
         Verkehr, Klimaschutz und Umwelt aktualisiert werden.
         <br />
         Für die Identifizierung der nahelegenen 
         <a
             target="blank"
-            href="https://daten.berlin.de/datensaetze/koordinaten-der-zugangsmöglichkeiten-zu-stationen"
+            href="https://daten.berlin.de/datensaetze/https-vbb-live-exozet-com-media-download-2035"
             class="text-gold"
         >
             S-Bahn und U-Bahn-Stationen 
@@ -241,51 +241,27 @@ const text: Text = {
         einfach abzufragen. So können die Wettervorhersagen für
         Berlin stundengenau dargestellt werden.
         </p>`,
-      infoOpenDataHeader: 'Was ist Open Data?',
+      infoOpenDataHeader: 'Wie kann ich einen Markt eintragen?',
       infoOpenData: `<p  class="text-sm pb-2">
-        Offene Daten definieren sich dadurch, dass sie in einem
-        offenen und maschinenlesbaren Format vorliegen, unter einer
-        freien Lizenz nutzbar sind, der Zugang diskriminierungsfrei
-        und kostenlos ist und die Daten an einem zentralen Ort
-        dauerhaft auffindbar sind. Open Data ist heute ein wichtiger
-        Bestandteil im Verwaltungshandeln Berlins und schafft nicht
-        nur Transparenz und Offenheit, sondern ermöglicht auch
-        Analysen und Anwendungen wie diese, um den Alltag angenehmer
-        zu machen. Deshalb unterstützt die 
-        <a
-            target="blank"
-            href="https://odis-berlin.de"
-             class="text-gold"
-        >
-            Open Data Infor­mations­stelle 
-        </a>
-        Berliner Behörden bei der Bereit­stellung von Open Data.
-        Mehr offene Daten findest du im 
-        <a
-            target="blank"
-            href="https://daten.berlin.de"
-             class="text-gold"
-        >
-            Berliner Datenportal
-        </a>
-        .
+      Wenn Sie Betreiber:in eines Weihnachtsmarktes sind, dann können Sie Ihren Markt
+      zur Eintragung in den offenen Datensatz bei der Senatsverwaltung für Wirtschaft,
+      Energie und Betriebe melden. Nutzen Sie dafür dieses
+            <a
+          target="blank"
+          href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
+          class="text-gold"
+      >
+          Formular.
+      </a>
+      Ihr Markt erscheint dann mit wenigen Tagen Verzögerung in der Karte. Achten Sie besonders darauf
+      eine gute Beschreibung zu ihrem Markt einzureichen. Insbesondere Angaben zur Barrierefreiheit,
+      jeglichen Besonderheiten und Eintrittspreisen helfen, dass ihr Markt gut gefunden werden kann.
+            
         </p>`,
-      infoTakePartHeader: 'Wie kann ich mitmachen?',
+      infoTakePartHeader: 'Wie kann ich Bilder beisteuern?',
       infoTakePart: `<p class="text-sm pb-2">
-        Du möchtest aktiv werden und dazu beitragen, dass der
-        Weihnachtsmarkt-Finder im besten Glanz erscheint? Der Code
-        ist 
-        <a
-            target="blank"
-            href="https://github.com/technologiestiftung/weihnachtsmarktkarte"
-            class="text-gold"
-        >
-            Open Source 
-        </a>
-        und jede:r kann nutzen. So kannst du das Projekt duplizieren
-        und selbst weiterentwickeln oder du machst direkt Vorschläge
-        für Verbesserungen und neue Funktionen. Sicher ist dir auch
-        aufgefallen, dass viele Weihnachtsmärkte lediglich ein
+      Sicher ist dir auch
+        aufgefallen, dass einige Weihnachtsmärkte lediglich ein
         Platzhalter-Bild haben. Dies liegt daran, dass wir nur auf
         Bilder zurückgreifen wollen, die in Wikimedia Commons
         liegen, dem zentralen und offenen Medienarchiv. Also knips
@@ -300,13 +276,13 @@ const text: Text = {
         </a>
         !
         </p>`,
-      infoTownsHeader: 'Was ist mit anderen Städten?',
-      infoTowns: `<p  class="text-sm pb-2">
+      infoTownsHeader: 'Ist die Anwendung Open Source?',
+      infoTowns: `<p  class="text-sm pb-2">#
         Der “Berliner Weihnachtsmarkt-Finder” ist ein
         Open-Source-Projekt und läuft unter einer MIT Lizenz.
-        Dementsprechend kann die Idee, aber auch der Quellcode für
-        die Umsetzung in anderen Städten kostenlos genutzt,
-        angepasst und weiterentwickelt werden. Wenn Du dich dafür
+        Dementsprechend kann der Quellcode
+        angepasst und weiterentwickelt und auch für andere Städte genutzt werden.
+        Wenn Du dich dafür
         interessierst, schau gerne in unserem
         <a
             target="blank"
@@ -341,7 +317,30 @@ const text: Text = {
         . Seit 2018 begleiten wir als ODIS die Stadt auf dem Weg zu
         einer partizipativen, nachhaltigen und datengetriebenen
         Gesellschaft mit dem Schwerpunkt auf die Bereitstellung und
-        Nutzung offener Daten. Du hast Feedback oder willst mehr
+        Nutzung offener Daten.
+                <br />
+        <br />
+        Offene Daten definieren sich dadurch, dass sie in einem
+        offenen und maschinenlesbaren Format vorliegen, unter einer
+        freien Lizenz nutzbar sind, der Zugang diskriminierungsfrei
+        und kostenlos ist und die Daten an einem zentralen Ort
+        dauerhaft auffindbar sind. Open Data ist heute ein wichtiger
+        Bestandteil im Verwaltungshandeln Berlins und schafft nicht
+        nur Transparenz und Offenheit, sondern ermöglicht auch
+        Analysen und Anwendungen wie diese, um den Alltag angenehmer
+        zu machen.
+        Mehr offene Daten findest du im 
+        <a
+            target="blank"
+            href="https://daten.berlin.de"
+             class="text-gold"
+        >
+            Berliner Datenportal.
+        </a>
+      
+                <br />
+        <br />
+        Du hast Feedback oder willst mehr
         erfahren? Schau dich auf unserer Webseite um oder
         kontaktiere uns unter 
         <a href="mailto:odis@ts.berlin" class="text-gold">
@@ -448,12 +447,12 @@ const text: Text = {
       about christmas markets is taken from the data set on  
       <a
           target="blank"
-          href="https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte"
+          href="https://daten.berlin.de/datensaetze/simple_search_wwwberlindesenwebservicemaerktefesteweihnachtsmaerkte"
           class="text-gold"
       >
-          Berlin christmas markets
+          Berlin christmas markets,
       </a>
-      , published annually by the Senate Department for  Senatsverwaltung für Economics, Energy and Enterprises. 
+       published annually by the Senate Department for  Senatsverwaltung für Economics, Energy and Enterprises. 
       Information about markets is only available for markets registered with the Senate Department and
       thus might not represent the entirety of venues in Berlin.
       <br />
@@ -461,18 +460,18 @@ const text: Text = {
       The map additionally shows the
       <a
           target="blank"
-          href="https://daten.berlin.de/datensaetze/standorte-der-öffentlichen-toiletten"
+          href="https://daten.berlin.de/datensaetze/toiletten"
           class="text-gold"
       >
-          locations of public toilets
+          locations of public toilets,
       </a>
-      , which are published to Berlin's Open Data portal and regularly updated by the Senate Department
+       which are published to Berlin's Open Data portal and regularly updated by the Senate Department
       for Mobility, Traffic and Climate Protection.
       <br />
       In order to identify the nearest 
       <a
           target="blank"
-          href="https://daten.berlin.de/datensaetze/koordinaten-der-zugangsmöglichkeiten-zu-stationen"
+          href="https://daten.berlin.de/datensaetze/https-vbb-live-exozet-com-media-download-2035"
           class="text-gold"
       >
           S-Bahn and metro stops 
@@ -532,44 +531,25 @@ const text: Text = {
       offers an easy to use API that provides weather data as JSON files at no cost.
       This way, hourly weather forecasts for Berlin can be included in the map.
       </p>`,
-      infoOpenDataHeader: 'What is Open Data?',
+      infoOpenDataHeader: 'How can I register a market?',
       infoOpenData: `<p  class="text-sm pb-2">
-      Open Data commonly includes data held or generated by public administration 
-      that is machine-readable, made accessible freely at no cost and can be found permanently at a central location,
-      such as an open data portal. Today, open data is an important part of Berlin's administrative activities and
-      not only creates transparency and openness, but also enable analyses and applications like this one, 
-      making everyday life in Berlin more convenient. To this end, the
+      If you are the operator of a Christmas market, you can submit your market
+      for entry in the open data set at the Senate Department for Economic Affairs,
+      Energy and Public Enterprises. Please use this 
       <a
           target="blank"
-          href="https://odis-berlin.de"
-           class="text-gold"
-      >
-          Open Data Infor­mations­stelle 
-      </a>
-      supports Berlin's authorities in the provision of open data.
-      More publicly available data can be found in the 
-      <a
-          target="blank"
-          href="https://daten.berlin.de"
-           class="text-gold"
-      >
-          Open Data Portal Berlin
-      </a>
-      .
-      </p>`,
-      infoTakePartHeader: 'How can I contribute?',
-      infoTakePart: `<p class="text-sm pb-2">
-      Do you want to play an active role in improving the 
-      Christmas Market Finder? It was built with  
-      <a
-          target="blank"
-          href="https://github.com/technologiestiftung/weihnachtsmarktkarte"
+          href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
           class="text-gold"
       >
-          open source code 
+          form.
       </a>
-      , which means you can replicate it yourself and develop it further or suggest
-      improvements and new functionalities to the current project. You may have noticed 
+            Your market will then appear on the map with a delay of a few days. Pay particular attention to
+      submit a good description of your market. In particular, information on accessibility,
+      special features and admission prices will help your market to be found easily.
+      </p>`,
+      infoTakePartHeader: 'How can I contribute pictures?',
+      infoTakePart: `<p class="text-sm pb-2">
+      You may have noticed 
       that many christmas markets contain a placeholder image. We decided to only
       use images available at Wikimedia Commons, a central and open media archive.
       We invite you to capture your next visit to a christmas market with your camera
@@ -583,11 +563,11 @@ const text: Text = {
       </a>
       under a free license.
       </p>`,
-      infoTownsHeader: 'What about other cities?',
+      infoTownsHeader: 'Is this project Open Source?',
       infoTowns: `<p  class="text-sm pb-2">
       The Christmas Market Finder is an open source project, published under an MIT license.
       Accordingly, the idea, including its source code can be used free of charge for implementation
-      and further development in other cities. If you are interested in this, visit our 
+      and further development, also in other cities. If you are interested in this, visit our 
       <a
           target="blank"
           href="https://github.com/technologiestiftung/weihnachtsmarktkarte"
@@ -619,7 +599,25 @@ const text: Text = {
       </a>
       . Since 2018, ODIS has been supporting Berlin on its path towards a 
       participatory, sustainable, and data-driven society with a focus on the 
-      provision and use of open data. Do you have feedback or would like to 
+      provision and use of open data. 
+      <br />
+      <br />
+      Open Data commonly includes data held or generated by public administration 
+      that is machine-readable, made accessible freely at no cost and can be found permanently at a central location,
+      such as an open data portal. Today, open data is an important part of Berlin's administrative activities and
+      not only creates transparency and openness, but also enable analyses and applications like this one, 
+      making everyday life in Berlin more convenient.
+      More publicly available data can be found in the 
+      <a
+          target="blank"
+          href="https://daten.berlin.de"
+           class="text-gold"
+      >
+          Open Data Portal Berlin.
+      </a>
+    <br />
+    <br />  
+      Do you have feedback or would like to 
       find out more? Visit our website or contact us at
       <a href="mailto:odis@ts.berlin" class="text-gold">
           odis@ts.berlin
