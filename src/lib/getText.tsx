@@ -109,7 +109,7 @@ const text: Text = {
         der Senatsverwaltung für Wirtschaft, Energie und
         Betriebe melden.
       </span>
-      Ende Oktober steht der neue Weihnachtsmarkt-Finder 2024
+      Mitte November steht der neue Weihnachtsmarkt-Finder 2024
       zur Verfügung.`,
       reportMarket: 'Markt melden',
       exploreMarkets: 'Märkte 2023 erkunden',
@@ -407,7 +407,7 @@ const text: Text = {
       <span className="text-gold font-clanbold">
         Are you the operator of a Christmas Market? Then you can register your market with the Senate Department for Economics, Energy and Enterprises to be included in the map.
       </span>
-      The updated Christmas Market Finder for 2024 will be made available at the end of October.`,
+      The updated Christmas Market Finder for 2024 will be made available in the middle of November.`,
       reportMarket: 'Report market',
       exploreMarkets: 'Explore markets from 2023',
     },
