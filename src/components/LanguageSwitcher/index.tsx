@@ -22,7 +22,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherType> = ({
   return (
     <nav
       className={classNames(
-        'mb-3 fixed top-0 p-4 ease-in-out duration-300 z-50 right-0'
+        'mb-3 fixed top-0 p-4 ease-in-out duration-300 z-20 right-0'
       )}
     >
       <div>
