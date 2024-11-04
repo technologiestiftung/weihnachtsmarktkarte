@@ -6,6 +6,7 @@ import { TsbLogo } from '@components/Logos/TsbLogo'
 import { OdisLogo } from '@components/Logos/OdisLogo'
 
 import { LanguageText } from '@lib/getText'
+import { LanguageSwitcher } from '@components/LanguageSwitcher'
 
 export interface IntroModalType {
   modalOpen: boolean
@@ -14,6 +15,8 @@ export interface IntroModalType {
   setSidebarMenuOpen: (date: boolean) => void
   underConstruction: boolean
   text: LanguageText
+  language: string
+  setLanguage: (lang: string) => void
 }
 
 export const IntroModal: FC<IntroModalType> = ({
@@ -23,6 +26,8 @@ export const IntroModal: FC<IntroModalType> = ({
   setSidebarMenuOpen,
   underConstruction,
   text,
+  language,
+  setLanguage,
 }) => {
   function closeModal() {
     setModalOpen(false)
@@ -52,13 +57,14 @@ export const IntroModal: FC<IntroModalType> = ({
         <div className="fixed inset-0 bg-darkblue/60" aria-hidden="true" />
         <div className="fixed inset-0 overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4 leading-7">
-            <Dialog.Panel className="border-2 border-gold/50  bg-darkblue text-lightblue/90 max-h-full p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all">
-              <button
+            <Dialog.Panel className="border-2 border-gold/50  bg-darkblue text-lightblue/90 max-h-full p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all absolute">
+              {/* <button
                 className="text-lightblue focus:outline-none top-0 right-0 m-1 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
                 onClick={closeModal}
               >
                 <Cross />
-              </button>
+              </button> */}
+              <LanguageSwitcher language={language} setLanguage={setLanguage} />
               <h2 className="font-clanbold text-2xl pb-2 pt-2 text-lightblue/80">
                 {text.introModal.header}{' '}
                 <img
