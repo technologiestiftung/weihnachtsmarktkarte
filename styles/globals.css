@@ -104,7 +104,8 @@ cursor: pointer;
     top: 0px;
   }
   .nav-small-height-temp {
-    right: 64px;
-    margin-top: 64px;
+    right: 33px;
+    margin-top: 32px;
+    position: absolute;
   }
 }
