@@ -53,6 +53,7 @@ export interface LanguageText {
   }
   sidebarSearch: {
     header: string
+    placeholder: string
   }
   sidebarMarket: {
     exceptions: string
@@ -140,6 +141,7 @@ const text: Text = {
     },
     sidebarSearch: {
       header: 'Marktsuche',
+      placeholder: 'Marktname',
     },
     sidebarInfo: {
       header: 'Über den Finder',
@@ -436,6 +438,7 @@ const text: Text = {
     },
     sidebarSearch: {
       header: 'Market search',
+      placeholder: 'Market name',
     },
     sidebarInfo: {
       header: 'About the Finder',
