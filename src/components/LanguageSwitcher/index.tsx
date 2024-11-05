@@ -11,7 +11,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherType> = ({
   setLanguage,
 }) => {
   const navClasses =
-    'hover:text-darkblue text-darkblue h-10 w-10 cursor-pointer list-none text-center grid place-items-center rounded-full hover:bg-darkgold bg-gold'
+    'hover:text-darkblue text-darkblue h-10 w-10 cursor-pointer list-none text-center grid place-items-center rounded-full hover:bg-darkgold bg-gold focus-visible:outline-none'
 
   function btnClicked(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
