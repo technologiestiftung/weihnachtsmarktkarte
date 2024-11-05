@@ -31,7 +31,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherType> = ({
           className={navClasses}
           onClick={(e) => btnClicked(e)}
         >
-          {language === 'de' ? 'EN' : 'DE'}
+          {language === 'de' ? 'DE' : 'EN'}
         </button>
       </div>
     </nav>
