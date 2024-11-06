@@ -31,7 +31,7 @@ export const AudioPlayer = () => {
   return (
     <nav
       className={
-        'fixed bottom-0 p-4 ease-in-out duration-300 z-10 right-0 top-24 h-min'
+        'fixed bottom-0 p-4 ease-in-out duration-300 z-10 right-0 top-24 h-min nav-small-height-music'
       }
     >
       <audio ref={audioRef} src={src} onEnded={handleSongEnd} loop />

@@ -54,6 +54,7 @@ export const SidebarContentSearch: FC<SidebarContentSearchType> = ({
           <input
             type="text"
             onInput={onMarketSearch}
+            placeholder={text.sidebarSearch.placeholder}
             className="text-darkblue flex p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:gold focus:gold "
           />
         </div>

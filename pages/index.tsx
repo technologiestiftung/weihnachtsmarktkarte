@@ -213,6 +213,8 @@ const MapSite: NextPage = (mapData: any) => {
         setSidebarMenuOpen={setSidebarMenuOpen}
         underConstruction={underConstruction}
         text={text}
+        language={language}
+        setLanguage={setLanguage}
       />
       <SidebarWrapper
         classes="z-20"

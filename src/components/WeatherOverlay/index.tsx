@@ -259,7 +259,7 @@ export const WeatherOverlay: FC<{
   }, [dateAPI]) // Add dateAPI as a dependency to useEffect
 
   return (
-    <nav>
+    <nav className="nav-small-height-temp">
       {weatherRecords &&
         weatherRecords[hour] &&
         weatherRecords[hour].temperature && (
@@ -271,7 +271,8 @@ export const WeatherOverlay: FC<{
               'fixed right-4 text-center py-2 z-10',
               'bg-darkblue text-gold',
               isWeatherOpened && 'bg-gold text-darkblue',
-              !isWeatherOpened && 'hover:bg-gold hover:text-darkblue'
+              !isWeatherOpened && 'hover:bg-gold hover:text-darkblue',
+              'nav-small-height-temp'
             )}
           >
             <span className="inline-block">

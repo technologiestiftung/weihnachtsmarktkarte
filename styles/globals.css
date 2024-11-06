@@ -98,10 +98,14 @@ cursor: pointer;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-
-
-
-
-
-
-
+@media (max-height: 400px) {
+  .nav-small-height-music {
+    right: 50px;
+    top: 0px;
+  }
+  .nav-small-height-temp {
+    right: 33px;
+    margin-top: 32px;
+    position: absolute;
+  }
+}
