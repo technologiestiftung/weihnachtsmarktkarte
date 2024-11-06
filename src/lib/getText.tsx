@@ -279,7 +279,7 @@ const text: Text = {
         !
         </p>`,
       infoTownsHeader: 'Ist die Anwendung Open Source?',
-      infoTowns: `<p  class="text-sm pb-2">#
+      infoTowns: `<p  class="text-sm pb-2">
         Der “Berliner Weihnachtsmarkt-Finder” ist ein
         Open-Source-Projekt und läuft unter einer MIT Lizenz.
         Dementsprechend kann der Quellcode
