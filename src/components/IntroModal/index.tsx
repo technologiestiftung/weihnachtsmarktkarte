@@ -55,9 +55,9 @@ export const IntroModal: FC<IntroModalType> = ({
         }}
       >
         <div className="fixed inset-0 bg-darkblue/60" aria-hidden="true" />
-        <div className="fixed inset-0 overflow-y-auto">
+        <div className="fixed inset-0">
           <div className="flex min-h-full items-center justify-center p-4 leading-7">
-            <Dialog.Panel className="h-5/6 md:h-fit overflow-y-auto border-2 border-gold/50  bg-darkblue text-lightblue/90 max-h-full p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all absolute">
+            <Dialog.Panel className="h-5/6 md:h-fit border-2 border-gold/50  bg-darkblue text-lightblue/90 max-h-full p-6 max-w-xs md:max-w-none drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto overflow-hidden absolute">
               {/* <button
                 className="text-lightblue focus:outline-none top-0 right-0 m-1 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
                 onClick={closeModal}
@@ -65,81 +65,83 @@ export const IntroModal: FC<IntroModalType> = ({
                 <Cross />
               </button> */}
               <LanguageSwitcher language={language} setLanguage={setLanguage} />
-              <h2 className="font-clanbold text-2xl pb-2 pt-2 text-lightblue/80">
-                {text.introModal.header}{' '}
-                <img
-                  src="./stern_ausgewaehlt.png"
-                  alt="stern"
-                  className="inline absolute mt-0 md:-mt-2 ml-6 w-10"
-                />
-              </h2>
-              <h4 className="pb-4">{text.introModal.subHeader}</h4>
+              <div className="overflow-y-auto overflow-x-hidden h-full md:h-fit relative">
+                <h2 className="font-clanbold text-2xl pb-2 pt-2 text-lightblue/80">
+                  {text.introModal.header}{' '}
+                  <img
+                    src="./stern_ausgewaehlt.png"
+                    alt="stern"
+                    className="inline  mt-0 md:-mt-2 ml-6 w-10 relative"
+                  />
+                </h2>
+                <h4 className="pb-4">{text.introModal.subHeader}</h4>
 
-              {underConstruction ? (
-                <>
-                  <div className="block md:flex">
-                    <div>
-                      <div className="px-2 pb-2 md:hidden flex">
-                        <UnderConstruction />
-                        <UnderConstruction />
-                        <UnderConstruction />
+                {underConstruction ? (
+                  <>
+                    <div className="block md:flex">
+                      <div>
+                        <div className="px-2 pb-2 md:hidden flex">
+                          <UnderConstruction />
+                          <UnderConstruction />
+                          <UnderConstruction />
+                        </div>
+                        <div className="px-2 hidden md:block h-full mt-[50%]">
+                          <UnderConstruction />
+                        </div>
                       </div>
-                      <div className="px-2 hidden md:block h-full mt-[50%]">
-                        <UnderConstruction />
+                      <div className="flex flex-col md:block">
+                        {' '}
+                        <p
+                          className="pb-4"
+                          dangerouslySetInnerHTML={{
+                            __html: text.introModal.infoConstruction,
+                          }}
+                        ></p>
+                        <a
+                          className="xmas-btn px-4 hover:bg-darkgold bg-gold text-darkblue font-clanbold  p-2 md:p-3 text-center text-bold rounded border-2 border-gold hover:border-darkgold"
+                          href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
+                        >
+                          {text.introModal.reportMarket}
+                        </a>
+                        <button
+                          className="mt-2 md:mt-0 px-4 md:ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
+                          onClick={closeModalExplore}
+                        >
+                          {text.introModal.exploreMarkets}
+                        </button>
                       </div>
                     </div>
-                    <div className="flex flex-col md:block">
-                      {' '}
-                      <p
-                        className="pb-4"
-                        dangerouslySetInnerHTML={{
-                          __html: text.introModal.infoConstruction,
-                        }}
-                      ></p>
-                      <a
-                        className="xmas-btn px-4 hover:bg-darkgold bg-gold text-darkblue font-clanbold  p-2 md:p-3 text-center text-bold rounded border-2 border-gold hover:border-darkgold"
-                        href="https://www.berlin.de/sen/web/service/maerkte-feste/formular.230156.php"
-                      >
-                        {text.introModal.reportMarket}
-                      </a>
-                      <button
-                        className="mt-2 md:mt-0 px-4 md:ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
-                        onClick={closeModalExplore}
-                      >
-                        {text.introModal.exploreMarkets}
-                      </button>
+                  </>
+                ) : (
+                  <>
+                    <p className="pb-4">{text.introModal.about}</p>
+
+                    <button
+                      className="xmas-btn px-4 hover:bg-darkgold bg-gold font-clanbold md:p-3 text-center rounded hover:border-darkgold text-darkblue"
+                      onClick={closeModalExplore}
+                    >
+                      {text.introModal.explore}
+                    </button>
+                    <button
+                      className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
+                      onClick={closeModalInfo}
+                    >
+                      {text.introModal.moreInfo}
+                    </button>
+                  </>
+                )}
+
+                <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
+                  <p className="text-xs mb-2 md:mb-0 text-gray-500 w-11/12 md:w-full pt-4">
+                    <i>{text.introModal.info}</i>
+                  </p>
+                  <div className="ml-2 flex self-center w-10/12">
+                    <div className="w-32">
+                      <TsbLogo className={`w-30`} />
                     </div>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <p className="pb-4">{text.introModal.about}</p>
-
-                  <button
-                    className="xmas-btn px-4 hover:bg-darkgold bg-gold font-clanbold md:p-3 text-center rounded hover:border-darkgold text-darkblue"
-                    onClick={closeModalExplore}
-                  >
-                    {text.introModal.explore}
-                  </button>
-                  <button
-                    className="px-4 ml-4 bg-darkblue text-lightblue text-bold border-2 border-lightblue/90 hover:border-gold p-2 rounded hover:text-lightblue hover:bg-gold"
-                    onClick={closeModalInfo}
-                  >
-                    {text.introModal.moreInfo}
-                  </button>
-                </>
-              )}
-
-              <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
-                <p className="text-xs mb-2 md:mb-0 text-gray-500 w-11/12 md:w-full pt-4">
-                  <i>{text.introModal.info}</i>
-                </p>
-                <div className="ml-2 flex self-center w-10/12">
-                  <div className="w-32">
-                    <TsbLogo className={`w-30`} />
-                  </div>
-                  <div className="w-32 pt-2 mr-8 md:mt-0 self-center md:pl-4">
-                    <OdisLogo className={`w-30`} />
+                    <div className="w-32 pt-2 mr-8 md:mt-0 self-center md:pl-4">
+                      <OdisLogo className={`w-30`} />
+                    </div>
                   </div>
                 </div>
               </div>
