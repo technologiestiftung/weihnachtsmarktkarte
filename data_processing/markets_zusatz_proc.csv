@@ -1,0 +1,17 @@
+id,name,shortname,strasse,bezirk,plz_ort,von,bis,oeffnungszeiten,Mo,Di,Mi,Do,Fr,Sa,So,closed-exc,hours-exc,w3,bemerkungen,bemerkungen_en,lat,lng,ignore,immer-kostenlos,international,barrierefrei,action,short_distance,train,image,urheberschaft
+1,WeihnachtsZauber Gendarmenmarkt an der Staatsoper,WeihnachtsZauber Gendarmenmarkt an der Staatsoper,Bebelplatz,Mitte,10117 Berlin,25.11.24,23.12.24,"So-Do 12:00 - 22:00 Uhr
+Fr, Sa 12:00 - 23:00 Uhr
+Heiligabend 12:00 - 18:00 Uhr
+Silvester 12:00 - 01:00 Uhr
+Von 12:00 - 14:00 Uhr freier Eintritt",12:00 - 22:00,12:00 - 22:00,12:00 - 22:00,12:00 - 22:00,12:00 - 23:00,12:00 - 23:00,12:00 - 22:00,0,"24.12.23=12:00-18:00, 31.12.23=12:00-00:00",https://www.weihnachtsmarkt-berlin.de,"Der WeihnachtsZauber Gendarmenmarkt an der Staatsoper findet auf Grund der klimagerechten Sanierung des Gendarmenmarktes in den Jahren 2022 bis 2024 auf den geschichtsträchtigen Bebelplatz statt. Genießen Sie dieses historische Ambiente im Zentrum von Berlin gegenüber der Humboldt-Universität. Hier heißen wir unsere Besucher in gewohnt weihnachtlich-zauberhafter Atmosphäre willkommen.
+Die besten Aussteller, Gastronomen und Künstler freuen sich auf Ihren Besuch!","The WeihnachtsZauber Gendarmenmarkt at the Staatsoper will take place on the historic Bebelplatz from 2022 to 2024 due to the climate-conscious renovation of the Gendarmenmarkt. Enjoy this historic ambience in the centre of Berlin opposite Humboldt University. Here we welcome our visitors in the usual magical Christmas atmosphere.
+The best exhibitors, caterers and artists are looking forward to your visit!",52.516664,13.394126,0,0,0,0,1,1,U Unter den Linden (U5),Weihnachsmarkt_Staatsoper.jpg,"Jörg Reichert, CC BY-SA 3.0"
+2,Weihnachtsmarkt am Potsdamer Platz,Weihnachtsmarkt am Potsdamer Platz,Potsdamer Platz,Mitte,10785 Berlin,01.11.24,26.12.24,"10 bis 22 Uhr, 24. Dezember von 10 bis 16 Uhr",10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,0,24.12.23=10:00-16:00,http://www.bergmannevent.de,mit Rodelbahn und Hüttengaudi,"with toboggan run and ""Hüttengaudi""",52.509008,13.376262,0,1,0,0,0,1,"S+U Potsdamer Platz Bhf (U2, S1, S2, S25, S26)",Weihnachtsmarkt_PotsdamerPlatz.jpg,"KlemensM, CC0, via Wikimedia Commons"
+4,Weihnachtsmarkt am Alexanderplatz,Weihnachtsmarkt am Alexanderplatz,Alexanderplatz,Mitte,10178 Berlin,25.11.24,26.12.24,"Täglich 10 bis 22 Uhr, 24. Dezember 10 bis 16 Uhr",10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,10:00 - 22:00,0,24.12.23=10:00-16:00,http://www.bergmannevent.de,"mit Almhütte und großer Weihnachtspyramide, 
+Markt: 11:00 – 22:00 Uhr
+Pyramide “PartyTreff”: 11:00 – 24:00 Uhr
+Partyhaus vom Nikolaus: 11:00 – 03:00 Uhr","with alpine hut and large Christmas pyramid, 
+Market: 11:00 - 22:00
+Pyramid ‘PartyTreff’: 11:00 - 24:00
+Party house from St Nicholas: 11:00 - 03:00",52.521918,13.413215,0,1,0,0,1,1,S+U Alexanderplatz Bhf,Weihnachtsmarkt_Alex.jpg,"Pascal Volk from Berlin, Germany, CC BY-SA 2.0 via Wikimedia Commons"
+5,Alt-Rixdorfer Weihnachtsmarkt,Alt-Rixdorfer Weihnachtsmarkt,Richardplatz,Neukölln,12055 Berlin,6.12.2024,8.12.2024,,0,0,0,0,17:00 - 21:00,14:00 - 21:00,14:00 - 20:00,0,0,,,,52.474222,13.445179,0,0,0,0,1,0,"U Karl-Marx-Str., S+U Neukölln",,
