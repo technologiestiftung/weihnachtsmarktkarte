@@ -57,7 +57,7 @@ export const IntroModal: FC<IntroModalType> = ({
         <div className="fixed inset-0 bg-darkblue/60" aria-hidden="true" />
         <div className="fixed inset-0 overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4 leading-7">
-            <Dialog.Panel className="h-5/6 md:h-fit overflow-scroll border-2 border-gold/50  bg-darkblue text-lightblue/90 max-h-full p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all absolute">
+            <Dialog.Panel className="h-5/6 md:h-fit overflow-y-auto border-2 border-gold/50  bg-darkblue text-lightblue/90 max-h-full p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto transition-all absolute">
               {/* <button
                 className="text-lightblue focus:outline-none top-0 right-0 m-1 absolute cursor-pointer z-20 hover:bg-gold rounded-full p-2"
                 onClick={closeModal}
