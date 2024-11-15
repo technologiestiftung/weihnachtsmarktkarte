@@ -45,7 +45,7 @@ export const Head: FC<Partial<HeadPropType>> = ({
 }) => {
   const { pathname } = useRouter()
   const longTitle = [pageTitle, siteTitle].join(' – ')
-  const formatedSocialImage = `${siteUrl}/social-image.jpg`
+  const formatedSocialImage = `${siteUrl}/socialimage.jpg`
 
   return (
     <NextHead>
