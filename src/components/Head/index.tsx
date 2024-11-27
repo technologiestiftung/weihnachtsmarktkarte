@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 const siteUrl =
   process.env.URL ||
   (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL) ||
-  'http://localhost:3000'
+  'https://weihnachtsmaerkte.odis-berlin.de'
 
 const faviconPath = '/favicon.ico'
 const faviconPNGPath = '/favicons/star.png'
@@ -29,7 +29,14 @@ export const Head: FC<Partial<HeadPropType>> = ({
   siteTitle = 'weihnachtsmaerkte.odis-berlin.de',
   pageTitle = 'Berliner Weihnachtsmarkt-Finder',
   fbAppId = '',
-  keywords = ['Berlin', 'Weihnachtsmärkte','Weihnachtsmarkt', 'ODIS', 'Karte','Open Data'],
+  keywords = [
+    'Berlin',
+    'Weihnachtsmärkte',
+    'Weihnachtsmarkt',
+    'ODIS',
+    'Karte',
+    'Open Data',
+  ],
   themeColor = '#091725',
   locales = ['de'],
   locale = 'de',
@@ -38,7 +45,7 @@ export const Head: FC<Partial<HeadPropType>> = ({
 }) => {
   const { pathname } = useRouter()
   const longTitle = [pageTitle, siteTitle].join(' – ')
-  const formatedSocialImage = `${siteUrl}/social-image.jpg`
+  const formatedSocialImage = `${siteUrl}/socialimage.jpg`
 
   return (
     <NextHead>

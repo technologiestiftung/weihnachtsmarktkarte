@@ -360,7 +360,7 @@ const text: Text = {
       exceptions: 'Ausnahmen',
       marketLink: 'Markt teilen',
       marketLinkCopied: 'Markt-Link kopiert!',
-      until: 'von',
+      until: 'bis',
       closedOn: 'geschlossen am',
       date: 'Datum',
       openingTimes: 'Öffnungszeiten',

@@ -9,7 +9,7 @@
 
 The Berliner Weihnachtsmarktkarte (Berlin Christmas market map) is an interactive web map of Berlin showing all christmas markets 2023 based on an open dataset. You can filter the markets by date and opening hours and also by marktes with no entry fee or with a special focus like international or design marktes. As a further example this map makes the meaning of open data clear by exploring the city in a new way. We wish you a charming exploration of the berlin christmas markets and merry christmas.
 
-![Map](/public/social-image.jpg)
+![Map](/public/socialimage.jpg)
 
 <!--
 
