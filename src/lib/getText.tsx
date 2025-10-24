@@ -103,17 +103,17 @@ const text: Text = {
       moreInfo: 'Mehr Infos',
       info: 'Eine prototypische Datenvisualisierung der Open Data Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB Berlin',
       infoConstruction: `Im Weihnachtsmarkt-Finder werden gerade die Daten für
-      die Weihnachtszeit 2024 aktualisiert!
+      die Weihnachtszeit 2025 aktualisiert!
       <span class="text-gold font-clanbold">
         Sie sind Betreiber:in eines Weihnachtsmarkts? Dann
         können Sie Ihren Markt zur Eintragung in der Karte bei
         der Senatsverwaltung für Wirtschaft, Energie und
         Betriebe melden.
       </span>
-      Mitte November steht der neue Weihnachtsmarkt-Finder 2024
+      Mitte November steht der neue Weihnachtsmarkt-Finder 2025
       zur Verfügung.`,
       reportMarket: 'Markt melden',
-      exploreMarkets: 'Märkte 2023 erkunden',
+      exploreMarkets: 'Märkte 2024 erkunden',
     },
     sidebarFilter: {
       header: 'Weihnachtsmärkte entdecken',
