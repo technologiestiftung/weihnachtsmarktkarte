@@ -10,7 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
-    "@headlessui/react": "1.7.3",
+    "@headlessui/react": "2.2.9",
     "classnames": "2.3.2",
     "date-fns": "^2.30.0",
     "mapbox-gl": "npm:empty-npm-package@1.0.0",
