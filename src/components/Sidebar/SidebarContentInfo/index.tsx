@@ -95,7 +95,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({ text }) => {
       </SidebarBody>
       <footer className={classNames('mt-8 p-4', 'flex flex-wrap')}>
         <span className="text-xs w-full mb-4">
-          © 2024 Technologiestiftung Berlin
+          2025 Technologiestiftung Berlin
         </span>
         <a
           href="https://www.technologiestiftung-berlin.de/de/impressum/"
