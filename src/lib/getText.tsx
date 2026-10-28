@@ -103,17 +103,17 @@ const text: Text = {
       moreInfo: 'Mehr Infos',
       info: 'Eine prototypische Datenvisualisierung der Open Data Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB Berlin',
       infoConstruction: `Im Weihnachtsmarkt-Finder werden gerade die Daten für
-      die Weihnachtszeit 2025 aktualisiert!
+      die Weihnachtszeit 2026 aktualisiert!
       <span class="text-gold font-clanbold">
         Sie sind Betreiber:in eines Weihnachtsmarkts? Dann
         können Sie Ihren Markt zur Eintragung in der Karte bei
         der Senatsverwaltung für Wirtschaft, Energie und
         Betriebe melden.
       </span>
-      Mitte November steht der neue Weihnachtsmarkt-Finder 2025
+      Mitte November steht der neue Weihnachtsmarkt-Finder 2026
       zur Verfügung.`,
       reportMarket: 'Markt melden',
-      exploreMarkets: 'Märkte 2024 erkunden',
+      exploreMarkets: 'Märkte 2025 erkunden',
     },
     sidebarFilter: {
       header: 'Weihnachtsmärkte entdecken',
@@ -404,13 +404,13 @@ const text: Text = {
       explore: 'Explore',
       moreInfo: 'About',
       info: 'A data visualization prototype of the Open Data Informationsstelle (ODIS) Berlin in cooperation with CityLAB Berlin',
-      infoConstruction: `The Christmas Market Finder is currently being updated with dates for the 2025 Christmas season!
+      infoConstruction: `The Christmas Market Finder is currently being updated with dates for the 2026 Christmas season!
       <span className="text-gold font-clanbold">
         Are you the operator of a Christmas Market? Then you can register your market with the Senate Department for Economics, Energy and Enterprises to be included in the map.
       </span>
-      The updated Christmas Market Finder for 2025 will be made available in the middle of November.`,
+      The updated Christmas Market Finder for 2026 will be made available in the middle of November.`,
       reportMarket: 'Report market',
-      exploreMarkets: 'Explore markets from 2024',
+      exploreMarkets: 'Explore markets from 2025',
     },
     sidebarFilter: {
       header: 'Discover Christmas Markets',
