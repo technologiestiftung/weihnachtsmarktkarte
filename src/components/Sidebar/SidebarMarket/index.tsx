@@ -174,7 +174,7 @@ export const SidebarMarket: FC<SidebarMarketType> = ({
         {marketData.w3 !== '' && (
           <MarketInfo title={text.sidebarMarket.website} icon={<Globe />}>
             <a
-              className="text-sm underline"
+              className="text-sm underline break-all"
               href={marketData.w3}
               target="_blank"
             >
