@@ -89,7 +89,7 @@ export const SidebarContentInfo: FC<SidebarContentInfoType> = ({ text }) => {
 
           <div className="flex flex-col">
             <span className="text-sm mb-2">{text.sidebarInfo.supportedBy}</span>
-            <SenatskanzleiLogo className="w-40" />
+            <SenatskanzleiLogo className="block w-24 md:w-40" />
           </div>
         </section>
       </SidebarBody>
