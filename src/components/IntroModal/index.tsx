@@ -1,12 +1,13 @@
 import { FC } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Cross, UnderConstruction } from '../Icons'
+import { ArrowUpRight, Cross, UnderConstruction } from '../Icons'
 
 import { TsbLogo } from '@components/Logos/TsbLogo'
 import { OdisLogo } from '@components/Logos/OdisLogo'
 
 import { LanguageText } from '@lib/getText'
 import { LanguageSwitcher } from '@components/LanguageSwitcher'
+import { getGameLink } from '@lib/gameLink'
 
 export interface IntroModalType {
   modalOpen: boolean
@@ -117,7 +118,7 @@ export const IntroModal: FC<IntroModalType> = ({
                     <p className="pb-4">{text.introModal.about}</p>
 
                     <button
-                      className="xmas-btn px-4 hover:bg-darkgold bg-gold font-clanbold md:p-3 text-center rounded hover:border-darkgold text-darkblue"
+                      className="xmas-btn px-4 p-2 hover:bg-darkgold bg-gold font-clanbold text-center rounded border-2 border-gold hover:border-darkgold text-darkblue"
                       onClick={closeModalExplore}
                     >
                       {text.introModal.explore}
@@ -128,6 +129,22 @@ export const IntroModal: FC<IntroModalType> = ({
                     >
                       {text.introModal.moreInfo}
                     </button>
+                    <p className="text-sm mt-4 md:mt-5 text-lightblue/80">
+                      {text.introModal.gameTeaser}{' '}
+                      <a
+                        href={getGameLink('intro')}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gold font-clanbold underline hover:text-darkgold whitespace-nowrap"
+                      >
+                        {text.introModal.gameTeaserLink}
+                        <ArrowUpRight
+                          size={14}
+                          aria-hidden="true"
+                          className="inline-block ml-0.5 -mt-0.5"
+                        />
+                      </a>
+                    </p>
                   </>
                 )}
 
