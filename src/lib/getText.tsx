@@ -13,6 +13,8 @@ export interface LanguageText {
     infoConstruction: string
     reportMarket: string
     exploreMarkets: string
+    gameTeaser: string
+    gameTeaserLink: string
   }
   sidebarFilter: {
     header: string
@@ -73,6 +75,9 @@ export interface LanguageText {
     website: string
     daysHelper: object
   }
+  game: {
+    buttonTitle: string
+  }
   weather: {
     header: string
     subHeader: string
@@ -114,6 +119,9 @@ const text: Text = {
       zur Verfügung.`,
       reportMarket: 'Markt melden',
       exploreMarkets: 'Märkte 2025 erkunden',
+      gameTeaser:
+        'Neu: Die Berliner Weihnachtsmarkt-Sause, das Minispiel zu unseren Weihnachtsmarktdaten.',
+      gameTeaserLink: 'Jetzt spielen',
     },
     sidebarFilter: {
       header: 'Weihnachtsmärkte entdecken',
@@ -388,6 +396,9 @@ const text: Text = {
         So: 'Sonntag',
       },
     },
+    game: {
+      buttonTitle: 'Minispiel: Weihnachtsmarkt-Sause',
+    },
     weather: {
       header: 'Wie wird das Wetter?',
       subHeader:
@@ -417,6 +428,9 @@ const text: Text = {
       The updated Christmas Market Finder for 2026 will be made available in the middle of November.`,
       reportMarket: 'Report market',
       exploreMarkets: 'Explore markets from 2025',
+      gameTeaser:
+        'New: the Berliner Weihnachtsmarkt-Sause, a mini game built on our Christmas market data.',
+      gameTeaserLink: 'Play now',
     },
     sidebarFilter: {
       header: 'Discover Christmas Markets',
@@ -666,6 +680,9 @@ const text: Text = {
         Sa: 'Saturday',
         So: 'Sunday',
       },
+    },
+    game: {
+      buttonTitle: 'Mini game: Weihnachtsmarkt-Sause',
     },
     weather: {
       header: 'What will the weather be like? ',
