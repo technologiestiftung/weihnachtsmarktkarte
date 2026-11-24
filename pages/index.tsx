@@ -18,7 +18,6 @@ import { MapNav } from '@components/MapNav'
 import { LanguageSwitcher } from '@components/LanguageSwitcher'
 
 import { SnowNav } from '@components/SnowNav'
-import { GameNav } from '@components/GameNav'
 import { AudioPlayer } from '@components/AudioPlayer'
 import { IntroModal } from '@components/IntroModal'
 
@@ -203,7 +202,7 @@ const MapSite: NextPage = (mapData: any) => {
       <Head />
       <div
         id="snowId"
-        className="w-full h-full absolute z-[5] pointer-events-none overflow-hidden"
+        className="w-full h-full absolute z-50 pointer-events-none overflow-hidden"
       ></div>
       <LanguageSwitcher language={language} setLanguage={setLanguage} />
 
@@ -293,7 +292,6 @@ const MapSite: NextPage = (mapData: any) => {
       />
 
       <AudioPlayer></AudioPlayer>
-      <GameNav text={text} />
       <MapComponent
         mapData={mapData}
         marketsData={marketsData}
