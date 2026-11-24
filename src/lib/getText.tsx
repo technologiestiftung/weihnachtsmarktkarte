@@ -120,7 +120,7 @@ const text: Text = {
       reportMarket: 'Markt melden',
       exploreMarkets: 'Märkte 2025 erkunden',
       gameTeaser:
-        'Neu: Die Berliner Weihnachtsmarkt-Sause, das Minispiel zu den Weihnachtsmarktdaten.',
+        'Neu: Die Berliner Weihnachtsmarkt-Sause, das Minispiel zu unseren Weihnachtsmarktdaten.',
       gameTeaserLink: 'Jetzt spielen',
     },
     sidebarFilter: {
@@ -423,7 +423,7 @@ const text: Text = {
       reportMarket: 'Report market',
       exploreMarkets: 'Explore markets from 2025',
       gameTeaser:
-        'New: the Berliner Weihnachtsmarkt-Sause, a mini game built on the Christmas market data.',
+        'New: the Berliner Weihnachtsmarkt-Sause, a mini game built on our Christmas market data.',
       gameTeaserLink: 'Play now',
     },
     sidebarFilter: {
