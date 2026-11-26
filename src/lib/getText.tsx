@@ -149,8 +149,8 @@ const text: Text = {
         'Von klassisch über kiezig bis krawallig: Bei den Berliner Weihnachtsmärkten ist für jeden Geschmack etwas dabei. Einige der über 60 Weihnachtsmärkte sind dabei nur für wenige Tage geöffnet. Mit dem Berliner Weihnachtsmarkt-Finder behältst du stets den Überblick, an welchen Tagen und zu welchen Uhrzeiten welche Weihnachtsmärkte zu einem Besuch einladen. Entdecke außerdem, welche Weihnachtsmärkte kostenlos sind, wo es spannende Attraktionen und Programm zu erleben gibt und mehr. Zoom in die Karte rein, um Haltestationen zu öffentlichen Verkehrsmitteln und Standorte von nahegelegenen öffentlichen Toiletten zu sehen. Mit einem Klick über die Teilen-Funktion kannst du den Link zu deinem Lieblingsweihnachtsmarkt kopieren und an Freund:innen verschicken.',
       infoWhereHeader: 'Woher kommen die Daten?',
       infoWhere: `<p class="text-sm pb-2">
-        Diese Anwendung basiert komplett auf offenen Daten. Die
-        gezeigten Weihnachtsmärkte stammen aus dem Datensatz 
+        Diese Anwendung basiert vollständig auf offenen Daten. Die
+        gezeigten Weihnachtsmärkte stammen größtenteils aus dem Datensatz 
         <a
             target="blank"
             href="https://daten.berlin.de/datensaetze/simple_search_wwwberlindesenwebservicemaerktefesteweihnachtsmaerkte"
@@ -159,9 +159,15 @@ const text: Text = {
             Berliner Weihnachtsmärkte,
         </a>
          der jährlich von der Senatsverwaltung für Wirtschaft,
-        Energie und Betriebe bereitgestellt wird. Dadurch sind nur
-        zu den der Senatsverwaltung gemeldeten Märkte Informationen
-        vorhanden und es besteht kein Anspruch auf Vollständigkeit.
+        Energie und Betriebe bereitgestellt wird, sowie aus der Übersicht des 
+        <a
+            target="blank"
+            href="https://www.berlin.de/weihnachtsmarkt/#halle"
+            class="text-gold"
+        >
+            offiziellen Hauptstadtportals berlin.de,
+        </a>
+        Darüber hinaus wurden einzelne Märkte auf Basis eigener Recherche ergänzt. Es besteht kein Anspruch auf Vollständigkeit.
         <br />
         <br />
         Weiterhin liegen in der Karte 
@@ -446,20 +452,27 @@ const text: Text = {
         "From traditional to quirky: there is something for everyone's tastes and preferences at Berlin's Christmas markets. Some of the more than 60 christmas markets are only open for a few days. Thankfully the Berlin Christmas Market Finder can help you keep track of which markets are open on specific days and during specific times. Additionally you can filter markets for specific interests. For example, which ones offer free entry, or feature exciting attractions and other entertainment. Zoom in on the map to see public transport stops and locations of nearby public toilets. With a click on the share button, you can copy the link to your favourite Christmas market and send it to a friend. ",
       infoWhereHeader: 'Where does the data come from?',
       infoWhere: `<p class="text-sm pb-2">
-      The map is generated using publicly available data only. Information
-      about christmas markets is taken from the data set on  
-      <a
-          target="blank"
-          href="https://daten.berlin.de/datensaetze/simple_search_wwwberlindesenwebservicemaerktefesteweihnachtsmaerkte"
-          class="text-gold"
-      >
-          Berlin christmas markets,
-      </a>
-       published annually by the Senate Department for  Senatsverwaltung für Economics, Energy and Enterprises. 
-      Information about markets is only available for markets registered with the Senate Department and
-      thus might not represent the entirety of venues in Berlin.
-      <br />
-      <br />
+      This application is based entirely on open data. The Christmas
+        markets shown are drawn largely from the dataset 
+        <a
+            target="blank"
+            href="https://daten.berlin.de/datensaetze/simple_search_wwwberlindesenwebservicemaerktefesteweihnachtsmaerkte"
+            class="text-gold"
+        >
+            Berlin Christmas Markets,
+        </a>
+         which is published annually by the Senate Department for Economic Affairs,
+        Energy and Public Enterprises, as well as from the listing on the 
+        <a
+            target="blank"
+            href="https://www.berlin.de/weihnachtsmarkt/#halle"
+            class="text-gold"
+        >
+            official berlin.de capital city portal,
+        </a>
+        In addition, a few markets have been added based on our own research. There is no claim to completeness.
+        <br />
+        <br />
       The map additionally shows the
       <a
           target="blank"
