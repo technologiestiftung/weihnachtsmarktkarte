@@ -67,8 +67,12 @@ function openOnDate(date, d) {
   return false
 }
 
+// returns the closing hour as number, or NaN if no closing time is given
+// (e.g. "ab 16 Uhr" -> "16:00"), so such markets don't count as open late
 function lastHour(timeString) {
-  return timeString.split('-')[1].split(':')[0]
+  const end = (timeString || '').split('-')[1]
+  if (!end) return NaN
+  return Number(end.trim().split(/[:.]/)[0])
 }
 
 function openLate(d, date) {

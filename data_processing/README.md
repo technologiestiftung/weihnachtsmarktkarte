@@ -60,17 +60,51 @@ Die Zelle zeigt an, ob beide Dateien vorhanden sind.
    Gibt es noch keine Live-Datei (Saisonstart), gelten alle Märkte als neu und die
    Update-Datei enthält alle Märkte.
 2. **`todo.csv`** in Excel öffnen und abarbeiten. Die Korrekturen in der
-   **Update-Datei** eintragen (nicht in Excel bearbeiten, sondern z. B. in VS Code):
+   **Update-Datei** eintragen (in VS Code oder Excel, siehe unten):
    - `neu`: Markt komplett prüfen,
    - `geändert`: die Felder in `geaenderte_felder` mit dem Report vergleichen und bei
      Bedarf übernehmen,
    - `entfernt`: bei Bedarf `ignore = 1` setzen.
-3. **Live stellen:** die geprüfte Update-Datei von Hand nach `public/markets_<SAISON>.csv`
+3. **Nur wenn die Update-Datei in Excel bearbeitet wurde:** Kartenformat wiederherstellen
+   (siehe [Nach Excel-Bearbeitung](#nach-excel-bearbeitung)).
+4. **Live stellen:** die geprüfte Update-Datei von Hand nach `public/markets_<SAISON>.csv`
    kopieren (vorhandene Datei ersetzen).
 
 **Wichtig:** Die Update-Datei wird bei jedem Durchlauf neu aus der Live-Datei erzeugt.
 Korrekturen, die nur in einer Update-Datei stehen und nicht live gestellt wurden,
 sind beim nächsten Durchlauf nicht mehr drin.
+
+## Nach Excel-Bearbeitung
+
+Excel speichert CSV-Dateien mit `;`, BOM und teils 4-stelligen Jahreszahlen. Damit die
+Karte die Datei lesen kann, **vor dem Live-Stellen** im Terminal (im Repo-Hauptordner)
+ausführen. Den Dateinamen am Ende an die eigene Update-Datei anpassen:
+
+```bash
+/opt/homebrew/Caskroom/miniforge/base/envs/geo/bin/python -c "
+import pandas as pd, re, sys
+f = sys.argv[1]
+d = pd.read_csv(f, sep=None, engine='python', dtype=str, keep_default_na=False, encoding='utf-8-sig')
+d = d.apply(lambda s: s.str.strip())
+for c in ['von', 'bis', 'closed-exc', 'hours-exc']:
+    d[c] = d[c].str.replace(r'(\d{1,2}\.\d{1,2}\.)20(\d\d)\b', r'\1\2', regex=True)
+for c in ['closed-exc', 'hours-exc']:
+    d.loc[d[c] == '', c] = '0'
+for c in ['lat', 'lng']:
+    d[c] = d[c].str.replace(',', '.')
+d.to_csv(f, index=False, sep=',')
+print('ok:', len(d), 'Märkte')
+" data_processing/markets_2026_update_TTMMJJ.csv
+```
+
+Der Befehl entfernt Leerzeichen am Rand, kürzt Jahreszahlen (`24.12.2026` → `24.12.26`),
+setzt leere `closed-exc`/`hours-exc` auf `0`, wandelt Komma-Koordinaten um und speichert
+mit `,` und ohne BOM.
+
+Beim Arbeiten in Excel beachten:
+- Speichern als **„CSV UTF-8 (durch Trennzeichen getrennt)“**, sonst gehen die Umlaute kaputt.
+- Excel macht aus manchen Koordinaten Datumswerte (z. B. `13.4` → „13. Apr“). Das kann der
+  Befehl nicht reparieren. Daher `lat`/`lng` nach dem Speichern kurz in VS Code prüfen.
 
 ## To-do-Liste
 
